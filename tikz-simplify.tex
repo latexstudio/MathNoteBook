@@ -1,0 +1,91 @@
+\begin{tikzpicture}[scale=1, node distance=1.1cm, text width=5em, auto]
+    % Place nodes
+\node [property] (MId1) {MId};
+\node [notation, below of=MId1] (ONeg1) {ONeg};
+\node [operation, below of=ONeg1] (DOS1) {DOS};
+\node [delim, below of=DOS1] (DELIM) {DELIM};
+\node [property, below of=DELIM] (DPE) {DPE};
+\node [notation, below of=DPE] (JTC) {JTC};
+\node [property, below of=JTC] (CPM) {CPM};
+\node [operation, below of=CPM] (OOM) {OOM};
+\node [property, right of=OOM, node distance=2.8cm] (APM) {APM};
+\node [algorithm, below of=OOM] (RF1) {RF};
+\node [algorithm, below of=RF1] (CTJ) {CTJ};
+\node [property, below of=CTJ] (CPA) {CPA};
+\node [property, below of=CPA] (DPF) {DPF};
+\node [operation, below of=DPF] (OOA) {OOA};
+\node [property, right of=OOA,node distance=2.8cm] (APA) {APA};
+\node [algorithm, below of=OOA] (RF2) {RF};
+\node [property, below of=RF2] (AId) {AId};
+\node [operation, below of=AId] (DOS2) {DOS};
+\node [notation, below of=DOS2] (ONeg2) {ONeg};
+\node [property, below of=ONeg2] (MId2) {MId};
+
+\path [line] (MId1) -- (ONeg1);
+\path [line] (ONeg1) -- (DOS1);
+\path [line] (DOS1) -- (DELIM);
+\path [line] (DELIM) -- (DPE);
+\path [line] (DPE) -- (JTC);
+\path [line] (JTC) -- (CPM);
+\path [line] (CPM) edge [out= 315, in= 150] (APM);
+\path [line] (APM) -- (OOM);
+\path [line] (OOM) -- (RF1);
+\path [line] (RF1) -- (CTJ);
+\path [line] (CTJ) -- (CPA);
+\path [line] (CPA) -- (DPF);
+\path [line] (DPF) edge [out= 315, in= 150] (APA);
+\path [line] (APA) -- (OOA);
+\path [line] (OOA) -- (RF2);
+\path [line] (RF2) -- (AId);
+\path [line] (AId) -- (DOS2);
+\path [line] (DOS2) -- (ONeg2);
+\path [line] (ONeg2) -- (MId2);
+
+\node [function, right of=DELIM, node distance=8cm] (PoTF) {PoTF};
+\node [function, below of=PoTF] (RTPo) {RTPo};
+\node [function, below of=RTPo] (PoNE1) {PoNE};
+\node [function, below of=PoNE1] (PoPr) {PoPr};
+\node [function, below of=PoPr] (PoQ) {PoQ};
+\node [function, below of=PoQ] (PoPrPo) {PoPrPo};
+\node [function, below of=PoPrPo] (PoQPo) {PoQPo};
+\node [function, below of=PoQPo] (PrCBPo) {PrCBPo};
+\node [function, below of=PrCBPo] (QCBPo) {QCBPo};
+\node [function, below of=QCBPo] (PoPo) {PoPo};
+\node [function, below of=PoPo] (PoNE2) {PoNE};
+\node [operation, below of=PoNE2] (OOE) {OOE};
+\node [function, below of=OOE] (PoTR) {PoTR};
+
+
+\path [line] (DELIM) edge [bend left=30] (PoTF);
+\path [line] (PoTF) -- (RTPo);
+\path [line] (RTPo) -- (PoNE1);
+\path [line] (PoPr) -- (PoQ);
+\path [line] (PoQ) -- (PoPrPo);
+\path [line] (PoPrPo) -- (PoQPo);
+\path [line] (PoQPo) -- (PrCBPo);
+\path [line] (PrCBPo) -- (QCBPo);
+\path [line] (QCBPo) -- (PoPo);
+\path [line] (PoPo) -- (PoNE2);
+\path [line] (PoNE2) -- (OOE);
+\path [line] (OOE) -- (PoTR);
+
+%\node[productdotted, fit =(DELIM)(JTC)(CPM)(OOM)(RF1)(CTJ)(APM)](product) {};
+%\node[left of =product, text centered,](powers) {\textcolor{stockholmPurple}{\textbf{Multiplication}}};
+%\node[sumdotted, fit =(CPA)(DPF)(OOA)(RF2)(AId)(ONeg2)(DOS2)(MId2)(APA)](sum2) {};
+%\node[sumdotted, fit =(MId1)(ONeg1)(DOS1)](sum1) {};
+%\node[left of =sum1, text centered,](powers) {\textcolor{stockholmPurple}{\textbf{Addition}}};
+%\node[left of =sum2, text centered,](powers) {\textcolor{stockholmPurple}{\textbf{Addition}}};
+
+
+\node[functiondotted, fit =(PoTF)(RTPo)(PoNE1)(PoPr)(PoQ)(PoPrPo)(PoQPo)(PrCBPo)(QCBPo)(PoPo)(PoNE2)(OOE)(PoTR)](powerfunctions) {};
+\node[below of =PoTR, text centered,](powers) {\textcolor{stockholmPurple}{\textbf{Powers}}};
+
+\path [line] (PoNE1) edge [out= 180, in= 0] (DELIM);
+
+\path [line] (CPM) edge [out= 0, in= 180] (PoPr);
+
+\path [line] (PoTR) edge [out= 180, in= 0] (APM);
+
+\path [line] (AId) edge [out= 180, in= 180] (DELIM);
+
+\end{tikzpicture}

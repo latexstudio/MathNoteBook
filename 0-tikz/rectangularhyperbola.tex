@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-6:2,
+            ymax=4,
+            ymin=-4,
+            samples=100,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+			restrict y to domain=-20:20
+          ]
+          \addplot [dashed, stockholmPink, smooth] plot coordinates {(-2,4) (-2,-4)}; %% {.451};
+
+          \addplot [very thick, stockholmBlue, smooth] {1/(x+2)};
+
+          \node at (axis cs:-5.7,3.8) [anchor=west] {\color{stockholmPink}Vertical Asymptote};  
+
+        \end{axis}
+\end{tikzpicture}
