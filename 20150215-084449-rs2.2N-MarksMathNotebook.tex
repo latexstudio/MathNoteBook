@@ -1,0 +1,275 @@
+%!TEX TS-program = xelatex
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 1.4 (12/4/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Compiling this template:
+% This template uses biber for its bibliography and makeindex for its index.
+% When you first open the template, compile it from the command line with the 
+% commands below to make sure your LaTeX distribution is configured correctly:
+%
+% 1) pdflatex main
+% 2) makeindex main.idx -s StyleInd.ist
+% 3) biber main
+% 4) pdflatex main x 2
+%
+% After this, when you wish to update the bibliography/index use the appropriate
+% command above and make sure to compile with pdflatex several times 
+% afterwards to propagate your changes to the document.
+%
+% This template also uses a number of packages which may need to be
+% updated to the newest versions for the template to compile. It is strongly
+% recommended you update your LaTeX distribution if you have any
+% compilation errors.
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+\usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,a4paper]{geometry} % Page margins
+
+\usepackage{xcolor} % Required for specifying colors by name
+\definecolor{ocre}{RGB}{0,126,196} % Define the orange color used for highlighting throughout the book
+\newcommand{\alert}[1]{{\color{stockholmPink}{#1}}}
+\newcommand{\mathref}[1]{{\color{stockholmPurple}{#1}}}
+
+% Define Stockholms Stad Colors
+\definecolor{stockholmPink}{RGB}{196,0,104}
+% HEX #c40064
+\definecolor{stockholmLightPink}{RGB}{254,222,237}
+% HEX #fedeed
+\definecolor{stockholmGreen}{RGB}{40,157,147}
+% HEX #00867f
+\definecolor{stockholmLightGreen}{RGB}{182,215,211}
+% HEX #d5f7f4
+\definecolor{stockholmOrange}{RGB}{203,80,25}
+% HEX #dd4a2c
+\definecolor{stockholmLightOrange}{RGB}{233,189,155}
+% HEX #ffd7d2
+\definecolor{stockholmBlue}{RGB}{0,126,196}
+% HEX #006ebf
+\definecolor{stockholmLightBlue}{RGB}{172,199,233}
+% HEX #d6edfc
+\definecolor{stockholmPurple}{RGB}{104,55,136}
+% HEX #5d237d
+\definecolor{stockholmLightPurple}{RGB}{188,170,208}
+% HEX #f1e6fc
+\definecolor{stockholmYellow}{RGB}{252,191,10}
+% HEX #fcbf0a
+\definecolor{stockholmGrey}{RGB}{245,243,238}
+% HEX #f5f3ee
+\definecolor{stockholmDarkGrey}{RGB}{51,51,51}
+% HEX #333333
+
+\usepackage{multicol}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FONT SETTINGS
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+%\usepackage{avant} % Use the Avantgarde font for headings
+\usepackage{times} % Use the Times font for headings
+\usepackage{mathpazo}
+%\usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Sym­bol, Chancery and Com­puter Modern fonts
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[utf8]{inputenc} % Required for including letters with accents
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{xspace} % Used for printing a trailing space better than using a tilde (~) using the \xspace command
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	BIBLIOGRAPHY
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
+\addbibresource{bibliography.bib} % BibTeX bibliography file
+\defbibheading{bibempty}{}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	INDEX
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\usepackage{calc} % For simpler calculation - used for spacing the index letter headings correctly
+\usepackage{makeidx} % Required to make an index
+\makeindex % Tells LaTeX to create the files required for indexing
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	MATHEMATICS SETTINGS
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\usepackage{
+amsmath,
+amssymb,
+amsfonts,
+amsthm,
+cancel,
+colortbl,
+longtable,
+pdflscape,
+sagetex,
+setspace,
+mathtools,
+pgfplots
+}
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	TIKZ LIBRARIES
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\input{tikz-libraries}
+\input{tikz-factor}
+\input{tikz-workflowsetup}
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	MATH COMMANDS
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
+\newcommand{\limit}{\displaystyle\lim}
+\newcommand{\impart}{\textrm{Im}}
+\newcommand{\repart}{\textrm{Re}}
+\newcommand{\integer}{\mathbb{Z}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\degree}{^{\circ}}
+\newcommand{\rad}{\unit{rad}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\dx}{\mathrm{d}x}
+\newcommand{\dy}{\mathrm{d}y}
+\newcommand{\dr}{\mathrm{d}r}
+\newcommand{\dtheta}{\mathrm{d}\theta}
+\newcommand{\dydx}{\dfrac{\mathrm{d}y}{\mathrm{d}x}}
+\newcommand{\dydt}{\dfrac{\mathrm{d}y}{\mathrm{d}t}}
+\newcommand{\dydu}{\dfrac{\mathrm{d}y}{\mathrm{d}u}}
+\newcommand{\dudx}{\dfrac{\mathrm{d}u}{\mathrm{d}x}}
+\newcommand{\dxdt}{\dfrac{\mathrm{d}x}{\mathrm{d}t}}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\farg}[1]{{\color{stockholmBlue}{\left[\boldsymbol{#1}\right]}}}
+\newcommand{\cBlue}[1]{{\color{stockholmBlue}{#1}}}
+\newcommand{\cGreen}[1]{{\color{stockholmGreen}{#1}}}
+\newcommand{\cYellow}[1]{{\color{stockholmYellow}{#1}}}
+\newcommand{\cPurple}[1]{{\color{stockholmPurple}{#1}}}
+\newcommand{\cOrange}[1]{{\color{stockholmOrange}{#1}}}
+\newcommand{\chide}[1]{{\color{stockholmDarkGrey}{#1}}}
+\newcommand{\cGrey}[1]{{\color{stockholmGrey}{#1}}}
+\newcommand{\cDarkGrey}[1]{{\color{stockholmDarkGrey}{#1}}}
+\newcommand{\cDarkBlue}[1]{{\color{stockholmDarkBlue}{#1}}}
+\newcommand{\cLightBlue}[1]{{\color{stockholmLightBlue}{#1}}}
+\newcommand{\cRed}[1]{{\color{stockholmPink}{#1}}}
+\newcommand{\cLightRed}[1]{{\color{stockholmPink}{#1}}}
+\newcommand{\sname}[1]{\texttt{#1}}
+\newcommand{\inv}{^{-1}}
+\newcommand{\cb}{$\Box$}
+\newcommand{\lesssteps}{\cGreen{\textbf{Less Steps Solution:}}}
+\newcommand{\solnsteps}{\cGreen{\textbf{Solution:}}}
+\newcommand{\qdependlist}{\cDarkGrey{\textbf{Dependencies:}}}
+\newcommand{\suchthat}{\;\ifnum\currentgrouptype=16 \middle\fi|\;}
+% used in tables
+\newcommand{\cellyes}{\cellcolor{stockholmGreen!30}Yes}  
+\newcommand{\cellno}{\cellcolor{stockholmPink!30}No}  
+\newcommand{\ihat}{\hat{\imath}}
+\newcommand{\jhat}{\hat{\jmath}} 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	IMPORT STRUCTURE
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\begin{document}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	TITLE PAGE
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\begingroup
+\thispagestyle{empty}
+\AddToShipoutPicture*{\put(6,5){\includegraphics[scale=1]{Pictures/background}}} % Image background
+\centering
+\vspace*{9cm}
+\par\normalfont\fontsize{35}{35}\sffamily\selectfont
+{\textcolor{stockholmGrey}{Mathematics Notebook}} \par % Book title
+\vspace*{1cm}
+{\Huge {\color{stockholmGrey}{Mark H. Olson}}}\par % Author name
+\vspace*{1cm}
+{\Large {\color{stockholmGrey}{Updated: \today}}}\par % Author name
+\endgroup
+
+%\include{chapter-copyright}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	TABLE OF CONTENTS
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapterimage{chapter_head_1.pdf} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{fancy} % Print headers again
+
+\include{sagesilent}
+%\include{chapter-arithmeticexpressions}
+\include{chapter-algebraicexpressions}
+\include{chapter-univariatepolynomialexpressions}
+\include{chapter-multivariatepolynomialexpressions}
+\include{chapter-algebraicequations}
+\include{chapter-functions}
+\include{chapter-vectors}
+\include{chapter-differentiation}
+\include{chapter-integration}
+\include{chapter-answers}
+%\include{chapter-gy2011}
+%\include{chapter-formatexamples}
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\chapter*{Bibliography}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
+\section*{Website}
+\addcontentsline{toc}{section}{Websites}
+\printbibliography[heading=bibempty,type=misc]
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage
+\phantomsection
+\setlength{\columnsep}{0.75cm}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
+\printindex
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
