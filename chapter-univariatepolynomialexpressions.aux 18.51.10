@@ -1,0 +1,314 @@
+\relax 
+\providecommand\zref@newlabel[2]{}
+\providecommand\hyper@newdestlabel[2]{}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {2}Univariate Polynomial Expressions}{11}{chapter.2}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
+\ttl@writefile{ptc}{\ttl@stoptoc{default@1}}
+\ttl@writefile{ptc}{\ttl@starttoc{default@2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2.1}Classification of Univariate Polynomial Expressions}{11}{section.2.1}}
+\zref@newlabel{mdf@pagelabel-21}{\default{2.1}\page{11}\abspage{11}\mdf@pagevalue{11}}
+\zref@newlabel{mdf@pagelabel-22}{\default{2.1}\page{11}\abspage{11}\mdf@pagevalue{11}}
+\zref@newlabel{mdf@pagelabel-23}{\default{2.1}\page{11}\abspage{11}\mdf@pagevalue{11}}
+\zref@newlabel{mdf@pagelabel-24}{\default{2.1}\page{12}\abspage{12}\mdf@pagevalue{12}}
+\newlabel{eq:mid1}{{2.1a}{12}{Multiplicative Identity (MId)}{equation.2.1.1a}{}}
+\newlabel{eq:mid2}{{2.1b}{12}{Multiplicative Identity (MId)}{equation.2.1.1b}{}}
+\zref@newlabel{mdf@pagelabel-25}{\default{2.1}\page{12}\abspage{12}\mdf@pagevalue{12}}
+\newlabel{20141120-202842}{{2.1}{12}{id:20141120-202842}{exampleT.2.1}{}}
+\zref@newlabel{mdf@pagelabel-26}{\default{2.1}\page{12}\abspage{12}\mdf@pagevalue{12}}
+\zref@newlabel{mdf@pagelabel-27}{\default{2.1}\page{12}\abspage{12}\mdf@pagevalue{12}}
+\zref@newlabel{mdf@pagelabel-28}{\default{2.1}\page{13}\abspage{13}\mdf@pagevalue{13}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2.2}Degree -1 Univariate Polynomials}{13}{section.2.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2.3}Degree 0 Univariate Polynomials}{13}{section.2.3}}
+\zref@newlabel{mdf@pagelabel-29}{\default{2.3}\page{13}\abspage{13}\mdf@pagevalue{13}}
+\newlabel{20141121-093747}{{2.2}{13}{id:20141121-093747}{exampleT.2.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2.4}Degree 1 Univariate Polynomials}{13}{section.2.4}}
+\zref@newlabel{mdf@pagelabel-30}{\default{2.4}\page{14}\abspage{14}\mdf@pagevalue{14}}
+\zref@newlabel{mdf@pagelabel-31}{\default{2.4}\page{14}\abspage{14}\mdf@pagevalue{14}}
+\newlabel{20141120-202042}{{2.3}{14}{id:20141120-202042}{exampleT.2.3}{}}
+\zref@newlabel{mdf@pagelabel-32}{\default{2.4}\page{14}\abspage{14}\mdf@pagevalue{14}}
+\newlabel{20141121-093439}{{2.4}{14}{id:20141121-093439}{exampleT.2.4}{}}
+\zref@newlabel{mdf@pagelabel-33}{\default{2.4}\page{14}\abspage{14}\mdf@pagevalue{14}}
+\zref@newlabel{mdf@pagelabel-34}{\default{2.4}\page{15}\abspage{15}\mdf@pagevalue{15}}
+\newlabel{eq:aid1}{{2.3a}{15}{Additive Identity (AId)}{equation.2.4.3a}{}}
+\newlabel{eq:aid2}{{2.3b}{15}{Additive Identity (AId)}{equation.2.4.3b}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Simplifying Univariate Monomial Expressions}{15}{section*.6}}
+\zref@newlabel{mdf@pagelabel-35}{\default{2.4}\page{15}\abspage{15}\mdf@pagevalue{15}}
+\newlabel{eq:dpf1}{{2.4a}{15}{Distributive Property Factoring (DPF)}{equation.2.4.4a}{}}
+\newlabel{eq:dpf2}{{2.4b}{15}{Distributive Property Factoring (DPF)}{equation.2.4.4b}{}}
+\zref@newlabel{mdf@pagelabel-36}{\default{2.4}\page{15}\abspage{15}\mdf@pagevalue{15}}
+\newlabel{20141120-203846}{{2.5}{15}{id:20141120-203846}{exampleT.2.5}{}}
+\zref@newlabel{mdf@pagelabel-37}{\default{2.4}\page{16}\abspage{16}\mdf@pagevalue{16}}
+\zref@newlabel{mdf@pagelabel-38}{\default{2.4}\page{16}\abspage{16}\mdf@pagevalue{16}}
+\newlabel{20141120-211843}{{2.1}{16}{id:20141120-211843}{exerciseT.2.1}{}}
+\zref@newlabel{mdf@pagelabel-39}{\default{2.4}\page{16}\abspage{16}\mdf@pagevalue{16}}
+\newlabel{20141027-075159}{{2.6}{16}{id:20141027-075159}{exampleT.2.6}{}}
+\zref@newlabel{mdf@pagelabel-40}{\default{2.4}\page{16}\abspage{16}\mdf@pagevalue{16}}
+\newlabel{20141121-185558}{{2.7}{16}{id:20141121-185558}{exampleT.2.7}{}}
+\zref@newlabel{mdf@pagelabel-41}{\default{2.4}\page{17}\abspage{17}\mdf@pagevalue{17}}
+\zref@newlabel{mdf@pagelabel-42}{\default{2.4}\page{17}\abspage{17}\mdf@pagevalue{17}}
+\newlabel{20141121-195608}{{2.2}{17}{id:20141121-195608}{exerciseT.2.2}{}}
+\zref@newlabel{mdf@pagelabel-43}{\default{2.4}\page{17}\abspage{17}\mdf@pagevalue{17}}
+\newlabel{eq:dos1}{{2.5a}{17}{Definition of Subtraction (DOS)}{equation.2.4.5a}{}}
+\newlabel{eq:dos2}{{2.5b}{17}{Definition of Subtraction (DOS)}{equation.2.4.5b}{}}
+\newlabel{eq:oneg1}{{2.6a}{17}{Operation of Negation (ONeg)}{equation.2.4.6a}{}}
+\newlabel{eq:oneg2}{{2.6b}{17}{Operation of Negation (ONeg)}{equation.2.4.6b}{}}
+\zref@newlabel{mdf@pagelabel-44}{\default{2.4}\page{18}\abspage{18}\mdf@pagevalue{18}}
+\newlabel{20141121-190857}{{2.8}{18}{id:20141121-190857}{exampleT.2.8}{}}
+\zref@newlabel{mdf@pagelabel-45}{\default{2.4}\page{18}\abspage{18}\mdf@pagevalue{18}}
+\newlabel{20141121-193636}{{2.9}{18}{id:20141121-193636}{exampleT.2.9}{}}
+\zref@newlabel{mdf@pagelabel-46}{\default{2.4}\page{19}\abspage{19}\mdf@pagevalue{19}}
+\zref@newlabel{mdf@pagelabel-47}{\default{2.4}\page{19}\abspage{19}\mdf@pagevalue{19}}
+\newlabel{20141106-150622}{{2.10}{19}{id:20141106-150622}{exampleT.2.10}{}}
+\zref@newlabel{mdf@pagelabel-48}{\default{2.4}\page{19}\abspage{19}\mdf@pagevalue{19}}
+\newlabel{20141121-191224}{{2.3}{19}{id:20141121-191224}{exerciseT.2.3}{}}
+\zref@newlabel{mdf@pagelabel-49}{\default{2.4}\page{19}\abspage{19}\mdf@pagevalue{19}}
+\newlabel{eq:apa1}{{2.7a}{19}{Associative Property of Addition (APA)}{equation.2.4.7a}{}}
+\newlabel{eq:apa2}{{2.7b}{19}{Associative Property of Addition (APA)}{equation.2.4.7b}{}}
+\zref@newlabel{mdf@pagelabel-50}{\default{2.4}\page{20}\abspage{20}\mdf@pagevalue{20}}
+\newlabel{20141121-184652}{{2.11}{20}{id:20141121-184652}{exampleT.2.11}{}}
+\zref@newlabel{mdf@pagelabel-51}{\default{2.4}\page{20}\abspage{20}\mdf@pagevalue{20}}
+\newlabel{20141106-152020}{{2.12}{20}{id:20141106-152020}{exampleT.2.12}{}}
+\zref@newlabel{mdf@pagelabel-52}{\default{2.4}\page{21}\abspage{21}\mdf@pagevalue{21}}
+\zref@newlabel{mdf@pagelabel-53}{\default{2.4}\page{21}\abspage{21}\mdf@pagevalue{21}}
+\newlabel{20141123-091420}{{2.4}{21}{id:20141123-091420}{exerciseT.2.4}{}}
+\zref@newlabel{mdf@pagelabel-54}{\default{2.4}\page{21}\abspage{21}\mdf@pagevalue{21}}
+\newlabel{20141108-194431}{{2.13}{21}{id:20141108-194431}{exampleT.2.13}{}}
+\zref@newlabel{mdf@pagelabel-55}{\default{2.4}\page{22}\abspage{22}\mdf@pagevalue{22}}
+\zref@newlabel{mdf@pagelabel-56}{\default{2.4}\page{22}\abspage{22}\mdf@pagevalue{22}}
+\newlabel{20141108-194156}{{2.14}{22}{id:20141108-194156}{exampleT.2.14}{}}
+\zref@newlabel{mdf@pagelabel-57}{\default{2.4}\page{23}\abspage{23}\mdf@pagevalue{23}}
+\zref@newlabel{mdf@pagelabel-58}{\default{2.4}\page{23}\abspage{23}\mdf@pagevalue{23}}
+\newlabel{20141108-173613}{{2.15}{23}{id:20141108-173613}{exampleT.2.15}{}}
+\zref@newlabel{mdf@pagelabel-59}{\default{2.4}\page{23}\abspage{23}\mdf@pagevalue{23}}
+\newlabel{eq:cpa}{{2.8}{23}{Commutative Property of Addition (CPA)}{equation.2.4.8}{}}
+\zref@newlabel{mdf@pagelabel-60}{\default{2.4}\page{23}\abspage{23}\mdf@pagevalue{23}}
+\newlabel{eq:dpe1}{{2.9a}{23}{Distributive Property Expanding (DPE)}{equation.2.4.9a}{}}
+\newlabel{eq:dpe2}{{2.9b}{23}{Distributive Property Expanding (DPE)}{equation.2.4.9b}{}}
+\zref@newlabel{mdf@pagelabel-61}{\default{2.4}\page{23}\abspage{23}\mdf@pagevalue{23}}
+\newlabel{20141109-090809}{{2.16}{23}{id:20141109-090809}{exampleT.2.16}{}}
+\zref@newlabel{mdf@pagelabel-62}{\default{2.4}\page{24}\abspage{24}\mdf@pagevalue{24}}
+\zref@newlabel{mdf@pagelabel-63}{\default{2.4}\page{24}\abspage{24}\mdf@pagevalue{24}}
+\newlabel{20141109-091015}{{2.17}{24}{id:20141109-091015}{exampleT.2.17}{}}
+\zref@newlabel{mdf@pagelabel-64}{\default{2.4}\page{24}\abspage{24}\mdf@pagevalue{24}}
+\newlabel{20141109-092448}{{2.18}{24}{id:20141109-092448}{exampleT.2.18}{}}
+\zref@newlabel{mdf@pagelabel-65}{\default{2.4}\page{25}\abspage{25}\mdf@pagevalue{25}}
+\zref@newlabel{mdf@pagelabel-66}{\default{2.4}\page{25}\abspage{25}\mdf@pagevalue{25}}
+\newlabel{20141109-092651}{{2.19}{25}{id:20141109-092651}{exampleT.2.19}{}}
+\zref@newlabel{mdf@pagelabel-67}{\default{2.4}\page{26}\abspage{26}\mdf@pagevalue{26}}
+\newlabel{20141109-092910}{{2.20}{26}{id:20141109-092910}{exampleT.2.20}{}}
+\zref@newlabel{mdf@pagelabel-68}{\default{2.4}\page{26}\abspage{26}\mdf@pagevalue{26}}
+\newlabel{20141109-093220}{{2.21}{26}{id:20141109-093220}{exampleT.2.21}{}}
+\zref@newlabel{mdf@pagelabel-69}{\default{2.4}\page{27}\abspage{27}\mdf@pagevalue{27}}
+\zref@newlabel{mdf@pagelabel-70}{\default{2.4}\page{27}\abspage{27}\mdf@pagevalue{27}}
+\newlabel{20141109-093419}{{2.22}{27}{id:20141109-093419}{exampleT.2.22}{}}
+\zref@newlabel{mdf@pagelabel-71}{\default{2.4}\page{27}\abspage{27}\mdf@pagevalue{27}}
+\newlabel{20141109-094928}{{2.23}{27}{id:20141109-094928}{exampleT.2.23}{}}
+\zref@newlabel{mdf@pagelabel-72}{\default{2.4}\page{28}\abspage{28}\mdf@pagevalue{28}}
+\zref@newlabel{mdf@pagelabel-73}{\default{2.4}\page{28}\abspage{28}\mdf@pagevalue{28}}
+\newlabel{20141109-095151}{{2.24}{28}{id:20141109-095151}{exampleT.2.24}{}}
+\zref@newlabel{mdf@pagelabel-74}{\default{2.4}\page{28}\abspage{28}\mdf@pagevalue{28}}
+\newlabel{20141109-095536}{{2.25}{28}{id:20141109-095536}{exampleT.2.25}{}}
+\zref@newlabel{mdf@pagelabel-75}{\default{2.4}\page{29}\abspage{29}\mdf@pagevalue{29}}
+\zref@newlabel{mdf@pagelabel-76}{\default{2.4}\page{29}\abspage{29}\mdf@pagevalue{29}}
+\newlabel{20141109-095842}{{2.26}{29}{id:20141109-095842}{exampleT.2.26}{}}
+\zref@newlabel{mdf@pagelabel-77}{\default{2.4}\page{30}\abspage{30}\mdf@pagevalue{30}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2.5}Degree 2 Univariate Polynomials}{30}{section.2.5}}
+\zref@newlabel{mdf@pagelabel-78}{\default{2.5}\page{30}\abspage{30}\mdf@pagevalue{30}}
+\newlabel{20141106-151138}{{2.27}{30}{id:20141106-151138}{exampleT.2.27}{}}
+\zref@newlabel{mdf@pagelabel-79}{\default{2.5}\page{30}\abspage{30}\mdf@pagevalue{30}}
+\newlabel{20141106-154547}{{2.28}{30}{id:20141106-154547}{exampleT.2.28}{}}
+\zref@newlabel{mdf@pagelabel-80}{\default{2.5}\page{31}\abspage{31}\mdf@pagevalue{31}}
+\zref@newlabel{mdf@pagelabel-81}{\default{2.5}\page{31}\abspage{31}\mdf@pagevalue{31}}
+\newlabel{20141108-194709}{{2.29}{31}{id:20141108-194709}{exampleT.2.29}{}}
+\zref@newlabel{mdf@pagelabel-82}{\default{2.5}\page{31}\abspage{31}\mdf@pagevalue{31}}
+\newlabel{eq:prcbpo1}{{2.10a}{31}{Product of a Common Base Powers (PrCBPo)}{equation.2.5.10a}{}}
+\newlabel{eq:prcbpo2}{{2.10b}{31}{Product of a Common Base Powers (PrCBPo)}{equation.2.5.10b}{}}
+\zref@newlabel{mdf@pagelabel-83}{\default{2.5}\page{32}\abspage{32}\mdf@pagevalue{32}}
+\newlabel{eq:qcbpoo1}{{2.11a}{32}{Quotient of a Common Base Powers (QCBPo)}{equation.2.5.11a}{}}
+\newlabel{eq:qcbpo2}{{2.11b}{32}{Quotient of a Common Base Powers (QCBPo)}{equation.2.5.11b}{}}
+\zref@newlabel{mdf@pagelabel-84}{\default{2.5}\page{32}\abspage{32}\mdf@pagevalue{32}}
+\newlabel{eq:popo1}{{2.12a}{32}{Power of a Power (PoPo)}{equation.2.5.12a}{}}
+\newlabel{eq:popo2}{{2.12b}{32}{Power of a Power (PoPo)}{equation.2.5.12b}{}}
+\zref@newlabel{mdf@pagelabel-85}{\default{2.5}\page{32}\abspage{32}\mdf@pagevalue{32}}
+\newlabel{20141108-191616}{{2.30}{32}{id:20141108-191616}{exampleT.2.30}{}}
+\zref@newlabel{mdf@pagelabel-86}{\default{2.5}\page{32}\abspage{32}\mdf@pagevalue{32}}
+\newlabel{20141106-152339}{{2.31}{32}{id:20141106-152339}{exampleT.2.31}{}}
+\zref@newlabel{mdf@pagelabel-87}{\default{2.5}\page{33}\abspage{33}\mdf@pagevalue{33}}
+\zref@newlabel{mdf@pagelabel-88}{\default{2.5}\page{33}\abspage{33}\mdf@pagevalue{33}}
+\newlabel{20141107-121834}{{2.32}{33}{id:20141107-121834}{exampleT.2.32}{}}
+\zref@newlabel{mdf@pagelabel-89}{\default{2.5}\page{34}\abspage{34}\mdf@pagevalue{34}}
+\zref@newlabel{mdf@pagelabel-90}{\default{2.5}\page{34}\abspage{34}\mdf@pagevalue{34}}
+\newlabel{20141209-145211}{{2.33}{34}{id:20141209-145211}{exampleT.2.33}{}}
+\zref@newlabel{mdf@pagelabel-91}{\default{2.5}\page{35}\abspage{35}\mdf@pagevalue{35}}
+\zref@newlabel{mdf@pagelabel-92}{\default{2.5}\page{35}\abspage{35}\mdf@pagevalue{35}}
+\newlabel{20141109-133008}{{2.34}{35}{id:20141109-133008}{exampleT.2.34}{}}
+\zref@newlabel{mdf@pagelabel-93}{\default{2.5}\page{35}\abspage{35}\mdf@pagevalue{35}}
+\newlabel{20141109-133316}{{2.35}{35}{id:20141109-133316}{exampleT.2.35}{}}
+\zref@newlabel{mdf@pagelabel-94}{\default{2.5}\page{36}\abspage{36}\mdf@pagevalue{36}}
+\zref@newlabel{mdf@pagelabel-95}{\default{2.5}\page{36}\abspage{36}\mdf@pagevalue{36}}
+\newlabel{20141109-140659}{{2.36}{36}{id:20141109-140659}{exampleT.2.36}{}}
+\zref@newlabel{mdf@pagelabel-96}{\default{2.5}\page{37}\abspage{37}\mdf@pagevalue{37}}
+\zref@newlabel{mdf@pagelabel-97}{\default{2.5}\page{37}\abspage{37}\mdf@pagevalue{37}}
+\newlabel{20141109-141019}{{2.37}{37}{id:20141109-141019}{exampleT.2.37}{}}
+\zref@newlabel{mdf@pagelabel-98}{\default{2.5}\page{37}\abspage{37}\mdf@pagevalue{37}}
+\newlabel{20141109-141347}{{2.38}{37}{id:20141109-141347}{exampleT.2.38}{}}
+\zref@newlabel{mdf@pagelabel-99}{\default{2.5}\page{38}\abspage{38}\mdf@pagevalue{38}}
+\zref@newlabel{mdf@pagelabel-100}{\default{2.5}\page{38}\abspage{38}\mdf@pagevalue{38}}
+\newlabel{20141105-161225}{{2.39}{38}{id:20141105-161225}{exampleT.2.39}{}}
+\zref@newlabel{mdf@pagelabel-101}{\default{2.5}\page{39}\abspage{39}\mdf@pagevalue{39}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2.6}Degree 3 Univariate Polynomials}{40}{section.2.6}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2.7}Degree $n$ Univariate Polynomials}{40}{section.2.7}}
+\@setckpt{chapter-univariatepolynomialexpressions}{
+\setcounter{page}{41}
+\setcounter{equation}{12}
+\setcounter{enumi}{12}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{2}
+\setcounter{section}{7}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{tabx@nest}{0}
+\setcounter{listtotal}{0}
+\setcounter{listcount}{0}
+\setcounter{liststart}{0}
+\setcounter{liststop}{0}
+\setcounter{citecount}{0}
+\setcounter{citetotal}{0}
+\setcounter{multicitecount}{0}
+\setcounter{multicitetotal}{0}
+\setcounter{instcount}{0}
+\setcounter{maxnames}{3}
+\setcounter{minnames}{1}
+\setcounter{maxitems}{3}
+\setcounter{minitems}{1}
+\setcounter{citecounter}{0}
+\setcounter{savedcitecounter}{0}
+\setcounter{uniquelist}{0}
+\setcounter{uniquename}{0}
+\setcounter{refsection}{0}
+\setcounter{refsegment}{0}
+\setcounter{maxextratitle}{0}
+\setcounter{maxextratitleyear}{0}
+\setcounter{maxextrayear}{0}
+\setcounter{maxextraalpha}{0}
+\setcounter{abbrvpenalty}{50}
+\setcounter{highnamepenalty}{50}
+\setcounter{lownamepenalty}{25}
+\setcounter{maxparens}{3}
+\setcounter{parenlevel}{0}
+\setcounter{mincomprange}{10}
+\setcounter{maxcomprange}{100000}
+\setcounter{mincompwidth}{1}
+\setcounter{afterword}{0}
+\setcounter{savedafterword}{0}
+\setcounter{annotator}{0}
+\setcounter{savedannotator}{0}
+\setcounter{author}{0}
+\setcounter{savedauthor}{0}
+\setcounter{bookauthor}{0}
+\setcounter{savedbookauthor}{0}
+\setcounter{commentator}{0}
+\setcounter{savedcommentator}{0}
+\setcounter{editor}{0}
+\setcounter{savededitor}{0}
+\setcounter{editora}{0}
+\setcounter{savededitora}{0}
+\setcounter{editorb}{0}
+\setcounter{savededitorb}{0}
+\setcounter{editorc}{0}
+\setcounter{savededitorc}{0}
+\setcounter{foreword}{0}
+\setcounter{savedforeword}{0}
+\setcounter{holder}{0}
+\setcounter{savedholder}{0}
+\setcounter{introduction}{0}
+\setcounter{savedintroduction}{0}
+\setcounter{namea}{0}
+\setcounter{savednamea}{0}
+\setcounter{nameb}{0}
+\setcounter{savednameb}{0}
+\setcounter{namec}{0}
+\setcounter{savednamec}{0}
+\setcounter{shortauthor}{0}
+\setcounter{savedshortauthor}{0}
+\setcounter{shorteditor}{0}
+\setcounter{savedshorteditor}{0}
+\setcounter{translator}{0}
+\setcounter{savedtranslator}{0}
+\setcounter{labelname}{0}
+\setcounter{savedlabelname}{0}
+\setcounter{institution}{0}
+\setcounter{savedinstitution}{0}
+\setcounter{lista}{0}
+\setcounter{savedlista}{0}
+\setcounter{listb}{0}
+\setcounter{savedlistb}{0}
+\setcounter{listc}{0}
+\setcounter{savedlistc}{0}
+\setcounter{listd}{0}
+\setcounter{savedlistd}{0}
+\setcounter{liste}{0}
+\setcounter{savedliste}{0}
+\setcounter{listf}{0}
+\setcounter{savedlistf}{0}
+\setcounter{location}{0}
+\setcounter{savedlocation}{0}
+\setcounter{organization}{0}
+\setcounter{savedorganization}{0}
+\setcounter{origlocation}{0}
+\setcounter{savedoriglocation}{0}
+\setcounter{origpublisher}{0}
+\setcounter{savedorigpublisher}{0}
+\setcounter{publisher}{0}
+\setcounter{savedpublisher}{0}
+\setcounter{language}{0}
+\setcounter{savedlanguage}{0}
+\setcounter{pageref}{0}
+\setcounter{savedpageref}{0}
+\setcounter{textcitecount}{0}
+\setcounter{textcitetotal}{0}
+\setcounter{textcitemaxnames}{0}
+\setcounter{biburlnumpenalty}{0}
+\setcounter{biburlucpenalty}{0}
+\setcounter{biburllcpenalty}{0}
+\setcounter{smartand}{1}
+\setcounter{bbx:relatedcount}{0}
+\setcounter{bbx:relatedtotal}{0}
+\setcounter{parentequation}{12}
+\setcounter{LT@tables}{0}
+\setcounter{LT@chunks}{0}
+\setcounter{FancyVerbLine}{0}
+\setcounter{lstnumber}{1}
+\setcounter{ST@inline}{96}
+\setcounter{ST@plot}{0}
+\setcounter{ST@cmdline}{0}
+\setcounter{lips@count}{0}
+\setcounter{notation}{1}
+\setcounter{dummy}{0}
+\setcounter{problem}{0}
+\setcounter{exerciseT}{4}
+\setcounter{exampleT}{39}
+\setcounter{essentialqT}{1}
+\setcounter{vocabulary}{0}
+\setcounter{mdf@globalstyle@cnt}{0}
+\setcounter{mdfcountframes}{0}
+\setcounter{mdf@env@i}{0}
+\setcounter{mdf@env@ii}{0}
+\setcounter{mdf@zref@counter}{101}
+\setcounter{Item}{50}
+\setcounter{Hfootnote}{0}
+\setcounter{bookmark@seq@number}{13}
+\setcounter{lstlisting}{0}
+\setcounter{section@level}{1}
+\setcounter{ttl@toc@default}{2}
+}

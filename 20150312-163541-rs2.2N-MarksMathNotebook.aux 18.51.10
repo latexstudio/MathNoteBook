@@ -1,0 +1,74 @@
+\relax 
+\providecommand\zref@newlabel[2]{}
+\providecommand\hyper@newdestlabel[2]{}
+\abx@aux@sortscheme{nyt}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand*\HyPL@Entry[1]{}
+\HyPL@Entry{0<</S/D>>}
+\@writefile{toc}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
+\@writefile{lof}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
+\@writefile{lot}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
+\select@language{english}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\select@language{english}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\select@language{english}}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\select@language{english}}
+\pgfsyspdfmark {pgfid2}{6708151}{48902215}
+\pgfsyspdfmark {pgfid1}{6708151}{48902215}
+\pgfsyspdfmark {pgfid4}{6708151}{48902215}
+\pgfsyspdfmark {pgfid3}{6708151}{48902215}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {part}{\@mypartnumtocformat {I}{MYP}}{5}{part.1}}
+\ttl@writefile{ptc}{\ttl@starttoc{default@1}}
+\pgfsyspdfmark {pgfid6}{6708151}{33817350}
+\pgfsyspdfmark {pgfid5}{6708151}{33817350}
+\@input{chapter-myp-algebraicexpressions.aux}
+\pgfsyspdfmark {pgfid8}{5594039}{48902215}
+\pgfsyspdfmark {pgfid7}{5594039}{48902215}
+\@input{chapter-myp-univariatepolynomialexpressions.aux}
+\abx@aux@cite{wikipediate:indeterminate}
+\pgfsyspdfmark {pgfid13}{5594039}{48902215}
+\pgfsyspdfmark {pgfid12}{5594039}{48902215}
+\abx@aux@cite{wikipedia:polynomial}
+\@input{chapter-myp-multivariatepolynomialexpressions.aux}
+\@input{chapter-myp-algebraicequations.aux}
+\pgfsyspdfmark {pgfid93}{5594039}{48902215}
+\pgfsyspdfmark {pgfid92}{5594039}{48902215}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {part}{\@mypartnumtocformat {II}{DP-SL}}{53}{part.2}}
+\ttl@writefile{ptc}{\ttl@stoptoc{default@1}}
+\ttl@writefile{ptc}{\ttl@starttoc{default@2}}
+\pgfsyspdfmark {pgfid112}{6708151}{33817350}
+\pgfsyspdfmark {pgfid111}{6708151}{33817350}
+\@input{chapter-dpsl-functions.aux}
+\pgfsyspdfmark {pgfid114}{5594039}{48902215}
+\pgfsyspdfmark {pgfid113}{5594039}{48902215}
+\abx@aux@cite{mathworld:completethesquare}
+\abx@aux@cite{mathworld:asymptote}
+\@input{chapter-dpsl-differentiation.aux}
+\abx@aux@cite{mooculus:textbook}
+\pgfsyspdfmark {pgfid127}{5594039}{48902215}
+\pgfsyspdfmark {pgfid126}{5594039}{48902215}
+\@input{chapter-dpsl-integration.aux}
+\pgfsyspdfmark {pgfid150}{5594039}{48902215}
+\pgfsyspdfmark {pgfid149}{5594039}{48902215}
+\pgfsyspdfmark {pgfid160}{6708151}{48902215}
+\pgfsyspdfmark {pgfid159}{6708151}{48902215}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\leavevmode {\color  {ocre}Bibliography}}{77}{chapter*.19}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\leavevmode {\color  {ocre}Bibliography}}{77}{section*.20}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{Websites}{77}{section*.21}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{Articles}{77}{section*.22}}
+\pgfsyspdfmark {pgfid162}{5594039}{49623111}
+\pgfsyspdfmark {pgfid161}{5594039}{49623111}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\leavevmode {\color  {ocre}Index}}{79}{section*.23}}
+\ttl@finishall

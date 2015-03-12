@@ -1,0 +1,310 @@
+%!TEX root = /Users/markholson/Dropbox/+Projects/LatexFiles/Book/main.tex
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER 
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\chapter{Algebraic Expressions}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: OPERATION OF ADDITION
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Expressions}\index{Algebraic Expressions}
+
+\begin{essentialq}\hfill \\
+
+\begin{enumerate}
+	\item What is an algebraic expression?
+\end{enumerate}
+
+\end{essentialq}
+
+
+\begin{table}
+\begin{tabular}{|l|c|c|c|c|c|c}
+\hline
+ 									& Arithmetic 	& Polynomial	& Algebraic  	\\
+\hline
+Constant 							& \cellyes		& \cellyes 		& \cellyes		\\
+\hline
+Factorial 							& \cellyes 		& \cellyes 		& \cellyes		\\
+\hline
+Variable: parameter/coefficient 	& \cellyes 		& \cellyes 		& \cellyes		\\
+\hline
+Variable: unknown/indeterminate 	& \cellno 		& \cellyes 		& \cellyes		\\
+\hline
+Power with $\integer^{+}$ exponent 	& \cellno 		& \cellyes 		& \cellyes		 \\
+\hline
+Power with $\integer$ exponent 		& \cellno 		& \cellno 		& \cellyes		 \\
+\hline
+$n$-th root 						& \cellno 		& \cellno 		& \cellyes		\\
+\hline
+Power with $\mathbb{Q}$ exponent 	& \cellno 		& \cellno 		& \cellyes		 \\
+\hline
+\end{tabular}
+\caption{Names of different types of expressions}\label{tab:tableofexpressions}
+\end{table}
+
+
+%-=-=-= DEFINITION
+%\begin{definition}[Algebraic Expression]\index{Algebraic Expression}
+
+%An algebraic expression is made up of one or more terms (operation of addition), which are themselves made up of factors (operation of multiplication).\\
+
+%Algebraic expressions have three different types of multiplicative factors:\\
+
+%\begin{enumerate}   
+%	\item constant (coefficient) 
+%	\begin{itemize}
+%		\item real number 
+%		\item parameter 
+%	\end{itemize}
+%	\item variable
+%	\item rational power
+%\end{enumerate}
+%\hfill \cite{mathworld:algebraicexpression}
+%\end{definition}
+
+\section{Polynomial Expressions}\index{Polynomial Expressions}
+
+%-=-=-= DEFINITION
+\begin{definition}[Operation of Addition (OOA)]\index{Operation!Operation of Addition}
+\begin{align}
+\underbrace{\underbrace{a}_{\text{Augend}}+\underbrace{b}_{\text{Addend}}}_{\text{Sum}} \label{eq:ooa}
+\end{align}
+\end{definition}
+
+
+%-=-=-= DEFINITION
+\begin{definition}[Common Denominator (CD)]\index{Common Denominator}
+\begin{subequations}
+\begin{align}
+\dfrac{a}{b} + \dfrac{c}{b} &= \dfrac{a+c}{b} \label{eq:cd1} \\
+\dfrac{a+c}{b}&= \dfrac{a}{b} + \dfrac{c}{b} \label{eq:cd2}
+\end{align}
+\end{subequations}
+\end{definition}
+
+%-=-=-= RULE
+\begin{arule}[Fraction Operation of Addition (FOOA)]\index{Fraction Operation of Addition}
+\begin{subequations}
+\begin{align}
+\dfrac{a}{b} + \dfrac{c}{d} &= \dfrac{ad+bc}{bd} \label{eq:fooa1} \\
+\dfrac{ad+bc}{bd} &= \dfrac{a}{b} + \dfrac{c}{d} \label{eq:fooa2}
+\end{align}
+\end{subequations}
+\end{arule}
+
+\newpage
+\begin{figure}
+\input{tikz-simplify}
+\caption{Simplifying Expressions Workflow: \newline {\color{stockholmPink!40}\ensuremath{\blacksquare}} Property, {\color{stockholmBlue!40}\ensuremath{\blacksquare}} Operation, {\color{stockholmGreen!40}\ensuremath{\blacksquare}} Notation, {\color{stockholmPurple!40}\ensuremath{\blacksquare}} Powers, {\color{stockholmYellow!40}\ensuremath{\blacksquare}} Delimiters, {\color{stockholmOrange!40}\ensuremath{\blacksquare}} Process, {\color{stockholmDarkGrey!40}\ensuremath{\blacksquare}} Not Used}
+\end{figure}
+
+
+%-=-=-= DEFINITION
+\begin{definition}[Operation of Multiplication (OOM)] \index{Operation!Operation of Multiplication}
+\begin{align}
+\underbrace{\underbrace{a}_{\text{Multiplicand}} \cdot \underbrace{b}_{\text{Multiplier}}}_{\text{Product}} \label{eq:oom}
+\end{align}
+\end{definition}
+
+
+
+%-=-=-= DEFINITION
+\begin{definition}[Operation of Exponentiation (OOE)]\index{Operation!Operation of Exponentiation}
+\begin{align}
+\underbrace{{\underbrace{b}_{base}}^{\overbrace{m}^{Exponent}}}_{Power} \label{eq:ooe}
+\end{align}
+\end{definition}
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: ALGEBRAIC EXPRESSIONS
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+
+
+
+%-=-=-= DEFINITION
+\begin{definition}[Juxtaposition to Center-Dot (JTC)]\index{Notation!Juxtapostion to Center-Dot}
+\begin{align}
+ab &= a \cdot b \label{eq:jtc}
+\end{align}
+\end{definition}
+
+%-=-=-= DEFINITION
+\begin{definition}[Center-Dot to Justapostion (CTJ)]\index{Notation!Center-Dot to Juxtaposition}
+\begin{align}
+a \cdot b &= ab \label{eq:ctj}
+\end{align}
+\end{definition}
+
+
+%-=-=-= DEFINITION
+\begin{definition}[Commutative Property of Multiplication (CPM)]\index{Property!Commutative Property of Multiplication}
+\begin{align}
+\alert{a} \cdot b &= b \cdot \alert{a} \label{eq:cpm}
+\end{align}
+\end{definition}
+
+
+
+%-=-=-= DEFINITION
+\begin{definition}[Multiplicative Inverse (MI)]\index{Multiplicative Inverse}
+\begin{subequations}
+\begin{align}
+a \cdot \alert{\dfrac{1}{a}} &= 1 \label{eq:mi1} \\
+a \cdot \alert{a^{-1}} &= 1 \label{eq:mi2} 
+\end{align}
+\end{subequations}
+\end{definition}
+
+%-=-=-= DEFINITION
+\begin{definition}[Associative Property of Multiplication (APM)]\index{Property!Associative Property of Multiplication}
+\begin{subequations}
+\begin{align}
+a\cdot b\cdot c &= (a\cdot b)\cdot c \label{eq:apm1} \\
+a\cdot b\cdot c &= a\cdot (b\cdot c) \label{eq:apm2}
+\end{align}
+\end{subequations}
+\end{definition}
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Powers
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\subsubsection{Powers}\index{Powers}
+
+
+\begin{arule}[Power of a Quotient of Powers (PoQPo)]\index{Powers!Power of a Quotient of Powers}
+\begin{subequations}
+\begin{align}
+	\left(\dfrac{a^m}{b^n}\right)^k &= \dfrac{a^{m \cdot k}}{b^{n\cdot k}} \label{eq:poqpo1}\\
+	\dfrac{a^{m \cdot k}}{b^{n\cdot k}} &= \left(\dfrac{a^m}{b^n}\right)^k \label{eq:poqpo2}
+\end{align}
+\end{subequations}
+\end{arule}
+
+\begin{arule}[Power of a Product of Powers (PoPrPo)]\index{Powers!Power of a Product of Powers}
+\begin{subequations}
+\begin{align}
+	\left(a^m \cdot b^n\right)^k &= a^{m \cdot k} \cdot b^{n\cdot k} \label{eq:poprpo1}\\
+	a^{m \cdot k} \cdot b^{n \cdot k} &= \left(a^m \cdot b^n\right)^k \label{eq:poprpo2}
+\end{align}
+\end{subequations}
+\end{arule}
+
+\begin{definition}[Power To Factor (PoTF)]\index{Powers!Power to Factor}
+\begin{align}
+a^{\alert{n}} &= a_1 \cdot a_2 \cdot \ldots \cdot a_{n-1} \cdot a_{\alert{n}} \label{eq:potf} 
+\end{align}
+\end{definition}
+
+\begin{definition}[Factor To Power (FTPo)]\index{Powers!Factor to Power}
+\begin{align}
+a_1 \cdot a_2 \cdot \ldots \cdot a_{n-1} \cdot a_{\alert{n}} &= a^{\alert{n}} \label{eq:ftpo} 
+\end{align}
+\end{definition}
+
+%-=-=-= DEFINITION
+\begin{definition}[Power Inverse (PoI)]\index{Power Inverse}
+\begin{subequations}
+\begin{align}
+\left(b^{m}\right)^{\frac{1}{m}} &= b  \label{eq:poi} 
+\end{align}
+\end{subequations}
+\end{definition}
+
+%-=-=-= DEFINITION
+\begin{definition}[Power Inverse (PoId)]\index{Power Identity}
+\begin{subequations}
+\begin{align}
+1&= b^0  \label{eq:poid1} \\
+b^{0}&= 1  \label{eq:poid2} 
+\end{align}
+\end{subequations}
+\end{definition}
+
+\begin{notation}[Radical To Power (RTPo)]\index{Powers!Radical to Power}
+\begin{align}
+\sqrt[m]{b^n} &= b^{\frac{n}{m}}	 \label{eq:rtpo} 
+\end{align}
+\end{notation}
+
+\begin{notation}[Power To Radical (PoTR)]\index{Powers!Power to Radical}
+\begin{align}
+b^{\frac{n}{m}} &= \sqrt[m]{b^n}	 \label{eq:potr} 
+\end{align}
+\end{notation}
+
+
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION: Monomials of Like Terms
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\subsection{Monomials of Like Terms}\index{Monomials of Like Terms}
+
+
+
+
+
+
+
+
+%-=-=-= DEFINITION
+\begin{definition}[Additive Inverse (AI)]\index{Additive Inverse}
+\begin{subequations}
+\begin{align}
+a + \alert{(-a)} &= 0 \label{eq:ai}
+\end{align}
+\end{subequations}
+\end{definition}
+
+
+
+
+\subsection{Surds}\index{Surds}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141108-085327] \label{20141108-085327} \index{Example!20141108-085327} \hfill \\
+
+Simplify $2\sqrt{2}-\dfrac{\left(\sqrt{2}\right)^3}{3}-\left(2\left(-\sqrt{2}\right)-\dfrac{\left(-\sqrt{2}\right)^3}{3} \right)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+2 \sqrt{2}- \dfrac{\alert{1}\left(\alert{1}\sqrt{2}\right)^{3}}{3}-\alert{1} \left(2 \left(-\alert{1}\sqrt{2} \right) - \dfrac{\alert{1} \left(-\alert{1} \sqrt{2}\right)^{3}}{3} \right) && \text{MId} \eqref{eq:mid1} \\
+2 \sqrt{2} - \dfrac{1 \left(1\sqrt{2}\right)^{3}}{3}-1 \left(2 \left(\alert{\neg 1} \sqrt{2} \right) - \dfrac{1 \left(\alert{\neg 1} \sqrt{2}\right)^{3}}{3} \right) && \text{ONeg} \eqref{eq:oneg1} \\
+2 \sqrt{2} + \dfrac{\neg 1 \left(1\sqrt{2}\right)^{3}}{3}+ \neg 1 \left(2 \left(\alert{\neg 1} \sqrt{2} \right) + \dfrac{\neg 1 \left(\alert{\neg 1} \sqrt{2}\right)^{3}}{3} \right) && \text{DOS} \eqref{eq:dos1} \\
+2 \cdot \alert{2^{1/2}} + \dfrac{\neg 1 \left(1 \cdot \alert{2^{1/2}}\right)^{3}}{3} + \neg 1 \left(2 \left(\neg  1 \cdot \alert{2^{1/2}} \right) + \dfrac{\neg 1 \left(\neg  1  \cdot \alert{2^{1/2}}\right)^{3}}{3} \right) && \text{RTPo} \eqref{eq:rtpo} \\
+2 \cdot 2^{1/2} + \dfrac{\neg 1 \left(1 \cdot 2^{1/2}\right)^{3}}{3} + \neg 1 \left(\alert{2 \cdot \neg  1 \cdot 2^{1/2}} + \dfrac{\neg 1 \left(\neg 1  \cdot 2^{1/2}\right)^{3}}{3} \right) && \text{JTC} \eqref{eq:jtc} \\
+2 \cdot 2^{1/2} + \dfrac{\neg 1 \cdot \alert{1 \cdot 2^{3/2}}}{3} + \neg 1 \left(2 \cdot \neg  1 \cdot 2^{1/2} + \dfrac{\neg 1 \cdot \alert{\neg 1  \cdot 2^{3/2}}}{3} \right) && \text{PoPrPo} \eqref{eq:poprpo1} \\
+2 \cdot 2^{1/2} + \dfrac{\neg 1 \cdot 1 \cdot \alert{2^{2/2} \cdot 2^{1/2}}}{3} + \neg 1 \left(2 \cdot \neg  1 \cdot 2^{1/2} + \dfrac{\neg 1 \cdot \neg 1  \cdot \alert{2^{2/2} \cdot 2^{1/2}}}{3} \right) && \text{PrCBPo} \eqref{eq:prcbpo2} \\
+2 \cdot 2^{1/2} + \dfrac{\neg 1 \cdot 1 \cdot \alert{2} \cdot 2^{1/2}}{3} + \neg 1 \left(2 \cdot \neg  1 \cdot 2^{1/2} + \dfrac{\neg 1 \cdot \neg 1  \cdot \alert{2} \cdot 2^{1/2}}{3} \right) && \text{MId} \eqref{eq:mid2} \\
+2 \cdot \alert{\sqrt{2}} + \dfrac{\neg 1 \cdot 1 \cdot 2 \cdot \alert{\sqrt{2}}}{3} + \neg 1 \left(2 \cdot \neg  1 \cdot \alert{\sqrt{2}} + \dfrac{\neg 1 \cdot \neg 1  \cdot 2 \cdot \alert{\sqrt{2}}}{3} \right) && \text{PoTR} \eqref{eq:potr} \\
+2 \cdot \sqrt{2} + \dfrac{\neg 1 \cdot 1 \cdot 2 \cdot \sqrt{2}}{3} + \alert{\neg 1} \cdot 2 \cdot \neg  1 \cdot \sqrt{2} + \dfrac{\alert{\neg 1} \cdot \neg 1 \cdot \neg 1  \cdot 2 \cdot \sqrt{2}}{3}  && \text{DPE} \eqref{eq:dpe1} \\
+2 \cdot \sqrt{2} + \dfrac{\neg 2 \cdot \sqrt{2}}{3} + 2 \cdot \sqrt{2} + \dfrac{\neg 2 \cdot \sqrt{2}}{3}  && \text{OOM} \eqref{eq:oom} \\
+2\sqrt{2} + \dfrac{\neg 2\sqrt{2}}{3} + 2\sqrt{2} + \dfrac{\neg 2\sqrt{2}}{3} && \text{CTJ} \eqref{eq:ctj} \\
+\left(2 + \dfrac{\neg 2}{3} + 2 + \dfrac{\neg 2}{3} \right)  \sqrt{2} && \text{DPF} \eqref{eq:dpf1} \\
+\dfrac{8}{3}\sqrt{2} && \text{OOA} \eqref{eq:ooa} 
+\end{align*}
+
+\qdepend 
+
+\qdependlist
+example \ref{20141108-083108}-20141108-083108
+
+\end{example}
+
+
+

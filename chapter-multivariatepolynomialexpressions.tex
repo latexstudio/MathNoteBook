@@ -1,0 +1,396 @@
+%!TEX root = /Users/markholson/Dropbox/+Projects/LatexFiles/Book/main.tex
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER 
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\chapter{Multivariate Polynomial Expressions}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: OPERATION OF ADDITION
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section*{Classification of Multivariate Polynomial Expressions}\index{Classification of Multivariate Polynomial Expressions}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section*{Degree -1 Multivariate Polynomials}\index{Degree -1 Multivariate Polynomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Monomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section*{Degree 0 Multivariate Polynomials}\index{Degree 0 Multivariate Polynomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Monomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section*{Degree 1 Multivariate Polynomials}\index{Degree 1 Multivariate Polynomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Monomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Binomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section*{Degree 2 Multivariate Polynomials}\index{Degree 2 Multivariate Polynomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Monomials}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141106-150953] \label{20141106-150953} \index{Example!20141106-150953} \hfill \\
+
+Simplify $8xy+5xy$
+
+\soln
+
+\solnsteps
+\begin{align*}
+(8+5)xy && \text{DPF} \eqref{eq:dpf1} \\
+13xy && \text{OOA} \eqref{eq:ooa} 
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+13xy && \text{OOA} \eqref{eq:ooa} 
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141108-193835] \label{20141108-193835} \index{Example!20141108-193835} \hfill \\
+
+Simplify $3xy + 4yx$
+
+\soln
+
+\solnsteps
+\begin{align*}
+3 \cdot x \cdot y + 4 \cdot y \cdot x && \text{JTC} \eqref{eq:jtc} \\
+3 \cdot x \cdot y + 4 \cdot x \cdot y && \text{CPM} \eqref{eq:cpm} \\
+3xy+4xy && \text{CTJ} \eqref{eq:ctj} \\
+(3+4)xy && \text{DPF} \eqref{eq:dpf1} \\ 
+7xy && \text{OOA} \eqref{eq:ooa} 
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+3xy + 4xy && \text{CPM} \eqref{eq:cpm} \\
+7xy && \text{OOA} \eqref{eq:ooa} 
+\end{align*}
+
+\end{example}
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141108-180100] \label{20141108-180100} \index{Example!20141108-180100} \hfill \\
+
+Simplify $8x \cdot 2y$
+
+\soln
+
+\solnsteps
+\begin{align*}
+8 \cdot x \cdot 2 \cdot y && \text{JTC} \eqref{eq:jtc} \\
+8 \cdot 2 \cdot x \cdot y && \text{CPM} \eqref{eq:cpm} \\
+(8 \cdot 2) \cdot x \cdot y && \text{APM} \eqref{eq:apm1} \\
+16 \cdot x \cdot y && \text{OOM} \eqref{eq:oom} \\
+16 xy && \text{CTJ} \eqref{eq:ctj}  
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+8 \cdot 2 \cdot x \cdot y && \text{CPM} \eqref{eq:cpm} \\
+16xy && \text{OOM} \eqref{eq:oom} 
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141108-180608] \label{20141108-180608} \index{Example!20141108-180608} \hfill \\
+
+Simplify $3x \cdot y$
+
+\soln
+
+\solnsteps
+\begin{align*}
+3x \cdot 1y && \text{MId} \eqref{eq:mid1} \\
+3 \cdot x \cdot 1 \cdot y && \text{JTC} \eqref{eq:jtc} \\
+3 \cdot 1 \cdot x \cdot y && \text{CPM} \eqref{eq:cpm} \\
+(3 \cdot 1) \cdot x \cdot y && \text{CPM} \eqref{eq:cpm} \\
+3 \cdot x \cdot y && \text{OOM} \eqref{eq:oom} \\
+3xy && \text{CTJ} \eqref{eq:ctj} 
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+3xy && \text{CTJ} \eqref{eq:ctj}  
+\end{align*}
+
+\end{example}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Binomials}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141106-151622] \label{20141106-151622} \index{Example!20141106-151622} \hfill \\
+
+Simplify $5xy^2-3xy$
+
+\soln
+
+\solnsteps
+\begin{align*}
+5xy^2+\neg 3xy && \text{DOS} \eqref{eq:dos1} \\
+(5y+\neg 3)xy && \text{DPF} \eqref{eq:dpf1} \\
+(5y-3)xy && \text{DOS} \eqref{eq:dos2} 
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+5xy^2-3xy 
+\end{align*}
+
+\emph{Depending on the context of the problem, both $(5y-3)xy$, the factored form and $5xy^2-3xy$, the expanded form, can both be considered simplified.  }
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141108-180858] \label{20141108-180858} \index{Example!20141108-180858} \hfill \\
+
+Simplify $\dfrac{x}{4} \cdot \dfrac{y}{5}$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\dfrac{1x}{4} \cdot \dfrac{1y}{5} && \text{MId} \eqref{eq:mid1} \\ 
+\dfrac{1}{4} \cdot x \cdot \dfrac{1}{5} \cdot y && \text{JTC} \eqref{eq:jtc} \\
+\dfrac{1}{4} \cdot \dfrac{1}{5} \cdot x \cdot y && \text{CPM} \eqref{eq:cpm} \\
+\dfrac{1}{20} \cdot x \cdot y && \text{OOM} \eqref{eq:oom} \\
+\dfrac{1xy}{20} && \text{CTJ} \eqref{eq:ctj} \\
+\dfrac{xy}{20} && \text{MId} \eqref{eq:mid2} 
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+\dfrac{xy}{20} && \text{OOM} \eqref{eq:oom} 
+\end{align*}
+\end{example}
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Trinomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section*{Degree 3 Multivariate Polynomials}\index{Degree 3 Multivariate Polynomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Monomials}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141106-151409] \label{20141106-151409} \index{Example!20141106-151409} \hfill \\
+
+Simplify $7xy^2-xy^2$
+
+\soln
+
+\solnsteps
+\begin{align*}
+7xy^2-1xy^2 && \text{MId} \eqref{eq:mid1} \\
+7xy^2+\neg 1xy^2 && \text{DOS} \eqref{eq:dos1} \\
+(7+\neg 1)xy^2 && \text{DPF} \eqref{eq:dpf1} \\
+6xy^2 && \text{OOA} \eqref{eq:ooa} 
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+7xy^2 + \neg xy^2 && \text{DOS} \eqref{eq:dos1} \\
+6xy^2 && \text{OOA} \eqref{eq:ooa} 
+\end{align*}
+
+\end{example}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Binomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Trinomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Polynomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section*{Degree $n$ Multivariate Polynomials}\index{Degree $n$ Multivariate Polynomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Monomials}
+
+\begin{arule}[Power of a Product (PoPr)]\index{Powers!Power of a Product}
+\begin{subequations}
+\begin{align}
+	(a \cdot b)^k &= a^k \cdot b^k \label{eq:popr1}\\
+	a^k \cdot b^k &= (a \cdot b)^k \label{eq:popr2}
+\end{align}
+\end{subequations}
+\end{arule}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141108-193145] \label{20141108-193145} \index{Example!20141108-193145} \hfill \\
+
+Simplify $12xy \cdot \left(-\frac{1}{2}\right)yx$
+
+\soln
+
+\solnsteps
+\begin{align*}
+12x1y \cdot \left(-\frac{1}{2}\right)y1x && \text{MId} \eqref{eq:mid1} \\
+12x1y \cdot \neg \frac{1}{2}y1x && \text{ONeg} \eqref{eq:oneg1} \\
+12 \cdot x \cdot 1 \cdot y \cdot \neg \frac{1}{2} \cdot y \cdot 1 \cdot x  && \text{JTC} \eqref{eq:jtc} \\
+12 \cdot 1 \cdot \neg \frac{1}{2} \cdot 1 \cdot x \cdot x \cdot y \cdot y && \text{CPM} \eqref{eq:cpm} \\
+12 \cdot 1 \cdot \neg \frac{1}{2} \cdot 1 \cdot x^2 \cdot y^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+\left(12 \cdot 1 \cdot \neg \frac{1}{2} \cdot 1  \right) \cdot x^2 \cdot y^2 && \text{APM} \eqref{eq:apm1} \\
+\neg 6 \cdot x^2 \cdot y^2 && \text{OOM} \eqref{eq:oom} \\
+\neg 6 x^2y^2 && \text{CTJ} \eqref{eq:ctj} \\
+-6x^2y^2 && \text{ONeg} \eqref{eq:oneg2}   
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+12 \cdot \neg \frac{1}{2} \cdot x \cdot x \cdot y \cdot y && \text{CPM} \eqref{eq:cpm} \\
+12 \cdot \neg \frac{1}{2} \cdot x^2 \cdot y^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+-6x^2y^2 && \text{OOM} \eqref{eq:oom}  
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141108-192234] \label{20141108-192234} \index{Example!20141108-192234} \hfill \\
+
+Simplify $ac \cdot ab$
+
+\soln
+
+\solnsteps
+\begin{align*}
+1a1c \cdot 1a1b && \text{MId} \eqref{eq:mid1} \\
+1 \cdot a \cdot 1 \cdot c \cdot 1 \cdot a \cdot 1 \cdot b && \text{JTC} \eqref{eq:jtc} \\
+1 \cdot 1 \cdot 1 \cdot 1 \cdot a \cdot a \cdot b \cdot c && \text{CPM} \eqref{eq:cpm} \\
+1 \cdot 1 \cdot 1 \cdot 1 \cdot a^2 \cdot b \cdot c && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+(1 \cdot 1 \cdot 1 \cdot 1) \cdot a^2 \cdot b \cdot c && \text{APM} \eqref{eq:apm1} \\
+1 \cdot a^2 \cdot b \cdot c && \text{OOM} \eqref{eq:oom} \\
+1 a^2bc && \text{CTJ} \eqref{eq:ctj} \\
+a^2bc && \text{MId} \eqref{eq:mid2} 
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+a \cdot a \cdot b \cdot c && \text{CPM} \eqref{eq:cpm} \\
+a^2bc && \text{PrCBPo} \eqref{eq:prcbpo1} 
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141108-192611] \label{20141108-192611} \index{Example!20141108-192611} \hfill \\
+
+Simplify $(-ac) \cdot (-bc)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+(-1a1c)\cdot (-1b1c) && \text{MId} \eqref{eq:mid1} \\
+\neg 1a1c \cdot \neg 1b1c && \text{ONeg} \eqref{eq:oneg1} \\
+\neg 1 \cdot a \cdot 1 \cdot c \cdot \neg 1 \cdot b \cdot 1 \cdot c && \text{JTC} \eqref{eq:jtc} \\
+\neg 1 \cdot \neg 1 \cdot 1 \cdot 1 \cdot a \cdot b \cdot c \cdot c && \text{CPM} \eqref{eq:cpm} \\
+\neg 1 \cdot \neg 1 \cdot 1 \cdot 1 \cdot a \cdot b \cdot c^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+(\neg 1 \cdot \neg 1 \cdot 1 \cdot 1) \cdot a \cdot b \cdot c^2 && \text{APM} \eqref{eq:apm1} \\
+1 \cdot a \cdot b \cdot c^2 && \text{OOM} \eqref{eq:oom} \\
+1abc^2 && \text{CTJ} \eqref{eq:ctj} \\
+abc^2 && \text{MId} \eqref{eq:mid2} 
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+\neg a \cdot \neg b \cdot c \cdot c && \text{CPM} \eqref{eq:cpm} \\
+abc^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\  
+\end{align*}
+
+\end{example}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Binomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Trinomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Polynomials}
