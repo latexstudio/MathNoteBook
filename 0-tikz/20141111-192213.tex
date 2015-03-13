@@ -9,11 +9,11 @@
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
 			restrict y to domain=-5:5
           ]
-          \addplot [dashed, stockholmPink, smooth] plot coordinates {(-5/2,4) (-5/2,-4)}; %% {.451};
+          \addplot [dashed, sthlmRed, smooth] plot coordinates {(-5/2,4) (-5/2,-4)}; %% {.451};
 
-          \addplot [very thick, stockholmBlue, smooth] {(x+4)/(2*x+5)};
+          \addplot [very thick, sthlmBlue, smooth] {(x+4)/(2*x+5)};
 
-          \node at (axis cs:-4.7,2.8) [anchor=west] {\color{stockholmPink}$x_{va}=-\frac{5}{2}$};  
+          \node at (axis cs:-4.7,2.8) [anchor=west] {\color{sthlmRed}$x_{va}=-\frac{5}{2}$};  
 
         \end{axis}
 \end{tikzpicture}

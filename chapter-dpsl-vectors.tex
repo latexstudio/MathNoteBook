@@ -1,0 +1,67 @@
+%!TEX root = /Users/markholson/Dropbox/+Projects/LatexFiles/MathNotebook/20150312-163541-rs2.2N-MarksMathNotebook
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER 
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\chapter{Vectors}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Component \& Geometric Vectors}
+
+
+\section{Dot Product}
+
+%-=-=-= DEFINITION
+\begin{definition}[Dot Product in $\mathbb{R}^2$ (VDPr)]\index{Dot Product $\mathbb{R}^2$}
+The dot product of vectors $\vec{u}=(u_x,u_y)$ and $\vec{v}=(v_x, v_y)$ is 
+
+\begin{align}
+\vec{u} \cdot \vec{v} 	&= u_x v_x + u_y v_y  \label{eq:vdpr1}
+\end{align}
+
+The dot product of vectors $\vec{u}=u_x \ihat + u_y \jhat$ and $\vec{v}=v_x \ihat + v_y \jhat$ is 
+
+\begin{align}
+\vec{u} \cdot \vec{v} 	&= u_xv_x \ihat + u_yv_y \jhat \label{eq:vdpr2}
+\end{align}
+
+\end{definition}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141214-195907] \label{20141214-195907}\index{Example!20141214-195907} \hfill \\
+
+Find the dot product of the vectors $\vec{u}=(-5,12)$ and $\vec{v}=(-7,- 2)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\vec{u} \cdot \vec{v} &= u_x v_x + u_y v_y && \text{VDPr} \eqref{eq:vdpr1} \\
+&=\farg{-5}\farg{-7} + \farg{12}\farg{-2} && \text{SPE} \eqref{eq:spe} \\
+&= 35 + -24  && \text{OOM} \eqref{eq:oom} \\
+&= 11
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141214-194701] \label{20141214-194701}\index{Example!20141214-194701} \hfill \\
+
+Find the dot product of the vectors $\vec{u}=-10\ihat - 10 \jhat$ and $\vec{v}=-9\ihat + 7 \jhat$
+
+\soln
+\solnsteps
+\begin{align*}
+\vec{u} \cdot \vec{v} & = \cBlue{u_x}\cRed{v_x} \ihat + \cBlue{u_y}\cRed{v_y} \jhat && \text{VDPr} \eqref{eq:vdpr2} \\
+&= \farg{-10}\farg{-9}+ \farg{-10}\farg{7} && \text{SPE} \eqref{eq:spe} \\
+&= 90+\neg 70 && \text{OOM} \eqref{eq:oom} \\
+&= 20 && \text{OOA} \eqref{eq:ooa} 
+\end{align*}
+
+
+\end{example}

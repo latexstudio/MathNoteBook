@@ -1,0 +1,209 @@
+%!TEX root = /Users/markholson/Dropbox/+Projects/LatexFiles/MathNotebook/20150312-163541-rs2.2N-MarksMathNotebook
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER 
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\chapter{Integration}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Integration Rules
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Integration Rules}
+
+\begin{arule}[Integral of a Constant (IC)]\index{Integrals! Integral of a Constant}
+\begin{align}
+	\displaystyle \int \! c \, \mathrm{d} x &= cx + k \label{eq:ic}
+\end{align}
+\end{arule}
+
+\begin{arule}[Integral of a Constant Multiple (ICM)]\index{Integrals! Integral of a Constant Multiple}
+\begin{align}
+	\displaystyle \int \! \alert{c}x \, \mathrm{d} x &= \alert{c} \displaystyle \int \! x \, \mathrm{d} x \label{eq:icm}
+\end{align}
+\end{arule}
+
+\begin{arule}[Integral of a Power (IPo)]\index{Integrals! Integral of a Power}
+\begin{align}
+	\displaystyle \int \! x^n \, \mathrm{d} x &=  \dfrac{x^{n+1}}{n+1}  && \text{for} \, x \ne -1 \label{eq:ipo}
+\end{align}
+\end{arule}
+
+\begin{arule}[Integral of a Sum (IS)]\index{Integrals! Integral of a Sum}
+\begin{align}
+	\displaystyle \int \! f(x)+g(x) \, \mathrm{d} x &=  \displaystyle \int \! f(x) \, \mathrm{d} x + \displaystyle \int \! g(x) \, \mathrm{d} x  \label{eq:is}
+\end{align}
+\end{arule}
+
+\begin{example}[id:20141105-172103] \label{20141105-172103} \index{Example!20141105-172103} \hfill \\
+	
+Integrate $\displaystyle \int \! \dfrac{1}{4}x^2-2x+4 \, \mathrm{d} x$ 
+
+\soln
+
+\solnsteps
+\begin{align*}
+\displaystyle \int \! \dfrac{1}{4}x^2-2x+4 \, \mathrm{d} x &= \displaystyle \int \! \dfrac{1}{4}x^2 + \neg 2x+4 \, \mathrm{d} x && \text{DOS} \eqref{eq:dos1} \\
+&= \displaystyle \int \! \dfrac{1}{4}x^2 \, \mathrm{d} x + \displaystyle \int \! \neg 2x \, \mathrm{d} x + \displaystyle \int \! 4 \, \mathrm{d} x && \text{IS} \eqref{eq:is} \\
+&= \dfrac{1}{4}\displaystyle \int \! x^2 \, \mathrm{d} x + \neg 2\displaystyle \int \! x \, \mathrm{d} x + \displaystyle \int \! 4 \, \mathrm{d} x && \text{ICM} \eqref{eq:icm} \\
+&= \dfrac{1}{4}\displaystyle \int \! x^2 \, \mathrm{d} x + \neg 2\displaystyle \int \! x \, \mathrm{d} x + 4(x) + c_1 && \text{IC} \eqref{eq:ic} \\
+&= \dfrac{1}{4} \left( \dfrac{x^3}{3} \right) + c_2 + \neg 2 \left(\dfrac{x^2}{2} \right) + c_3 + 4(x) + c_1 && \text{IPo} \eqref{eq:ipo} \\
+&= \dfrac{x^3}{12} + c_2 - x^2 + c_3 + 4x + c_1 && \text{OOM} \eqref{eq:oom} \\
+&= \dfrac{x^3}{12} - x^2 + 4x + \underbrace{c_1 + c_2 + c_3}_{\text{Just a constant}} && \text{CPA} \eqref{eq:cpa} \\
+&= \dfrac{x^3}{12} - x^2 + 4x + C && \text{OOA} \eqref{eq:ooa} 
+\end{align*}
+
+\qdepend
+
+\qdependlist
+
+example \ref{20141105-144223}-20141105-144223
+
+
+\end{example}
+
+\begin{theorem}[Fundamental Theorem of Calculus (FThmC)]\index{Theorems!Fundamental Theorem of Calculus}
+If $f$ is continuous on the closed interval $[a, b]$ and $F$ is the indefinite integral of $f$ on $[a, b]$, then
+
+\begin{subequations}
+\begin{align}
+\displaystyle \int_{a}^{b} \! f(x) \, \mathrm{d} x 	&= F(b)-F(a) \label{eq:fthmc}\\
+													&= \left[F(x)\right]_{a}^b 
+\end{align}
+\end{subequations}
+\end{theorem}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Volumes of Revolution
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Volumes of Revolution}
+
+\begin{definition}[Volume of Revolution: Method of Disks]\index{Method of Disks}
+Let $f$ be a nonnegative and continuous function on the closed interval $[a,b]$, then the solid of revolution obtained by rotating the curve $f(x)$ about the $x$-axis from $x=a$ to $x=b$ has volume given by
+
+\begin{align}
+V & =\pi \displaystyle \int_{a}^{b} \! [f(x)]^2 \, \mathrm{d} x \label{eq:vrd}
+\end{align}	
+\end{definition}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141105-144223]\label{20141105-144223} \index{Example!20141105-144223} \hfill \\
+	
+Find the volume of the solid formed by rotating the region enclosed by $y=2-\dfrac{x}{2}$ and $y=0$ through $2\pi$ about the $x$-axis on the closed interval $[2, 3]$. 
+
+\soln
+
+\solnsteps
+\begin{align*}
+V & =\pi \displaystyle \int_{a}^{b} \! [f(x)]^2 \, \mathrm{d} x &&\text{VRD}\eqref{eq:vrd} \\
+  & =\pi \displaystyle \int_{2}^{3} \! \farg{2-\dfrac{x}{2}}^2 \, \mathrm{d} x && \text{SPE} \eqref{eq:spe} \\
+  &= \pi \displaystyle \int_{2}^{3} \! \dfrac{1}{4} x^2 + \neg 2 x + 4 \, \mathrm{d} x && \text{simplify:} \text{\, goto \,} \, \ref{20141105-161225} \\
+  &= \pi \left[ \dfrac{x^3}{12} - x^2 + 4x\right]_{2}^{3} && \text{integrate} \text{\, goto \,} \, \ref{20141105-172103} \\
+  &= \pi \left[\dfrac{\farg{3}^3}{12} - \farg{3}^2 + 4\farg{3}- \left(\dfrac{\farg{2}^3}{12} - \farg{2}^2 + 4\farg{2} \right) \right] && \text{FThmC} \eqref{eq:fthmc} \\
+  &= \pi \left(\dfrac{7}{12}\right)  &&\text{evaluate: example} \, \ref{20141106-083703} \\
+  &= \dfrac{7}{12} \pi && \text{CPM} \eqref{eq:cpm}
+\end{align*}
+
+% TODO Add tikz plot
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141106-114907] \label{20141106-114907} \index{Example!20141106-114907} \hfill \\
+	
+Find the volume of the solid formed by rotating the region enclosed by $y=\sqrt{9-x^2}$ and $y=0$ through $2\pi$ about the $x$-axis on the closed interval $[1, 3]$.
+
+\soln
+
+\solnsteps
+\begin{align*}
+V & = \pi \displaystyle \int_{a}^{b} \! [f(x)]^2 \, \mathrm{d} x &&\text{VRD}\eqref{eq:vrd} \\
+  & = \pi \displaystyle \int_{1}^{3} \! \farg{\sqrt{9-x^2}}^2 \, \mathrm{d} x && \text{SPE} \eqref{eq:spe} \\
+  & = \pi \displaystyle \int_{1}^{3} \! 9-x^2 \, \mathrm{d} x && \text{simplify:} \text{\, goto \,} \, \ref{20141107-121834}\\
+  & = \pi \left[9x-\dfrac{x^3}{3} \right]_{1}^{3}  &&\text{integrate} \\ % TODO Create integration example
+  & = \pi \left[9\farg{3}-\dfrac{\farg{3}^3}{3} - \left(9\farg{1}-\dfrac{\farg{1}^3}{3} \right) \right] && \text{FThmC} \eqref{eq:fthmc} \\
+  & = \pi \left(\dfrac{28}{3} \right)  &&\text{evaluate} \\
+  & = \dfrac{28}{3}\pi && \text{CPM} \eqref{eq:cpm}  
+\end{align*}
+
+% TODO Add tikz plot
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141106-122528] \label{20141106-122528} \index{Example!20141106-122528} \hfill \\
+	
+Find the volume of the solid formed by rotating the region enclosed by $y=\sqrt{\sin x}$ and $y=0$ through $2\pi$ about the $x$-axis on the closed interval $\left[\frac{\pi}{2}, \pi \right]$.
+
+\soln
+
+\solnsteps
+\begin{align*}
+V & = \pi \displaystyle \int_{a}^{b} \! [f(x)]^2 \, \mathrm{d} x &&\text{VRD}\eqref{eq:vrd} \\
+  & = \pi \displaystyle \int_{\pi/2}^{\pi} \! \farg{\sqrt{\sin} \theta}^2 \, \mathrm{d} \theta && \text{SPE} \eqref{eq:spe} \\
+  & = \pi \displaystyle \int_{\pi/2}^{\pi} \! \sin \theta  \, \mathrm{d} \theta && \text{PoPo} \eqref{eq:popo1} \\
+  & = \pi \left[ -1 \cos \theta \right]_{\pi/2}^{\pi}  &&\text{integrate} \\
+  & = \pi \left[-1\cos \farg{\pi}- \left(-1\cos \farg{\dfrac{\pi}{2}} \right) \right] && \text{FThmC} \eqref{eq:fthmc} \\
+  & = \pi (1)  &&\text{evaluate} \\
+  & = \pi && \text{MId} \eqref{eq:mid2}  
+\end{align*}
+
+% TODO Add tikz plot
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141108-083108] \label{20141108-083108} \index{Example!20141108-083108} \hfill \\
+
+Find the volume of the solid formed by rotating the region enclosed by $y=\sqrt{2-x^2}$ and $y=0$ through $2\pi$ about the $x$-axis.
+
+\soln
+\solnsteps
+
+
+Since no closed interval is stated, we will need to find where the curves $y=\sqrt{2-x^2}$ and $y=0$ intersect to determine the closed interval.  Solving this system of equations (see example \ref{20141107-131748}), we find that $x=\pm \sqrt{2}$.
+
+\begin{align*}
+V & = \pi \displaystyle \int_{a}^{b} \! [f(x)]^2 \, \mathrm{d} x &&\text{VRD}\eqref{eq:vrd} \\
+&= \pi \displaystyle \int_{-\sqrt{2}}^{\sqrt{2}} \! \farg{\sqrt{2-x^2}}^2 \, \mathrm{d} x \\ % TODO Justify step
+&= \pi \displaystyle \int_{-\sqrt{2}}^{\sqrt{2}} \! 2-x^2 \, \mathrm{d} x && \text{PoPo} \eqref{eq:popo1} \\
+&= \pi \left[2x-\dfrac{x^3}{3} \right]_{-\sqrt{2}}^{\sqrt{2}}  &&\text{integrate} \\ % TODO add example
+&= \pi \left[2\farg{\sqrt{2}}-\dfrac{\farg{\sqrt{2}}^3}{3}-\left(2\farg{-\sqrt{2}}-\dfrac{\farg{-\sqrt{2}}^3}{3} \right) \right] && \text{FThmC} \eqref{eq:fthmc} \\
+&= \pi \left(\dfrac{8}{2} \sqrt{2}\right)  &&\text{simplify} \text{\, goto \,} \, \ref{20141107-121834}\\
+&= \dfrac{8}{2} \pi \sqrt{2} && \text{CPM} \eqref{eq:cpm} 
+\end{align*}
+
+% TODO Add tikz plot
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141125-084541] \label{20141125-084541}\index{Example!20141125-084541} \hfill \\
+
+Find the volume of the solid formed by rotating the region enclosed by $y=\sqrt{2-x^2}$ and $y=0$ through $2\pi$ about the $x$-axis.
+
+\soln
+\solnsteps
+
+Since no closed interval is stated, we will need to find where the curves $y=4-x^2$ and $y=0$ intersect to determine the closed interval.  Solving this system of equations (see the similar example \ref{20141107-131748}), we find that $x=\pm 2$. \\
+
+
+Since the parabolar $y=4-x^2$ is symmetric about the $y$-axis, we can find the volume on the closed interval [0,2] and multiply this by a factor of two to include the volume on the closed interval [-2,0].
+ 
+\soln
+
+\solnsteps
+\begin{align*}
+V & = 2 \cdot \pi \displaystyle \int_{a}^{b} \! [f(x)]^2 \, \mathrm{d} x &&\text{VRD}\eqref{eq:vrd} \\
+&= 2 \cdot \pi \displaystyle \int_{0}^{2} \! \farg{4-x^2}^2 \, \mathrm{d} x \\ % TODO Justify step
+&= 2 \cdot \pi \displaystyle \int_{0}^{2} \! x^4-8x^2+16 \, \mathrm{d} x  \\ % TODO Justify step
+&= 2 \cdot \pi \left[\dfrac{x^5}{5}-\dfrac{8x^3}{3}+16x \right]_{0}^{2} \\ % TODO Justify step
+&= 2 \cdot \pi \left( \dfrac{\farg{2}^5}{5}-\dfrac{8\farg{2}^3}{3}+16\farg{2} \right) && \text{FThmC} \eqref{eq:fthmc} \\
+&= \dfrac{512 \pi}{15}
+\end{align*}
+\end{example}

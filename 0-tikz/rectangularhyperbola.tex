@@ -9,11 +9,11 @@
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
 			restrict y to domain=-20:20
           ]
-          \addplot [dashed, stockholmPink, smooth] plot coordinates {(-2,4) (-2,-4)}; %% {.451};
+          \addplot [dashed, sthlmRed, smooth] plot coordinates {(-2,4) (-2,-4)}; %% {.451};
 
-          \addplot [very thick, stockholmBlue, smooth] {1/(x+2)};
+          \addplot [very thick, sthlmBlue, smooth] {1/(x+2)};
 
-          \node at (axis cs:-5.7,3.8) [anchor=west] {\color{stockholmPink}Vertical Asymptote};  
+          \node at (axis cs:-5.7,3.8) [anchor=west] {\color{sthlmRed}Vertical Asymptote};  
 
         \end{axis}
 \end{tikzpicture}

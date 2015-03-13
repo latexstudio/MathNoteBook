@@ -1,0 +1,477 @@
+%!TEX root = /Users/markholson/Dropbox/+Projects/LatexFiles/MathNotebook/20150312-163541-rs2.2N-MarksMathNotebook
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER 
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\chapter{Differentiation}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Limit of the Difference Quotient}
+
+%-=-=-= DEFINITION
+\begin{definition}[Derivative]\index{Derivative}
+
+The derivative of a function $f(x)$ with respect to the variable $x$ is defined as 
+\begin{align}
+f'(\cBlue{x}) & \equiv \displaystyle \lim_{\cRed{\Delta x} \to 0} \underbrace{\dfrac{f(\cBlue{x}+\cRed{\Delta x})-f(\cBlue{x})}{\cRed{\Delta x}}}_{\text{Difference Quotient}} \label{eq:dbfp1} 
+\end{align}
+
+\end{definition}
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=0:2, range=0:6,ymax=6,ymin=0,
+            axis lines =left, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            xtick={1,1.666}, ytick={1,3},
+            xticklabels={$x$,$x+\Delta x$}, yticklabels={$f(x)$,$f(x+\Delta x)$},
+            axis on top,
+          ]         
+          \addplot [sthlmRed!15, domain=(0:2)] {-3.348+4.348*x};
+          \addplot [sthlmRed!32, domain=(0:2)] {-2.704+3.704*x};
+          \addplot [sthlmRed!49, domain=(0:2)] {-1.994+2.994*x};         
+          \addplot [sthlmRed!66, domain=(0:2)] {-1.326+2.326*x}; 
+          \addplot [sthlmRed!83, domain=(0:2)] {-0.666+1.666*x};
+	  \addplot [sthlmDarkGrey,dashed] plot coordinates {(1,0) (1,1)};
+          \addplot [sthlmDarkGrey,dashed] plot coordinates {(0,1) (1,1)};
+          \addplot [sthlmDarkGrey,dashed] plot coordinates {(0,3) (1.666,3)};
+          \addplot [sthlmDarkGrey,dashed] plot coordinates {(1.666,0) (1.666,3)};
+          \addplot [very thick,sthlmBlue, smooth,domain=(0:1.833)] {-1/(x-2)};
+          \addplot[color=sthlmDarkGrey,fill=sthlmDarkGrey,only marks,mark=*] coordinates{(1.666,3)};  %% closed hole          
+          \addplot[color=sthlmDarkGrey,fill=sthlmDarkGrey,only marks,mark=*] coordinates{(1,1)};  %% closed hole          
+          \addplot [very thick,sthlmRed, smooth,domain=(0:2)] {x};
+        \end{axis}
+\end{tikzpicture}
+\caption{\cite{mooculus:textbook}}
+\end{figure}
+%-=-=-= EXAMPLE
+\begin{example}[id:20141219-212546] \label{20141219-212546}\index{Example!20141219-212546} \hfill \\
+
+Differentiate the function $f(x)=5$
+
+\soln
+
+\solnsteps
+\begin{align*}
+f(x) & = 5x^0 && \text{PoID} \eqref{eq:poid1} \\
+f'(x) &= \displaystyle \lim_{\Delta x \to 0} \dfrac{5\farg{x+\Delta x}^0-5\farg{x}^0}{\Delta x} && \text{SPE} \eqref{eq:spe} \& \text{DBFP} \eqref{eq:dbfp1}\\
+f'(x) &= \displaystyle \lim_{\Delta x \to 0} \dfrac {5(1)-5(1)}{\Delta x} && \text{PoID} \eqref{eq:poid2} \\
+f'(x) &= \displaystyle \lim_{\Delta x \to 0} 0 && \text{OOM} \eqref{eq:oom} \\
+f'(x) &= 0 % TODO Evaluate the limit
+\end{align*}
+
+\end{example}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Derivative of a Monomial Functions}
+
+\begin{arule}[Derivative of a Constant (DC)]\index{Derivatives! Derivative of a Constant}
+\begin{align}
+	\left[c \right]' &= 0 \label{eq:dc1} \\
+	\dfrac{\dd}{\dx} \left[c \right]&=0  \label{eq:dc2}
+\end{align}
+\end{arule}
+
+\begin{arule}[Derivative of a Constant Multiple (DCM)]\index{Derivatives! Derivative of a Constant Multiple}
+\begin{align}
+	\left[c f(x) \right]' &= c \left[f(x)\right]' \label{eq:dcm1} \\
+	\dfrac{\dd}{\dx}\left[c f(x) \right] &= c \dfrac{\dd}{\dx}\left[f(x)\right]  \label{eq:dcm2}
+\end{align}
+\end{arule}
+
+\begin{arule}[Derivative of a Power (DPo)]\index{Derivatives! Derivative of a Power}
+\begin{align}
+	\left[x^n \right]'&= n x^{n-1} \label{eq:dpo1} \\
+	\dfrac{\dd}{\dx} \left[x^n \right] &= n x^{n-1}  \label{eq:dpo2}
+\end{align}
+\end{arule}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141124-153017] \label{20141124-153017}\index{Example!20141124-153017} \hfill \\
+
+Differentiate $f(x)=-3$
+
+\soln
+
+\solnsteps
+\begin{align*}
+f'(x) &= [-3]' && \text{SPE} \eqref{eq:spe} \\
+f'(x) &= 0 && \text{DC} \eqref{eq:dc1} 
+\end{align*}
+
+\qdepend
+
+\qdependlist
+
+example \ref{20141124-152503}-20141124-152503
+
+
+\end{example}
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141124-141850] \label{20141124-141850}\index{Example!20141124-141850} \hfill \\
+
+Differentiate $f(x)=x^2$
+
+\soln
+
+\solnsteps
+\begin{align*}
+f'(x) &= \left[x^2\right]' && \text{SPE} \eqref{eq:spe} \\
+f'(x) &= \cRed{2}x^{\cRed{2-1}} && \text{DPo} \eqref{eq:dpo1} \\
+f'(x) &= 2x^1 && \text{OOA} \eqref{eq:ooa} \\
+f'(x) &= 2x && \text{MId} \eqref{eq:mid2} 
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+f'(x) & = 2x && \text{DPo} \eqref{eq:dpo1}  
+\end{align*}
+
+\qdepend
+
+\qdependlist
+
+example \ref{20141124-152503}-20141124-152503
+
+
+
+\end{example}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Derivative of Polynomial Functions}
+
+\begin{arule}[Derivative of a Sum (DS)]\index{Derivatives! Derivative of a Sum}
+\begin{align}
+	[f(x) + g(x)]' &= f'(x) + g'(x) \label{eq:ds1} \\
+	\dfrac{\dd}{\dx} \left[f(x) + g(x) \right] &= \dfrac{\dd}{\dx} \left[f(x) \right] + \dfrac{\dd}{\dx} \left[g(x) \right]  \label{eq:ds2}
+\end{align}
+\end{arule}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141124-152503] \label{20141124-152503}\index{Example!20141124-152503} \hfill \\
+
+Differentiate $f(x)=x^2-3$
+
+\soln
+
+\solnsteps
+\begin{align*}
+f(x) &= x^2 + \neg 3 && \text{DOS} \eqref{eq:dos1} \\
+f'(x) &= \farg{x^2 + \neg 3}' && \text{SPE} \eqref{eq:spe} \\
+f'(x) &= \farg{x^2}' + \farg{\neg 3}' && \text{DS} \eqref{eq:ds1} \\
+f'(x) &= \farg{x^2}' + 0 && \text{DC} \eqref{eq:dc1} \\
+f'(x) &= \farg{x^2}' && \text{AId} \eqref{eq:aid1} \\
+f'(x) &= 2x && \text{DPo} \eqref{eq:dpo1}  \text{\, goto \,}  \ref{20141124-141850} 
+\end{align*}
+
+\soln
+
+\lesssteps
+
+\begin{align*}
+f(x) & = 2x^2 && \text{DPo} \eqref{eq:dpo1} \& \text{DC} \eqref{eq:dpo1} 
+\end{align*}
+
+\qdepend
+
+\qdependlist
+
+example \ref{20141124-205219}-20141124-205219
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141128-151834] \label{20141128-151834}\index{Example!20141128-151834} \hfill \\
+
+Differentiate $f(x)=3x^2-6x+4$
+
+\soln
+
+\solnsteps
+\begin{align*}
+f(x) &= 3x^2 + \neg 6x + 4 && \text{DOS} \eqref{eq:dos1} \\
+f'(x) &= \farg{3x^2 + \neg 6x + 4}' && \text{SPE} \eqref{eq:spe} \\
+f'(x) &= \farg{3x^2}' + \farg{6x}' + \farg{4}' && \text{DS} \eqref{eq:ds1} \\
+f'(x) &= \farg{3x^2}' + \farg{6x}' + 0 && \text{DC} \eqref{eq:dc1} \\
+f'(x) &= \farg{3x^2}' + \farg{6x}' && \text{AId} \eqref{eq:aid1} \\
+f'(x) &= 3\farg{x^2}' + 6\farg{x}' && \text{DCM} \eqref{eq:dcm1} \\
+f'(x) &= 3 \left(2x \right) + 6 \left(1\right) && \text{DPo} \eqref{eq:dpo1} \\
+f'(x) &= 6x+6 && \text{OOM} \eqref{eq:oom} 
+\end{align*}
+
+\soln
+\lesssteps
+\begin{align*}
+f'(x) & = 6x+6 && \text{DS} \eqref{eq:ds1}  
+\end{align*}
+\end{example}
+
+
+\begin{arule}[Derivative of a Product (DPr)]\index{Derivatives! Derivative of a Product}
+\begin{align}
+	\left[f(x)g(x) \right]' &= \cRed{f'(x)}g(x) + f(x)\cRed{g'(x)} \label{eq:dpr1} \\
+	\dfrac{\dd}{\dx} \left[f(x)g(x) \right] &= \cRed{\dfrac{\dd}{\dx} \left[f(x) \right]}g(x) + f(x)\cRed{\dfrac{\dd}{\dx} \left[g(x)\right]}  \label{eq:dpr2}
+\end{align}
+\end{arule}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141209-144203] \label{20141209-144203}\index{Example!20141209-144203} \hfill \\
+
+Differentiate $f(x)=x^2(2x+4)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+f'(x)&= \farg{x^2(2x+4)}' && \text{SPE} \eqref{eq:spe} \\
+f'(x)&= \farg{x^2}'(2x+4)+x^2\farg{2x+4}' && \text{DPr} \eqref{eq:dpr1} \\
+f'(x)&= \farg{x^2}'(2x+4)+x^2\farg{2x}+\farg{4}' && \text{DS} \eqref{eq:ds1} \\
+f'(x)&= \farg{x^2}'(2x+4)+x^2 \cdot 2 \farg{x}+\farg{4}' && \text{DCM} \eqref{eq:dcm1} \\
+f'(x)&= 2x(2x+4)+ x^2\cdot 2 \cdot 1 + \farg{4}' && \text{DPo} \eqref{eq:dpo1} \\
+f'(x)&= 2x(2x+4)+ x^2\cdot 2 \cdot 1 + 0 && \text{DC} \eqref{eq:dc1} \\
+f'(x)&= 6x^2+8x && \text{simplify} \text{\, goto \,} \, \ref{20141209-145211}\\
+\end{align*}
+\end{example}
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141209-142321] \label{20141209-142321}\index{Example!20141209-142321} \hfill \\
+
+Differentiate $f(x)=x^2 \cos(x)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+f'(x)&= \farg{x^2 \cos(x)}' && \text{SPE} \eqref{eq:spe} \\
+f'(x)&= \farg{x^2}' \cos(x) + x^2 \farg{\cos (x)}' && \text{DPr} \eqref{eq:dpr1} \\
+f'(x)&= 2x \cos (x) + x^2 \farg{\cos (x)}' && \text{DPo} \eqref{eq:dpo1} \\
+f'(x)&= 2x \cos (x) + x^2 (-1 \sin(x)) && \text{DCos} \eqref{eq:dcos1} \\
+f'(x)&= 2x \cos (x) - x^2 \sin x && \text{OOM} \eqref{eq:oom} 
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141209-151354] \label{20141209-151354}\index{Example!20141209-151354} \hfill \\
+
+Differentiate $f(x)=\sin(x)\sin(x)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+f'(x) &= \farg{\sin(x)\sin(x)} && \text{SPE} \eqref{eq:spe} \\
+f'(x) &= \farg{\sin(x)}' \sin(x) + \sin (x) \farg{\sin(x)} && \text{DPr} \eqref{eq:dpr1} \\
+f'(x) &= \cos(x) \sin(x) + \sin (x) \cos(x) && \text{DSin} \eqref{eq:dsin1} \\
+f'(x) &= \cos(x)\sin(x) + \cos(x)\sin(x) && \text{CPM} \eqref{eq:cpm} \\
+f'(x) &= 2\cos(x)\sin(x) && \text{OOA} \eqref{eq:ooa} % TODO Simplifying trigonometric expressions
+\end{align*}
+\end{example}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Derivative of Rational Functions}
+
+
+\begin{arule}[Derivative of a Quotient (DQ)]\index{Derivatives! Derivative of a Quotient}
+\begin{align}
+	\left[ \dfrac{f(x)}{g(x)} \right]' &= \dfrac{f'(x)g(x)-f(x)g'(x)}{\left[g(x)\right]^2} \label{eq:drf1} \\
+	\dfrac{\dd}{\dx} \left[ \dfrac{f(x)}{g(x)} \right] & = \dfrac{\dfrac{\dd}{\dx}\left[f(x)\right]g(x)-f(x) \dfrac{\dd}{\dx} \left[g(x)\right] }{\left[g(x)\right]^2}  \label{eq:drf2}
+\end{align}
+\end{arule}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Derivative of Trigonometric Functions}
+
+\begin{arule}[Derivative of Sine (DSin)]\index{Derivatives! Derivative of Sine}
+\begin{align}
+	\left[ \sin(x) \right]' &= \cos (x) \label{eq:dsin1} \\
+	\dfrac{\dd}{\dx} \left[ \sin(x) \right] & = \cos (x)  \label{eq:dsin2}
+\end{align}
+\end{arule}
+
+
+\begin{arule}[Derivative of Cosine (DCos)]\index{Derivatives! Derivative of Cosine}
+\begin{align}
+	\left[ \cos(x) \right]' &= -\sin (x) \label{eq:dcos1} \\
+	\dfrac{\dd}{\dx} \left[ \cos(x) \right] & = -\sin (x)  \label{eq:dcos2}
+\end{align}
+\end{arule}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Derivative of Exponential Functions}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Derivative of Logarithmic Functions}
+
+\begin{arule}[Derivative of a Natural Logarithm (DNL)]\index{Derivatives! Derivative of a Natural Logarithm}
+\begin{align}
+	\left[\ln x \right]' &= \frac{1}{x} \label{eq:dnl1} \\
+	\dfrac{\dd}{\dx} \left[\ln x \right] &= \frac{1}{x}  \label{eq:dnl2}
+\end{align}
+\end{arule}
+
+
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Derivative of Composite Functions}
+
+
+\begin{arule}[Derivative of a Composite Function (DComp)]\index{Derivatives! Derivative of a Composite Function}
+\begin{align}
+	\left[f \left( \cRed{g(x)} \right) \right]' &= \left[\cRed{g(x)} \right]' \left[f\left(\cRed{g(x)}\right)\right]' \label{eq:dcf1} \\
+	\dfrac{\dd}{\dx} \left[f \left( \cRed{g(x)} \right) \right] &= \dfrac{\dd}{\dx} \left[\cRed{g(x)} \right] \dfrac{\dd}{\dx} \left[f\left(\cRed{g(x)}\right)\right]  \label{eq:dcf2}
+\end{align}
+\end{arule}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141124-203850] \label{20141124-203850}\index{Example!20141124-203850} \hfill \\
+
+Differentiate $y=\ln (3x)$
+
+\soln
+
+\solnsteps
+
+After identifying that $y=\ln (\cRed{3x})$ is a composite function, we let $\cRed{u=3x}$ and thus we get a new function $y=\ln (\cRed{u})$.\\
+
+Using chain rule, 
+\begin{align*}
+\dydx &= \cBlue{\dydu} \cdot \cPurple{\dudx} && \text{DComp} \eqref{eq:dcf2}
+\end{align*}
+
+We need to find the factors $\cBlue{\dydu}$ and $\cPurple{\dudx}$.
+
+\begin{alignat*}{2}
+		y &= \ln (\cRed{u})				&\quad	 		\cRed{u}		&= 3x \\
+	\cBlue{\dydu} &= \dfrac{1}{u}		&\quad 	 \cPurple{\dudx}	 &= 3 
+\end{alignat*}
+
+\begin{align*}
+\dydx &= \cBlue{\dydu} \cdot \cPurple{\dudx} && \text{DComp} \eqref{eq:dcf2} \\
+\dydx &= \dfrac{1}{\cRed{u}} \cdot \dudx && \text{DNL} \eqref{eq:dnl1} \\
+\dydx &= \dfrac{1}{\cRed{u}} \cdot 3 && \text{DPo} \eqref{eq:dpo1} \\
+\dydx &= \dfrac{1}{\cRed{3x}} \cdot 3 \\	% TODO variable subsitution 
+\dydx &= \dfrac{3}{3x} && \text{OOM} \eqref{eq:oom} \\
+\dydx &= \dfrac{1}{x} % TODO reduce fraction
+\end{align*}
+
+\qdepend
+
+\qdependlist
+
+example \ref{20141124-205219}-20141124-205219
+
+\end{example}
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141128-160248] \label{20141128-160248}\index{Example!20141128-160248} \hfill \\
+
+Differentiate $y=\ln(3x^2-6x+4)$
+
+\soln
+
+\solnsteps
+After identifying that $y=\ln (\cRed{3x^2-6x+4})$ is a composite function, we let \\
+$\cRed{u=3x^2-6x+4}$ and thus we get a new function $y=\ln (\cRed{u})$.\\
+
+Using chain rule, 
+\begin{align*}
+\dydx &= \cBlue{\dydu} \cdot \cPurple{\dudx} && \text{DComp} \eqref{eq:dcf2}
+\end{align*}
+
+We need to find the factors $\cBlue{\dydu}$ and $\cPurple{\dudx}$.
+
+\begin{alignat*}{3}
+		y &= \ln (\cRed{u})				&\quad	 			\cRed{u} 	&= 3x^2-6x+4 	&\quad\\
+	\cBlue{\dydu} &= \dfrac{1}{u}		&\quad 	 \cPurple{\dudx}	 &= 6x-6 		&\quad \text{\, goto \,} \, \ref{20141128-151834}
+\end{alignat*}
+
+\begin{align*}
+\dydx &= \cBlue{\dydu} \cdot \cPurple{\dudx} && \text{DComp} \eqref{eq:dcf2} \\
+\dydx &= \dfrac{1}{\cRed{u}} \cdot \dudx && \text{DNL} \eqref{eq:dnl1} \\
+\dydx &= \dfrac{1}{\cRed{u}} \cdot (6x-6) && \text{DPo} \eqref{eq:dpo1} \\
+\dydx &= \dfrac{1}{\cRed{3x^2-6x+4}} \cdot (6x-6) \\	% TODO variable subsitution 
+\dydx &= \dfrac{6x-6}{3x^2-6x+4} && \text{OOM} \eqref{eq:oom} 
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141128-155506] \label{20141128-155506}\index{Example!20141128-155506} \hfill \\
+
+Differentiate $y=\ln(\cos x)$
+
+\soln
+
+\solnsteps
+After identifying that $y=\ln (\cRed{\cos x})$ is a composite function, we let $\cRed{u=\cos x}$ and thus we get a new function $y=\ln (\cRed{u})$.\\
+
+Using chain rule, 
+\begin{align*}
+\dydx &= \cBlue{\dydu} \cdot \cPurple{\dudx} && \text{DComp} \eqref{eq:dcf2}
+\end{align*}
+
+We need to find the factors $\cBlue{\dydu}$ and $\cPurple{\dudx}$.
+
+\begin{alignat*}{2}
+		y &= \ln (\cRed{u})				&\quad	 		\cRed{u}		&= \cos x \\
+	\cBlue{\dydu} &= \dfrac{1}{u}		&\quad 	 \cPurple{\dudx}	 &= - \sin x 
+\end{alignat*}
+
+\begin{align*}
+\dydx &= \cBlue{\dydu} \cdot \cPurple{\dudx} && \text{DComp} \eqref{eq:dcf2} \\
+\dydx &= \dfrac{1}{\cRed{u}} \cdot \dudx && \text{DNL} \eqref{eq:dnl1} \\
+\dydx &= \dfrac{1}{\cRed{u}} \cdot - \sin x && \text{DPo} \eqref{eq:dpo1} \\
+\dydx &= \dfrac{1}{\cRed{\cos x}} \cdot - \sin x \\	% TODO variable subsitution 
+\dydx &= \dfrac{-\sin x}{\cos x} && \text{OOM} \eqref{eq:oom} \\
+\dydx &= -\tan x % TODO reduce fraction
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141124-205219] \label{20141124-205219}\index{Example!20141124-205219} \hfill \\
+
+Differentiate $y=\left(x^2-1 \right) \ln(3x)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+y' &= \farg{x^2-3}' \cdot \ln x + \left(x^2-3\right) \cdot \farg{\ln 3x}' && \text{DPr} \eqref{eq:dpr1} \\
+y' &= 2x \cdot \ln x + \left(x^2-3\right) \cdot \farg{\ln 3x}' && \text{differentiate} \text{\, goto \,} \, \ref{20141124-152503} \\
+y' &= 2x \cdot \ln x + \left(x^2-3\right) \cdot \dfrac{1}{x}  &&\text{differentiate} \text{\, goto \,} \, \ref{20141124-203850}\\
+y' &= 2x \cdot \ln x + \dfrac{x^2-3}{x} && \text{OOM} \eqref{eq:oom} \\
+y' &= 2x^2 \ln x +\dfrac{x^2-3}{x} && \text{JTC} \eqref{eq:jtc} \\
+y' &= \dfrac{2x^2 \ln x + \left(x^2-3\right)}{x} && \text{OOA} \eqref{eq:ooa} 
+\end{align*}
+\end{example}
+
+
+

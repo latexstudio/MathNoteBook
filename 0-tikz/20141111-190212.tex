@@ -9,11 +9,11 @@
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
 			restrict y to domain=-20:20
           ]
-          \addplot [dashed, stockholmPink, smooth] plot coordinates {(-8,10) (-8,-10)}; %% {.451};
+          \addplot [dashed, sthlmRed, smooth] plot coordinates {(-8,10) (-8,-10)}; %% {.451};
 
-          \addplot [very thick, stockholmBlue, smooth] {7/(x+8)};
+          \addplot [very thick, sthlmBlue, smooth] {7/(x+8)};
 
-          \node at (axis cs:-17.7,5.8) [anchor=west] {\color{stockholmPink}$x_{va}=-8$};  
+          \node at (axis cs:-17.7,5.8) [anchor=west] {\color{sthlmRed}$x_{va}=-8$};  
 
         \end{axis}
 \end{tikzpicture}

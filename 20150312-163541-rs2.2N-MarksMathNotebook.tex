@@ -1,0 +1,197 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 2.0 (9/2/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Compiling this template:
+% This template uses biber for its bibliography and makeindex for its index.
+% When you first open the template, compile it from the command line with the 
+% commands below to make sure your LaTeX distribution is configured correctly:
+%
+% 1) pdflatex main
+% 2) makeindex main.idx -s StyleInd.ist
+% 3) biber main
+% 4) pdflatex main x 2
+%
+% After this, when you wish to update the bibliography/index use the appropriate
+% command above and make sure to compile with pdflatex several times 
+% afterwards to propagate your changes to the document.
+%
+% This template also uses a number of packages which may need to be
+% updated to the newest versions for the template to compile. It is strongly
+% recommended you update your LaTeX distribution if you have any
+% compilation errors.
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+%----------------------------------------------------------------------------------------
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	TIKZ LIBRARIES
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\input{tikz-libraries}
+\input{tikz-factor}
+\input{tikz-workflowsetup}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	MATH COMMANDS
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
+\newcommand{\limit}{\displaystyle\lim}
+\newcommand{\impart}{\textrm{Im}}
+\newcommand{\repart}{\textrm{Re}}
+\newcommand{\integer}{\mathbb{Z}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\degree}{^{\circ}}
+\newcommand{\rad}{\unit{rad}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\dx}{\mathrm{d}x}
+\newcommand{\dy}{\mathrm{d}y}
+\newcommand{\dr}{\mathrm{d}r}
+\newcommand{\dtheta}{\mathrm{d}\theta}
+\newcommand{\dydx}{\dfrac{\mathrm{d}y}{\mathrm{d}x}}
+\newcommand{\dydt}{\dfrac{\mathrm{d}y}{\mathrm{d}t}}
+\newcommand{\dydu}{\dfrac{\mathrm{d}y}{\mathrm{d}u}}
+\newcommand{\dudx}{\dfrac{\mathrm{d}u}{\mathrm{d}x}}
+\newcommand{\dxdt}{\dfrac{\mathrm{d}x}{\mathrm{d}t}}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\farg}[1]{{\color{sthlmBlue}{\left[\boldsymbol{#1}\right]}}}
+\newcommand{\chide}[1]{{\color{sthlmDarkGrey}{#1}}}
+\newcommand{\sname}[1]{\texttt{#1}}
+\newcommand{\inv}{^{-1}}
+\newcommand{\cb}{$\Box$}
+\newcommand{\lesssteps}{\cGreen{\textbf{Less Steps Solution:}}}
+\newcommand{\solnsteps}{\cGreen{\textbf{Solution:}}}
+\newcommand{\qdependlist}{\cDarkGrey{\textbf{Dependencies:}}}
+\newcommand{\suchthat}{\;\ifnum\currentgrouptype=16 \middle\fi|\;}
+% used in tables
+\newcommand{\cellyes}{\cellcolor{sthlmGreen!30}Yes}  
+\newcommand{\cellno}{\cellcolor{sthlmRed!30}No}  
+\newcommand{\ihat}{\hat{\imath}}
+\newcommand{\jhat}{\hat{\jmath}} 
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\coordinate [below=12cm] (midpoint) at (current page.north);
+\node at (current page.north west)
+{\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{Pictures/background}}; % Background image
+\draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering \cDarkGrey{Mathematics Notebook}\\[15pt] % Book title
+{\cDarkGrey{\Large http://hendryolson.com}}\\[20pt] % Subtitle
+{\cDarkGrey{\huge Mark Olson}}}}; % Author name
+\end{tikzpicture}};
+\end{tikzpicture}
+\vfill
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+%~\vfill
+%\thispagestyle{empty}
+
+%\noindent Copyright \copyright\ 2013 John Smith\\ % Copyright notice
+
+%\noindent \textsc{Published by Publisher}\\ % Publisher
+
+%\noindent \textsc{book-website.com}\\ % URL
+
+%\noindent Licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License (the ``License''). You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{http://creativecommons.org/licenses/by-nc/3.0}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ % License information
+
+%\noindent \textit{First printing, March 2013} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_head_1.pdf} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{fancy} % Print headers again
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{MYP}
+%\include{chapter-myp-arithmeticexpressions}
+\include{chapter-myp-algebraicexpressions}
+\include{chapter-myp-univariatepolynomialexpressions}
+\include{chapter-myp-multivariatepolynomialexpressions}
+\include{chapter-myp-algebraicequations}
+%\part{Base Year}
+
+\part{DP-SL}
+\include{chapter-dpsl-functions}
+%\include{chapter-dpsl-vectors}
+\include{chapter-dpsl-differentiation}
+\include{chapter-dpsl-integration}
+%\include{chapter-gy2011}
+%\include{chapter-formatexamples}
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\chapter*{Bibliography}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
+\section*{Books}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
+\section*{Website}
+\addcontentsline{toc}{section}{Websites}
+\printbibliography[heading=bibempty,type=misc]
+\section*{Articles}
+\addcontentsline{toc}{section}{Articles}
+\printbibliography[heading=bibempty,type=article]
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage
+\phantomsection
+\setlength{\columnsep}{0.75cm}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
+\printindex
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
