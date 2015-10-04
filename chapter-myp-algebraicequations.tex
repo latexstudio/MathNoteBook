@@ -1,11 +1,13 @@
-%!TEX root = /Users/markholson/Dropbox/+Projects/LatexFiles/MathNotebook/20150312-163541-rs2.2N-MarksMathNotebook
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %
-%	CHAPTER 
+%	CHAPTER
 %
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\chapterimage{chapter_head_2.pdf} % Chapter heading image
+\chapterimage{Pictures/chapter_head_2.pdf} % Chapter heading image
 
 \chapter{Equations}
 
@@ -19,7 +21,7 @@
 \begin{property}[Reflexive Property of Eqaulity (RPE)]\index{Reflexive Property of Equality}
 \begin{subequations}
 \begin{align}
-a &= a \label{eq:rpe} 
+a &= a \label{eq:rpe}
 \end{align}
 \end{subequations}
 \end{property}
@@ -27,9 +29,9 @@ a &= a \label{eq:rpe}
 %-=-=-= PROPERTY
 \begin{property}[Substitution Property of Equality (SPE)]\index{Substitution Property of Equality} \hfill \\
 
-Given $a=b$, then 
+Given $a=b$, then
 \begin{align}
-E(a) &= E(b) \label{eq:spe} 
+E(a) &= E(b) \label{eq:spe}
 \end{align}
 $E(x)$ represents any expression.
 \end{property}
@@ -38,7 +40,7 @@ $E(x)$ represents any expression.
 \begin{property}[Symmetric Property of Equality (SyPE)]\index{Symmetric Property of Equality}
 \begin{subequations}
 \begin{align}
-a =b \quad \text{then} \quad b=a \label{eq:sype} 
+a =b \quad \text{then} \quad b=a \label{eq:sype}
 \end{align}
 \end{subequations}
 \end{property}
@@ -47,7 +49,7 @@ a =b \quad \text{then} \quad b=a \label{eq:sype}
 \begin{property}[Transitive Property of Equality (TPE)]\index{Transitive Property of Equality}
 \begin{subequations}
 \begin{align}
-\text{if} \quad a =b \quad \text{and} \quad b=c \quad \text{then} \quad a =c \label{eq:tpe} 
+\text{if} \quad a =b \quad \text{and} \quad b=c \quad \text{then} \quad a =c \label{eq:tpe}
 \end{align}
 \end{subequations}
 \end{property}
@@ -72,10 +74,10 @@ Solve the equation $x+a=b$ for $x$
 \solnsteps
 \begin{align*}
 \farg{x+a} + \neg a  &= \farg{b} + \neg a  && \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
-x + (a+\neg a) &= b + \neg a  && \text{APA} \eqref{eq:apa2} \\ 
+x + (a+\neg a) &= b + \neg a  && \text{APA} \eqref{eq:apa2} \\
 x + 0 &= b + \neg a  && \text{OOA} \eqref{eq:ooa} \\
 x &= b + \neg a  && \text{AId} \eqref{eq:aid2} \\
-x &= b-a  && \text{DOS} \eqref{eq:dos2} 
+x &= b-a  && \text{DOS} \eqref{eq:dos2}
 \end{align*}
 \end{example}
 
@@ -93,7 +95,7 @@ Solve the equations $x+8=0$
 x+(8+\neg 8) &= 0 + \neg 8 && \text{APA} \eqref{eq:apa2} \\
 x+0 &= \neg 8 && \text{OOA} \eqref{eq:ooa} \\
 x &= \neg 8 && \text{AId} \eqref{eq:aid2} \\
-x &= -8 && \text{ONeg} \eqref{eq:oneg2} 
+x &= -8 && \text{ONeg} \eqref{eq:oneg2}
 \end{align*}
 
 \soln
@@ -101,10 +103,10 @@ x &= -8 && \text{ONeg} \eqref{eq:oneg2}
 \lesssteps
 \begin{align*}
 \farg{x+8}+\neg 8 &= \farg{0}+\neg 8 && \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
-x &= - 8 && \text{OOA} \eqref{eq:ooa} 
+x &= - 8 && \text{OOA} \eqref{eq:ooa}
 \end{align*}
 
-\qdepend 
+\qdepend
 
 \qdependlist
 
@@ -124,7 +126,7 @@ Solve the equation $x+4=7$
 \farg{x +4} + \neg 4  &= \farg{7} + \neg 4  && \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
 x + (4+\neg 4) &= 7 + \neg 4  && \text{APA} \eqref{eq:apa2} \\
 x + 0 &= 3  && \text{OOA} \eqref{eq:ooa} \\
-x  &= 3  && \text{AId} \eqref{eq:aid2}  
+x  &= 3  && \text{AId} \eqref{eq:aid2}
 \end{align*}
 
 \soln
@@ -133,7 +135,7 @@ x  &= 3  && \text{AId} \eqref{eq:aid2}
 
 \begin{align*}
 \farg{x} +4 + \neg 4  &= \farg{7} + \neg 4  && \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
-x &= 3  && \text{OOA} \eqref{eq:ooa} 
+x &= 3  && \text{OOA} \eqref{eq:ooa}
 \end{align*}
 \end{example}
 
@@ -150,7 +152,7 @@ x+ \neg 8 &= 15  && \text{DOS} \eqref{eq:dos1} \\
 \farg{x+ \neg 8} + 8  &= \farg{15} + 8  && \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
 x + (\neg 8+ 8) &= 15 + 8  && \text{APA} \eqref{eq:apa2} \\
 x + 0 &= 23  && \text{OOA} \eqref{eq:ooa} \\
-x  &= 23  && \text{AId} \eqref{eq:aid2} 
+x  &= 23  && \text{AId} \eqref{eq:aid2}
 \end{align*}
 
 \soln
@@ -173,17 +175,17 @@ Solve the equation $5x=9$ for $x$.
 \begin{align*}
 \dfrac{1}{5}\farg{5x} &= \dfrac{1}{5}\farg{9} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
 \dfrac{1}{5} \cdot \left[ 5 \cdot x \right] &= \dfrac{1}{5} \cdot 9 && \text{JTC} \eqref{eq:jtc} \\
-\left(\dfrac{1}{5} \cdot 5 \right) \cdot x &= \dfrac{1}{5} \cdot 9  && \text{APM} \eqref{eq:apm2} \\ 
+\left(\dfrac{1}{5} \cdot 5 \right) \cdot x &= \dfrac{1}{5} \cdot 9  && \text{APM} \eqref{eq:apm2} \\
 1\cdot x &= \dfrac{9}{5}  && \text{OOM} \eqref{eq:oom} \\
-x &= \dfrac{9}{5}  && \text{MId} \eqref{eq:mid2}  
+x &= \dfrac{9}{5}  && \text{MId} \eqref{eq:mid2}
 \end{align*}
 
 \soln
 
 \lesssteps
 \begin{align*}
-\dfrac{1}{5}\farg{5x} &= \dfrac{1}{5}\farg{9} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\ 
-x &= \dfrac{9}{5}  && \text{OOM} \eqref{eq:oom} 
+\dfrac{1}{5}\farg{5x} &= \dfrac{1}{5}\farg{9} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
+x &= \dfrac{9}{5}  && \text{OOM} \eqref{eq:oom}
 \end{align*}
 \end{example}
 
@@ -198,9 +200,9 @@ Solve the equation $ax=b$ for $x$.
 \begin{align*}
 \dfrac{1}{a}\farg{ax} &= \dfrac{1}{a}\farg{b} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
 \dfrac{1}{a} \cdot \left( a \cdot x \right) &= \dfrac{1}{a} \cdot b && \text{JTC} \eqref{eq:jtc} \\
-\left(\dfrac{1}{a} \cdot a \right) \cdot x &= \dfrac{1}{a} \cdot b  && \text{APM} \eqref{eq:apm2} \\ 
+\left(\dfrac{1}{a} \cdot a \right) \cdot x &= \dfrac{1}{a} \cdot b  && \text{APM} \eqref{eq:apm2} \\
 1\cdot x &= \dfrac{b}{a}  && \text{OOM} \eqref{eq:oom} \\
-x &= \dfrac{b}{a}  && \text{MId} \eqref{eq:mid2} 
+x &= \dfrac{b}{a}  && \text{MId} \eqref{eq:mid2}
 \end{align*}
 \end{example}
 
@@ -216,17 +218,17 @@ Solve the equation $-2x=7$ for $x$
 \neg 2x &= 7  && \text{ONeg} \eqref{eq:oneg1} \\
 \neg \dfrac{1}{2}\farg{\neg 2x}  &= \neg \dfrac{1}{2}\farg{7} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi2} \\
 \neg \dfrac{1}{2} \cdot \left( \neg 2 \cdot x \right) &= \neg \dfrac{1}{2} \cdot 7 && \text{JTC} \eqref{eq:jtc} \\
-\left(\neg\dfrac{1}{2} \cdot \neg 2 \right) \cdot x &= \neg \dfrac{1}{2} \cdot 7  && \text{APM} \eqref{eq:apm2} \\ 
+\left(\neg\dfrac{1}{2} \cdot \neg 2 \right) \cdot x &= \neg \dfrac{1}{2} \cdot 7  && \text{APM} \eqref{eq:apm2} \\
 1\cdot x &= \neg \dfrac{7}{2}  && \text{OOM} \eqref{eq:oom} \\
 1\cdot x &= -\dfrac{7}{2}  && \text{ONeg} \eqref{eq:oneg2} \\
-x &= -\dfrac{7}{2}  && \text{MId} \eqref{eq:mid2}  
+x &= -\dfrac{7}{2}  && \text{MId} \eqref{eq:mid2}
 \end{align*}
 
 \soln
 
 \lesssteps
 \begin{align*}
-\neg \dfrac{1}{2}\farg{\neg 2x}  &= \neg \dfrac{1}{2}\farg{7} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi2} \\ 
+\neg \dfrac{1}{2}\farg{\neg 2x}  &= \neg \dfrac{1}{2}\farg{7} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi2} \\
 x &= -\dfrac{7}{2}  && \text{OOM} \eqref{eq:oom}
 \end{align*}
 \end{example}
@@ -250,7 +252,7 @@ Solve the equation $2x+5=0$ for $x$
 \left(\dfrac{1}{2}\cdot 2 \right) \cdot x &= \dfrac{1}{2} \cdot \neg 5 && \text{APM} \eqref{eq:apm1} \\
 1 \cdot x &= \dfrac{\neg 5}{2} && \text{OOM} \eqref{eq:oom} \\
 1x &= -\dfrac{5}{2} && \text{ONeg} \eqref{eq:oneg2} \\
-x &= -\dfrac{5}{2} && \text{MId} \eqref{eq:mid2} 
+x &= -\dfrac{5}{2} && \text{MId} \eqref{eq:mid2}
 \end{align*}
 
 \soln
@@ -260,10 +262,10 @@ x &= -\dfrac{5}{2} && \text{MId} \eqref{eq:mid2}
 \farg{2x+5}+\neg 5 &= \farg{0} + \neg 5 && \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
 2x &= \neg 5 && \text{OOA} \eqref{eq:ooa} \\
 \dfrac{1}{2}\farg{2x} &= \dfrac{1}{2}\farg{\neg 5} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
-x &= -\dfrac{5}{2} && \text{OOM} \eqref{eq:oom} 
+x &= -\dfrac{5}{2} && \text{OOM} \eqref{eq:oom}
 \end{align}
 
-\qdepend 
+\qdepend
 
 \qdependlist
 
@@ -297,7 +299,7 @@ Solve the equation $2-x^2=0$ for $x$
 \alert{\pm} \left[\alert{2} \right]^{\frac{1}{2}} &= \left[\alert{x^2}\right]^{\frac{1}{2}} \\ % TODO Power Inverse
 \pm 2^{\frac{1}{2}} &= x && \text{PoPo} \eqref{eq:popo1} \\
 \pm \sqrt{2} &= x && \text{PoTR} \eqref{eq:potr} \\
-x &= \pm \sqrt{2} && \text{SyPE} \eqref{eq:sype} 
+x &= \pm \sqrt{2} && \text{SyPE} \eqref{eq:sype}
 \end{align*}
 \end{example}
 
@@ -313,7 +315,7 @@ Since we are trying to manipulate the equation  $ax^2+bx+c=0$ such that $x=\text
 \dfrac{1}{a} \cdot ax^2 + \dfrac{1}{a} \cdot bx + \dfrac{1}{a} \cdot c  & = \dfrac{1}{a} \left[ 0\right] && \text{DPE} \eqref{eq:dpe1} \\
 \dfrac{1}{a} \cdot a \cdot x^2 + \dfrac{1}{a} \cdot b \cdot x + \dfrac{1}{a} \cdot c  & = \dfrac{1}{a} \left[ 0\right] && \text{JTC} \eqref{eq:jtc} \\
 x^2 + \dfrac{b}{a} \cdot x + \dfrac{c}{a} & = 0 && \text{OOM} \eqref{eq:oom} \\
-x^2 +\dfrac{b}{a}x + \dfrac{c}{a}  & = 0 && \text{CTJ} \eqref{eq:ctj} 
+x^2 +\dfrac{b}{a}x + \dfrac{c}{a}  & = 0 && \text{CTJ} \eqref{eq:ctj}
 \end{align*}
 
 We now have three terms in the left hand expression where the first two terms have at least one variable factor, $x$.  The problem is that the third term is a constant and we want $x=\text{some value}$.  This text step is to get rid of the $\dfrac{c}{a}$ term, which can be done by using the additive inverse followed by simplifying both expressions.\\
@@ -345,7 +347,7 @@ The next step is called completing the square.  The idea is to add a \textit{NeW
 %	(m-1-4)	edge node[description] {$+$}(m-2-4)
 %	(m-2-1)	edge  (m-3-1)
 %	(m-2-3)	edge  (m-3-3)
-%	(m-2-4)	edge  (m-3-4)			
+%	(m-2-4)	edge  (m-3-4)
 %	(m-1-3)	edge  node[description] {$\times$} (m-2-3);
 %\end{tikzpicture}
 
@@ -368,7 +370,7 @@ Solving for $m$,
 \dfrac{1}{2} \left[2 \cdot m \cdot x \right] &= \dfrac{1}{2} \left[\dfrac{b}{a} \cdot x \right]  && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
 m \cdot  x &= \dfrac{b}{2a} \cdot x  && \text{OOM} \eqref{eq:oom} \\
 \left[m \cdot x \right]\dfrac{1}{x}  &= \left[\dfrac{b}{2a}  \cdot x\right] \dfrac{1}{x}  && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
-m &= \dfrac{b}{2a}  && \text{OOM} \eqref{eq:oom} 
+m &= \dfrac{b}{2a}  && \text{OOM} \eqref{eq:oom}
 \end{align*}
 
 
@@ -389,7 +391,7 @@ m &= \dfrac{b}{2a}  && \text{OOM} \eqref{eq:oom}
 %	(m-1-4)	edge node[description] {$+$}(m-2-4)
 %	(m-2-1)	edge  (m-3-1)
 %	(m-2-3)	edge  (m-3-3)
-%	(m-2-4)	edge  (m-3-4)			
+%	(m-2-4)	edge  (m-3-4)
 %	(m-1-3)	edge  node[description] {$\times$} (m-2-3);
 %\end{tikzpicture}
 
@@ -415,7 +417,7 @@ m &= \dfrac{b}{2a}  && \text{OOM} \eqref{eq:oom}
 %	(m-1-4)	edge node[description] {$+$}(m-2-4)
 %	(m-2-1)	edge  (m-3-1)
 %	(m-2-3)	edge  (m-3-3)
-%	(m-2-4)	edge  (m-3-4)			
+%	(m-2-4)	edge  (m-3-4)
 %	(m-1-3)	edge  node[description] {$\times$} (m-2-3);
 %\end{tikzpicture}
 
@@ -453,3 +455,7 @@ x &= \dfrac{\neg  b  \pm {\left[b^2 - 4ac \right]^{\frac{1}{2}}}}{2a} && \text{D
 x &= \dfrac{\neg  b  \pm {\sqrt{b^2 - 4ac}}}{2a} && \text{ETR}\\
 x &= \dfrac{-  b  \pm {\sqrt{b^2 - 4ac}}}{2a} && \text{ONeg}
 \end{align*}
+
+
+\end{document}
+

@@ -1,0 +1,163 @@
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapterimage{Pictures/chapter_head_2.pdf} % Chapter heading image
+
+\chapter{Analytic Geometry}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: OPERATION OF ADDITION
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Angles}\index{Algebraic Expressions}
+
+%-=-=-= DEFINITION
+\begin{definition}[Acute Angle]\index{Acute Angle}
+
+An angle is \textbf{acute}\index{acute angle}\index{angle!acute} if it is between $0\degree$ and $90\degree$ \\
+
+\begin{tikzpicture}
+\draw [line width=0.5pt,-latex] (0.7,0) arc (0:45:0.7);
+\draw [sthlmBlue,line width=1.5pt,latex-latex] (1.5,0) -- (0,0) -- (1.3,1.3);
+\draw [white] (1.6,0) -- (2.1,0);
+\draw [white] (-0.1,0) -- (-0.5,0);
+\end{tikzpicture}
+
+\end{definition}
+
+%-=-=-= DEFINITION
+\begin{definition}[Right Angle]\index{Right Angle}
+
+An angle is a \textbf{right angle}\index{right angle}\index{angle!right} if it equals $90\degree$
+
+\begin{tikzpicture}
+\draw [line width=0.5pt,-latex] (0.7,0) arc (0:90:0.7);
+\draw [line width=0.5pt] (0.2,0) -- (0.2,0.2) -- (0,0.2);
+\draw [sthlmBlue,line width=1.5pt,latex-latex] (1.5,0) -- (0,0) -- (0,1.3);
+\draw [white] (1.6,0) -- (2.1,0);
+\draw [white] (-0.1,0) -- (-0.5,0);
+\end{tikzpicture}
+
+\end{definition}
+
+%-=-=-= DEFINITION
+\begin{definition}[Obtuse Angle]\index{Obtuse Angle}
+
+An angle is \textbf{obtuse}\index{obtuse angle}\index{angle!obtuse} if it is between $90\degree$ and $180\degree$.
+
+\begin{tikzpicture}
+\draw [line width=0.5pt,-latex] (0.7,0) arc (0:135:0.7);
+\draw [sthlmBlue,line width=1.5pt,latex-latex] (1.5,0) -- (0,0) -- (-1.3,1.3);
+\end{tikzpicture}
+
+\end{definition}
+
+%-=-=-= DEFINITION
+\begin{definition}[Straight Angle]\index{Straight Angle}
+
+An angle is a \textbf{straight angle}\index{straight angle}\index{angle!straight} if it equals $180\degree$.
+
+\begin{tikzpicture}
+\draw [line width=0.5pt,-latex] (0.7,0) arc (0:180:0.7);
+\draw [sthlmBlue,line width=1.5pt,latex-latex] (-1.5,0) -- (0,0) -- (1.5,0);
+\end{tikzpicture}
+\end{definition}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Similar Triangles
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Similar Triangles}\label{Similar Triangles}
+
+ \begin{tikzpicture}[scale=1]
+   \fill [fill=sthlmGrey!40] (0,0) -- (4,0) -- (2.56,1.92) -- (0,0);
+   \fill [fill=sthlmGreen!40] (4,0) -- (2.56,1.92) -- (4,3) -- (4,0);
+   \draw [line width=0.5pt] (3.7,0) -- (3.7,0.3) -- (4,0.3);
+   \draw [line width=0.5pt,rotate=36.87] (2.9,0) -- (2.9,-0.3) -- (3.5,-0.3) -- (3.5,0);
+   \draw [dashed,line width=0.5pt] (4,0) -- (2.56,1.92);
+   \draw [black!60,line width=0.75pt,sthlmRed] (1.5,0) arc (0:36.87:1.5);
+   \draw [black!60,line width=0.75pt,sthlmRed] (4,1.75) arc (270:216.87:1.2);
+   \draw [sthlmBlue,line width=1.5pt] (0,0) -- (4,0) -- (4,3) -- cycle;
+   \node [below left] at (0,0) {\small $A$};
+   \node [below right] at (4,0) {\small $C$};
+   \node [above right] at (4,3) {\small $B$};
+   \node [below] at (2,0) {\small $b$};
+   \node [right] at (4,1.5) {\small $a$};
+   \node [above left] at (1.35,2.45) {\small $c$};
+   \node [right, sthlmRed] at (0.6, 0.3) {$\theta$};
+   \node [below, sthlmRed] at (3.7, 2.7) {$\phi$};
+   \draw [snake=brace,segment amplitude=3mm,rotate=36.87] (0,0.65) -- (5,0.65);
+   \node [above] at (2.45,1.87) {\small $D$};
+   \node [above,rotate=36.87] at (3.28,2.46) {\small $d$};
+   \node [above,rotate=36.87] at (1.28,0.96) {\small $c-d$};
+ \end{tikzpicture}
+
+\begin{figure}[h]
+ \centering
+ \subfloat[][ $\triangle\,ABC$]{
+ \begin{tikzpicture}[scale=0.67]
+   \fill [fill=sthlmGrey!40] (0,0) -- (4,0) -- (2.56,1.92) -- (0,0);
+   \fill [fill=sthlmGreen!40] (4,0) -- (2.56,1.92) -- (4,3) -- (4,0);
+   \draw [line width=0.5pt] (3.7,0) -- (3.7,0.3) -- (4,0.3);
+   \draw [line width=0.5pt,rotate=36.87] (2.9,0) -- (2.9,-0.3) -- (3.5,-0.3) -- (3.5,0);
+   \draw [dashed,line width=0.5pt] (4,0) -- (2.56,1.92);
+   \draw [black!60,line width=0.5pt] (1,0) arc (0:36.87:1);
+   \draw [black!60,line width=0.5pt,rotate=18.435] (0.8,0) -- (1.2,0);
+   \draw [black!60,line width=0.5pt] (4,2.2) arc (270:216.87:0.8);
+   \draw [black!60,line width=0.5pt,rotate around={-22.565:(4,3)}] (4,2.4) -- (4,2);
+   \draw [black!60,line width=0.5pt,rotate around={-30.565:(4,3)}] (4,2.4) -- (4,2);
+   \draw [sthlmBlue,line width=1.5pt] (0,0) -- (4,0) -- (4,3) -- cycle;
+   \node [below left] at (0,0) {\small $A$};
+   \node [below right] at (4,0) {\small $C$};
+   \node [above right] at (4,3) {\small $B$};
+   \node [below] at (2,0) {\small $b$};
+   \node [right] at (4,1.5) {\small $a$};
+   \node [above left] at (1.35,2.45) {\small $c$};
+   \draw [snake=brace,segment amplitude=3mm,rotate=36.87] (0,0.65) -- (5,0.65);
+   \node [above] at (2.45,1.87) {\small $D$};
+   \node [above,rotate=36.87] at (3.28,2.46) {\small $d$};
+   \node [above,rotate=36.87] at (1.28,0.96) {\small $c-d$};
+ \end{tikzpicture}}
+ \qquad
+ \subfloat[][ $\triangle\,CBD$]{
+ \begin{tikzpicture}[scale=0.402]
+   \fill [fill=sthlmGreen!40] (0,0) -- (4,0) -- (4,3) -- (0,0);
+   \draw [line width=0.5pt] (3.5,0) -- (3.5,0.5) -- (4,0.5);
+   \draw [black!60,line width=0.5pt] (4,1.8) arc (270:216.87:1.2);
+   \draw [black!60,line width=0.5pt,rotate around={-22.565:(4,3)}] (4,2.2) -- (4,1.4);
+   \draw [black!60,line width=0.5pt,rotate around={-30.565:(4,3)}] (4,2.2) -- (4,1.4);
+   \draw [sthlmBlue,line width=1.5pt] (0,0) -- (4,0) -- (4,3) -- cycle;
+   \node [below left] at (0,0) {\small $C$};
+   \node [below right] at (4,0) {\small $D$};
+   \node [above right] at (4,3) {\small $B$};
+   \node [right] at (4,1.5) {\small $d$};
+   \node [above left] at (2,1.5) {\small $a$};
+ \end{tikzpicture}}
+ \qquad
+ \subfloat[][ $\triangle\,ACD$]{
+ \begin{tikzpicture}[scale=0.536]
+   \fill [fill=sthlmGrey!40] (0,0) -- (4,0) -- (4,3) -- (0,0);
+   \draw [line width=0.5pt] (3.625,0) -- (3.625,0.375) -- (4,0.375);
+   \draw [black!60,line width=0.5pt] (1.3,0) arc (0:36.87:1.3);
+   \draw [black!60,line width=0.5pt,rotate=18.435] (1.1,0) -- (1.5,0);
+   \draw [sthlmBlue,line width=1.5pt] (0,0) -- (4,0) -- (4,3) -- cycle;
+   \node [below left] at (0,0) {\small $A$};
+   \node [below right] at (4,0) {\small $D$};
+   \node [above right] at (4,3) {\small $C$};
+   \node [below] at (2,0) {\small $c-d$};
+   \node [above left] at (2,1.5) {\small $b$};
+ \end{tikzpicture}}
+ \caption[]{\quad Similar triangles $\triangle\,ABC$, $\triangle\,CBD$, $\triangle\,ACD$}
+ \label{fig:pythagorean}
+\end{figure}
+
+
+
+
+\end{document}
+

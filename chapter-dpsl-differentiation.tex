@@ -1,25 +1,27 @@
-%!TEX root = /Users/markholson/Dropbox/+Projects/LatexFiles/MathNotebook/20150312-163541-rs2.2N-MarksMathNotebook
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %
-%	CHAPTER 
+%	CHAPTER
 %
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\chapterimage{chapter_head_2.pdf} % Chapter heading image
+\chapterimage{Pictures/chapter_head_2.pdf} % Chapter heading image
 
 \chapter{Differentiation}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION: 
+%	SECTION:
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Limit of the Difference Quotient}
 
 %-=-=-= DEFINITION
 \begin{definition}[Derivative]\index{Derivative}
 
-The derivative of a function $f(x)$ with respect to the variable $x$ is defined as 
+The derivative of a function $f(x)$ with respect to the variable $x$ is defined as
 \begin{align}
-f'(\cBlue{x}) & \equiv \displaystyle \lim_{\cRed{\Delta x} \to 0} \underbrace{\dfrac{f(\cBlue{x}+\cRed{\Delta x})-f(\cBlue{x})}{\cRed{\Delta x}}}_{\text{Difference Quotient}} \label{eq:dbfp1} 
+f'(\cBlue{x}) & \equiv \displaystyle \lim_{\cRed{\Delta x} \to 0} \underbrace{\dfrac{f(\cBlue{x}+\cRed{\Delta x})-f(\cBlue{x})}{\cRed{\Delta x}}}_{\text{Difference Quotient}} \label{eq:dbfp1}
 \end{align}
 
 \end{definition}
@@ -34,19 +36,19 @@ f'(\cBlue{x}) & \equiv \displaystyle \lim_{\cRed{\Delta x} \to 0} \underbrace{\d
             xtick={1,1.666}, ytick={1,3},
             xticklabels={$x$,$x+\Delta x$}, yticklabels={$f(x)$,$f(x+\Delta x)$},
             axis on top,
-          ]         
+          ]
           \addplot [sthlmRed!15, domain=(0:2)] {-3.348+4.348*x};
           \addplot [sthlmRed!32, domain=(0:2)] {-2.704+3.704*x};
-          \addplot [sthlmRed!49, domain=(0:2)] {-1.994+2.994*x};         
-          \addplot [sthlmRed!66, domain=(0:2)] {-1.326+2.326*x}; 
+          \addplot [sthlmRed!49, domain=(0:2)] {-1.994+2.994*x};
+          \addplot [sthlmRed!66, domain=(0:2)] {-1.326+2.326*x};
           \addplot [sthlmRed!83, domain=(0:2)] {-0.666+1.666*x};
 	  \addplot [sthlmDarkGrey,dashed] plot coordinates {(1,0) (1,1)};
           \addplot [sthlmDarkGrey,dashed] plot coordinates {(0,1) (1,1)};
           \addplot [sthlmDarkGrey,dashed] plot coordinates {(0,3) (1.666,3)};
           \addplot [sthlmDarkGrey,dashed] plot coordinates {(1.666,0) (1.666,3)};
           \addplot [very thick,sthlmBlue, smooth,domain=(0:1.833)] {-1/(x-2)};
-          \addplot[color=sthlmDarkGrey,fill=sthlmDarkGrey,only marks,mark=*] coordinates{(1.666,3)};  %% closed hole          
-          \addplot[color=sthlmDarkGrey,fill=sthlmDarkGrey,only marks,mark=*] coordinates{(1,1)};  %% closed hole          
+          \addplot[color=sthlmDarkGrey,fill=sthlmDarkGrey,only marks,mark=*] coordinates{(1.666,3)};  %% closed hole
+          \addplot[color=sthlmDarkGrey,fill=sthlmDarkGrey,only marks,mark=*] coordinates{(1,1)};  %% closed hole
           \addplot [very thick,sthlmRed, smooth,domain=(0:2)] {x};
         \end{axis}
 \end{tikzpicture}
@@ -71,7 +73,7 @@ f'(x) &= 0 % TODO Evaluate the limit
 \end{example}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION: 
+%	SECTION:
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Derivative of a Monomial Functions}
 
@@ -106,7 +108,7 @@ Differentiate $f(x)=-3$
 \solnsteps
 \begin{align*}
 f'(x) &= [-3]' && \text{SPE} \eqref{eq:spe} \\
-f'(x) &= 0 && \text{DC} \eqref{eq:dc1} 
+f'(x) &= 0 && \text{DC} \eqref{eq:dc1}
 \end{align*}
 
 \qdepend
@@ -131,14 +133,14 @@ Differentiate $f(x)=x^2$
 f'(x) &= \left[x^2\right]' && \text{SPE} \eqref{eq:spe} \\
 f'(x) &= \cRed{2}x^{\cRed{2-1}} && \text{DPo} \eqref{eq:dpo1} \\
 f'(x) &= 2x^1 && \text{OOA} \eqref{eq:ooa} \\
-f'(x) &= 2x && \text{MId} \eqref{eq:mid2} 
+f'(x) &= 2x && \text{MId} \eqref{eq:mid2}
 \end{align*}
 
 \soln
 
 \lesssteps
 \begin{align*}
-f'(x) & = 2x && \text{DPo} \eqref{eq:dpo1}  
+f'(x) & = 2x && \text{DPo} \eqref{eq:dpo1}
 \end{align*}
 
 \qdepend
@@ -152,7 +154,7 @@ example \ref{20141124-152503}-20141124-152503
 \end{example}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION: 
+%	SECTION:
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Derivative of Polynomial Functions}
 
@@ -177,7 +179,7 @@ f'(x) &= \farg{x^2 + \neg 3}' && \text{SPE} \eqref{eq:spe} \\
 f'(x) &= \farg{x^2}' + \farg{\neg 3}' && \text{DS} \eqref{eq:ds1} \\
 f'(x) &= \farg{x^2}' + 0 && \text{DC} \eqref{eq:dc1} \\
 f'(x) &= \farg{x^2}' && \text{AId} \eqref{eq:aid1} \\
-f'(x) &= 2x && \text{DPo} \eqref{eq:dpo1}  \text{\, goto \,}  \ref{20141124-141850} 
+f'(x) &= 2x && \text{DPo} \eqref{eq:dpo1}  \text{\, goto \,}  \ref{20141124-141850}
 \end{align*}
 
 \soln
@@ -185,7 +187,7 @@ f'(x) &= 2x && \text{DPo} \eqref{eq:dpo1}  \text{\, goto \,}  \ref{20141124-1418
 \lesssteps
 
 \begin{align*}
-f(x) & = 2x^2 && \text{DPo} \eqref{eq:dpo1} \& \text{DC} \eqref{eq:dpo1} 
+f(x) & = 2x^2 && \text{DPo} \eqref{eq:dpo1} \& \text{DC} \eqref{eq:dpo1}
 \end{align*}
 
 \qdepend
@@ -212,14 +214,61 @@ f'(x) &= \farg{3x^2}' + \farg{6x}' + 0 && \text{DC} \eqref{eq:dc1} \\
 f'(x) &= \farg{3x^2}' + \farg{6x}' && \text{AId} \eqref{eq:aid1} \\
 f'(x) &= 3\farg{x^2}' + 6\farg{x}' && \text{DCM} \eqref{eq:dcm1} \\
 f'(x) &= 3 \left(2x \right) + 6 \left(1\right) && \text{DPo} \eqref{eq:dpo1} \\
-f'(x) &= 6x+6 && \text{OOM} \eqref{eq:oom} 
+f'(x) &= 6x+6 && \text{OOM} \eqref{eq:oom}
 \end{align*}
 
 \soln
 \lesssteps
 \begin{align*}
-f'(x) & = 6x+6 && \text{DS} \eqref{eq:ds1}  
+f'(x) & = 6x+6 && \text{DS} \eqref{eq:ds1}
 \end{align*}
+\end{example}
+
+\subsection{Finding the vertex of a quadratic function using differentiation.}
+
+We can find the vertex of a quadratic function, $f(x)$ using differentiation by:
+
+\begin{enumerate}
+\item Differentiate the function: Find $f'(x)$.
+\item Set the derivative equal to zero: $f'(x)=0$.
+\item Find the abscissa of the vertex by solving the equation $f'(x)=0$ for $x$ to find the critical $x$ value: $x=k$.
+\item Find the ordinate of the vertex by substituting the value of critical value $x=k$ into the function $f(x)$: Evaluate $f(k)$
+\end{enumerate}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20150923-152515] \label{20150923-152515}\index{Example!20150923-152515} \hfill \\
+Find the vertex of the parabola $y=x^2-2x-6$ using differentiation.
+\soln
+\solnsteps
+1. Differentiate the function.
+\begin{align*}
+f(x) &=x^2-2x-6 \\
+f(x) &=x^2+ \neg 2x + \neg 6 && \text{DOS} \eqref{eq:dos1} \\
+\farg{f(x)}' &= \farg{x^2+ \neg 2x + \neg 6}' && \text{SPE} \eqref{eq:spe} \\
+f'(x) &= \farg{x^2}'+ \farg{\neg 2x}' + \farg{\neg 6}' && \text{DS} \eqref{eq:ds1} \\
+f'(x) &= \farg{x^2}'+ \neg 2 \farg{x}' + \farg{\neg 6}' && \text{DCM} \eqref{eq:dcm1} \\
+f'(x) &= 2x + \neg 2 + \farg{\neg 6}' && \text{DPo} \eqref{eq:dpo1} \\
+f'(x) &= 2x + \neg 2 + 0 && \text{DC} \eqref{eq:dc1} \\
+f'(x) &= 2x + \neg 2 && \text{AId} \eqref{eq:aid2} \\
+f'(x) &= 2x - 2 && \text{DOS} \eqref{eq:dos2}
+\end{align*}
+
+2 and 3. Set the derivative equal to zero and solve for $x$
+
+\begin{align*}
+2x-2 & = 0\\
+x &= 1
+\end{align*}
+
+4. Find the value of $f(1)$
+
+\begin{align*}
+f(x) & = x^2-2x-6 \\
+f(1) &= \farg{1}^2-2\farg{1}-6 && \text{SPE} \eqref{eq:spe} \\
+f(1) &= -7  &&\text{Evaluate}
+\end{align*}
+
+The vertex of this parabola is the point $(1,-7)$
 \end{example}
 
 
@@ -263,42 +312,12 @@ f'(x)&= \farg{x^2 \cos(x)}' && \text{SPE} \eqref{eq:spe} \\
 f'(x)&= \farg{x^2}' \cos(x) + x^2 \farg{\cos (x)}' && \text{DPr} \eqref{eq:dpr1} \\
 f'(x)&= 2x \cos (x) + x^2 \farg{\cos (x)}' && \text{DPo} \eqref{eq:dpo1} \\
 f'(x)&= 2x \cos (x) + x^2 (-1 \sin(x)) && \text{DCos} \eqref{eq:dcos1} \\
-f'(x)&= 2x \cos (x) - x^2 \sin x && \text{OOM} \eqref{eq:oom} 
-\end{align*}
-\end{example}
-
-%-=-=-= EXAMPLE
-\begin{example}[id:20141209-151354] \label{20141209-151354}\index{Example!20141209-151354} \hfill \\
-
-Differentiate $f(x)=\sin(x)\sin(x)$
-
-\soln
-
-\solnsteps
-\begin{align*}
-f'(x) &= \farg{\sin(x)\sin(x)} && \text{SPE} \eqref{eq:spe} \\
-f'(x) &= \farg{\sin(x)}' \sin(x) + \sin (x) \farg{\sin(x)} && \text{DPr} \eqref{eq:dpr1} \\
-f'(x) &= \cos(x) \sin(x) + \sin (x) \cos(x) && \text{DSin} \eqref{eq:dsin1} \\
-f'(x) &= \cos(x)\sin(x) + \cos(x)\sin(x) && \text{CPM} \eqref{eq:cpm} \\
-f'(x) &= 2\cos(x)\sin(x) && \text{OOA} \eqref{eq:ooa} % TODO Simplifying trigonometric expressions
+f'(x)&= 2x \cos (x) - x^2 \sin x && \text{OOM} \eqref{eq:oom}
 \end{align*}
 \end{example}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION: 
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\section{Derivative of Rational Functions}
-
-
-\begin{arule}[Derivative of a Quotient (DQ)]\index{Derivatives! Derivative of a Quotient}
-\begin{align}
-	\left[ \dfrac{f(x)}{g(x)} \right]' &= \dfrac{f'(x)g(x)-f(x)g'(x)}{\left[g(x)\right]^2} \label{eq:drf1} \\
-	\dfrac{\dd}{\dx} \left[ \dfrac{f(x)}{g(x)} \right] & = \dfrac{\dfrac{\dd}{\dx}\left[f(x)\right]g(x)-f(x) \dfrac{\dd}{\dx} \left[g(x)\right] }{\left[g(x)\right]^2}  \label{eq:drf2}
-\end{align}
-\end{arule}
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION: 
+%	SECTION:
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Derivative of Trigonometric Functions}
 
@@ -317,13 +336,63 @@ f'(x) &= 2\cos(x)\sin(x) && \text{OOA} \eqref{eq:ooa} % TODO Simplifying trigono
 \end{align}
 \end{arule}
 
+%-=-=-= EXAMPLE
+\begin{example}[id:20150910-115935] \label{20150910-115935}\index{Example!20150910-115935} \hfill \\
+
+Differentiate $f(x)=\sin(x)\cos(x)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+f'(x) & = \farg{\sin(x)\cos(x)}' && \text{SPE} \eqref{eq:spe} \\
+f'(x) & = \farg{\sin(x)}'\cos(x)+ \sin(x)\farg{\cos(x)}' && \text{DPr} \eqref{eq:dpr1} \\
+f'(x) & = \cos (x) \cos (x) + \sin(x)\farg{\cos(x)}' && \text{DSin} \eqref{eq:dsin1} \\
+f'(x) &= \cos (x) \cos (x) + \sin(x) (-\sin(x)) && \text{DCos} \eqref{eq:dcos1} \\
+f'(x) &= \cos^2(x)-\sin^2(x) && \text{simplify} \text{\, goto \,} \, \ref{} %TODO simplify trigonometric expression
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141209-151354] \label{20141209-151354}\index{Example!20141209-151354} \hfill \\
+
+Differentiate $f(x)=\sin(x)\sin(x)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+f'(x) &= \farg{\sin(x)\sin(x)}' && \text{SPE} \eqref{eq:spe} \\
+f'(x) &= \farg{\sin(x)}' \sin(x) + \sin (x) \farg{\sin(x)} && \text{DPr} \eqref{eq:dpr1} \\
+f'(x) &= \cos(x) \sin(x) + \sin (x) \cos(x) && \text{DSin} \eqref{eq:dsin1} \\
+f'(x) &= \cos(x)\sin(x) + \cos(x)\sin(x) && \text{CPM} \eqref{eq:cpm} \\
+f'(x) &= 2\cos(x)\sin(x) && \text{OOA} \eqref{eq:ooa} % TODO Simplifying trigonometric expressions
+\end{align*}
+\end{example}
+
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION: 
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Derivative of Rational Functions}
+
+
+\begin{arule}[Derivative of a Quotient (DQ)]\index{Derivatives! Derivative of a Quotient}
+\begin{align}
+	\left[ \dfrac{f(x)}{g(x)} \right]' &= \dfrac{f'(x)g(x)-f(x)g'(x)}{\left[g(x)\right]^2} \label{eq:drf1} \\
+	\dfrac{\dd}{\dx} \left[ \dfrac{f(x)}{g(x)} \right] & = \dfrac{\dfrac{\dd}{\dx}\left[f(x)\right]g(x)-f(x) \dfrac{\dd}{\dx} \left[g(x)\right] }{\left[g(x)\right]^2}  \label{eq:drf2}
+\end{align}
+\end{arule}
+
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Derivative of Exponential Functions}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION: 
+%	SECTION:
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Derivative of Logarithmic Functions}
 
@@ -338,7 +407,7 @@ f'(x) &= 2\cos(x)\sin(x) && \text{OOA} \eqref{eq:ooa} % TODO Simplifying trigono
 
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION: 
+%	SECTION:
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Derivative of Composite Functions}
 
@@ -361,7 +430,7 @@ Differentiate $y=\ln (3x)$
 
 After identifying that $y=\ln (\cRed{3x})$ is a composite function, we let $\cRed{u=3x}$ and thus we get a new function $y=\ln (\cRed{u})$.\\
 
-Using chain rule, 
+Using chain rule,
 \begin{align*}
 \dydx &= \cBlue{\dydu} \cdot \cPurple{\dudx} && \text{DComp} \eqref{eq:dcf2}
 \end{align*}
@@ -370,14 +439,14 @@ We need to find the factors $\cBlue{\dydu}$ and $\cPurple{\dudx}$.
 
 \begin{alignat*}{2}
 		y &= \ln (\cRed{u})				&\quad	 		\cRed{u}		&= 3x \\
-	\cBlue{\dydu} &= \dfrac{1}{u}		&\quad 	 \cPurple{\dudx}	 &= 3 
+	\cBlue{\dydu} &= \dfrac{1}{u}		&\quad 	 \cPurple{\dudx}	 &= 3
 \end{alignat*}
 
 \begin{align*}
 \dydx &= \cBlue{\dydu} \cdot \cPurple{\dudx} && \text{DComp} \eqref{eq:dcf2} \\
 \dydx &= \dfrac{1}{\cRed{u}} \cdot \dudx && \text{DNL} \eqref{eq:dnl1} \\
 \dydx &= \dfrac{1}{\cRed{u}} \cdot 3 && \text{DPo} \eqref{eq:dpo1} \\
-\dydx &= \dfrac{1}{\cRed{3x}} \cdot 3 \\	% TODO variable subsitution 
+\dydx &= \dfrac{1}{\cRed{3x}} \cdot 3 \\	% TODO variable subsitution
 \dydx &= \dfrac{3}{3x} && \text{OOM} \eqref{eq:oom} \\
 \dydx &= \dfrac{1}{x} % TODO reduce fraction
 \end{align*}
@@ -402,7 +471,7 @@ Differentiate $y=\ln(3x^2-6x+4)$
 After identifying that $y=\ln (\cRed{3x^2-6x+4})$ is a composite function, we let \\
 $\cRed{u=3x^2-6x+4}$ and thus we get a new function $y=\ln (\cRed{u})$.\\
 
-Using chain rule, 
+Using chain rule,
 \begin{align*}
 \dydx &= \cBlue{\dydu} \cdot \cPurple{\dudx} && \text{DComp} \eqref{eq:dcf2}
 \end{align*}
@@ -418,8 +487,8 @@ We need to find the factors $\cBlue{\dydu}$ and $\cPurple{\dudx}$.
 \dydx &= \cBlue{\dydu} \cdot \cPurple{\dudx} && \text{DComp} \eqref{eq:dcf2} \\
 \dydx &= \dfrac{1}{\cRed{u}} \cdot \dudx && \text{DNL} \eqref{eq:dnl1} \\
 \dydx &= \dfrac{1}{\cRed{u}} \cdot (6x-6) && \text{DPo} \eqref{eq:dpo1} \\
-\dydx &= \dfrac{1}{\cRed{3x^2-6x+4}} \cdot (6x-6) \\	% TODO variable subsitution 
-\dydx &= \dfrac{6x-6}{3x^2-6x+4} && \text{OOM} \eqref{eq:oom} 
+\dydx &= \dfrac{1}{\cRed{3x^2-6x+4}} \cdot (6x-6) \\	% TODO variable subsitution
+\dydx &= \dfrac{6x-6}{3x^2-6x+4} && \text{OOM} \eqref{eq:oom}
 \end{align*}
 \end{example}
 
@@ -433,7 +502,7 @@ Differentiate $y=\ln(\cos x)$
 \solnsteps
 After identifying that $y=\ln (\cRed{\cos x})$ is a composite function, we let $\cRed{u=\cos x}$ and thus we get a new function $y=\ln (\cRed{u})$.\\
 
-Using chain rule, 
+Using chain rule,
 \begin{align*}
 \dydx &= \cBlue{\dydu} \cdot \cPurple{\dudx} && \text{DComp} \eqref{eq:dcf2}
 \end{align*}
@@ -442,14 +511,14 @@ We need to find the factors $\cBlue{\dydu}$ and $\cPurple{\dudx}$.
 
 \begin{alignat*}{2}
 		y &= \ln (\cRed{u})				&\quad	 		\cRed{u}		&= \cos x \\
-	\cBlue{\dydu} &= \dfrac{1}{u}		&\quad 	 \cPurple{\dudx}	 &= - \sin x 
+	\cBlue{\dydu} &= \dfrac{1}{u}		&\quad 	 \cPurple{\dudx}	 &= - \sin x
 \end{alignat*}
 
 \begin{align*}
 \dydx &= \cBlue{\dydu} \cdot \cPurple{\dudx} && \text{DComp} \eqref{eq:dcf2} \\
 \dydx &= \dfrac{1}{\cRed{u}} \cdot \dudx && \text{DNL} \eqref{eq:dnl1} \\
 \dydx &= \dfrac{1}{\cRed{u}} \cdot - \sin x && \text{DPo} \eqref{eq:dpo1} \\
-\dydx &= \dfrac{1}{\cRed{\cos x}} \cdot - \sin x \\	% TODO variable subsitution 
+\dydx &= \dfrac{1}{\cRed{\cos x}} \cdot - \sin x \\	% TODO variable subsitution
 \dydx &= \dfrac{-\sin x}{\cos x} && \text{OOM} \eqref{eq:oom} \\
 \dydx &= -\tan x % TODO reduce fraction
 \end{align*}
@@ -469,9 +538,9 @@ y' &= 2x \cdot \ln x + \left(x^2-3\right) \cdot \farg{\ln 3x}' && \text{differen
 y' &= 2x \cdot \ln x + \left(x^2-3\right) \cdot \dfrac{1}{x}  &&\text{differentiate} \text{\, goto \,} \, \ref{20141124-203850}\\
 y' &= 2x \cdot \ln x + \dfrac{x^2-3}{x} && \text{OOM} \eqref{eq:oom} \\
 y' &= 2x^2 \ln x +\dfrac{x^2-3}{x} && \text{JTC} \eqref{eq:jtc} \\
-y' &= \dfrac{2x^2 \ln x + \left(x^2-3\right)}{x} && \text{OOA} \eqref{eq:ooa} 
+y' &= \dfrac{2x^2 \ln x + \left(x^2-3\right)}{x} && \text{OOA} \eqref{eq:ooa}
 \end{align*}
 \end{example}
 
-
+\end{document}
 

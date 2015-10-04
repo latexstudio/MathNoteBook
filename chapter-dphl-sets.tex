@@ -1,0 +1,237 @@
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapterimage{Pictures/chapter_head_2.pdf} % Chapter heading image
+
+\chapter{Sets}
+
+\section{Sets}
+
+The study of sets and their properties is the object of set theory.
+
+%-=-=-= DEFINITION
+
+\begin{definition}[Set]\index{Set}
+A \textbf{set} A set is a finite or infinite collection of objects in which order has no significance, and multiplicity is generally also ignored (\textit{unlike a list}).\\
+
+Members of a set are often referred to as elements and the notation $a \in A$ is used to denote that $a$ is an element of a set $A$.
+\end{definition}
+
+\[
+\underbrace{S}_{\text{Set Name}}=\{\underbrace{a, b, c}_{\text{elements}}\}
+\]
+
+\begin{remark}
+We are intentionally using a non-specific definition of a set.
+\end{remark}
+
+\begin{definition}[Cardinality]\index{Cardinality}
+The number of distinct elements of a set \(S\) is called its \textbf{cardinality}, which is represented as \(\left|S\right|\)
+\end{definition}
+
+
+\begin{definition}[Subset]\index{Subset}
+Suppose that $A$ and $B$ are sets.  We say that $A$ is a \textbf{subset} of $B$ if whenever $x \in A$, then $x \in B$.
+
+\[
+A \subseteq B
+\]
+
+We could also say that all the elements of set $A$ are also elements of set $B$.
+\end{definition}
+
+\begin{definition}[Proper Subset]\index{Proper Subset}
+Suppose that $A$ and $B$ are sets.  We say that $A$ is a \textbf{\textit{proper} subset} of $B$ if whenever $x \in A$, then $x \in B$, but $A \ne B$
+
+\[
+A \subset B
+\]
+
+\end{definition}
+
+\begin{remark}
+Some textbooks makes a point of differentiating between a subset and a proper subset.  This convention may later cause trouble, in terms of notation, as different writers may use the notation $A \subset B$ to denote a subsets. Making matters worse $A \subset B$ can sometimes be used to describe a proper subset as does the textbook.
+\end{remark}
+
+\begin{definition}[Equality of Sets]\index{Equality of Sets}
+Suppose that both $A \subseteq B$ and $B \subseteq A$, we then say $A$ and $B$ are equal and write
+
+\[
+A=B
+\]
+\end{definition}
+
+\begin{definition}[Empty Set]\index{Empty Set}
+The empty set has no elements.  It is written $\emptyset$ and called the \textbf{empty set} or \textbf{null set}.
+
+\[
+\emptyset = \{\,\}
+\]
+\end{definition}
+
+\begin{remark}
+$\emptyset$ and $\set{\emptyset}$ are not the same thing.  By definition $\emptyset$ has no elements; however, $\set{\emptyset}$ is a set with one element, which happens to be the empty set.
+\end{remark}
+
+\section{Well-Known Sets}
+
+\begin{itemize}
+    \item Naturals: $\mathbb{N}= \set{1, 2, 3, 4, \ldots }$
+    \item Integers: $\mathbb{Z}= \set{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots }$
+    \item Rationals: $\mathbb{Q}= \set{a/b \suchthat a \in \mathbb{Z}, b \in \mathbb{Z}, b \ne 0 } $
+\end{itemize}
+
+\subsection{Rationals}
+
+\begin{definition}[Field]{Field}
+A \textbf{field} $F$ is a set of elements that contains at least the elements 0 and 1, given the operations of addition and multiplication, and satisfies the field axioms.
+\end{definition}
+
+Field Axioms
+
+\begin{description}
+\item[addition is commutative] $a+b=b+a \; \forall a,b,c \in F$
+\item[addition is associative] $(a+b)+c = a+(b+c) \; \forall a,b \in F$
+\item[additive identity] $\exists 0 \in F$ such that $a+0=a \; \forall a \in F$
+\item[additive inverse] $\forall a \in F \; \exists -a \in F$ such that $-a+a=0$
+\item[multiplication is commutative] $a\times b=b\times a \; \forall a,b \in F$
+\item[multiplication is associative] $(a\times b) \times c = a\times (b \times c) \; \forall a,b,c \in F$
+\item[multiplicative identity] $\exists 1 \in F$ such that $a \times 1 = a \; \forall a \in F$
+\item[multiplicative inverse] $\forall a \in F \setminus \set{0} \exists a^{-1} \in F$ such that $a^{-1} \times a = 1$
+\item[distributive law] $a \times (b +c) = a \times b + a \times c \; \forall a, b, c \in F$
+\end{description}
+
+The usual priority to $\times$ over $+$ to reduce the number of delimiters.
+
+\section{Set Operations}
+
+\begin{definition}[Union]\index{Union}
+\[
+A \cup B = \set{x \suchthat x \in a \text{ or } x \in B }
+\]
+\end{definition}
+
+\begin{remark}
+The word \textit{or} is not exclusive meaning that we have $x \in A \cup B$ even if $x$ is an element of both set $A$ and set $B$.
+\end{remark}
+
+\begin{definition}[Intersection]\index{Intersection}
+\[
+A \cap B = \set{x \suchthat x \in a \text{ and } x \in B}
+\]
+\end{definition}
+
+\begin{definition}{Disjoint Sets}\index{Disjoint Sets}
+We say sets $A$ and $B$ are disjoint when
+
+\[
+A \cap B = \emptyset
+\]
+
+for all sets $A$ and $B$
+\end{definition}
+
+\begin{property}[Commutative Law of Union]\index{Commutative Law of Union}
+\[
+A \cup B = B \cup A
+\]
+for all sets $A$ and $B$
+\end{property}
+
+\begin{property}[Commutative Law of Intersection]\index{Commutative Law of Intersection}
+\[
+A \cap B = B \cap A
+\]
+for all sets $A$ and $B$
+\end{property}
+
+\begin{property}[Distributive Law of Intersection over Union]\index{Distributive Law of Intersection over Union}
+
+\[
+A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
+\]
+
+\end{property}
+
+\begin{property}[Distributive Law of Intersection over Union]\index{Distributive Law of Intersection over Union}
+
+\[
+A \cup (B \cap C) = (A \cup B) \cap (A \cup C)
+\]
+
+\end{property}
+
+\begin{property}[Union of a Set and the Empty Set]\index{Union of a Set and the Empty Set}
+
+\[
+A \cup \emptyset = A
+\]
+For set A
+\end{property}
+
+\begin{property}[Intersection of a Set and the Empty Set]\index{Intersection of a Set and the Empty Set}
+
+\[
+A \cap \emptyset = \emptyset
+\]
+For set A
+\end{property}
+
+\begin{definition}[Difference of two sets]\index{Difference of two sets}
+\[
+A \setminus B \set{x \suchthat x \in A, x \notin B}
+\]
+
+For all sets A and B
+\end{definition}
+
+\begin{definition}[Universe Set]\index{Universe Set}
+The universe set $U$ is a given fixed set from which all subsets are discussed from.
+\end{definition}
+
+\begin{definition}[Compliment Set]\index{Compliment Set}
+If $A$ is a set such that $A \subseteq B$, then
+
+\[
+A'=U \setminus A
+\]
+
+or
+
+\[
+A'=\set{x \suchthat x \notin A}
+\]
+
+where $A'$ is called the \textbf{compliment} of A.
+\end{definition}
+
+\begin{remark}
+Complimentation has no meaning unless there is a universe $U$.
+\end{remark}
+
+\begin{property}{Double Compliment}\index{Double Compliment}
+\[
+A''=A
+\]
+\end{property}
+
+\begin{property}
+\[
+A \cup A' = U
+\]
+\end{property}
+
+\begin{property}
+\[
+A \cap A' = \emptyset
+\]
+\end{property}
+
+\end{document}
+

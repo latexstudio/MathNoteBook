@@ -1,11 +1,13 @@
-%!TEX root = /Users/markholson/Dropbox/+Projects/LatexFiles/MathNotebook/20150312-163541-rs2.2N-MarksMathNotebook.tex
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %
-%	CHAPTER 
+%	CHAPTER
 %
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\chapterimage{chapter_head_2.pdf} % Chapter heading image
+\chapterimage{Pictures/chapter_head_2.pdf} % Chapter heading image
 
 \chapter{Algebraic Expressions}
 
@@ -36,9 +38,9 @@ Variable: parameter/coefficient 	& \cellyes 		& \cellyes 		& \cellyes		\\
 \hline
 Variable: unknown/indeterminate 	& \cellno 		& \cellyes 		& \cellyes		\\
 \hline
-Power with $\integer^{+}$ exponent 	& \cellno 		& \cellyes 		& \cellyes		 \\
+Power with $\mathbb{Z}^{+}$ exponent 	& \cellno 		& \cellyes 		& \cellyes		 \\
 \hline
-Power with $\integer$ exponent 		& \cellno 		& \cellno 		& \cellyes		 \\
+Power with $\mathbb{Z}$ exponent 		& \cellno 		& \cellno 		& \cellyes		 \\
 \hline
 $n$-th root 						& \cellno 		& \cellno 		& \cellyes		\\
 \hline
@@ -56,11 +58,11 @@ Power with $\mathbb{Q}$ exponent 	& \cellno 		& \cellno 		& \cellyes		 \\
 
 %Algebraic expressions have three different types of multiplicative factors:\\
 
-%\begin{enumerate}   
-%	\item constant (coefficient) 
+%\begin{enumerate}
+%	\item constant (coefficient)
 %	\begin{itemize}
-%		\item real number 
-%		\item parameter 
+%		\item real number
+%		\item parameter
 %	\end{itemize}
 %	\item variable
 %	\item rational power
@@ -70,33 +72,10 @@ Power with $\mathbb{Q}$ exponent 	& \cellno 		& \cellno 		& \cellyes		 \\
 
 \section{Polynomial Expressions}\index{Polynomial Expressions}
 
-%-=-=-= DEFINITION
-\begin{definition}[Operation of Addition (OOA)]\index{Operation!Operation of Addition}
-\begin{align}
-\underbrace{\underbrace{a}_{\text{Augend}}+\underbrace{b}_{\text{Addend}}}_{\text{Sum}} \label{eq:ooa}
-\end{align}
-\end{definition}
 
 
-%-=-=-= DEFINITION
-\begin{definition}[Common Denominator (CD)]\index{Common Denominator}
-\begin{subequations}
-\begin{align}
-\dfrac{a}{b} + \dfrac{c}{b} &= \dfrac{a+c}{b} \label{eq:cd1} \\
-\dfrac{a+c}{b}&= \dfrac{a}{b} + \dfrac{c}{b} \label{eq:cd2}
-\end{align}
-\end{subequations}
-\end{definition}
 
-%-=-=-= RULE
-\begin{arule}[Fraction Operation of Addition (FOOA)]\index{Fraction Operation of Addition}
-\begin{subequations}
-\begin{align}
-\dfrac{a}{b} + \dfrac{c}{d} &= \dfrac{ad+bc}{bd} \label{eq:fooa1} \\
-\dfrac{ad+bc}{bd} &= \dfrac{a}{b} + \dfrac{c}{d} \label{eq:fooa2}
-\end{align}
-\end{subequations}
-\end{arule}
+
 
 \newpage
 \begin{figure}
@@ -105,12 +84,7 @@ Power with $\mathbb{Q}$ exponent 	& \cellno 		& \cellno 		& \cellyes		 \\
 \end{figure}
 
 
-%-=-=-= DEFINITION
-\begin{definition}[Operation of Multiplication (OOM)] \index{Operation!Operation of Multiplication}
-\begin{align}
-\underbrace{\underbrace{a}_{\text{Multiplicand}} \cdot \underbrace{b}_{\text{Multiplier}}}_{\text{Product}} \label{eq:oom}
-\end{align}
-\end{definition}
+
 
 
 
@@ -160,7 +134,7 @@ a \cdot b &= ab \label{eq:ctj}
 \begin{subequations}
 \begin{align}
 a \cdot \alert{\dfrac{1}{a}} &= 1 \label{eq:mi1} \\
-a \cdot \alert{a^{-1}} &= 1 \label{eq:mi2} 
+a \cdot \alert{a^{-1}} &= 1 \label{eq:mi2}
 \end{align}
 \end{subequations}
 \end{definition}
@@ -203,13 +177,13 @@ a\cdot b\cdot c &= a\cdot (b\cdot c) \label{eq:apm2}
 
 \begin{definition}[Power To Factor (PoTF)]\index{Powers!Power to Factor}
 \begin{align}
-a^{\alert{n}} &= a_1 \cdot a_2 \cdot \ldots \cdot a_{n-1} \cdot a_{\alert{n}} \label{eq:potf} 
+a^{\alert{n}} &= a_1 \cdot a_2 \cdot \ldots \cdot a_{n-1} \cdot a_{\alert{n}} \label{eq:potf}
 \end{align}
 \end{definition}
 
 \begin{definition}[Factor To Power (FTPo)]\index{Powers!Factor to Power}
 \begin{align}
-a_1 \cdot a_2 \cdot \ldots \cdot a_{n-1} \cdot a_{\alert{n}} &= a^{\alert{n}} \label{eq:ftpo} 
+a_1 \cdot a_2 \cdot \ldots \cdot a_{n-1} \cdot a_{\alert{n}} &= a^{\alert{n}} \label{eq:ftpo}
 \end{align}
 \end{definition}
 
@@ -217,7 +191,7 @@ a_1 \cdot a_2 \cdot \ldots \cdot a_{n-1} \cdot a_{\alert{n}} &= a^{\alert{n}} \l
 \begin{definition}[Power Inverse (PoI)]\index{Power Inverse}
 \begin{subequations}
 \begin{align}
-\left(b^{m}\right)^{\frac{1}{m}} &= b  \label{eq:poi} 
+\left(b^{m}\right)^{\frac{1}{m}} &= b  \label{eq:poi}
 \end{align}
 \end{subequations}
 \end{definition}
@@ -227,37 +201,28 @@ a_1 \cdot a_2 \cdot \ldots \cdot a_{n-1} \cdot a_{\alert{n}} &= a^{\alert{n}} \l
 \begin{subequations}
 \begin{align}
 1&= b^0  \label{eq:poid1} \\
-b^{0}&= 1  \label{eq:poid2} 
+b^{0}&= 1  \label{eq:poid2}
 \end{align}
 \end{subequations}
 \end{definition}
 
 \begin{notation}[Radical To Power (RTPo)]\index{Powers!Radical to Power}
 \begin{align}
-\sqrt[m]{b^n} &= b^{\frac{n}{m}}	 \label{eq:rtpo} 
+\sqrt[m]{b^n} &= b^{\frac{n}{m}}	 \label{eq:rtpo}
 \end{align}
 \end{notation}
 
 \begin{notation}[Power To Radical (PoTR)]\index{Powers!Power to Radical}
 \begin{align}
-b^{\frac{n}{m}} &= \sqrt[m]{b^n}	 \label{eq:potr} 
+b^{\frac{n}{m}} &= \sqrt[m]{b^n}	 \label{eq:potr}
 \end{align}
 \end{notation}
-
-
-
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	SUBSECTION: Monomials of Like Terms
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 \subsection{Monomials of Like Terms}\index{Monomials of Like Terms}
-
-
-
-
-
-
 
 
 %-=-=-= DEFINITION
@@ -268,9 +233,6 @@ a + \alert{(-a)} &= 0 \label{eq:ai}
 \end{align}
 \end{subequations}
 \end{definition}
-
-
-
 
 \subsection{Surds}\index{Surds}
 
@@ -296,15 +258,15 @@ Simplify $2\sqrt{2}-\dfrac{\left(\sqrt{2}\right)^3}{3}-\left(2\left(-\sqrt{2}\ri
 2 \cdot \sqrt{2} + \dfrac{\neg 2 \cdot \sqrt{2}}{3} + 2 \cdot \sqrt{2} + \dfrac{\neg 2 \cdot \sqrt{2}}{3}  && \text{OOM} \eqref{eq:oom} \\
 2\sqrt{2} + \dfrac{\neg 2\sqrt{2}}{3} + 2\sqrt{2} + \dfrac{\neg 2\sqrt{2}}{3} && \text{CTJ} \eqref{eq:ctj} \\
 \left(2 + \dfrac{\neg 2}{3} + 2 + \dfrac{\neg 2}{3} \right)  \sqrt{2} && \text{DPF} \eqref{eq:dpf1} \\
-\dfrac{8}{3}\sqrt{2} && \text{OOA} \eqref{eq:ooa} 
+\dfrac{8}{3}\sqrt{2} && \text{OOA} \eqref{eq:ooa}
 \end{align*}
 
-\qdepend 
+\qdepend
 
 \qdependlist
 example \ref{20141108-083108}-20141108-083108
 
 \end{example}
 
-
+\end{document}
 
