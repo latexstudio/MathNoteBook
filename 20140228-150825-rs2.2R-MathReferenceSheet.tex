@@ -1,10 +1,3 @@
-%%--------------------------------------------
-%%	Mark H. Olson: mark.olson@sodermalm.engelska.se 
-%%	Department of Mathematics
-%%	Internationella Engelska Gymnasiet
-%% --shell-escape required for graphs to be printed
-%%--------------------------------------------
-
 %--------------------------------------------
 %
 %	I.	DOCUMENT OPTIONS
@@ -30,71 +23,289 @@
 	}
 
 
-
 % NOTE TITLE
 	\newcommand{\documenttitle}{Math Reference Sheet}
 
 % NOTE SUBTITLE
-	\newcommand{\documentsubtitle}{HendryOlson.com}
+	\newcommand{\documentsubtitle}{v42.org}
 
 % NOTE SUBJECT
 	\newcommand{\documentsubject}{Mathematics}
-	
+
 % DOCUMENT KEYWORDS
 	\newcommand{\documentkeywords}{ma1, ma2, ma3, ma4, ma5, IBby, IBsl}
 
 % DOCUMENT TYPE
 	\newcommand{\documenttype}{Math Sheet}
-	
+
 % DOCUMENT YEAR
-	\newcommand{\documentyear}{2014}
-	
+	\newcommand{\documentyear}{2014-2105}
+
 % DOCUMENT VERSION
 	\newcommand{\documentversion}{\today}
 
 
-%-LOAD PACKAGES
-	\input{../0-CommonFiles/Packages}
-	\input{../0-CommonFiles/PackagesMath}
-	\input{../0-CommonFiles/PackagesTikz}
-	%\input{../0-CommonFiles/PackagesTables}
-	%\input{../0-CommonFiles/PackagesFonts}
-	%\input{../0-CommonFiles/PackagesLayout}
+%--	DEFAULT PACKAGES
+\usepackage{
+caption,
+color,
+datetime,
+graphicx,
+hyperref,
+multicol,
+sagetex,
+subfiles,
+tikz,
+xcolor
+}
 
-%-LOAD CUSTOM COLORS
-	\input{../0-CommonFiles/CustomColorsISSR}
-	%\input{../0-CommonFiles/CustomColorsSTHLM}
-	%\input{../0-CommonFiles/CustomColorsIEGS}
-	%\input{../0-CommonFiles/CustomColorsTANGO}
-	
-%-LOAD CUSTOM COMMANDS
-	\input{../0-CommonFiles/CustomCommandsMath}
-	%\usepackage[euler-digits,euler-hat-accent]{eulervm}
-	%\usepackage{newpxtext}
-%-DOCUMENT PDF INFORMATION	
+%--	DEFAULT MATH PACKAGES
+\usepackage{
+amsmath,
+amssymb,
+mathtools,
+xspace
+}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	STOCKHOLMS COLOR THEME
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+%== BLUE
+	\definecolor{sthlmLightBlue}{RGB}{214,237,252} % HEX #d6edfc
+		\newcommand{\csthlmLightBlue}[1]{{\color{sthlmLightBlue}{#1}}}
+	\definecolor{sthlmBlue}{RGB}{0,110,191} % HEX #006ebf
+		\newcommand{\csthlmBlue}[1]{{\color{sthlmBlue}{#1}}}
+	%\definecolor{sthlmDarkBlue}{RGB}{} %HEX #
+		%\newcommand{\csthlmDarkBlue}[1]{{\color{sthlmDarkBlue}{#1}}}
+
+%== GREEN
+
+	\definecolor{sthlmLightGreen}{RGB}{213,247,244} % HEX #0d5f7f4
+		\newcommand{\csthlmLightGreen}[1]{{\color{sthlmLightGreen}{#1}}}
+	\definecolor{sthlmGreen}{RGB}{0,134,127} % #00867f
+		\newcommand{\csthlmGreen}[1]{{\color{sthlmGreen}{#1}}}
+
+%== GREY
+	%\definecolor{sthlmLightGrey}{RGB}{}
+		%\newcommand{\csthlmLightGrey}[1]{{\color{sthlmLightGrey}{#1}}}
+	\definecolor{sthlmGrey}{RGB}{245,243,238} % HEX #f5f3ee
+		\newcommand{\csthlmGrey}[1]{{\color{sthlmGrey}{#1}}}
+	\definecolor{sthlmDarkGrey}{RGB}{51,51,51} % HEX #333333
+		\newcommand{\csthlmDarkGrey}[1]{{\color{sthlmDarkGrey}{#1}}}
+
+%== ORANGE
+	\definecolor{sthlmLightOrange}{RGB}{255,215,210} % HEX #ffd7d2
+		\newcommand{\csthlmLightOrange}[1]{{\color{sthlmLightOrange}{#1}}}
+	\definecolor{sthlmOrange}{RGB}{221,74,44} % HEX #dd4a2c
+		\newcommand{\csthlmOrange}[1]{{\color{sthlmOrange}{#1}}}
+
+%== PURPLE
+
+	\definecolor{sthlmLightPurple}{RGB}{241,230,252} % HEX #f1e6fc
+		\newcommand{\csthlmLightPurple}[1]{{\color{sthlmLightPurple}{#1}}}
+	\definecolor{sthlmPurple}{RGB}{93,35,125} % HEX #5d237d
+		\newcommand{\csthlmPurple}[1]{{\color{sthlmPurple}{#1}}}
+
+%== RED
+
+	\definecolor{sthlmLightRed}{RGB}{254,222,237} % HEX #c40064
+		\newcommand{\csthlmLightRed}[1]{{\color{sthlmLightRed}{#1}}}
+	\definecolor{sthlmRed}{RGB}{196,0,100} % HEX #fedeed
+		\newcommand{\csthlmRed}[1]{{\color{sthlmRed}{#1}}}
+	%\definecolor{sthlmDarkRed}{RGB}{} % HEX #
+		%\newcommand{\csthlmDarkRed}[1]{{\color{sthlmDarkRed}{#1}}}
+
+%== YELLOW
+
+	%\definecolor{sthlmLightYellow}{RGB}{}
+		%\newcommand{\csthlmLightYellow}[1]{{\color{sthlmLightYellow}{#1}}}
+	\definecolor{sthlmYellow}{RGB}{252,191,10} % HEX #fcbf0a
+		\newcommand{\csthlmYellow}[1]{{\color{sthlmYellow}{#1}}}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	ISSR COLORS
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+%== BLUE
+	\definecolor{issrBlue}{RGB}{0,111,174} % HEX #0066cc
+		\newcommand{\cissrBlue}[1]{{\color{issrBlue}{#1}}}
+
+%== GREY
+	\definecolor{issrGrey}{RGB}{167,169,172} % HEX #999999
+		\newcommand{\cissrGrey}[1]{{\color{issrGrey}{#1}}}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	GLOBAL COLOR THEME
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+%== BLUE
+
+	\newcommand{\cLightBlue}[1]{{\color{sthlmLightBlue}{#1}}}
+	\newcommand{\crLightBlue}{\color{sthlmLightBlue}}
+	\newcommand{\cnLightBlue}{sthlmLightBlue}
+	\newcommand{\cBlue}[1]{{\color{sthlmBlue}{#1}}}
+	\newcommand{\crBlue}{\color{sthlmBlue}}
+	\newcommand{\cnBlue}{sthlmBlue}
+	%\newcommand{\cDarkBlue}[1]{{\color{}{#1}}}
+	%\newcommand{\crDarkBlue}{\color{}}
+	%\newcommand{\cnDarkBlue}{}
+
+%== GREEN
+
+	%\newcommand{\cLightGreen}[1]{{\color{}{#1}}}
+	%\newcommand{\crLightGreen}{\color{}}
+	\newcommand{\cnLightGreen}{sthlmLightGreen}
+	\newcommand{\cGreen}[1]{{\color{sthlmGreen}{#1}}}
+	\newcommand{\crGreen}{\color{sthlmGreen}}
+	\newcommand{\cnGreen}{sthlmGreen}
+	%\newcommand{\cDarkGreen}[1]{{\color{}{#1}}}
+	%\newcommand{\crDarkGreen}{\color{}}
+	%\newcommand{\cnDarkGreen}{sthlmDarkGreen}
+
+%== GREY
+
+	\newcommand{\cLightGrey}[1]{{\color{sthlmLightGrey}{#1}}}
+	\newcommand{\crLightGrey}{\color{sthlmLightGrey}}
+	\newcommand{\cnLightGrey}{sthlmLightGrey}
+	\newcommand{\cGrey}[1]{{\color{sthlmGrey}{#1}}}
+	\newcommand{\crGrey}{\color{sthlmGrey}}
+	\newcommand{\cnGrey}{sthlmGrey}
+	\newcommand{\cDarkGrey}[1]{{\color{sthlmDarkGrey}{#1}}}
+	\newcommand{\crDarkGrey}{\color{sthlmDarkGrey}}
+	\newcommand{\cnDarkGrey}{sthlmDarkGrey}
+
+%== ORANGE
+
+	\newcommand{\cLightOrange}[1]{{\color{sthlmLightOrange}{#1}}}
+	\newcommand{\crLightOrange}{\color{sthlmLightOrange}}
+	\newcommand{\cnLightOrange}{sthlmLightOrange}
+	\newcommand{\cOrange}[1]{{\color{}{#1}}}
+	\newcommand{\crOrange}{\color{sthlmOrange}}
+	\newcommand{\cnOrange}{sthlmOrange}
+	%\newcommand{\cDarkOrange}[1]{{\color{}{#1}}}
+	%\newcommand{\crDarkOrange}{\color{}}
+	%\newcommand{\cnDarkOrange}{}
+
+%== PURPLE
+
+	\newcommand{\cLightPurple}[1]{{\color{sthlmLightPurple}{#1}}}
+	\newcommand{\crLightPurple}{\color{sthlmLightPurple}}
+	\newcommand{\cnLightPurple}{sthlmLightPurple}
+	\newcommand{\cPurple}[1]{{\color{sthlmPurple}{#1}}}
+	\newcommand{\crPurple}{\color{sthlmPurple}}
+	\newcommand{\cnPurple}{sthlmPurple}
+	%\newcommand{\cDarkPurple}[1]{{\color{}{#1}}}
+	%\newcommand{\crDarkPurple}{\color{}}
+	%\newcommand{\cnDarkPurple}{}
+
+%== RED
+
+	\newcommand{\cLightRed}[1]{{\color{sthlmLightRed}{#1}}}
+	\newcommand{\crLightRed}{\color{sthlmLightRed}}
+	\newcommand{\cnLightRed}{sthlmLightRed}
+	\newcommand{\cRed}[1]{{\color{sthlmRed}{#1}}}
+	\newcommand{\crRed}{\color{sthlmRed}}
+	\newcommand{\cnRed}{sthlmRed}
+	\newcommand{\cDarkRed}[1]{{\color{sthlmDarkRed}{#1}}}
+	\newcommand{\crDarkRed}{\color{sthlmDarkRed}}
+	\newcommand{\cnDarkRed}{sthlmDarkRed}
+
+%== YELLOW
+
+	%\newcommand{\cLightYellow}[1]{{\color{}{#1}}}
+	%\newcommand{\crLightYellow}{\color{}}
+	%\newcommand{\cnLightYellow}{sthlmLightYellow}
+	\newcommand{\cYellow}[1]{{\color{sthlmYellow}{#1}}}
+	\newcommand{\crYellow}{\color{sthlmYellow}}
+	\newcommand{\cnYellow}{sthlmYellow}
+	%\newcommand{\cDarkYellow}[1]{{\color{}{#1}}}
+	%\newcommand{\crDarkYellow}{\color{}}
+	%\newcommand{\cnDarkYellow}{}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	GLOBAL UNITS
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
+\newcommand{\doneit}{\textcolor{sthlmRed}{$\odot$}}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	GLOBAL MATH
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\newcommand{\limit}{\displaystyle\lim}
+\newcommand{\impart}{\textrm{Im}}
+\newcommand{\repart}{\textrm{Re}}
+\newcommand{\integer}{\mathbb{Z}}
+\newcommand{\degree}{\ensuremath{{}^{\circ}}\xspace}
+%\newcommand{\degree}{^{\circ}} Depricated by above
+\newcommand{\rad}{\unit{rad}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\dx}{\mathrm{d}x}
+\newcommand{\dy}{\mathrm{d}y}
+\newcommand{\dr}{\mathrm{d}r}
+\newcommand{\dtheta}{\mathrm{d}\theta}
+\newcommand{\dydx}{\dfrac{\mathrm{d}y}{\mathrm{d}x}}
+\newcommand{\dydt}{\dfrac{\mathrm{d}y}{\mathrm{d}t}}
+\newcommand{\dxdt}{\dfrac{\mathrm{d}x}{\mathrm{d}t}}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\farg}[1]{{\color{sthlmBlue}{\left[\boldsymbol{#1}\right]}}}
+\newcommand{\avf}[1]{\left| #1 \right|}
+\newcommand{\sname}[1]{\texttt{#1}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\inv}{^{-1}}
+\newcommand{\cb}{$\Box$}
+\newcommand{\suchthat}{\;\ifnum\currentgrouptype=16 \middle\fi|\;}
+\newcommand{\ihat}{\hat{\imath}}
+\newcommand{\jhat}{\hat{\jmath}}
+\newcommand{\khat}{\hat{k}}
+\DeclareMathOperator{\lcm}{lcm}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	TIKZ LIBRARIES
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\usetikzlibrary{
+arrows,
+backgrounds,
+fit,
+chains,
+calc,
+decorations.pathmorphing,
+matrix,
+mindmap,
+positioning,
+shapes,
+snakes,
+trees
+}
+
+\tikzset{ >=stealth', help lines/.style={dashed, thick}, axis/.style={<->}, important line/.style={thick}, connection/.style={thick, dotted},}
+%-DOCUMENT PDF INFORMATION
 \hypersetup{
 	% AUTHOR OF THE DOCUMENT
-	    pdfauthor = {Mark H. Olson: mark.olson@sodermalm.engelska.se},      
+	    pdfauthor = {Mark H. Olson: mark.olson@sodermalm.engelska.se},
 	% SUBJECT OF THE DOCUMENT
 	    pdfsubject = {\documentsubject},
 	% DOCUMENT KEYWORDS
-	    pdfkeywords = {\jobname, \documentkeywords},  
+	    pdfkeywords = {\jobname, \documentkeywords},
 	% DOCUMENT LAST MODIFICATIONS - USES DATE TIME PACKAGE
-	    pdfmoddate= {D:\pdfdate},          
+	    pdfmoddate= {D:\pdfdate},
 	% CREATOR OF THE DOCUMENT
-	    pdfcreator = {LaTeX with hyperref package},       
+	    pdfcreator = {LaTeX with hyperref package},
 	% FALSE: BOXED LINKS; TRUE: COLORED LINKS
-	    colorlinks=true,                                  
+	    colorlinks=true,
 	% COLOR OF INTERNAL LINKS
-	    linkcolor=sthlmBlue, 
+	    linkcolor=sthlmBlue,
 	% COLOR OF CITATIONS
-	    citecolor=sthlmBlue,                                     
+	    citecolor=sthlmBlue,
 	% COLOR OF EXTERNAL LINKS
 	    urlcolor=sthlmBlue  }
-		
+
 % Turn off header and footer
 \pagestyle{empty}
- 
+
 
 % Redefine section commands to use less space
 \makeatletter
@@ -119,14 +330,14 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt plus 0.5ex}
 
-\newtcolorbox{mysection}[1]{colback=stockholmGrey!5!white,colframe=sthlmBlue,fonttitle=\bfseries,title=#1}
-\newtcolorbox{mysubsection}[1]{colback=stockholmGrey!5!white,colframe=stockholmPurple,fonttitle=\bfseries,title=#1}
-	
+\newtcolorbox{mysection}[1]{colback=sthlmGrey!5!white,colframe=sthlmBlue,fonttitle=\bfseries,title=#1}
+\newtcolorbox{mysubsection}[1]{colback=sthlmGrey!5!white,colframe=sthlmPurple,fonttitle=\bfseries,title=#1}
+
 %--------------------------------------------
 %
 %	III.  THE DOCUMENT
 %
-%-------------------------------------------- 
+%--------------------------------------------
 
 \begin{document}
 
@@ -144,7 +355,7 @@
 \setlength{\columnsep}{2pt}
 
 
-\includegraphics[height=4em]{../0-CommonFiles/texmf/stockholmstad}	\hspace{0.5cm} \includegraphics[height=4em]{../0-CommonFiles/texmf/issr} \\
+\includegraphics[height=4em]{stockholmstad}	\hspace{0.5cm} \includegraphics[height=4em]{issr} \\
 \vspace{0.5cm}
 {\Large\textbf\documenttitle} \\
 \vspace{0.5cm}
@@ -152,26 +363,26 @@
 
 Version: \today\\
 FileID: \jobname
-	
+
 
 \begin{mysection}{Number Systems}
 
 \begin{tabular}{@{}ll@{}l@{}}
 
-$\cLightRed{\mathbb{N}}$	& \texttt{Natural numbers} 
+$\cRed{\mathbb{N}}$	& \texttt{Natural numbers}
 							& \qquad $\mathbb{N}=\{1, 2, 3, \ldots  \}$ \\
 							&& \\
-$\cLightRed{\mathbb{Z}}$  	& \texttt{Integers}
+$\cRed{\mathbb{Z}}$  	& \texttt{Integers}
 							& \qquad $\mathbb{Z}=\{0, \pm 1, \pm 2, \pm 3, \ldots \}$ \\
 							&& \\
-$\cLightRed{\mathbb{Q}}$  	& \texttt{Rational}
+$\cRed{\mathbb{Q}}$  	& \texttt{Rational}
 							& \qquad $\mathbb{Q}=\{\frac{m}{n} \mid m \in \mathbb{Z}, n \in \mathbb{Z}, n \ne 0\}$ \\
 							&& \\
-$\cLightRed{\mathbb{R}}$  	& \texttt{Real numbers}
+$\cRed{\mathbb{R}}$  	& \texttt{Real numbers}
 							&  \\
 							&& \\
-$\cLightRed{\mathbb{C}}$  	& \texttt{Complex numbers}
-							&  
+$\cRed{\mathbb{C}}$  	& \texttt{Complex numbers}
+							&
 \end{tabular}
 \end{mysection}
 
@@ -199,12 +410,12 @@ $\cLightRed{\mathbb{C}}$  	& \texttt{Complex numbers}
 
 \begin{mysection}{Prime Divisor rules}
 \begin{tabular}{@{}ll@{}l@{}}
-\cLightRed{2}			& \texttt{the 1's digit is even} \\
+\cRed{2}			& \texttt{the 1's digit is even} \\
 						& \\
-\cLightRed{3}			& \texttt{sum of digits is divisible by 3} \\
+\cRed{3}			& \texttt{sum of digits is divisible by 3} \\
 						& \\
-\cLightRed{5}			& \texttt{the 1's digit is 0 or 5} \\
-						& 
+\cRed{5}			& \texttt{the 1's digit is 0 or 5} \\
+						&
 \end{tabular}
 \end{mysection}
 
@@ -214,32 +425,32 @@ Reduce the fraction $\frac{m}{n}$
 \begin{enumerate}
 	\item Simplify by factoring $m$
 	\item Simplify by factoring $n$
-	\item Find the $\gcd(m, n)$ 
+	\item Find the $\gcd(m, n)$
 	\item If the $\gcd(m, n)=1$ the fraction is reduced.
 	\item $\gcd(m, n)$ is the MId
-\end{enumerate} 
+\end{enumerate}
 \end{mysection}
 
 \begin{mysection}{Operations}
 \begin{tabular}{@{}ll@{}l@{}}
-\cLightRed{DELIM}  		& \texttt{Delimiters } \\ 
+\cRed{DELIM}  		& \texttt{Delimiters } \\
 						& \\
-\cLightRed{DO}			& \texttt{Dyadic Operations} \\
+\cRed{DO}			& \texttt{Dyadic Operations} \\
 						& \\
-\cLightRed{OOA}			& \texttt{Operation of Addition} \\
+\cRed{OOA}			& \texttt{Operation of Addition} \\
 						& \\
-\cLightRed{OOD}			& \texttt{Operation of Division} \\
+\cRed{OOD}			& \texttt{Operation of Division} \\
 						& \\
-\cLightRed{OOE}			& \texttt{Operation of Exponentiation} \\
+\cRed{OOE}			& \texttt{Operation of Exponentiation} \\
 						& \\
-\cLightRed{OON}			& \texttt{Operation of Negation} \\
+\cRed{OON}			& \texttt{Operation of Negation} \\
 						& \\
-\cLightRed{OOS}			& \texttt{Operation of Subtraction} \\
+\cRed{OOS}			& \texttt{Operation of Subtraction} \\
 						& \\
-\cLightRed{OOO}			& \texttt{Order of Operations} \\
+\cRed{OOO}			& \texttt{Order of Operations} \\
 						& \\
-\cLightRed{UO}			& \texttt{Unary Operations} \\
-						& 
+\cRed{UO}			& \texttt{Unary Operations} \\
+						&
 \end{tabular}
 \end{mysection}
 
@@ -255,63 +466,63 @@ Reduce the fraction $\frac{m}{n}$
 \begin{mysection}{Operation of Negation}
 
 \begin{tabular}{@{}ll@{}l@{}}
-\cLightRed{ONeg}		& \texttt{Operation of Negation Notation} \\
-						& \qquad $- a = \neg a$ 
+\cRed{ONeg}		& \texttt{Operation of Negation Notation} \\
+						& \qquad $- a = \neg a$
 \end{tabular}
 \end{mysection}
 
 \begin{mysection}{Operation of Subtraction}
 
 \begin{tabular}{@{}ll@{}l@{}}
-\cLightRed{DOS}			& \texttt{Definition of Subtraction} \\
-						& \qquad $a+\neg b = a-b$ 
+\cRed{DOS}			& \texttt{Definition of Subtraction} \\
+						& \qquad $a+\neg b = a-b$
 \end{tabular}
 \end{mysection}
 
 \begin{mysection}{Operation of Addition}
 
 \begin{tabular}{@{}ll@{}l@{}}
-\cLightRed{APA}			& \texttt{Associative Property of Addition} \\
+\cRed{APA}			& \texttt{Associative Property of Addition} \\
 						& \qquad $(a+b)+c=a+(b+c)$ \\
 						& \\
-\cLightRed{CPA}			& \texttt{Commutative Property of Addition} \\
+\cRed{CPA}			& \texttt{Commutative Property of Addition} \\
 						& \qquad $a+b=b+a$ \\
 						& \\
-\cLightRed{DPF}			& \texttt{Distributive Property Factoring} \\
+\cRed{DPF}			& \texttt{Distributive Property Factoring} \\
 						& \qquad $a \cdot b + a \cdot c = a(b+c)$ \\
 						& \qquad $b \cdot a + c \cdot a = (b+c)a$ \\
 						& \\
-\cLightRed{CD}			& \texttt{Common Denominator} \\
-						& \qquad $\frac{a}{b}+ \frac{c}{d} = \frac{ad+cb}{bd}$ 
+\cRed{CD}			& \texttt{Common Denominator} \\
+						& \qquad $\frac{a}{b}+ \frac{c}{d} = \frac{ad+cb}{bd}$
 \end{tabular}
 \end{mysection}
 
 \begin{mysection}{Operation of Multiplicaiton}
 
 \begin{tabular}{@{}ll@{}l@{}}
-\cLightRed{APM}			& \texttt{Associative Property of Multiplication} \\
+\cRed{APM}			& \texttt{Associative Property of Multiplication} \\
 						& \qquad $(a \cdot  b) \cdot c=a \cdot (b\cdot c)$ \\
 						& \\
-\cLightRed{CPM}			& \texttt{Commutative Property of Multiplication} \\
+\cRed{CPM}			& \texttt{Commutative Property of Multiplication} \\
 						& \qquad $a \cdot b=b \cdot a$ \\
 						& \\
-\cLightRed{CTJ}			& \texttt{Center-Dot to Juxtaposition} \\
+\cRed{CTJ}			& \texttt{Center-Dot to Juxtaposition} \\
 						& \qquad $a \cdot b = ab$ \\
 						& \\
-\cLightRed{DPE}			& \texttt{Distributive Property Expanding} \\
+\cRed{DPE}			& \texttt{Distributive Property Expanding} \\
 						& \qquad $a(b+c)=a \cdot b + a \cdot c$ \\
 						& \qquad $(b+c)a=b \cdot a + c \cdot a$ \\
 						& \\
-\cLightRed{JTC}			& \texttt{Juxtaposition to Center-Dot} \\
+\cRed{JTC}			& \texttt{Juxtaposition to Center-Dot} \\
 						& \qquad $ab=a \cdot b$ \\
 						& \\
-\cLightRed{MC}			& \texttt{Center-Dot Notation} \\
+\cRed{MC}			& \texttt{Center-Dot Notation} \\
 						& \qquad $a\cdot b$ \\
 						& \\
-\cLightRed{MJ}			& \texttt{Juxtaposition Notation} \\
+\cRed{MJ}			& \texttt{Juxtaposition Notation} \\
 						& \qquad $ab, a(b), (a)b, (a)(b), a[b], [a]b,[a][b]$ \\
 						& \\
-\cLightRed{MT}			& \texttt{Times Notation} \\
+\cRed{MT}			& \texttt{Times Notation} \\
 						& \qquad $a \times b$
 \end{tabular}
 \end{mysection}
@@ -319,70 +530,70 @@ Reduce the fraction $\frac{m}{n}$
 \begin{mysection}{Operation of Division}
 
 \begin{tabular}{@{}ll@{}l@{}}
-\cLightRed{DOD}			& \texttt{Definition of Division} \\
+\cRed{DOD}			& \texttt{Definition of Division} \\
 						& \qquad $a \div b = \frac{a}{b}= a \cdot b^{-1}, b \ne 0$ \\
 						& \\
-\cLightRed{FN}			& \texttt{Fraction Numerator (upstaris)} \\
+\cRed{FN}			& \texttt{Fraction Numerator (upstaris)} \\
 						& \\
-\cLightRed{FD}			& \texttt{Fraction Denominator (downstairs)} \\
+\cRed{FD}			& \texttt{Fraction Denominator (downstairs)} \\
 						&  \\
-\cLightRed{RF}			& \texttt{Reduce Fraction} 
+\cRed{RF}			& \texttt{Reduce Fraction}
 \end{tabular}
 \end{mysection}
 
 \begin{mysection}{Powers}
 \begin{tabular}{@{}ll@{}l@{}}
-\cLightRed{FTPo}			& \texttt{Factor to Power} \\
+\cRed{FTPo}			& \texttt{Factor to Power} \\
 						& \qquad $a_n \cdot a_{n-1} \cdot \ldots \cdot a_2 \cdot a_1=a^n$ \\
 						& \\
-\cLightRed{PoNE}		& \texttt{Power with a Negative Exponent} \\
+\cRed{PoNE}		& \texttt{Power with a Negative Exponent} \\
 						& \qquad $b^{-k}= \frac{1}{b^k}$ \\
 						& \\
-\cLightRed{PoPo}		& \texttt{Power of a Power} \\
+\cRed{PoPo}		& \texttt{Power of a Power} \\
 						& \qquad $(b^m)^k=b^{m \cdot k}$ \\
 						& \\
-\cLightRed{PoQ}			& \texttt{Power of a Quotient} \\
+\cRed{PoQ}			& \texttt{Power of a Quotient} \\
 						& \qquad $\left(\frac{a}{b} \right)^k = \frac{a^k}{b^k}, b\ne 0$ \\
 						& \\
-\cLightRed{PoPr}		& \texttt{Power of a Product} \\
+\cRed{PoPr}		& \texttt{Power of a Product} \\
 						& \qquad $(a \cdot b)^k=a^k \cdot b^k$ \\
 						& \\
-\cLightRed{PoQPo}		& \texttt{Power of a Quotient of Powers} \\
+\cRed{PoQPo}		& \texttt{Power of a Quotient of Powers} \\
 						& \qquad $\left( \frac{a^{m}}{ b^{n}} \right)^{k} = \frac{a^{m \cdot k}}{ b^{n \cdot k}}, b\ne 0$ \\
 						& \\
-\cLightRed{PoPrPo}		& \texttt{Power of a Product of Powers} \\
+\cRed{PoPrPo}		& \texttt{Power of a Product of Powers} \\
 						& \qquad $(a^m b^n)^k = a^{m \cdot k} b^{n \cdot k}$ \\
 						& \\
-\cLightRed{PoTR}		& \texttt{Power to Radical} \\
+\cRed{PoTR}		& \texttt{Power to Radical} \\
 						& \qquad $a^{\frac{m}{n}} = \sqrt[n]{a^m}$ \\
 						& \\
-\cLightRed{PoTL}		& \texttt{Power to Logarithm} \\
+\cRed{PoTL}		& \texttt{Power to Logarithm} \\
 						& \qquad $y=b^x \Rightarrow x=\log_b y$ \\
 						& \\
-\cLightRed{PoTF}		& \texttt{Power to Factor} \\
+\cRed{PoTF}		& \texttt{Power to Factor} \\
 						& \qquad $(a)^n = a_1 \cdot a_2 \cdot \ldots \cdot a_n $ \\
 						& \\
-\cLightRed{PrCBPo}		& \texttt{Product of Common Base Powers} \\
+\cRed{PrCBPo}		& \texttt{Product of Common Base Powers} \\
 						& \qquad $b^m \cdot b^n = b^{m+n}$ \\
 						& \\
-\cLightRed{QCBPo}		& \texttt{Quotient of Common Base Powers} \\
+\cRed{QCBPo}		& \texttt{Quotient of Common Base Powers} \\
 						& \qquad $\frac{b^m}{b^n}=b^{m-n}$ \\
 						& \\
-\cLightRed{RTPo}		& \texttt{Radical to Power} \\
-						& \qquad $\sqrt[n]{a^m}=a^{\frac{m}{n}}$ 
+\cRed{RTPo}		& \texttt{Radical to Power} \\
+						& \qquad $\sqrt[n]{a^m}=a^{\frac{m}{n}}$
 \end{tabular}
 \end{mysection}
 
 \begin{mysection}{Identities}
 \begin{tabular}{@{}ll@{}}
 
-\cLightRed{AId}		& \texttt{Additive Identity} \\
-					& \qquad $a+\cLightRed{0} = a$ \\
+\cRed{AId}		& \texttt{Additive Identity} \\
+					& \qquad $a+\cRed{0} = a$ \\
 					& \\
-\cLightRed{MId}  	& \texttt{Multiplicative Identity} \\
-					& \qquad $a \cdot \cLightRed{1} = a$ \\
+\cRed{MId}  	& \texttt{Multiplicative Identity} \\
+					& \qquad $a \cdot \cRed{1} = a$ \\
 					& \\
-\cLightRed{PoId}  	& \texttt{Power Identity} \\
+\cRed{PoId}  	& \texttt{Power Identity} \\
 					& \qquad $b^0=1$, given $b>0$ \\
 					& \\
 \end{tabular}
@@ -391,28 +602,28 @@ Reduce the fraction $\frac{m}{n}$
 \begin{mysection}{Inverses}
 \begin{tabular}{@{}ll@{}l@{}}
 
-\cLightRed{AI}		& \texttt{Additive Inverse} \\
+\cRed{AI}		& \texttt{Additive Inverse} \\
 					& \qquad $a+(-a) = 0$ \\
 					& \\
-\cLightRed{CI}  	& \texttt{Cosine Inverse} \\
+\cRed{CI}  	& \texttt{Cosine Inverse} \\
 					& \qquad $\cos\inv \left(\cos \theta \right) = \theta $ \\
 					& \\
-\cLightRed{EI}  	& \texttt{Exponential Inverse} \\
+\cRed{EI}  	& \texttt{Exponential Inverse} \\
 					& \qquad $\log_a \left(a^x \right)=x$ \\
 					& \\
-\cLightRed{LI} 		& \texttt{Logarithmic Inverse} \\
+\cRed{LI} 		& \texttt{Logarithmic Inverse} \\
 					& \qquad $a^{\log_a x}= x$ \\
 					& \\
-\cLightRed{MI}  	& \texttt{Multiplicative Inverse} \\
-					& \qquad $a \cdot \frac{1}{a}=1=a \cdot a^{-1}, a \ne 0$ \\ 
+\cRed{MI}  	& \texttt{Multiplicative Inverse} \\
+					& \qquad $a \cdot \frac{1}{a}=1=a \cdot a^{-1}, a \ne 0$ \\
 					& \\
-\cLightRed{PoI} 	& \texttt{Power Inverse} \\
+\cRed{PoI} 	& \texttt{Power Inverse} \\
 					& \qquad $\left(x^{\frac{m}{n}} \right)^{\frac{n}{m}}=x$ \\
 					& \\
-\cLightRed{SI}  	& \texttt{Sine Inverse} \\
-					& \qquad $\sin\inv \left(\sin \theta \right) = \theta $\\ 
+\cRed{SI}  	& \texttt{Sine Inverse} \\
+					& \qquad $\sin\inv \left(\sin \theta \right) = \theta $\\
 					& \\
-\cLightRed{TI}  	& \texttt{Tangent Inverse} \\
+\cRed{TI}  	& \texttt{Tangent Inverse} \\
 					& \qquad $\tan\inv \left(\tan \theta \right) = \theta $
 \end{tabular}
 \end{mysection}
@@ -420,29 +631,29 @@ Reduce the fraction $\frac{m}{n}$
 
 \begin{mysection}{Equality \& Inequality}
 \begin{tabular}{@{}ll@{}l@{}}
-\cLightRed{RPE}			& \texttt{Reflexive Property of Equality} \\
+\cRed{RPE}			& \texttt{Reflexive Property of Equality} \\
 						& \qquad $a=a$ \\
 						& \\
-\cLightRed{SPE}			& \texttt{Substitution Property of Equality} \\
+\cRed{SPE}			& \texttt{Substitution Property of Equality} \\
 						& \qquad $a=b$ then $F(a)=F(b)$ \\
 						& \\
-\cLightRed{SPIn}		& \texttt{Substitution Property of Inequality} \\
+\cRed{SPIn}		& \texttt{Substitution Property of Inequality} \\
 						& \qquad $a<b$, then $a + c < b + c$ \\
 						& \qquad $a<b$ and $c>0$, then $ca<cb$\\
 						& \qquad $a<b$ and $c<0$, then $ca>cb$\\
 						& \\
-\cLightRed{SyPE}		& \texttt{Symmetric Property of Equality} \\
+\cRed{SyPE}		& \texttt{Symmetric Property of Equality} \\
 						& \qquad $a=b$ then $b=a$ \\
 						& \\
-\cLightRed{TPE}			& \texttt{Transitive Property of Equality} \\
+\cRed{TPE}			& \texttt{Transitive Property of Equality} \\
 						& \qquad if $a=b$ and $b=c$, then $a=c$ \\
 						& \\
-\cLightRed{TPIn}		& \texttt{Transitive Property of Inequality} \\
+\cRed{TPIn}		& \texttt{Transitive Property of Inequality} \\
 						& \qquad if $a<b$ and $b<c$, then $a<c$ \\
 						& \\
-\cLightRed{ZFP}			& \texttt{Zero Factor Property} \\
+\cRed{ZFP}			& \texttt{Zero Factor Property} \\
 						& \qquad if $a \cdot b =0$, then $a=0$ or $b=0$ \\
-						& 
+						&
 \end{tabular}
 \end{mysection}
 
@@ -452,67 +663,67 @@ Reduce the fraction $\frac{m}{n}$
 
 
 \begin{enumerate}
-	\item \cLightRed{MId}
-	\item \cLightRed{ONeg}
-	\item \cLightRed{DOS}
-	\item \cLightRed{DELIM} Goto 36, 21
-	\item \cLightRed{DPE}
-	\item \cLightRed{JTC}
-	\item \cLightRed{CPM} Goto 25
-	\item \cLightRed{APM}
-	\item \cLightRed{OOM}
-	\item \cLightRed{RF}
-	\item \cLightRed{CTJ}
-	\item \cLightRed{CPA}
-	\item \cLightRed{DPF}
-	\item \cLightRed{APA}
-	\item \cLightRed{RF}
-	\item \cLightRed{OOA}
-	\item \cLightRed{AId} Goto 4
-	\item \cLightRed{DOS}
-	\item \cLightRed{ONeg}
-	\item \cLightRed{MId} \textbf{DONE!}
-	\item \cLightRed{PoId}
-	\item \cLightRed{PoTF}
-	\item \cLightRed{RTPo}
-	\item \cLightRed{PoNE} Goto 4
-	\item \cLightRed{PoPr}
-	\item \cLightRed{PoQ}
-	\item \cLightRed{PoPrPo}
-	\item \cLightRed{PoQPo}
-	\item \cLightRed{PrCBPo}
-	\item \cLightRed{QCBPo}
-	\item \cLightRed{PoPo}
-	\item \cLightRed{PoNE}
-	\item \cLightRed{OOE}
-	\item \cLightRed{PoTR}
-	\item \cLightRed{PoId} Goto 8
-	\item \cLightRed{LPoPo}
-	\item \cLightRed{LPrCBPo}
-	\item \cLightRed{LQCBPo}
-	\item \cLightRed{LEF} Goto 4
+	\item \cRed{MId}
+	\item \cRed{ONeg}
+	\item \cRed{DOS}
+	\item \cRed{DELIM} Goto 36, 21
+	\item \cRed{DPE}
+	\item \cRed{JTC}
+	\item \cRed{CPM} Goto 25
+	\item \cRed{APM}
+	\item \cRed{OOM}
+	\item \cRed{RF}
+	\item \cRed{CTJ}
+	\item \cRed{CPA}
+	\item \cRed{DPF}
+	\item \cRed{APA}
+	\item \cRed{RF}
+	\item \cRed{OOA}
+	\item \cRed{AId} Goto 4
+	\item \cRed{DOS}
+	\item \cRed{ONeg}
+	\item \cRed{MId} \textbf{DONE!}
+	\item \cRed{PoId}
+	\item \cRed{PoTF}
+	\item \cRed{RTPo}
+	\item \cRed{PoNE} Goto 4
+	\item \cRed{PoPr}
+	\item \cRed{PoQ}
+	\item \cRed{PoPrPo}
+	\item \cRed{PoQPo}
+	\item \cRed{PrCBPo}
+	\item \cRed{QCBPo}
+	\item \cRed{PoPo}
+	\item \cRed{PoNE}
+	\item \cRed{OOE}
+	\item \cRed{PoTR}
+	\item \cRed{PoId} Goto 8
+	\item \cRed{LPoPo}
+	\item \cRed{LPrCBPo}
+	\item \cRed{LQCBPo}
+	\item \cRed{LEF} Goto 4
 \end{enumerate}
 
-\end{multicols}	
+\end{multicols}
 \end{mysection}
 
 \begin{mysection}{Logarithms}
 \begin{tabular}{@{}ll@{}l@{}}
-\cLightRed{LEV}			& \texttt{Logarithm Exponent Visible} \\
+\cRed{LEV}			& \texttt{Logarithm Exponent Visible} \\
 						& \qquad $\log_b y \Rightarrow \log_b y=x$ \\
 						& \\
-\cLightRed{LPoPo}  		& \texttt{Logarithm Power of a Power} \\
+\cRed{LPoPo}  		& \texttt{Logarithm Power of a Power} \\
 						& \qquad $\log_b x^n = n \log_b x$ \\
 						& \\
-\cLightRed{LPrCBPo}  	& \texttt{Logarithm Product of Common Base Powers} \\
+\cRed{LPrCBPo}  	& \texttt{Logarithm Product of Common Base Powers} \\
 						& \qquad $\log_b (mn) = \log_b m + \log_b n$ \\
 						& \\
-\cLightRed{LQCBPo}  	& \texttt{Logarithm Quotient of Common Base Powers} \\ 
+\cRed{LQCBPo}  	& \texttt{Logarithm Quotient of Common Base Powers} \\
 						& \qquad $\log_b \left( \frac{m}{n} \right) = \log_b m - \log_b n $\\
 						& \\
-\cLightRed{LTPo}  		& \texttt{Logarithm to Power Form} \\
+\cRed{LTPo}  		& \texttt{Logarithm to Power Form} \\
 						& \qquad $x=\log_b y \Rightarrow y=b^x$\\
-						& 
+						&
 \end{tabular}
 \end{mysection}
 
@@ -540,7 +751,7 @@ Reduce the fraction $\frac{m}{n}$
   }
   % Pascal's triangle
   % row #0 => value is 1
- 
+
   \node[box] (p-0-0) at (0,0) {1};
   \foreach \row in {1,...,5} {
      % col #0 =&gt; value is 1
@@ -571,7 +782,7 @@ Reduce the fraction $\frac{m}{n}$
 \begin{multicols}{2}
 \begin{tabular}{@{}ll@{}}
 
-\cLightRed{PyThm}	& \texttt{Pythagorean Theorem}	\\
+\cRed{PyThm}	& \texttt{Pythagorean Theorem}	\\
 	 				& $a^2+b^2=c^2$
 \end{tabular}
 
@@ -587,7 +798,7 @@ Reduce the fraction $\frac{m}{n}$
    \node [below] at (2,0) {\small $b$};
    \node [right] at (4,1.5) {\small $a$};
    \node [above left] at (2,1.5) {\small $c$};
-  \end{tikzpicture} 
+  \end{tikzpicture}
 \end{multicols}
 \end{mysection}
 
@@ -611,8 +822,8 @@ Reduce the fraction $\frac{m}{n}$
 \begin{mysection}{Function Vertical Line Test}
 
 \begin{tabular}{@{}ll@{}l@{}}
-\cLightRed{FVLT}		& \texttt{Function Vertical Line Test} \\
-						& 
+\cRed{FVLT}		& \texttt{Function Vertical Line Test} \\
+						&
 \end{tabular}
 
 \begin{multicols}{2}
@@ -624,7 +835,7 @@ Reduce the fraction $\frac{m}{n}$
    \draw (1.5,0.5) -- (1.5,2);
   \end{tikzpicture}
 \quad $f$ is a function
-\columnbreak 
+\columnbreak
 
   \begin{tikzpicture}[scale=0.8, every node/.style={font=\small}]
    \draw[latex-latex,black!60,line width=0.3pt] (0,2) node[above] {$y$} |- (4,0) node[right] {$x$};
@@ -633,12 +844,12 @@ Reduce the fraction $\frac{m}{n}$
    \draw (2.8,0.2) -- (2.8,2);
   \end{tikzpicture}
 \quad $f$ is not a function
-\end{multicols} 
-\end{mysection} 
+\end{multicols}
+\end{mysection}
 
  \begin{mysection}{Horizontal Line Test}
  \begin{tabular}{@{}ll@{}l@{}}
- \cLightRed{FHLT}		& \texttt{Function Horizontal Line Test} 
+ \cRed{FHLT}		& \texttt{Function Horizontal Line Test}
  \end{tabular}
 
  \begin{multicols}{2}
@@ -650,7 +861,7 @@ Reduce the fraction $\frac{m}{n}$
   \end{tikzpicture}
   \quad $f$ is one-to-one
   \columnbreak
- 
+
   \begin{tikzpicture}[scale=0.8,every node/.style={font=\small}]
    \draw[latex-latex,black!60,line width=0.3pt] (0,2) node[above] {$y$} |- (4,0) node[right] {$x$};
    \draw [sthlmBlue,line width=1.5pt] (0.5,0.5) parabola bend  (2,1.5) (3.5,0.5);
@@ -684,29 +895,29 @@ Reduce the fraction $\frac{m}{n}$
    \node at (2,0.5) {$m = \frac{\text{rise}}{\text{run}}$};
   \end{tikzpicture}
 
- 
+
 
 \begin{tabular}{@{}ll@{}}
-\cLightRed{DBP}			& \texttt{Distance betweent $P_1=(x_1, y_1)$} \\
+\cRed{DBP}			& \texttt{Distance betweent $P_1=(x_1, y_1)$} \\
 						& \texttt{\& $P_2=(x_2, y_2)$} \\
 						& \qquad $d \left(P_1, P_2 \right)=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$\\
 						& \\
-\cLightRed{MBP}			& \texttt{Midpoint between $P_1=(x_1, y_1)$} \\
+\cRed{MBP}			& \texttt{Midpoint between $P_1=(x_1, y_1)$} \\
 						& \texttt{\& $P_2=(x_2, y_2)$} \\
 						& \qquad $\text{Midpoint of }P_1P_2= \left(\frac{x_1+x_2}{2}, \frac{y_1+y_2}{3} \right)$\\
 						& \\
-\cLightRed{Line Slope}	& \texttt{Line Slope through $P_1=(x_1, y_1)$} \\
+\cRed{Line Slope}	& \texttt{Line Slope through $P_1=(x_1, y_1)$} \\
 						& \texttt{\& $P_2=(x_2, y_2)$ } \\
 						& \qquad $m=\frac{y_2-y_1}{x_2-x_1}$\\
 						& \\
-\cLightRed{PSE}			& \texttt{Point slope equation though $P(x_1, y_2)$} \\
+\cRed{PSE}			& \texttt{Point slope equation though $P(x_1, y_2)$} \\
 						& \qquad $y-y_1=m(x-x_1)$\\
 						& \\
-\cLightRed{SIE}			& \texttt{Slope-intercept equation } \\
+\cRed{SIE}			& \texttt{Slope-intercept equation } \\
 						& \qquad $y=mx+b$ \\
 						& \\
-\cLightRed{PrSPL}		& \texttt{Product of slopes - Perpendicual Lines } \\
-						& \qquad $m_1 m_2 =-1$ 
+\cRed{PrSPL}		& \texttt{Product of slopes - Perpendicual Lines } \\
+						& \qquad $m_1 m_2 =-1$
 \end{tabular}
 
   \begin{tikzpicture}[every node/.style={font=\small}]
@@ -724,7 +935,7 @@ Reduce the fraction $\frac{m}{n}$
    \node [left] at (-0.1,0.9) {$b_2$};
   \end{tikzpicture}
  \end{mysection}
- 
+
 \begin{mysection}{Quadratic Functions}
  If $ax^2+bx+c=0$, where $a \ne 0$, then \\
 
@@ -771,7 +982,7 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
 \end{mysection}
 
 \begin{mysection}{Angle Direction \& Magnitude}
- 
+
  \begin{tikzpicture}
   \draw [line width=0.5pt,-latex] (1,0) arc (0:135:1);
   \node[right,align=left] at (0,1.6) {\small counter-clockwise\\\small direction ($+$)};
@@ -787,7 +998,7 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
  \begin{multicols}{2}
  \begin{tabular}{@{}ll@{}}
 
- \cLightRed{Rad}	& \texttt{Radian}	\\
+ \cRed{Rad}	& \texttt{Radian}	\\
  	 				& $1 \text{ radian}= \frac{180}{\pi} \approx 57.3 \degree$
 
  \end{tabular}
@@ -817,10 +1028,10 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
  \begin{multicols}{2}
  \begin{tabular}{@{}ll@{}}
 
- \cLightRed{AL}	& \texttt{Arc Length}	\\
+ \cRed{AL}	& \texttt{Arc Length}	\\
  	 				& $s= r \theta $ \\
 					& \\
- \cLightRed{ASect}	& \texttt{Area of a Sector}	\\
+ \cRed{ASect}	& \texttt{Area of a Sector}	\\
  	 				& $A = \frac{1}{2}r^2 \theta $
  \end{tabular}
 
@@ -831,7 +1042,7 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
     \fill (0,0) circle (2pt);
     \node [below] at (0,0) {$O$};
     \draw (0,0) -- (65:1.2);
-  \filldraw [color=sthlmBlue,fill=stockholmGrey,line width=1pt] (0,0) -- (65:1.2)
+  \filldraw [color=sthlmBlue,fill=sthlmGrey,line width=1pt] (0,0) -- (65:1.2)
    node[black,midway,above left] {$r$} arc (65:0:1.2) -- (0,0);
     \fill (0:1.2) circle (2pt);
     \fill (65:1.2) circle (2pt);
@@ -842,14 +1053,14 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
    \end{tikzpicture}
  \end{multicols}
 \end{mysection}
- 
+
 
 \begin{mysection}{Classification of Angles}
 
 \begin{multicols}{2}
 \begin{tabular}{@{}ll@{}}
 
-\cLightRed{AA}	& \texttt{Acute Angle}	
+\cRed{AA}	& \texttt{Acute Angle}
 \end{tabular}
 
 \columnbreak
@@ -860,7 +1071,7 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
   \draw [white] (1.6,0) -- (2.1,0);
   \draw [white] (-0.1,0) -- (-0.5,0);
  \end{tikzpicture}
- 
+
 \end{multicols}
 
 \vspace{0.75cm}
@@ -868,7 +1079,7 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
 \begin{multicols}{2}
 \begin{tabular}{@{}ll@{}}
 
-\cLightRed{RA}	& \texttt{Right Angle}	
+\cRed{RA}	& \texttt{Right Angle}
 \end{tabular}
 
 \columnbreak
@@ -879,8 +1090,8 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
   \draw [color=sthlmBlue,line width=1.5pt,latex-latex] (1.5,0) -- (0,0) -- (0,1.3);
   \draw [white] (1.6,0) -- (2.1,0);
   \draw [white] (-0.1,0) -- (-0.5,0);
- \end{tikzpicture} 
- 
+ \end{tikzpicture}
+
 \end{multicols}
 
 \vspace{0.75cm}
@@ -888,7 +1099,7 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
 \begin{multicols}{2}
 \begin{tabular}{@{}ll@{}}
 
-\cLightRed{OA}	& \texttt{Obtuse Angle}
+\cRed{OA}	& \texttt{Obtuse Angle}
 \end{tabular}
 
 \columnbreak
@@ -897,14 +1108,14 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
   \draw [line width=0.5pt,-latex] (0.7,0) arc (0:135:0.7);
   \draw [color=sthlmBlue,line width=1.5pt,latex-latex] (1.5,0) -- (0,0) -- (-1.3,1.3);
  \end{tikzpicture}
- 
+
 \end{multicols}
 
 \vspace{0.75cm}
 \begin{multicols}{2}
 \begin{tabular}{@{}ll@{}}
 
-\cLightRed{SA}	& \texttt{Straight Angle}	
+\cRed{SA}	& \texttt{Straight Angle}
 \end{tabular}
 
 \columnbreak
@@ -913,7 +1124,7 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
   \draw [line width=0.5pt,-latex] (0.7,0) arc (0:180:0.7);
   \draw [color=sthlmBlue,line width=1.5pt,latex-latex] (-1.5,0) -- (0,0) -- (1.5,0);
  \end{tikzpicture}
- 
+
 \end{multicols}
 \vspace{0.75cm}
 \end{mysection}
@@ -923,7 +1134,7 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
 \begin{multicols}{2}
 \begin{tabular}{@{}ll@{}}
 
-\cLightRed{ComA}	& \texttt{Complimentary Angles}	
+\cRed{ComA}	& \texttt{Complimentary Angles}
 \end{tabular}
 
 \columnbreak
@@ -939,7 +1150,7 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
   \node [right] at (0.85,0.6) {\small $\angle\,A$};
   \node [above] at (0.35,1) {\small $\angle\,B$};
  \end{tikzpicture}
- 
+
 \end{multicols}
 
 \vspace{0.75cm}
@@ -947,7 +1158,7 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
 \begin{multicols}{2}
 \begin{tabular}{@{}ll@{}}
 
-\cLightRed{SA}	& \texttt{Supplementary Angles}	
+\cRed{SA}	& \texttt{Supplementary Angles}
 \end{tabular}
 
 \columnbreak
@@ -960,7 +1171,7 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
   \node [above right] at (0.1,0.8) {\small $\angle\,A$};
   \node [above left] at (-0.65,0.25) {\small $\angle\,B$};
  \end{tikzpicture}
- 
+
 \end{multicols}
 
 \vspace{0.75cm}
@@ -968,7 +1179,7 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
 \begin{multicols}{2}
 \begin{tabular}{@{}ll@{}}
 
-\cLightRed{ConA}	& \texttt{Conjugate Angles}	
+\cRed{ConA}	& \texttt{Conjugate Angles}
 \end{tabular}
 
 \columnbreak
@@ -980,7 +1191,7 @@ M & $\mu$ & \texttt{mu} 				& $\Omega$ & $\omega$ & \texttt{omega}
   \node [right] at (0.8,0.5) {\small $\angle\,A$};
   \node [above] at (-0.7,0.5) {\small $\angle\,B$};
  \end{tikzpicture}
- 
+
 \end{multicols}
 \end{mysection}
 
@@ -1034,9 +1245,9 @@ $\tan A = \frac{\text{opp}}{\text{adj}}$ & $\cot A = \frac{\text{adj}}{\text{hyp
 
 
 \begin{tikzpicture}[scale=2.4]
- \draw[<->] (-1.25,0) -- (1.25,0) node[anchor=north] {$x$}; 
- \draw [<->](0,-1.25) -- (0,1.25) node[anchor=west] {$y$}; 
- \draw (0,0) circle (1cm); 
+ \draw[<->] (-1.25,0) -- (1.25,0) node[anchor=north] {$x$};
+ \draw [<->](0,-1.25) -- (0,1.25) node[anchor=west] {$y$};
+ \draw (0,0) circle (1cm);
  \draw[sthlmBlue] (30:1cm) -- (0,0);
  \draw[sthlmBlue] (45:1cm) -- (0,0);
  \draw[sthlmBlue] (60:1cm) -- (0,0);
@@ -1098,7 +1309,7 @@ $\tan A = \frac{\text{opp}}{\text{adj}}$ & $\cot A = \frac{\text{adj}}{\text{hyp
 \node[anchor=east, rotate=45] (j1) at  ({cos(225)},{sin(225)}) {$\left(-\frac{\sqrt{2}}{2} \text{, } -\frac{\sqrt{2}}{2} \right)$};
 \node[rotate=45, fill=white] (j2) at ({cos(225)*.5}, {sin(225)*.5}) {\footnotesize{$225^{\circ}$}};
 \node[rotate=45, fill=white] (j3) at ({cos(225)*.8}, {sin(225)*.8}) {\normalsize{$\frac{5 \pi}{4}$}};
-\coordinate(j) at ({cos(225)},{sin(225)}); 
+\coordinate(j) at ({cos(225)},{sin(225)});
 % 240 Degree Angle
 \draw[sthlmBlue] (240:1cm) -- (0,0);
 \node[anchor=east, rotate=60] (k1) at  ({cos(240)},{sin(240)}) {$\left(-\frac{1}{2} \text{, } -\frac{\sqrt{3}}{2} \right)$};
@@ -1121,18 +1332,18 @@ $\tan A = \frac{\text{opp}}{\text{adj}}$ & $\cot A = \frac{\text{adj}}{\text{hyp
 \node[anchor=west, rotate=315] (n1) at  ({cos(315)},{sin(315)}) {$\left(\frac{\sqrt{2}}{2} \text{, } -\frac{\sqrt{2}}{2} \right)$};
 \node[rotate=315, fill=white] (n2) at ({cos(315)*.5}, {sin(315)*.5}) {\footnotesize{$315^{\circ}$}};
 \node[rotate=315, fill=white] (n3) at ({cos(315)*.8}, {sin(315)*.8}) {\normalsize{$\frac{7 \pi}{4}$}};
-\coordinate(n) at ({cos(315)},{sin(315)}); 
+\coordinate(n) at ({cos(315)},{sin(315)});
 % 330 Degree Angle
 \draw[sthlmBlue] (330:1cm) -- (0,0);
 \node[anchor=west, rotate=330] (o1) at  ({cos(330)},{sin(330)}) {$\left(\frac{\sqrt{3}}{2} \text{, } -\frac{1}{2} \right)$};
 \node[rotate=330, fill=white] (o2) at ({cos(330)*.5}, {sin(330)*.5}) {\footnotesize{$330^{\circ}$}};
 \node[rotate=330, fill=white] (o3) at ({cos(330)*.8}, {sin(330)*.8}) {\normalsize{$\frac{11 \pi}{6}$}};
-\coordinate(o) at ({cos(330)},{sin(330)}); 
+\coordinate(o) at ({cos(330)},{sin(330)});
 % 360 Degree Angle
 \node[anchor=south, above right] (p1) at  ({cos(0)},{sin(0)}) {$\left(1 \text{, } 0 \right)$};
 \node[fill=white] (p2) at ({cos(0)*.5}, {sin(0)*.5}) {\footnotesize{$0^{\circ}$}};
 \node[fill=white] (p3) at ({cos(0)*.8}, {sin(0)*.8}) {\normalsize{$2\pi$}};
-\coordinate(p) at ({cos(0)},{sin(0)}); 
+\coordinate(p) at ({cos(0)},{sin(0)});
     \foreach \p in {a, b,c,d,e,f,g,h,i,j,k,l,m,n,o,p}
     \fill [opacity=.5] (\p) circle(.5pt);
 \end{tikzpicture}
@@ -1151,7 +1362,7 @@ $\tan A = \frac{\text{opp}}{\text{adj}}$ & $\cot A = \frac{\text{adj}}{\text{hyp
   \fill (0,0) circle (2pt);
   \fill (125:2.5) circle (2pt) node[above] {\small $(x,y)$};
  \end{tikzpicture}
- 
+
 \columnbreak
 
  \begin{tikzpicture}[scale=0.8]
@@ -1184,7 +1395,7 @@ $\tan A = \frac{\text{opp}}{\text{adj}}$ & $\cot A = \frac{\text{adj}}{\text{hyp
 
 \begin{mysection}{Trigonometric Identities}
 \begin{tabular}{@{}ll@{}}
-\cLightRed{EOId}	& \texttt{Trigonometric Even/Odd Identities}	\\
+\cRed{EOId}	& \texttt{Trigonometric Even/Odd Identities}	\\
 &
 \begin{tabular}{l l l }
 $\sin -\theta = - \sin \theta $ & $\cos -\theta = \cos \theta $\\
@@ -1194,95 +1405,95 @@ $\csc -\theta = - \csc \theta $ & $\sec -\theta = \sec \theta $ \\
 $\tan -\theta = - \tan \theta$ & $\cot -\theta = - \tan \theta$
 \end{tabular} \\
 
-& \\	
-	
-\cLightRed{RId}	& \texttt{Trigonometric Reciprocal Identities}	\\
+& \\
+
+\cRed{RId}	& \texttt{Trigonometric Reciprocal Identities}	\\
 &
 \begin{tabular}{l l l }
 $\sin \theta = \frac{1}{\csc \theta}$ & $\cos \theta = \frac{1}{\sec \theta}$ & $\cot \theta = \frac{1}{\tan \theta}$ \\
 & & \\
-$\csc \theta = \frac{1}{\sin \theta}$ & $\sec \theta = \frac{1}{\cos \theta}$ & $\tan \theta = \frac{1}{\cot \theta}$ 
+$\csc \theta = \frac{1}{\sin \theta}$ & $\sec \theta = \frac{1}{\cos \theta}$ & $\tan \theta = \frac{1}{\cot \theta}$
 \end{tabular} \\
 
 & \\
 
-\cLightRed{PyId}	& \texttt{Trigonometric Pythagorean Identities}	\\
+\cRed{PyId}	& \texttt{Trigonometric Pythagorean Identities}	\\
 
 &
 \begin{tabular}{l l }
 $\sin^2 \theta + \cos^2 \theta = 1$ & \\
 &  \\
- $\sec^2 \theta = \tan^2 \theta +1$ & $\csc^2 \theta = 1 + \cot^2 \theta$ 
+ $\sec^2 \theta = \tan^2 \theta +1$ & $\csc^2 \theta = 1 + \cot^2 \theta$
 \end{tabular}\\
 
 & \\
 
-\cLightRed{TanId}	& \texttt{Tangent Identity}	\\
+\cRed{TanId}	& \texttt{Tangent Identity}	\\
 
 & $\tan \theta = \frac{\sin \theta}{\cos \theta}$ \\
 
 & \\
 
-\cLightRed{CotId}	& \texttt{Cotangent Identity}	\\
+\cRed{CotId}	& \texttt{Cotangent Identity}	\\
 
 & $\cot \theta = \frac{\cos \theta}{\sin \theta}$ \\
 
 & \\
 
-\cLightRed{SDAId}	& \texttt{Sine Double Angle Identity}	\\
+\cRed{SDAId}	& \texttt{Sine Double Angle Identity}	\\
 
-& $\sin 2\theta = 2 \sin \theta \cos \theta$ \\ 
+& $\sin 2\theta = 2 \sin \theta \cos \theta$ \\
 
 & \\
 
-\cLightRed{CDAId}	& \texttt{Cosine Double Angle Identity}	\\
+\cRed{CDAId}	& \texttt{Cosine Double Angle Identity}	\\
 
-& $\cos 2\theta = \cos^2 \theta - \sin^2 \theta$ \\ 
+& $\cos 2\theta = \cos^2 \theta - \sin^2 \theta$ \\
 & $\phantom{\cos 2\theta} =  1-2 \sin^2 \theta$\\
 & $\phantom{\cos 2\theta} =  2 \cos^2 \theta-1$\\
 & \\
 
-\cLightRed{TDAId}	& \texttt{Tangent Double Angle Identity}	\\
+\cRed{TDAId}	& \texttt{Tangent Double Angle Identity}	\\
 
-& $\tan 2\theta = \frac{2 \tan \theta}{1-\tan^2 \theta}$ \\ 
-
-& \\
-
-\cLightRed{SSAId}	& \texttt{Sine Sum of Angles Identity}	\\
-
-& $\sin (\theta + \phi)= \sin \theta \cos \phi + \cos \theta \sin \phi$ \\ 
+& $\tan 2\theta = \frac{2 \tan \theta}{1-\tan^2 \theta}$ \\
 
 & \\
 
-\cLightRed{SDAId}	& \texttt{Sine Difference of Angles Identity}	\\
+\cRed{SSAId}	& \texttt{Sine Sum of Angles Identity}	\\
 
-& $\sin (\theta - \phi)= \sin \theta \cos \phi - \cos \theta \sin \phi$ \\ 
-
-& \\
-
-\cLightRed{CSAId}	& \texttt{Cosine Sum of Angles Identity}	\\
-
-& $\cos (\theta + \phi)= \cos \theta \cos \phi - \sin \theta \sin \phi$ \\ 
+& $\sin (\theta + \phi)= \sin \theta \cos \phi + \cos \theta \sin \phi$ \\
 
 & \\
 
-\cLightRed{CDAId}	& \texttt{Cosine Difference of Angles Identity}	\\
+\cRed{SDAId}	& \texttt{Sine Difference of Angles Identity}	\\
 
-& $\cos (\theta - \phi)= \cos \theta \cos \phi + \sin \theta \sin \phi$ \\ 
-
-& \\
-
-\cLightRed{TSAId}	& \texttt{Tangent Difference of Angles Identity}	\\
-
-& $\tan (\theta + \phi)= \dfrac{\tan \theta + \tan \phi}{1- \tan \theta \tan \phi}$ \\ 
+& $\sin (\theta - \phi)= \sin \theta \cos \phi - \cos \theta \sin \phi$ \\
 
 & \\
 
-\cLightRed{TDAId}	& \texttt{Tangent Difference of Angles Identity}	\\
+\cRed{CSAId}	& \texttt{Cosine Sum of Angles Identity}	\\
 
-& $\tan (\theta - \phi)= \dfrac{\tan \theta - \tan \phi}{1+ \tan \theta \tan \phi}$ \\ 
+& $\cos (\theta + \phi)= \cos \theta \cos \phi - \sin \theta \sin \phi$ \\
 
-& 
+& \\
+
+\cRed{CDAId}	& \texttt{Cosine Difference of Angles Identity}	\\
+
+& $\cos (\theta - \phi)= \cos \theta \cos \phi + \sin \theta \sin \phi$ \\
+
+& \\
+
+\cRed{TSAId}	& \texttt{Tangent Difference of Angles Identity}	\\
+
+& $\tan (\theta + \phi)= \dfrac{\tan \theta + \tan \phi}{1- \tan \theta \tan \phi}$ \\
+
+& \\
+
+\cRed{TDAId}	& \texttt{Tangent Difference of Angles Identity}	\\
+
+& $\tan (\theta - \phi)= \dfrac{\tan \theta - \tan \phi}{1+ \tan \theta \tan \phi}$ \\
+
+&
 
 \end{tabular}
 
@@ -1291,15 +1502,15 @@ $\sin^2 \theta + \cos^2 \theta = 1$ & \\
 \begin{mysection}{Cosine Law}
 
 \begin{tabular}{@{}ll@{}}
-\cLightRed{CL}	& \texttt{Cosine Law}	\\
+\cRed{CL}	& \texttt{Cosine Law}	\\
 &
 \begin{tabular}{l l }
 $a^2=b^2+c^2-2bc \cos A$ & $\cos A = \dfrac{b^2+c^2-a^2}{2bc}$ \\
 & \\
-$b^2= a^2+c^2 - 2ac \cos B$ & $\cos B = \dfrac{a^2+c^2-b^2}{2ac}$ \\ 
+$b^2= a^2+c^2 - 2ac \cos B$ & $\cos B = \dfrac{a^2+c^2-b^2}{2ac}$ \\
 & \\
-$c^2= a^2+b^2 - 2ab \cos C$ & $\cos C = \dfrac{a^2+b^2-c^2}{2ab}$ \\ 
-\end{tabular} 
+$c^2= a^2+b^2 - 2ab \cos C$ & $\cos C = \dfrac{a^2+b^2-c^2}{2ab}$ \\
+\end{tabular}
 \end{tabular}
 
 \begin{multicols}{2}
@@ -1314,7 +1525,7 @@ $c^2= a^2+b^2 - 2ab \cos C$ & $\cos C = \dfrac{a^2+b^2-c^2}{2ab}$ \\
    \node [below] at (3,0) {$B$};
    \node [below] at (1.5,0) {$c$};
   \end{tikzpicture}
-  
+
   \begin{tikzpicture}[scale=0.95,every node/.style={font=\small}]
    \fill [white] (0,0) -- (-1,1.2) -- (2.5,0) -- cycle;
    \draw [color=sthlmBlue] (-1.07,1.2) -- (-1.07,0) node[midway,left] {$h$} -- (0,0);
@@ -1331,7 +1542,7 @@ $c^2= a^2+b^2 - 2ab \cos C$ & $\cos C = \dfrac{a^2+b^2-c^2}{2ab}$ \\
 
 \begin{mysection}{Sine Law}
 \begin{tabular}{@{}ll@{}}
-\cLightRed{SL}	& \texttt{Sine Law}	\\
+\cRed{SL}	& \texttt{Sine Law}	\\
 &
 $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
 \end{tabular}
@@ -1348,7 +1559,7 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
    \node [below] at (3,0) {$B$};
    \node [below] at (1.5,0) {$c$};
   \end{tikzpicture}
-  
+
   \begin{tikzpicture}[scale=0.95,every node/.style={font=\small}]
    \fill [white] (0,0) -- (-1,1.2) -- (2.5,0) -- cycle;
    \draw [color=sthlmBlue] (-1.07,1.2) -- (-1.07,0) node[midway,left] {$h$} -- (0,0);
@@ -1368,7 +1579,7 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
 %\section{$90\degree \le A < 180\degree$}
 %\vspace{0.5cm}
 
-\cLightRed{$90\degree \le A < 180\degree$, $a > b$ :  One solution}
+\cRed{$90\degree \le A < 180\degree$, $a > b$ :  One solution}
 
 \begin{center}
     \begin{tikzpicture}[scale=1,every node/.style={font=\small}]
@@ -1382,7 +1593,7 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
     \end{tikzpicture}
 \end{center}
 
-\cLightRed{$90\degree \le A < 180\degree$, $a \le b$ : No solution}
+\cRed{$90\degree \le A < 180\degree$, $a \le b$ : No solution}
 
 \begin{center}
   \begin{tikzpicture}[scale=1,every node/.style={font=\small}]
@@ -1399,7 +1610,7 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
 %\section{$0\degree < A < 90\degree$}
 %\vspace{0.5cm}
 
- \cLightRed{$0\degree < A < 90\degree$, $a < b\;\sin\;A$ :  No solution}
+ \cRed{$0\degree < A < 90\degree$, $a < b\;\sin\;A$ :  No solution}
  \begin{center}
   \begin{tikzpicture}[scale=1,every node/.style={font=\small}]
    \draw [dashed] (0,0) -- (3,0);
@@ -1413,8 +1624,8 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
    \node [below] at (2.5,0) {$B$};
   \end{tikzpicture}
   \end{center}
-  
-  \cLightRed{$0\degree < A < 90\degree$, $a = b\;\sin\;A$ :  One solution}
+
+  \cRed{$0\degree < A < 90\degree$, $a = b\;\sin\;A$ :  One solution}
   \begin{center}
   \begin{tikzpicture}[scale=1,every node/.style={font=\small}]
    \draw [white] (-0.5,0) -- (3.5,0);
@@ -1431,7 +1642,7 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
   \end{tikzpicture}
 	\end{center}
 
- \cLightRed{$0\degree < A < 90\degree$, $a \ge b$ :  One solution}
+ \cRed{$0\degree < A < 90\degree$, $a \ge b$ :  One solution}
  \begin{center}
  \begin{tikzpicture}[scale=0.85,every node/.style={font=\small}]
    \draw [dashed] (-0.8,0) -- (4,0);
@@ -1445,8 +1656,8 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
    \node [below] at (4,0) {$B$};
   \end{tikzpicture}
   \end{center}
-  
-\cLightRed{$0\degree < A < 90\degree$, $b\;\sin\;A < a < b$ :  Two solutions}
+
+\cRed{$0\degree < A < 90\degree$, $b\;\sin\;A < a < b$ :  Two solutions}
 \begin{center}
   \begin{tikzpicture}[scale=1,every node/.style={font=\small}]
    \draw [white] (-1,0) -- (4,0);
@@ -1464,9 +1675,9 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
    \node [below] at (2.5,0) {$B$};
    \node [below] at (1.1,0) {$B$};
   \end{tikzpicture}
- \end{center} 
-    
-  
+ \end{center}
+
+
 \end{mysection}
 
 \begin{mysection}{Graphs Trigonometric Functions}
@@ -1497,9 +1708,9 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
 	-- ++(2.268,0) -- ++(0,-1);
    \draw[sthlmRed,line width=0.3pt] (0,0) -- ++(60:2) node[black,pos=0.7,fill=white]
 	{$\tfrac{\pi}{3}$} -- ++(4,0) -- ++(0,-1.732);
-   \draw[stockholmPurple,line width=0.3pt] (0,0) -- ++(90:2) node[black,pos=0.7,fill=white]
+   \draw[sthlmPurple,line width=0.3pt] (0,0) -- ++(90:2) node[black,pos=0.7,fill=white]
 	{$\tfrac{\pi}{2}$} -- ++(6,0) -- ++(0,-2);
-   \draw[stockholmPurple,line width=0.3pt] (0,0) -- (3,0) node[black,pos=0.46,fill=white] {$0$};
+   \draw[sthlmPurple,line width=0.3pt] (0,0) -- (3,0) node[black,pos=0.46,fill=white] {$0$};
    \draw [black,line width=1pt] (0:2) arc (0:180:2);
    \node [black,below] at (2,0) {$1$};
    \node [black,above left] at (0,2) {$1$};
@@ -1542,19 +1753,19 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
    \draw[sthlmRed,line width=0.3pt] (0,0) -- ++(60:1);
    \draw[sthlmRed,line width=0.3pt] (0,0) -- ++(120:1) -- ++(4.5,0) -- ++(0,-0.866);
    \draw[sthlmRed,line width=0.3pt] (4,0.866) -- (5,0.866) -- (5,0);
-   \draw[stockholmPurple,line width=0.3pt] (0,0) -- ++(90:1) -- ++(4.5,0) -- ++(0,-1);
-   \draw[stockholmPurple,line width=0.3pt] (0,0) -- (3,0);
-   \draw[stockholmLightBlue,line width=0.3pt] (0,0) -- (225:1) -- ++(7.457,0) -- ++(0,0.707);
-   \draw[stockholmLightBlue,line width=0.3pt] (0,0) -- (315:1) -- ++(7.543,0) -- ++(0,0.707);
+   \draw[sthlmPurple,line width=0.3pt] (0,0) -- ++(90:1) -- ++(4.5,0) -- ++(0,-1);
+   \draw[sthlmPurple,line width=0.3pt] (0,0) -- (3,0);
+   \draw[sthlmLightBlue,line width=0.3pt] (0,0) -- (225:1) -- ++(7.457,0) -- ++(0,0.707);
+   \draw[sthlmLightBlue,line width=0.3pt] (0,0) -- (315:1) -- ++(7.543,0) -- ++(0,0.707);
    \draw [black,line width=1pt] (0,0) circle (1);
    \node [black,below right] at (1,0) {$1$};
    \node [black,below] at (0,-1) {$x^2 + y^2 = 1$};
    \node [black] at (15:0.6) {$\theta$};
   \end{tikzpicture}
 \end{mysection}
- 
+
  \begin{mysection}{Sine Function}
- 
+
  \begin{tikzpicture}[scale=0.55,every node/.style={font=\small}]
   \begin{scope}[shift={(3,0)},color=sthlmBlue,line width=1.5pt,x=6cm/360]
    \draw[black!60,line width=0.3pt,dotted] (-360,-1) grid[xstep=45,ystep=1] (360,1);
@@ -1637,7 +1848,7 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
    \end{scope}
   \end{tikzpicture}
   \end{mysection}
- 
+
 \begin{mysection}{Cosine Function}
 
   \begin{tikzpicture}[scale=0.55,every node/.style={font=\small}]
@@ -1674,8 +1885,8 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
    \end{scope}
   \end{tikzpicture}
  \end{mysection}
-  
-  
+
+
 \begin{mysection}{Secant Function}
 
   \begin{tikzpicture}[scale=0.55,every node/.style={font=\small}]
@@ -1816,9 +2027,9 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
 \begin{mysection}{Differentiation by First Principles}
 
 \begin{tabular}{@{}ll@{}}
-\cLightRed{DFP}			& \texttt{Differentiation by first principles} \\
+\cRed{DFP}			& \texttt{Differentiation by first principles} \\
 						& \qquad $f'(x) = \displaystyle \lim_{\Delta x \to 0} \dfrac{f(x+\Delta x) - f(x)}{\Delta x}$\\
-						& 
+						&
 \end{tabular}
 \end{mysection}
 
@@ -1864,52 +2075,52 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
 
 \begin{mysection}{Differentiation Structural Rules}
 \begin{tabular}{@{}ll@{}}
-\cLightRed{DS}			& \texttt{Derivative of a sum} \\
+\cRed{DS}			& \texttt{Derivative of a sum} \\
 						& $[f(x) + g(x)]'= f'(x) + g'(x) $\\
 						& \\
 						& $\dfrac{\dd}{\dx} \left[f(x) + g(x) \right]= \dfrac{\dd}{\dx} \left[f(x) \right] + \dfrac{\dd}{\dx} \left[g(x) \right] $\\
 						& \\
-\cLightRed{DD}			& \texttt{Derivative of a difference} \\
+\cRed{DD}			& \texttt{Derivative of a difference} \\
 						& $\left[f(x) - g(x) \right]'= f'(x) - g'(x) $\\
 						& \\
 						& $\dfrac{\dd}{\dx} \left[f(x) - g(x) \right]= \dfrac{\dd}{\dx} \left[f(x) \right] - \dfrac{\dd}{\dx} \left[g(x) \right] $\\
 						& \\
-\cLightRed{DPr}			& \texttt{Derivative of a product "Product Rule"} \\
+\cRed{DPr}			& \texttt{Derivative of a product "Product Rule"} \\
 						& $\left[f(x)g(x) \right]' = f'(x)g(x) + f(x)g'(x) $\\
 						& \\
 						& $\dfrac{\dd}{\dx} \left[f(x)g(x) \right]= \dfrac{\dd}{\dx} \left[f(x) \right]g(x) + f(x)\dfrac{\dd}{\dx} \left[g(x)\right] $\\
 						& \\
-\cLightRed{DQ}			& \texttt{Derivative of a quotient "Quotient Rule"} \\
+\cRed{DQ}			& \texttt{Derivative of a quotient "Quotient Rule"} \\
 						& $\left[ \dfrac{f(x)}{g(x)} \right]'= \dfrac{f'(x)g(x)-f(x)g'(x)}{\left[g(x)\right]^2}$\\
 						& \\
 						& $\dfrac{\dd}{\dx} \left[ \dfrac{f(x)}{g(x)} \right]= \dfrac{\dfrac{\dd}{\dx}\left[f(x)\right]g(x)-f(x) \dfrac{\dd}{\dx} \left[g(x)\right] }{\left[g(x)\right]^2}$\\
 						& \\
-\cLightRed{DCF}			& \texttt{Derivative of a composite function}\\
+\cRed{DCF}			& \texttt{Derivative of a composite function}\\
 						& $ \left[f \left( g(x) \right) \right]'= \left[g(x) \right]' \left[f\left(g(x)\right)\right]'$\\
 						& \\
 						& $\dfrac{\dd}{\dx} \left[f \left( g(x) \right) \right]= \dfrac{\dd}{\dx} \left[g(x) \right] \dfrac{\dd}{\dx} \left[f\left(g(x)\right)\right]$\\
-						& 
+						&
 \end{tabular}
 \end{mysection}
 
 \begin{mysection}{Differentiation Monomial Rules}
 
 \begin{tabular}{@{}ll@{}}
-\cLightRed{DC}			& \texttt{Derivative of a constant} \\
+\cRed{DC}			& \texttt{Derivative of a constant} \\
 						& $\left[c \right]' = 0$ \\
 						& \\
 						& $\dfrac{\dd}{\dx} \left[c \right]=0$\\
 						& \\
-\cLightRed{DCM}			& \texttt{Derivative of a constant multiple} \\
+\cRed{DCM}			& \texttt{Derivative of a constant multiple} \\
 						& $\left[c f(x) \right]'= c \left[f(x)\right]'$\\
 						& \\
 						& $\dfrac{\dd}{\dx}\left[c f(x) \right]= c \dfrac{\dd}{\dx}\left[f(x)\right]$\\
 						& \\
-\cLightRed{DPo}			& \texttt{Derivative of a power "Power Rule"} \\
+\cRed{DPo}			& \texttt{Derivative of a power "Power Rule"} \\
 						& $\left[x^n \right]'= n x^{n-1}$\\
 						& \\
 						& $\dfrac{\dd}{\dx} \left[x^n \right]= n x^{n-1}$\\
-						& 
+						&
 \end{tabular}
 
 \end{mysection}
@@ -1917,20 +2128,20 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
 \begin{mysection}{Differentiation Exponential and Logarithmic Function Rules}
 
 \begin{tabular}{@{}ll@{}}
-\cLightRed{DExp}		& \texttt{Derivative of an exponential function} \\
+\cRed{DExp}		& \texttt{Derivative of an exponential function} \\
 						& $\dfrac{\dd}{\dx}\left[ a^x \right] =a^{x} \ln a$\\
 						& \\
-\cLightRed{DNExp}		& \texttt{Derivative of a natural} \\
+\cRed{DNExp}		& \texttt{Derivative of a natural} \\
 						& \texttt{exponential function} \\
 						& $\dfrac{\dd}{\dx} \left[e^x \right]=e^{x}$\\
 						& \\
-\cLightRed{DL}			& \texttt{Derivative of a logarithmic function} \\
+\cRed{DL}			& \texttt{Derivative of a logarithmic function} \\
 						& $\dfrac{\dd}{\dx} \left[ \log_{a}x \right]= \frac{1}{x \ln a}$\\
 						& \\
-\cLightRed{DNL}			& \texttt{Derivative of a natural}\\ 
+\cRed{DNL}			& \texttt{Derivative of a natural}\\
 						& \texttt{logarithmic function} \\
 						& $\dfrac{\dd}{\dx} \left[\ln x \right]= \frac{1}{x}$\\
-						& 
+						&
 
 \end{tabular}
 \end{mysection}
@@ -1938,24 +2149,24 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
 \begin{mysection}{Differentiation Trigonometric Function Rules}
 
 \begin{tabular}{@{}ll@{}}
-\cLightRed{DSin}		& \texttt{Derivative of a sine function} \\
+\cRed{DSin}		& \texttt{Derivative of a sine function} \\
 						& $\dfrac{\dd}{\dx}(\sin x)= \cos x$\\
 						& \\
-\cLightRed{DCos}		& \texttt{Derivative of a cosine function} \\
+\cRed{DCos}		& \texttt{Derivative of a cosine function} \\
 						& $\dfrac{\dd}{\dx}(\cos x)= - \sin x$\\
 						& \\
-\cLightRed{DTan}		& \texttt{Derivative of a tangent function} \\
+\cRed{DTan}		& \texttt{Derivative of a tangent function} \\
 						& $\dfrac{\dd}{\dx} (\tan x)= \sec^2 x$\\
 						& \\
-\cLightRed{DCsc}		& \texttt{Derivative of a cosecant function} \\
+\cRed{DCsc}		& \texttt{Derivative of a cosecant function} \\
 						& $\dfrac{\dd}{\dx}(\csc x)= - \csc x \cot x$\\
 						& \\
-\cLightRed{DSec}		& \texttt{Derivative of a secant function} \\
+\cRed{DSec}		& \texttt{Derivative of a secant function} \\
 						& $\dfrac{\dd}{\dx} (\sec x)= \sec x \tan x$\\
 						& \\
-\cLightRed{DCot}		& \texttt{Derivative of a cotangent function} \\
+\cRed{DCot}		& \texttt{Derivative of a cotangent function} \\
 						& $\dfrac{\dd}{\dx} (\cot x)= -\csc^2 x$\\
-						& 
+						&
 \end{tabular}
 \end{mysection}
 
@@ -1964,7 +2175,7 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
 \scriptsize
 
 
-HendryOlson.com @hendryolson\\
+v42.org https://plus.google.com/+MarkHendryOlsonV42\\
 Trig images: http://bit.ly/mecmath-trigbook\\
 Pascal's triangle: http://bit.ly/1kIYJ9H \\
 
