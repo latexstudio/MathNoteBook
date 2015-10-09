@@ -522,7 +522,8 @@ innerrightmargin=5pt,
 innertopmargin=5pt,
 leftmargin=0cm,
 rightmargin=0cm,
-innerbottommargin=5pt]{tBox}
+innerbottommargin=5pt,
+linewidth=2pt]{tBox}
 
 % Rule box
 \newmdenv[skipabove=7pt,
@@ -534,7 +535,8 @@ innerrightmargin=5pt,
 innertopmargin=5pt,
 leftmargin=0cm,
 rightmargin=0cm,
-innerbottommargin=5pt]{arBox}
+innerbottommargin=5pt,
+linewidth=2pt]{arBox}
 
 % Definition box
 \newmdenv[skipabove=7pt,
@@ -547,7 +549,8 @@ innertopmargin=5pt,
 innerbottommargin=5pt,
 leftmargin=0cm,
 rightmargin=0cm,
-innerbottommargin=5pt]{dBox}
+innerbottommargin=5pt,
+linewidth=2pt]{dBox}
 
 % Property box
 \newmdenv[skipabove=7pt,
@@ -559,7 +562,8 @@ innerrightmargin=5pt,
 innertopmargin=5pt,
 leftmargin=0cm,
 rightmargin=0cm,
-innerbottommargin=5pt]{prBox}
+innerbottommargin=5pt,
+linewidth=2pt]{prBox}
 
 % Exercise box
 \newmdenv[skipabove=7pt,
@@ -790,8 +794,8 @@ innerbottommargin=5pt]{cBox}
 %	CHAPTER HEADINGS
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\newcommand{\thechapterimage}{}%
-\newcommand{\chapterimage}[1]{\renewcommand{\thechapterimage}{#1}}%
+%\newcommand{\thechapterimage}{}%
+%\newcommand{\chapterimage}[1]{\renewcommand{\thechapterimage}{#1}}%
 \def\@makechapterhead#1{%
 {\parindent \z@ \raggedright \normalfont
 \ifnum \c@secnumdepth >\m@ne
@@ -799,21 +803,21 @@ innerbottommargin=5pt]{cBox}
 \begin{tikzpicture}[remember picture,overlay]
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{\thechapterimage}};
-\draw[anchor=west] (\Gm@lmargin,-9cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.5,inner sep=15pt]{\strut\makebox[22cm]{}};
-\draw[anchor=west] (\Gm@lmargin+.3cm,-9cm) node {\huge\sffamily\bfseries\color{black}\thechapter. #1\strut};
+%\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{\thechapterimage}};
+\draw[anchor=west] (\Gm@lmargin,-4cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.5,inner sep=15pt]{\strut\makebox[22cm]{}};
+\draw[anchor=west] (\Gm@lmargin+.3cm,-4cm) node {\huge\sffamily\bfseries\color{black}\thechapter. #1\strut};
 \end{tikzpicture}};
 \end{tikzpicture}
 \else
 \begin{tikzpicture}[remember picture,overlay]
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{\thechapterimage}};
-\draw[anchor=west] (\Gm@lmargin,-9cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.5,inner sep=15pt]{\strut\makebox[22cm]{}};
-\draw[anchor=west] (\Gm@lmargin+.3cm,-9cm) node {\huge\sffamily\bfseries\color{black}#1\strut};
+%\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{\thechapterimage}};
+\draw[anchor=west] (\Gm@lmargin,-4cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.5,inner sep=15pt]{\strut\makebox[22cm]{}};
+\draw[anchor=west] (\Gm@lmargin+.3cm,-4cm) node {\huge\sffamily\bfseries\color{black}#1\strut};
 \end{tikzpicture}};
 \end{tikzpicture}
-\fi\fi\par\vspace*{270\p@}}}
+\fi\fi\par\vspace*{100\p@}}}
 
 %-------------------------------------------
 
@@ -821,12 +825,12 @@ innerbottommargin=5pt]{cBox}
 \begin{tikzpicture}[remember picture,overlay]
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{\thechapterimage}};
-\draw[anchor=west] (\Gm@lmargin,-9cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.5,inner sep=15pt]{\strut\makebox[22cm]{}};
-\draw[anchor=west] (\Gm@lmargin+.3cm,-9cm) node {\huge\sffamily\bfseries\color{black}#1\strut};
+%\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{\thechapterimage}};
+\draw[anchor=west] (\Gm@lmargin,-4cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.5,inner sep=15pt]{\strut\makebox[22cm]{}};
+\draw[anchor=west] (\Gm@lmargin+.3cm,-4cm) node {\huge\sffamily\bfseries\color{black}#1\strut};
 \end{tikzpicture}};
 \end{tikzpicture}
-\par\vspace*{270\p@}}
+\par\vspace*{100\p@}}
 \makeatother
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -946,9 +950,9 @@ trees
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
 \node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{Pictures/background}}; % Background image
-\draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering \cDarkGrey{Mathematics Notebook}\\[15pt] % Book title
-{\cDarkGrey{\Large http://hendryolson.com}}\\[20pt] % Subtitle
-{\cDarkGrey{\huge Mark Olson}}}}; % Author name
+\draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering \cDarkGrey{Mathematics Notebook of Essential Questions}\\[15pt] % Book title
+{\cDarkGrey{\huge by Mark Olson}}\\[20pt] % Subtitle
+{\cDarkGrey{\huge \texttt{v42.org}}}}}; % Author name
 \end{tikzpicture}};
 \end{tikzpicture}
 \vfill
@@ -976,7 +980,7 @@ trees
 %	TABLE OF CONTENTS
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\chapterimage{Pictures/chapter_head_1.pdf} % Table of contents heading image
+%\chapterimage{Pictures/chapter_head_1.pdf} % Table of contents heading image
 
 \pagestyle{empty} % No headers
 
@@ -989,19 +993,28 @@ trees
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	PARTS
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\part{Reference}
+\subfile{c-operations}
+\subfile{c-properties}
+
+\part{Number Sense}
+
+\part{Algebra}
+
+\part{Differential Calculus}
 
 \part{MYP}
-\subfile{chapter-myp-algebraicexpressions}
-%\include{chapter-myp-arithmeticexpressions}
+%\subfile{chapter-myp-algebraicexpressions}
+%\subfile{chapter-myp-arithmeticexpressions}
 %\include{chapter-myp-algebraicexpressions}
-%\include{chapter-myp-univariatepolynomialexpressions}
-%\include{chapter-myp-multivariatepolynomialexpressions}
-%\include{chapter-myp-algebraicequations}
-%\include{chapter-myp-analyticgeometry}
+\subfile{chapter-myp-univariatepolynomialexpressions}
+%\subfile{chapter-myp-multivariatepolynomialexpressions}
+\subfile{chapter-myp-algebraicequations}
+%\subfile{chapter-myp-analyticgeometry}
 %\part{Base Year}
 
 \part{DP-SL}
-%\include{chapter-dpsl-functions}
+\include{chapter-dpsl-functions}
 %\include{chapter-dpsl-vectors}
 \subfile{chapter-dpsl-differentiation}
 %\include{chapter-dpsl-differentiation}
