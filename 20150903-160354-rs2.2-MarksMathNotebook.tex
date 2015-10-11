@@ -13,14 +13,14 @@
 \usepackage{subfig}
 \usepackage{tikz} % Required for drawing custom shapes
 
-\usepackage[english]{babel} % English language/hyphenation
+%\usepackage[english]{babel} % English language/hyphenation
 
 \usepackage{enumitem} % Customize lists
 \setlist{nolistsep} % Reduce spacing between bullet points and numbered lists
 
 \usepackage{booktabs} % Required for nicer horizontal rules in tables
 
-\usepackage{sagetex}
+%\usepackage{sagetex}
 
 \usepackage{subfiles} % Required for use with SageMath Cloud
 
@@ -276,8 +276,8 @@ pgfplots
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	BIBLIOGRAPHY AND INDEX
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-\usepackage[style=alphabetic,citestyle=numeric,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
+\usepackage[autostyle]{csquotes}
+\usepackage[backend=biber,natbib=true,style=alphabetic,citestyle=numeric,sorting=nyt,sortcites=true,autopunct=true,hyperref=true,abbreviate=false,backref=true]{biblatex}
 \addbibresource{bibliography.bib} % BibTeX bibliography file
 \defbibheading{bibempty}{}
 
@@ -395,8 +395,6 @@ pgfplots
 %	THEOREM STYLES
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\usepackage{amsmath,amsfonts,amssymb,amsthm} % For math equations, theorems, symbols, etc
-
 \newcommand{\intoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
 \newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
 \newcommand{\intff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
@@ -489,7 +487,6 @@ pgfplots
 \theoremstyle{ocrenumbox}
 \newtheorem{theoremeT}[dummy]{Theorem}
 \newtheorem{aruleT}[dummy]{Rule}
-%\newtheorem{definitionT}[dummy]{Definition}
 \newtheorem{problem}{Problem}[chapter]
 \theoremstyle{blacknumexe}
 \newtheorem{exerciseT}{Exercise}[chapter]
@@ -499,6 +496,8 @@ pgfplots
 \newtheorem{essentialqT}{Essential Questions}[chapter]
 \theoremstyle{blacknumpro}
 \newtheorem{propertyT}[dummy]{Property}
+\theoremstyle{blacknumbox}
+\newtheorem{notationT}[dummy]{Notation}
 \theoremstyle{blacknumbox}
 \newtheorem{vocabulary}{Vocabulary}[chapter]
 \newtheorem{definitionT}{Definition}[section]
@@ -537,6 +536,19 @@ leftmargin=0cm,
 rightmargin=0cm,
 innerbottommargin=5pt,
 linewidth=2pt]{arBox}
+
+% Notation box
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+backgroundcolor=sthlmOrange!5,
+linecolor=sthlmOrange,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=5pt,
+leftmargin=0cm,
+rightmargin=0cm,
+innerbottommargin=5pt,
+linewidth=2pt]{notBox}
 
 % Definition box
 \newmdenv[skipabove=7pt,
@@ -581,22 +593,6 @@ innerbottommargin=5pt,
 leftmargin=0cm,
 rightmargin=0cm,
 linewidth=4pt]{eBox}
-
-% Definition box
-%\newmdenv[skipabove=7pt,
-%skipbelow=7pt,
-%rightline=false,
-%leftline=true,
-%topline=false,
-%bottomline=false,
-%linecolor=ocre,
-%innerleftmargin=5pt,
-%innerrightmargin=5pt,
-%innertopmargin=0pt,
-%leftmargin=0cm,
-%rightmargin=0cm,
-%linewidth=4pt,
-%innerbottommargin=0pt]{dBox}
 
 % Example box
 \newmdenv[skipabove=7pt,
@@ -655,11 +651,9 @@ innerbottommargin=5pt]{cBox}
 \newenvironment{exercise}{\begin{eBox}\begin{exerciseT}}{\hfill{\color{ocre}\tiny\ensuremath{\blacksquare}}\end{exerciseT}\end{eBox}}
 \newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}
 \newenvironment{property}{\begin{prBox}\begin{propertyT}}{\end{propertyT}\end{prBox}}
-%\newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}
-%\newenvironment{example}{\begin{exBox}\begin{exampleT}}{\end{exampleT}\end{exBox}}
+\newenvironment{notations}{\begin{notBox}\begin{notationT}}{\end{notationT}\end{notBox}}
 \newenvironment{example}{\begin{exaBox}\begin{exampleT}}{\hfill{\color{sthlmGreen}\tiny\ensuremath{\blacksquare}}\end{exampleT}\end{exaBox}}
 \newenvironment{essentialq}{\begin{essentialqBox}\begin{essentialqT}}{\end{essentialqT}\end{essentialqBox}}
-%\newenvironment{example}{\begin{exampleT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{exampleT}}
 \newenvironment{corollary}{\begin{cBox}\begin{corollaryT}}{\end{corollaryT}\end{cBox}}
 
 %----------------------------------------------------------------------------------------
@@ -677,28 +671,8 @@ innerbottommargin=5pt]{cBox}
 \newcommand{\soln}[1]{\par\vspace{10pt}\makebox[15pt]{\begin{tikzpicture}[overlay]
 \node[draw=sthlmGreen!70,line width=1pt,circle,fill=sthlmGreen!25,font=\sffamily\bfseries,inner sep=2pt,outer sep=0pt] at (-15pt,0pt){\textcolor{sthlmGreen}{S}};\end{tikzpicture}}\cGreen{\noindent\hrulefill\vskip 15pt}}
 
-%\newcommand{\soln}[1]{\vskip10pt\cGreen{\textbf{Solution:}\hspace{5pt}\noindent\hrulefill \vskip10pt}}
-
 \newcommand{\qdepend}[1]{\par\vspace{10pt}\makebox[15pt]{\begin{tikzpicture}[overlay]
 \node[draw=sthlmDarkGrey!70,line width=1pt,circle,fill=sthlmDarkGrey!25,font=\sffamily\bfseries,inner sep=2pt,outer sep=0pt] at (-15pt,0pt){\textcolor{sthlmDarkGrey}{D}};\end{tikzpicture}}\cDarkGrey{\noindent\hrulefill\vskip 15pt}}
-
-
-%\newenvironment{depend}{\par\vspace{10pt}\small % Vertical white space above the remark and smaller font size
-%\begin{list}{}{
-%\leftmargin=35pt % Indentation on the left
-%\rightmargin=25pt}\item\ignorespaces % Indentation on the right
-%\makebox[-2.5pt]{\begin{tikzpicture}[overlay]
-%\node[draw=sthlmDarkGrey!60,line width=1pt,circle,fill=sthlmDarkGrey!25,font=\sffamily\bfseries,inner sep=2pt,outer sep=0pt] at (-15pt,0pt){\textcolor{sthlmDarkGrey}{D}};\end{tikzpicture}} % Orange R in a circle
-%\advance\baselineskip -1pt}{\end{list}\vskip5pt} % Tighter line spacing and white space after remark
-
-
-%\newenvironment{soln}{\par\vspace{10pt}\small % Vertical white space above the remark and smaller font size
-%\begin{list}{}{
-%\leftmargin=35pt % Indentation on the left
-%\rightmargin=25pt}\item\ignorespaces % Indentation on the right
-%\makebox[-2.5pt]{\begin{tikzpicture}[overlay]
-%\node[draw=sthlmGreen!60,line width=1pt,circle,fill=sthlmGreen!25,font=\sffamily\bfseries,inner sep=2pt,outer sep=0pt] at (-15pt,0pt){\textcolor{sthlmGreen}{S}};\end{tikzpicture}}\cGreen{\noindent\hrulefill} % Orange R in a circle
-%\advance\baselineskip -1pt}{\end{list}\vskip5pt} % Tighter line spacing and white space after remark
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	SECTION NUMBERING IN THE MARGIN
@@ -868,7 +842,7 @@ matrix,
 mindmap,
 positioning,
 shapes,
-snakes,
+decorations,
 shadows,
 trees
 }
@@ -994,29 +968,36 @@ trees
 %	PARTS
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \part{Reference}
+\subfile{c-numbers}
 \subfile{c-operations}
+\subfile{c-notation}
 \subfile{c-properties}
-
-\part{Number Sense}
+\subfile{c-identities}
+\subfile{c-simplifyworkflow}
+\subfile{c-calculusrules}
 
 \part{Algebra}
+\subfile{algebra-simplify-univariatepolynomials}
+\subfile{algebra-simplify-multivariatemonomials}
+\subfile{algebra-solve-deg1polynomials}
+\subfile{algebra-solve-deg2polynomials}
 
-\part{Differential Calculus}
+%\part{Differential Calculus}
 
-\part{MYP}
+%\part{MYP}
 %\subfile{chapter-myp-algebraicexpressions}
 %\subfile{chapter-myp-arithmeticexpressions}
 %\include{chapter-myp-algebraicexpressions}
-\subfile{chapter-myp-univariatepolynomialexpressions}
+%\subfile{chapter-myp-univariatepolynomialexpressions}
 %\subfile{chapter-myp-multivariatepolynomialexpressions}
-\subfile{chapter-myp-algebraicequations}
+%\subfile{chapter-myp-algebraicequations}
 %\subfile{chapter-myp-analyticgeometry}
 %\part{Base Year}
 
-\part{DP-SL}
-\include{chapter-dpsl-functions}
+%\part{DP-SL}
+%\include{chapter-dpsl-functions}
 %\include{chapter-dpsl-vectors}
-\subfile{chapter-dpsl-differentiation}
+%\subfile{chapter-dpsl-differentiation}
 %\include{chapter-dpsl-differentiation}
 %\include{chapter-dpsl-integration}
 %\include{chapter-gy2011}
