@@ -1,0 +1,187 @@
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapter{Calculus Rules}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Monomial Derivative Rules}\index{DerivativeRules! Monomial Derivative Rules}
+
+%-=-=-= RULE
+\begin{arule}[Derivative of a Constant (DC)]\index{DerivativeRules! Derivative of a Constant}
+\begin{align}
+	\left[c \right]' &= 0 \label{eq:dc1} \\
+	\dfrac{\dd}{\dx} \left[c \right]&=0  \label{eq:dc2}
+\end{align}
+\end{arule}
+
+%-=-=-= RULE
+\begin{arule}[Derivative of a Constant Multiple (DCM)]\index{DerivativeRules! Derivative of a Constant Multiple}
+\begin{align}
+	\left[c f(x) \right]' &= c \left[f(x)\right]' \label{eq:dcm1} \\
+	\dfrac{\dd}{\dx}\left[c f(x) \right] &= c \dfrac{\dd}{\dx}\left[f(x)\right]  \label{eq:dcm2}
+\end{align}
+\end{arule}
+
+%-=-=-= RULE
+\begin{arule}[Derivative of a Power (DPo)]\index{DerivativeRules! Derivative of a Power}
+\begin{align}
+	\left[x^n \right]'&= n x^{n-1} \label{eq:dpo1} \\
+	\dfrac{\dd}{\dx} \left[x^n \right] &= n x^{n-1}  \label{eq:dpo2}
+\end{align}
+\end{arule}
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Derivative Structural Rules}\index{DerivativeRules! Derivative Structural Rules}
+
+%-=-=-= RULE
+\begin{arule}[Derivative of a Sum (DS)]\index{DerivativeRules! Derivative of a Sum}
+\begin{align}
+	[f(x) + g(x)]' &= f'(x) + g'(x) \label{eq:ds1} \\
+	\dfrac{\dd}{\dx} \left[f(x) + g(x) \right] &= \dfrac{\dd}{\dx} \left[f(x) \right] + \dfrac{\dd}{\dx} \left[g(x) \right]  \label{eq:ds2}
+\end{align}
+\end{arule}
+
+%-=-=-= RULE
+\begin{arule}[Derivative of a Difference (DD)]\index{DerivativeRules! Derivative of a Difference}
+\begin{align}
+	[f(x) - g(x)]' &= f'(x) - g'(x) \label{eq:dd1} \\
+	\dfrac{\dd}{\dx} \left[f(x) - g(x) \right] &= \dfrac{\dd}{\dx} \left[f(x) \right] - \dfrac{\dd}{\dx} \left[g(x) \right]  \label{eq:dd2}
+\end{align}
+\end{arule}
+
+%-=-=-= RULE
+\begin{arule}[Derivative of a Product (DPr)]\index{DerivativeRules! Derivative of a Product}
+\begin{align}
+	\left[f(x)g(x) \right]' &= \cRed{f'(x)}g(x) + f(x)\cRed{g'(x)} \label{eq:dpr1} \\
+	\dfrac{\dd}{\dx} \left[f(x)g(x) \right] &= \cRed{\dfrac{\dd}{\dx} \left[f(x) \right]}g(x) + f(x)\cRed{\dfrac{\dd}{\dx} \left[g(x)\right]}  \label{eq:dpr2}
+\end{align}
+\end{arule}
+
+%-=-=-= RULE
+\begin{arule}[Derivative of a Quotient (DQ)]\index{DerivativeRules! Derivative of a Quotient}
+\begin{align}
+	\left[ \dfrac{f(x)}{g(x)} \right]' &= \dfrac{f'(x)g(x)-f(x)g'(x)}{\left[g(x)\right]^2} \label{eq:drf1} \\
+	\dfrac{\dd}{\dx} \left[ \dfrac{f(x)}{g(x)} \right] & = \dfrac{\dfrac{\dd}{\dx}\left[f(x)\right]g(x)-f(x) \dfrac{\dd}{\dx} \left[g(x)\right] }{\left[g(x)\right]^2}  \label{eq:drf2}
+\end{align}
+\end{arule}
+
+%-=-=-= RULE
+\begin{arule}[Derivative of a Composite Function (DComp)]\index{DerivativeRules! Derivative of a Composite Function}
+\begin{align}
+	\left[f \left( \cRed{g(x)} \right) \right]' &= \left[\cRed{g(x)} \right]' \left[f\left(\cRed{g(x)}\right)\right]' \label{eq:dcf1} \\
+	\dfrac{\dd}{\dx} \left[f \left( \cRed{g(x)} \right) \right] &= \dfrac{\dd}{\dx} \left[\cRed{g(x)} \right] \dfrac{\dd}{\dx} \left[f\left(\cRed{g(x)}\right)\right]  \label{eq:dcf2}
+\end{align}
+\end{arule}
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Trigonometric Derivative Rules}\index{DerivativeRules! Trigonometric Derivative Structural Rules}
+
+%-=-=-= RULE
+\begin{arule}[Derivative of Sine (DSin)]\index{DerivativeRules! Derivative of Sine}
+\begin{align}
+	\left[ \sin(x) \right]' &= \cos (x) \label{eq:dsin1} \\
+	\dfrac{\dd}{\dx} \left[ \sin(x) \right] & = \cos (x)  \label{eq:dsin2}
+\end{align}
+\end{arule}
+
+%-=-=-= RULE
+\begin{arule}[Derivative of Cosine (DCos)]\index{DerivativeRules! Derivative of Cosine}
+\begin{align}
+	\left[ \cos(x) \right]' &= -\sin (x) \label{eq:dcos1} \\
+	\dfrac{\dd}{\dx} \left[ \cos(x) \right] & = -\sin (x)  \label{eq:dcos2}
+\end{align}
+\end{arule}
+
+%-=-=-= RULE
+\begin{arule}[Derivative of Tangent (DTan)]\index{DerivativeRules! Derivative of Tangent}
+\begin{align}
+	\left[ \tan x \right]' &= \sec^2  \label{eq:dtan1} \\
+	\dfrac{\dd}{\dx} \left[ \tan x \right] & = \sec^2   \label{eq:dtan2}
+\end{align}
+\end{arule}
+
+%-=-=-= RULE
+\begin{arule}[Derivative of Cosecant (DCsc)]\index{DerivativeRules! Derivative of Cosecant}
+\begin{align}
+	\left[ \csc x \right]' &= - \csc x \cot x \label{eq:dcsc1} \\
+	\dfrac{\dd}{\dx} \left[ \csc x \right] & = - \csc x \cot x   \label{eq:dcsc2}
+\end{align}
+\end{arule}
+
+%-=-=-= RULE
+\begin{arule}[Derivative of Secant (DSec)]\index{DerivativeRules! Derivative of Secant}
+\begin{align}
+	\left[ \sec x \right]' &= \sec x \tan x \label{eq:dsec1} \\
+	\dfrac{\dd}{\dx} \left[ \sec x \right] & = \sec x \tan x   \label{eq:dsec2}
+\end{align}
+\end{arule}
+
+%-=-=-= RULE
+\begin{arule}[Derivative of Cotangent (DCot)]\index{DerivativeRules! Derivative of Cotangent}
+\begin{align}
+	\left[ \cot x\right]' &= -\csc^2 x \label{eq:dcot1} \\
+	\dfrac{\dd}{\dx} \left[ \cot x \right] & = -\csc^2 x   \label{eq:dcot2}
+\end{align}
+\end{arule}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Logarithm Derivative Rules}\index{DerivativeRules! Logarithm Derivative Structural Rules}
+
+
+%-=-=-= RULE
+\begin{arule}[Derivative of a Logarithm (DL)]\index{DerivativeRules! Derivative of a Logarithm}
+\begin{align}
+	\left[ \log_{a}x \right]' &= \frac{1}{x \ln a} \label{eq:dl1} \\
+	\dfrac{\dd}{\dx} \left[ \log_{a}x \right] &= \frac{1}{x \ln a}  \label{eq:dl2}
+\end{align}
+\end{arule}
+
+%-=-=-= RULE
+\begin{arule}[Derivative of a Natural Logarithm (DNL)]\index{DerivativeRules! Derivative of a Natural Logarithm}
+\begin{align}
+	\left[\ln x \right]' &= \frac{1}{x} \label{eq:dnl1} \\
+	\dfrac{\dd}{\dx} \left[\ln x \right] &= \frac{1}{x}  \label{eq:dnl2}
+\end{align}
+\end{arule}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Exponential Derivative Rules}\index{DerivativeRules! Logarithm Derivative Structural Rules}
+
+\begin{arule}[Derivative of an Exponential(DExp)]\index{Derivatives! Derivative of an Exponential}
+\begin{align}
+	\left[a^{x} \right]' &= a^{x} \ln a \label{eq:dexp1} \\
+	\dfrac{\dd}{\dx} \left[a^{x} \right] &= a^{x} \ln a \label{eq:dexp2}
+\end{align}
+\end{arule}
+
+\begin{arule}[Derivative of a Natural Exponential(DNExp)]\index{DerivativeRules! Derivative of a Natural Exponential}
+\begin{align}
+	\left[e^{x} \right]' &= e^{x} \label{eq:dnexp1} \\
+	\dfrac{\dd}{\dx} \left[e^{x} \right] &= e^{x} \label{eq:dnexp2}
+\end{align}
+\end{arule}
+
+
+\end{document}
