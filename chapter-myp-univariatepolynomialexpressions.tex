@@ -16,92 +16,8 @@
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Classification of Univariate Polynomial Expressions}\index{Classification of Univariate Polynomial Expressions}
 
-%-=-=-= DEFINITION
-\begin{definition}[Indeterminate]\index{Indeterminate}
-
-\[
-\cRed{x}
-\]
-
-An indeterminate is a symbol that is treated as a variable, but does not stand for anything else but itself and is used as a placeholder.
-
-\begin{itemize}
-	\item it does \textbf{not} designate a constant or a parameter
-	\item it is \textbf{not} an unknown that could be solved for
-	\item it is \textbf{not} a variable designating a function argument
-\end{itemize}
-
-\hfill \cite{wikipediate:indeterminate}
-\end{definition}
 
 
-%-=-=-= DEFINITION
-\begin{definition}[Coefficient]\index{Coefficient}
-\[
-	\cBlue{C}x^{k}
-\]
-A coefficient, $\cBlue{C}$ is a real number multiplicative factor.\\
-
-\end{definition}
-
-%-=-=-= DEFINITION
-\begin{definition}[Univariate Monomial]\index{Univariate Monomial}
-
-\[
- \cBlue{C_{k}}\cRed{x^{k}}
-\]
-
-A univariate monomial is made up of two factors.  The first factor of a monomial, $\cBlue{C_{k}}$, is the \cBlue{coefficient}. The second factor of each monomial, $\cRed{x^{k}}$, is an indeterminate raised to a non-negative integer power $k$. \\
-
-\end{definition}
-
-
-
-%-=-=-= EXAMPLE
-\begin{example}[id:20141120-202842] \label{20141120-202842}\index{Example!20141120-202842} \hfill \\
-
-Express $1x^2$ in canonical form.
-
-\soln
-
-\solnsteps
-\begin{align*}
-x^2 && \text{MId} \eqref{eq:mid2}
-\end{align*}
-\end{example}
-
-%-=-=-= DEFINITION
-\begin{definition}[Univariate Polynomial Expression]\index{Univariate Polynomial Expression}
-\begin{align}
-\sum\limits_{k=0}^n \cBlue{C_{k}}\cRed{x^{n}} & = \cBlue{C_{n}}\cRed{x^{n}}+\cBlue{C_{n-1}}\cRed{x^{n-1}}+ \cdots + \cBlue{C_{k}}\cRed{x^{k}} + \cdots + \cBlue{C_{2}}\cRed{x^{2}}+\cBlue{C_{1}}\cRed{x^{1}}+\underbrace{\cBlue{C_{0}}}_{\cBlue{C_{0}}\cRed{x^{0}}}
-\end{align}
-A univariate polynomial in an indeterminate $x$ is an expression made up of one or more summands of the form $\cBlue{C_{k}}\cRed{x^{k}}$, which are called monomials.  The first factor of each monomial, $\cBlue{C_{k}}$, is a numerical factor called the \cBlue{coefficient} where $\cBlue{C_{k}} \in \real$. The second factor of each monomial, $\cRed{x^{k}}$, is an indeterminate raised to a non-negative integer power $i$.
-
-\hfill \cite{wikipedia:polynomial}
-\end{definition}
-
-%-=-=-= DEFINITION
-\begin{definition}[Degree of the Indeterminate]\index{Degree of the Indeterminate}
-
-\[
-x^{\cRed{k}}
-\]
-The exponent of an indeterminate power, $\cRed{k}$ is called the degree of the indeterminate.
-
-\hfill \cite{wikipedia:polynomial}
-\end{definition}
-
-%-=-=-= DEFINITION
-\begin{definition}[Degree of the Univarite Polynomial]\index{Degree of the Univariate Polynomial}
-
-\[
-C_{n}x^{\cRed{n}}+C_{n-1}x^{n-1}+ \cdots + C_{k}x^{k} + \cdots + C_{2}x^{2}+C_{1}x^{1}+\underbrace{C_{0}}_{C_{0}x^{0}}
-\]
-
-The degree of the univariate polynomial is determined by the monomial with the largest degree of the indeterminate.
-
-%\hfill \cite{mathworld:algebraicexpression}
-\end{definition}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	SECTION:
@@ -113,40 +29,14 @@ The degree of the univariate polynomial is determined by the monomial with the l
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \subsection*{Monomials}
 
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\section{Degree 0 Univariate Polynomials}\index{Degree 0 Univariate Polynomials}
 
-% TODO Define the PowerID
-
-\[
-\cDarkGrey{C_{n}x^{n}+C_{n-1}x^{n-1}+ \cdots + C_{k}x^{k} + \cdots + C_{2}x^{2}+C_{1}x^{1}+}\underbrace{\cBlue{C_{0}}}_{\cBlue{C_{0}}\cRed{x^{0}}}
-\]
-
-Degree 0 univariate polynomial expressions are made up of univariate monomials, $\cBlue{C_{0}}$, called \alert{constants}.  The power identity is an indeterminate raised to a power of 0 has a value of 1.  Thus, $\cRed{x^{0}}=1$ and results in the monomial $\cBlue{C_{0}} \cdot 1$.  The canonical form of a product does not show the multiplicative identity factor, so what remains of this monomial product is only the coefficient factor $\cBlue{C_{0}}$ and from now on will be referred to as a \alert{constant}.
-
-%-=-=-= EXAMPLE
-\begin{example}[id:20141121-093747] \label{20141121-093747}\index{Example!20141121-093747} \hfill \\
-
-Express $13x^0$ in canonical form.
-
-\soln
-
-\solnsteps
-\begin{align*}
-13 % TODO Add PowerID here.
-\end{align*}
-\end{example}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	SUBSECTION:
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \subsection*{Monomials}
 
-Degree 0 univariate polynomial expressions are usually a monomial in their canonical form if $\cBlue{C_{0}}$ is a non-zero real number.  The exception is if $\cBlue{C_{0}}=0$, the additive identity, then the result is the zero polynomial, which can be considered a degree -1 polynomial.\\
 
-The expression can be manipulated into its monomial canonical form by simplifying the expression.  Simplifying the expression can be defined as evaluating the expression by following order of operations, which is the same as evaluating an arithmetic expression.
 
 % TODO Add reference to evaluating arithmetic expressions.
 
@@ -311,33 +201,6 @@ As one becomes more experienced, there is no reason to make the multiplicative i
 
 \end{example}
 
-
-
-
-%-=-=-= NOTATION
-\begin{notation}[Operation of Negation (ONeg)]\index{Operation!Operation of Negation}
-
-\begin{subequations}
-\begin{align}
--a &= \neg a \label{eq:oneg1} \\
-\neg a &= -a \label{eq:oneg2}
-\end{align}
-\end{subequations}
-
-I have used a different symbol, $\neg$, as the prefix negation operator only to differentiate it from the minus sign infix operator symbol, $-$, which is also used as the infix operator for the dyadic operation of subtraction.  I will refer to this change of symbol as ONeg.  This is used only as a teaching tool and should not be confused with the logic negation operator.  Another advantage of using this symbol is that it reduces the number of delimiters used in an expression for example, $\neg a$ versus $(-a)$.
-
-\begin{itemize}
-	\item Negative five: $-5$
-	\item Negative five: $\neg 5$
-	\item Four minus five: $4-5$
-	\item Four minus negative five: $4--5$
-	\item Four minus negative five: $4-(-5)$
-	\item Four minus negative five: $4-\neg 5$
-	\item Negative four minus five: $-4-5$
-	\item Negative four minus five: $\neg 4-5$
-\end{itemize}
-
-\end{notation}
 
 %-=-=-= EXAMPLE
 \begin{example}[id:20141121-190857] \label{20141121-190857}\index{Example!20141121-190857} \hfill \\

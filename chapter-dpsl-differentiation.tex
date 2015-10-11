@@ -77,26 +77,7 @@ f'(x) &= 0 % TODO Evaluate the limit
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Derivative of a Monomial Functions}
 
-\begin{arule}[Derivative of a Constant (DC)]\index{Derivatives! Derivative of a Constant}
-\begin{align}
-	\left[c \right]' &= 0 \label{eq:dc1} \\
-	\dfrac{\dd}{\dx} \left[c \right]&=0  \label{eq:dc2}
-\end{align}
-\end{arule}
 
-\begin{arule}[Derivative of a Constant Multiple (DCM)]\index{Derivatives! Derivative of a Constant Multiple}
-\begin{align}
-	\left[c f(x) \right]' &= c \left[f(x)\right]' \label{eq:dcm1} \\
-	\dfrac{\dd}{\dx}\left[c f(x) \right] &= c \dfrac{\dd}{\dx}\left[f(x)\right]  \label{eq:dcm2}
-\end{align}
-\end{arule}
-
-\begin{arule}[Derivative of a Power (DPo)]\index{Derivatives! Derivative of a Power}
-\begin{align}
-	\left[x^n \right]'&= n x^{n-1} \label{eq:dpo1} \\
-	\dfrac{\dd}{\dx} \left[x^n \right] &= n x^{n-1}  \label{eq:dpo2}
-\end{align}
-\end{arule}
 
 %-=-=-= EXAMPLE
 \begin{example}[id:20141124-153017] \label{20141124-153017}\index{Example!20141124-153017} \hfill \\
@@ -158,12 +139,7 @@ example \ref{20141124-152503}-20141124-152503
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Derivative of Polynomial Functions}
 
-\begin{arule}[Derivative of a Sum (DS)]\index{Derivatives! Derivative of a Sum}
-\begin{align}
-	[f(x) + g(x)]' &= f'(x) + g'(x) \label{eq:ds1} \\
-	\dfrac{\dd}{\dx} \left[f(x) + g(x) \right] &= \dfrac{\dd}{\dx} \left[f(x) \right] + \dfrac{\dd}{\dx} \left[g(x) \right]  \label{eq:ds2}
-\end{align}
-\end{arule}
+
 
 %-=-=-= EXAMPLE
 \begin{example}[id:20141124-152503] \label{20141124-152503}\index{Example!20141124-152503} \hfill \\
@@ -309,12 +285,7 @@ The vertex of this parabola is the point $(1,-7)$
 \end{example}
 
 
-\begin{arule}[Derivative of a Product (DPr)]\index{Derivatives! Derivative of a Product}
-\begin{align}
-	\left[f(x)g(x) \right]' &= \cRed{f'(x)}g(x) + f(x)\cRed{g'(x)} \label{eq:dpr1} \\
-	\dfrac{\dd}{\dx} \left[f(x)g(x) \right] &= \cRed{\dfrac{\dd}{\dx} \left[f(x) \right]}g(x) + f(x)\cRed{\dfrac{\dd}{\dx} \left[g(x)\right]}  \label{eq:dpr2}
-\end{align}
-\end{arule}
+
 
 %-=-=-= EXAMPLE
 \begin{example}[id:20141209-144203] \label{20141209-144203}\index{Example!20141209-144203} \hfill \\
@@ -353,25 +324,7 @@ f'(x)&= 2x \cos (x) - x^2 \sin x && \text{OOM} \eqref{eq:oom}
 \end{align*}
 \end{example}
 
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\section{Derivative of Trigonometric Functions}
 
-\begin{arule}[Derivative of Sine (DSin)]\index{Derivatives! Derivative of Sine}
-\begin{align}
-	\left[ \sin(x) \right]' &= \cos (x) \label{eq:dsin1} \\
-	\dfrac{\dd}{\dx} \left[ \sin(x) \right] & = \cos (x)  \label{eq:dsin2}
-\end{align}
-\end{arule}
-
-
-\begin{arule}[Derivative of Cosine (DCos)]\index{Derivatives! Derivative of Cosine}
-\begin{align}
-	\left[ \cos(x) \right]' &= -\sin (x) \label{eq:dcos1} \\
-	\dfrac{\dd}{\dx} \left[ \cos(x) \right] & = -\sin (x)  \label{eq:dcos2}
-\end{align}
-\end{arule}
 
 %-=-=-= EXAMPLE
 \begin{example}[id:20150910-115935] \label{20150910-115935}\index{Example!20150910-115935} \hfill \\
@@ -408,53 +361,8 @@ f'(x) &= 2\cos(x)\sin(x) && \text{OOA} \eqref{eq:ooa} % TODO Simplifying trigono
 \end{align*}
 \end{example}
 
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\section{Derivative of Rational Functions}
 
 
-\begin{arule}[Derivative of a Quotient (DQ)]\index{Derivatives! Derivative of a Quotient}
-\begin{align}
-	\left[ \dfrac{f(x)}{g(x)} \right]' &= \dfrac{f'(x)g(x)-f(x)g'(x)}{\left[g(x)\right]^2} \label{eq:drf1} \\
-	\dfrac{\dd}{\dx} \left[ \dfrac{f(x)}{g(x)} \right] & = \dfrac{\dfrac{\dd}{\dx}\left[f(x)\right]g(x)-f(x) \dfrac{\dd}{\dx} \left[g(x)\right] }{\left[g(x)\right]^2}  \label{eq:drf2}
-\end{align}
-\end{arule}
-
-
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\section{Derivative of Exponential Functions}
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\section{Derivative of Logarithmic Functions}
-
-\begin{arule}[Derivative of a Natural Logarithm (DNL)]\index{Derivatives! Derivative of a Natural Logarithm}
-\begin{align}
-	\left[\ln x \right]' &= \frac{1}{x} \label{eq:dnl1} \\
-	\dfrac{\dd}{\dx} \left[\ln x \right] &= \frac{1}{x}  \label{eq:dnl2}
-\end{align}
-\end{arule}
-
-
-
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\section{Derivative of Composite Functions}
-
-
-\begin{arule}[Derivative of a Composite Function (DComp)]\index{Derivatives! Derivative of a Composite Function}
-\begin{align}
-	\left[f \left( \cRed{g(x)} \right) \right]' &= \left[\cRed{g(x)} \right]' \left[f\left(\cRed{g(x)}\right)\right]' \label{eq:dcf1} \\
-	\dfrac{\dd}{\dx} \left[f \left( \cRed{g(x)} \right) \right] &= \dfrac{\dd}{\dx} \left[\cRed{g(x)} \right] \dfrac{\dd}{\dx} \left[f\left(\cRed{g(x)}\right)\right]  \label{eq:dcf2}
-\end{align}
-\end{arule}
 
 %-=-=-= EXAMPLE
 \begin{example}[id:20141124-203850] \label{20141124-203850}\index{Example!20141124-203850} \hfill \\
