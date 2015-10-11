@@ -1,0 +1,100 @@
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapter{Curve Sketching}
+
+\subsection{Finding the vertex of a quadratic function using differentiation.}
+
+We can find the vertex of a quadratic function, $f(x)$ using differentiation by:
+
+\begin{enumerate}
+\item Differentiate the function: Find $f'(x)$.
+\item Set the derivative equal to zero: $f'(x)=0$.
+\item Find the abscissa of the vertex by solving the equation $f'(x)=0$ for $x$ to find the critical $x$ value: $x=k$.
+\item Find the ordinate of the vertex by substituting the value of critical value $x=k$ into the function $f(x)$: Evaluate $f(k)$
+\end{enumerate}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151008-110208] \label{20151008-110208}\index{Example!20151008-110208} \hfill \\
+Find the vertex of the quadratic function, $f(x)=ax^2+bx+c$, using differentiation.
+
+\soln
+
+\solnsteps
+
+1. Find the derivative of $f(x)$
+\begin{align*}
+\farg{f(x)}' &= \farg{ax^2+bx+c}' && \text{SPE} \eqref{eq:spe} \\
+f'(x) &= \farg{ax^2}' + \farg{bx}' + \farg{c}' && \text{DS} \eqref{eq:ds1} \\
+f'(x) &= a\farg{x^2}' + b \farg{x}' + \farg{c}' && \text{DCM} \eqref{eq:dcm1} \\
+f'(x) &= a \cdot{x} + b \cdot 1 + c && \text{DPo} \eqref{eq:dpo1} \\
+f'(x) &= ax + b + \farg{c}'  &&\text{Todo simplify} \\
+f'(x) &= ax + b + 0 && \text{DC} \eqref{eq:dc1} \\
+f'(x) &= ax + b && \text{AId} \eqref{eq:aid2} \\
+\end{align*}
+
+2. Set the derivative equal to zero and solve for $x$.
+
+\begin{align*}
+f'(x) & = 0 \\
+ax + b &= 0  \\
+x &= -\frac{b}{a}  &&\text{Todo Solve}
+\end{align*}
+
+The abscissa of the vertex is $x=-\frac{b}{2a}$.
+
+3.  Find the ordinate of the vertex by substituting the argument $x=-\frac{b}{2a}$ into $f(x)$
+
+%\begin{align*}
+%f(x) & = ax^2+bx+c \\
+%f\left(-\frac{b}{2a}\right) &= a
+%\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20150923-152515] \label{20150923-152515}\index{Example!20150923-152515} \hfill \\
+Find the vertex of the parabola $y=x^2-2x-6$ using differentiation.
+\soln
+\solnsteps
+1. Differentiate the function.
+\begin{align*}
+f(x) &=x^2-2x-6 \\
+f(x) &=x^2+ \neg 2x + \neg 6 && \text{DOS} \eqref{eq:dos1} \\
+\farg{f(x)}' &= \farg{x^2+ \neg 2x + \neg 6}' && \text{SPE} \eqref{eq:spe} \\
+f'(x) &= \farg{x^2}'+ \farg{\neg 2x}' + \farg{\neg 6}' && \text{DS} \eqref{eq:ds1} \\
+f'(x) &= \farg{x^2}'+ \neg 2 \farg{x}' + \farg{\neg 6}' && \text{DCM} \eqref{eq:dcm1} \\
+f'(x) &= 2x + \neg 2 + \farg{\neg 6}' && \text{DPo} \eqref{eq:dpo1} \\
+f'(x) &= 2x + \neg 2 + 0 && \text{DC} \eqref{eq:dc1} \\
+f'(x) &= 2x + \neg 2 && \text{AId} \eqref{eq:aid2} \\
+f'(x) &= 2x - 2 && \text{DOS} \eqref{eq:dos2}
+\end{align*}
+
+2 and 3. Set the derivative equal to zero and solve for $x$
+
+\begin{align*}
+2x-2 & = 0\\
+x &= 1
+\end{align*}
+
+4. Find the value of $f(1)$
+
+\begin{align*}
+f(x) & = x^2-2x-6 \\
+f(1) &= \farg{1}^2-2\farg{1}-6 && \text{SPE} \eqref{eq:spe} \\
+f(1) &= -7  &&\text{Evaluate}
+\end{align*}
+
+The vertex of this parabola is the point $(1,-7)$
+\end{example}
+
+
+
+
+\end{document}
+
