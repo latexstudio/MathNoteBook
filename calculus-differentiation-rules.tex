@@ -7,70 +7,7 @@
 %
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-%\chapterimage{Pictures/chapter_head_2.pdf} % Chapter heading image
-
-\chapter{Differentiation}
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\section{Limit of the Difference Quotient}
-
-%-=-=-= DEFINITION
-\begin{definition}[Derivative]\index{Derivative}
-
-The derivative of a function $f(x)$ with respect to the variable $x$ is defined as
-\begin{align}
-f'(\cBlue{x}) & \equiv \displaystyle \lim_{\cRed{\Delta x} \to 0} \underbrace{\dfrac{f(\cBlue{x}+\cRed{\Delta x})-f(\cBlue{x})}{\cRed{\Delta x}}}_{\text{Difference Quotient}} \label{eq:dbfp1}
-\end{align}
-
-\end{definition}
-\begin{figure}[h!]
-\centering
-\begin{tikzpicture}
-	\begin{axis}[
-            domain=0:2, range=0:6,ymax=6,ymin=0,
-            axis lines =left, xlabel=$x$, ylabel=$y$,
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            xtick={1,1.666}, ytick={1,3},
-            xticklabels={$x$,$x+\Delta x$}, yticklabels={$f(x)$,$f(x+\Delta x)$},
-            axis on top,
-          ]
-          \addplot [sthlmRed!15, domain=(0:2)] {-3.348+4.348*x};
-          \addplot [sthlmRed!32, domain=(0:2)] {-2.704+3.704*x};
-          \addplot [sthlmRed!49, domain=(0:2)] {-1.994+2.994*x};
-          \addplot [sthlmRed!66, domain=(0:2)] {-1.326+2.326*x};
-          \addplot [sthlmRed!83, domain=(0:2)] {-0.666+1.666*x};
-	  \addplot [sthlmDarkGrey,dashed] plot coordinates {(1,0) (1,1)};
-          \addplot [sthlmDarkGrey,dashed] plot coordinates {(0,1) (1,1)};
-          \addplot [sthlmDarkGrey,dashed] plot coordinates {(0,3) (1.666,3)};
-          \addplot [sthlmDarkGrey,dashed] plot coordinates {(1.666,0) (1.666,3)};
-          \addplot [very thick,sthlmBlue, smooth,domain=(0:1.833)] {-1/(x-2)};
-          \addplot[color=sthlmDarkGrey,fill=sthlmDarkGrey,only marks,mark=*] coordinates{(1.666,3)};  %% closed hole
-          \addplot[color=sthlmDarkGrey,fill=sthlmDarkGrey,only marks,mark=*] coordinates{(1,1)};  %% closed hole
-          \addplot [very thick,sthlmRed, smooth,domain=(0:2)] {x};
-        \end{axis}
-\end{tikzpicture}
-\caption{\cite{mooculus:textbook}}
-\end{figure}
-%-=-=-= EXAMPLE
-\begin{example}[id:20141219-212546] \label{20141219-212546}\index{Example!20141219-212546} \hfill \\
-
-Differentiate the function $f(x)=5$
-
-\soln
-
-\solnsteps
-\begin{align*}
-f(x) & = 5x^0 && \text{PoID} \eqref{eq:poid1} \\
-f'(x) &= \displaystyle \lim_{\Delta x \to 0} \dfrac{5\farg{x+\Delta x}^0-5\farg{x}^0}{\Delta x} && \text{SPE} \eqref{eq:spe} \& \text{DBFP} \eqref{eq:dbfp1}\\
-f'(x) &= \displaystyle \lim_{\Delta x \to 0} \dfrac {5(1)-5(1)}{\Delta x} && \text{PoID} \eqref{eq:poid2} \\
-f'(x) &= \displaystyle \lim_{\Delta x \to 0} 0 && \text{OOM} \eqref{eq:oom} \\
-f'(x) &= 0 % TODO Evaluate the limit
-\end{align*}
-
-\end{example}
+\chapter{Derivative Rules}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	SECTION:
@@ -175,6 +112,30 @@ example \ref{20141124-205219}-20141124-205219
 \end{example}
 
 %-=-=-= EXAMPLE
+\begin{example}[id:20151011-195002] \label{20151011-195002}\index{Example!20151011-195002} \hfill \\
+Differentiate $f(x)=2x^2+3x+7$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\farg{f'(x)}' &= \farg{2x^2+3x+7}' && \text{SPE} \eqref{eq:spe} \\
+f'(x) &= \farg{2x^2}'+\farg{3x}'+\farg{7}' && \text{DS} \eqref{eq:ds1} \\
+f'(x) &= 2 \farg{x^2}' + 3\farg{x}' + \farg{7}' && \text{DCM} \eqref{eq:dcm1} \\
+f'(x) &= 2 \farg{x^2}' + 3\farg{x}' + 0 && \text{DC} \eqref{eq:dc1} \\
+f'(x) &= 2 \farg{x^2}' + 3\farg{x}' && \text{AId} \eqref{eq:aid1} \\
+f'(x) &= 2(2x)+3 && \text{DPo} \eqref{eq:dpo1} \\
+f'(x) &= 4x + 3 && \text{OOM} \eqref{eq:oom} 
+\end{align*}
+
+\qdepend
+
+\qdependlist
+example \ref{20151011-154209}-20151011-154209
+
+\end{example}
+
+%-=-=-= EXAMPLE
 \begin{example}[id:20141128-151834] \label{20141128-151834}\index{Example!20141128-151834} \hfill \\
 
 Differentiate $f(x)=3x^2-6x+4$
@@ -199,93 +160,6 @@ f'(x) &= 6x+6 && \text{OOM} \eqref{eq:oom}
 f'(x) & = 6x+6 && \text{DS} \eqref{eq:ds1}
 \end{align*}
 \end{example}
-
-\subsection{Finding the vertex of a quadratic function using differentiation.}
-
-We can find the vertex of a quadratic function, $f(x)$ using differentiation by:
-
-\begin{enumerate}
-\item Differentiate the function: Find $f'(x)$.
-\item Set the derivative equal to zero: $f'(x)=0$.
-\item Find the abscissa of the vertex by solving the equation $f'(x)=0$ for $x$ to find the critical $x$ value: $x=k$.
-\item Find the ordinate of the vertex by substituting the value of critical value $x=k$ into the function $f(x)$: Evaluate $f(k)$
-\end{enumerate}
-
-%-=-=-= EXAMPLE
-\begin{example}[id:20151008-110208] \label{20151008-110208}\index{Example!20151008-110208} \hfill \\
-Find the vertex of the quadratic function, $f(x)=ax^2+bx+c$, using differentiation.
-
-\soln
-
-\solnsteps
-
-1. Find the derivative of $f(x)$
-\begin{align*}
-\farg{f(x)}' &= \farg{ax^2+bx+c}' && \text{SPE} \eqref{eq:spe} \\
-f'(x) &= \farg{ax^2}' + \farg{bx}' + \farg{c}' && \text{DS} \eqref{eq:ds1} \\
-f'(x) &= a\farg{x^2}' + b \farg{x}' + \farg{c}' && \text{DCM} \eqref{eq:dcm1} \\
-f'(x) &= a \cdot{x} + b \cdot 1 + c && \text{DPo} \eqref{eq:dpo1} \\
-f'(x) &= ax + b + \farg{c}'  &&\text{Todo simplify} \\
-f'(x) &= ax + b + 0 && \text{DC} \eqref{eq:dc1} \\
-f'(x) &= ax + b && \text{AId} \eqref{eq:aid2} \\
-\end{align*}
-
-2. Set the derivative equal to zero and solve for $x$.
-
-\begin{align*}
-f'(x) & = 0 \\
-ax + b &= 0  \\
-x &= -\frac{b}{a}  &&\text{Todo Solve}
-\end{align*}
-
-The abscissa of the vertex is $x=-\frac{b}{2a}$.
-
-3.  Find the ordinate of the vertex by substituting the argument $x=-\frac{b}{2a}$ into $f(x)$
-
-%\begin{align*}
-%f(x) & = ax^2+bx+c \\
-%f\left(-\frac{b}{2a}\right) &= a
-%\end{align*}
-\end{example}
-
-%-=-=-= EXAMPLE
-\begin{example}[id:20150923-152515] \label{20150923-152515}\index{Example!20150923-152515} \hfill \\
-Find the vertex of the parabola $y=x^2-2x-6$ using differentiation.
-\soln
-\solnsteps
-1. Differentiate the function.
-\begin{align*}
-f(x) &=x^2-2x-6 \\
-f(x) &=x^2+ \neg 2x + \neg 6 && \text{DOS} \eqref{eq:dos1} \\
-\farg{f(x)}' &= \farg{x^2+ \neg 2x + \neg 6}' && \text{SPE} \eqref{eq:spe} \\
-f'(x) &= \farg{x^2}'+ \farg{\neg 2x}' + \farg{\neg 6}' && \text{DS} \eqref{eq:ds1} \\
-f'(x) &= \farg{x^2}'+ \neg 2 \farg{x}' + \farg{\neg 6}' && \text{DCM} \eqref{eq:dcm1} \\
-f'(x) &= 2x + \neg 2 + \farg{\neg 6}' && \text{DPo} \eqref{eq:dpo1} \\
-f'(x) &= 2x + \neg 2 + 0 && \text{DC} \eqref{eq:dc1} \\
-f'(x) &= 2x + \neg 2 && \text{AId} \eqref{eq:aid2} \\
-f'(x) &= 2x - 2 && \text{DOS} \eqref{eq:dos2}
-\end{align*}
-
-2 and 3. Set the derivative equal to zero and solve for $x$
-
-\begin{align*}
-2x-2 & = 0\\
-x &= 1
-\end{align*}
-
-4. Find the value of $f(1)$
-
-\begin{align*}
-f(x) & = x^2-2x-6 \\
-f(1) &= \farg{1}^2-2\farg{1}-6 && \text{SPE} \eqref{eq:spe} \\
-f(1) &= -7  &&\text{Evaluate}
-\end{align*}
-
-The vertex of this parabola is the point $(1,-7)$
-\end{example}
-
-
-
 
 %-=-=-= EXAMPLE
 \begin{example}[id:20141209-144203] \label{20141209-144203}\index{Example!20141209-144203} \hfill \\
