@@ -1,0 +1,118 @@
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapter{Equations of Tangent \& Secant Lines}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Essential Questions
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Essential Questions}\label{Essential Questions}
+
+\begin{essentialq}\hfill \\
+
+\begin{enumerate}
+	\item How do we find the equation of the tangent line of a given function at the point $P(a,b)$?
+	\item How do we find the equation of the tangent line of a given function at $x=a$?
+\end{enumerate}
+
+\end{essentialq}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Finding the Equation of the Tangent Line 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Finding the Equation of the Tangent Line }\label{Finding the Equation of the Tangent Line }
+\begin{figure}[!ht]
+\begin{center}
+\begin{tikzpicture}[scale=1, node distance=2cm, text width=3em,text centered, auto]
+    % Place nodes
+\node [bluerbox] (abscissa) {$a$};
+\node [bluerbox, right of = abscissa] (ordinate) {$b$};
+\node [greenrbox, below of = abscissa] (function) {$f(x)$};
+\node [circlenode, right of = function] (join) {$b$};
+\node [purplerbox, below of = function] (derivative) {$f'(x)$};
+\node [purplerbox, right of = derivative] (derivativea) {$f'(a)$};
+\node [orangerbox, right of = join, node distance=4cm, text width=8em] (intercept) {$k=-f'(a)a+b$};
+\node [redrbox, below of= intercept, text width=8em] (equation) {$y=f'(a)x+k$};
+
+\path [line] (abscissa) edge [out= 180, in= 180] (function);
+\path [line] (function) -- (join);
+\path [line] (ordinate) edge [out=270, in=90] (join);
+\path [line] (join) -- (intercept);
+\path [line] (abscissa) edge [out= 180, in= 180] (derivative);
+\path [line] (derivative) edge [out=0, in=180] (derivativea);
+\path [line] (derivativea) edge [out=0, in=180] (intercept);
+\path [line] (abscissa) edge [out=90, in=90] (intercept);
+\path [line] (intercept) edge [out=0, in=0] (equation);
+\path [line] (derivative) edge [out=0, in=180] (derivativea);
+\path [line] (derivativea) edge [out=0, in=180] (equation);
+\path [dashline] (function)--(derivative);
+\end{tikzpicture}
+\end{center}
+\caption{Finding the Equation of a Tangent Line Workflow}
+\end{figure}
+
+For a given function, $\cGreen{f(x)}$, our goal is to find the equation of the tangent line at the point $P(\cBlue{a}, \cBlue{b})$, which can be expressed in slope-intercept form as:
+\[
+y=\cPurple{f'(\cBlue{a})}x+\cOrange{k}
+\] 
+Where $\cPurple{f'(\cBlue{a})}$ is the value of the derivative, slope, at $x=\cBlue{a}$ and $\cOrange{k}$ is the $y$-intercept.  We therefore need to:
+
+\begin{enumerate}
+	\item Find the derivative of the function $\cGreen{f(x)}$: $\cPurple{f'(x)}$
+	\item Find the value of the derivative at $x=\cBlue{a}$: $\cPurple{f'(\cBlue{a})}$
+	\item Find the value of the $y$-intercept: $\cOrange{k}=-\cPurple{f'(\cBlue{a})}+\cBlue{b}$:
+	\item If the ordinate $\cBlue{b}$ is not explicitly given, then find $\cGreen{f(\cBlue{a})}=\cBlue{b}$ 
+\end{enumerate}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151011-154209] \label{20151011-154209}\index{Example!20151011-154209} \hfill \\
+Find the equation of the line tangent to the curve of the function $f(x)=2x^2+3x+7$ at the point $P(2, 21)$.
+
+\soln
+
+\solnsteps
+
+Find the derivative of $f(x)$
+\begin{align*}
+f'(x) &= 4x+3 \text{\, goto \,} \, \ref{20151011-195002}
+\end{align*}
+
+Evaluate the derivative at $x=2$
+\begin{align*}
+f'(2) & = 4\farg{2}+3 && \text{SPE} \eqref{eq:spe} \\
+f'(2) &= 8+3 && \text{OOM} \eqref{eq:oom} \\
+f'(2) &= 11 && \text{OOA} \eqref{eq:ooa} 
+\end{align*}
+
+Find the $y$-intercept, $k$, of the equation of the tangent line.
+
+\begin{align*}
+y &= f'(x)x + k\\
+\farg{21} & = \farg{11}\farg{2} + k && \text{SPE} \eqref{eq:spe} \\
+21 & = 22 + k && \text{OOM} \eqref{eq:oom} \\
+\neg 22 + \left[\farg{21} \right] &= \neg 22 + \left[\farg{22} \right] + k && \text{SPE+AI}\\ 
+\neg 22 + 21 & = (\neg 22 + 22) + k && \text{APA} \eqref{eq:apa1} \\
+\neg 1 &= 0 + k && \text{OOA} \eqref{eq:ooa} \\
+\neg 1 &= k && \text{AId} \eqref{eq:aid1} \\
+-1 &= k && \text{ONeg} \eqref{eq:oneg2} \\
+k &= -1 && \text{SyPE} \eqref{eq:sype} 
+\end{align*}
+
+The equation of the tangent line is
+\begin{align*}
+y & = f'(2)x+k \\
+y &= 11x - 1 && \text{SPE} \eqref{eq:spe} 
+\end{align*}
+
+\end{example}
+
+\end{document}
+

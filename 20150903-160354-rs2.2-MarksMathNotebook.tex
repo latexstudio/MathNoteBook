@@ -158,7 +158,7 @@ pgfplots
 	\newcommand{\cLightOrange}[1]{{\color{sthlmLightOrange}{#1}}}
 	\newcommand{\crLightOrange}{\color{sthlmLightOrange}}
 	\newcommand{\cnLightOrange}{sthlmLightOrange}
-	\newcommand{\cOrange}[1]{{\color{}{#1}}}
+	\newcommand{\cOrange}[1]{{\color{sthlmOrange}{#1}}}
 	\newcommand{\crOrange}{\color{sthlmOrange}}
 	\newcommand{\cnOrange}{sthlmOrange}
 	%\newcommand{\cDarkOrange}[1]{{\color{}{#1}}}
@@ -487,6 +487,7 @@ pgfplots
 \theoremstyle{ocrenumbox}
 \newtheorem{theoremeT}[dummy]{Theorem}
 \newtheorem{aruleT}[dummy]{Rule}
+\newtheorem{aidentityT}[dummy]{Identity}
 \newtheorem{problem}{Problem}[chapter]
 \theoremstyle{blacknumexe}
 \newtheorem{exerciseT}{Exercise}[chapter]
@@ -536,6 +537,19 @@ leftmargin=0cm,
 rightmargin=0cm,
 innerbottommargin=5pt,
 linewidth=2pt]{arBox}
+
+% Identity box
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+linecolor=gray,
+backgroundcolor=black!5,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=5pt,
+leftmargin=0cm,
+rightmargin=0cm,
+innerbottommargin=5pt,
+linewidth=2pt]{idenBox}
 
 % Notation box
 \newmdenv[skipabove=7pt,
@@ -648,6 +662,7 @@ innerbottommargin=5pt]{cBox}
 % Creates an environment for each type of theorem and assigns it a theorem text style from the "Theorem Styles" section above and a colored box from above
 \newenvironment{theorem}{\begin{tBox}\begin{theoremeT}}{\end{theoremeT}\end{tBox}}
 \newenvironment{arule}{\begin{arBox}\begin{aruleT}}{\end{aruleT}\end{arBox}}
+\newenvironment{aidentity}{\begin{idenBox}\begin{aidentityT}}{\end{aidentityT}\end{idenBox}}
 \newenvironment{exercise}{\begin{eBox}\begin{exerciseT}}{\hfill{\color{ocre}\tiny\ensuremath{\blacksquare}}\end{exerciseT}\end{eBox}}
 \newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}
 \newenvironment{property}{\begin{prBox}\begin{propertyT}}{\end{propertyT}\end{prBox}}
@@ -876,7 +891,6 @@ trees
 \tikzstyle{property} = [rectangle, draw, fill=sthlmRed!40, text centered, rounded corners]
 \tikzstyle{hide} = [rectangle, draw, fill=sthlmGrey, text centered, rounded corners]
 \tikzstyle{active} = [rectangle, draw, fill=sthlmDarkGrey, text=white, text centered, rounded corners]
-\tikzstyle{line} = [draw, very thick, color=black!50, -latex']
 
 \tikzset{functiondotted/.style={draw=sthlmPurple!50!white, line width=1pt,
                                dash pattern=on 1pt off 4pt on 6pt off 4pt,
@@ -911,6 +925,28 @@ trees
   \tikzset{reddotted/.style={draw=sthlmRed!50!white, line width=1pt,
                                dash pattern=on 1pt off 4pt on 6pt off 4pt,
                                 inner sep=4mm, rectangle, rounded corners}}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	Derivative Workflow
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=	
+\tikzstyle{point} = [rectangle, draw, fill=sthlmBlue!40, text centered,rounded corners]
+\tikzstyle{limit} = [rectangle, draw, fill=sthlmPurple!40, text centered,rounded corners]
+\tikzstyle{class} = [rectangle, draw, fill=sthlmGreen!40, text centered, rounded corners]
+\tikzstyle{intervals} = [rectangle, draw, fill=sthlmOrange!40, text centered, rounded corners]
+\tikzstyle{fd} = [rectangle, draw, fill=sthlmRed!40, text centered, rounded corners]
+\tikzstyle{secondderivative} = [circle, draw, fill=sthlmGrey,radius=0.5, text width=1em, node distance =2.5cm]
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	General Workflow
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=	
+\tikzstyle{bluerbox} = [rectangle, draw, fill=sthlmBlue!40, text centered,rounded corners]
+\tikzstyle{purplerbox} = [rectangle, draw, fill=sthlmPurple!40, text centered,rounded corners]
+\tikzstyle{greenrbox} = [rectangle, draw, fill=sthlmGreen!40, text centered, rounded corners]
+\tikzstyle{orangerbox} = [rectangle, draw, fill=sthlmOrange!40, text centered, rounded corners]
+\tikzstyle{redrbox} = [rectangle, draw, fill=sthlmRed!40, text centered, rounded corners]
+\tikzstyle{circlenode} = [circle, draw, fill=sthlmGrey,radius=0.5, text width=1em, node distance =2.5cm]
+\tikzstyle{line} = [draw, very thick, color=black!50, -latex']
+\tikzstyle{dashline} = [draw, very thick, dash pattern=on 1pt off 4pt on 6pt off 4pt,inner sep=4mm,color=black!50, -latex']
 
 \begin{document}
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -982,8 +1018,14 @@ trees
 \subfile{algebra-solve-deg1polynomials}
 \subfile{algebra-solve-deg2polynomials}
 
-%\part{Differential Calculus}
-
+\part{Differential Calculus}
+\subfile{calculus-differentiation-firstprinciples}
+\subfile{calculus-differentiation-rules}
+\subfile{calculus-differentiation-equationtangentsecantlines}
+\subfile{calculus-differentiation-1stderivativetest}
+\subfile{calculus-differentiation-localextrema}
+\subfile{calculus-differentiation-2ndderivativetest}
+\subfile{calculus-differentiation-curvesketching}
 %\part{MYP}
 %\subfile{chapter-myp-algebraicexpressions}
 %\subfile{chapter-myp-arithmeticexpressions}
