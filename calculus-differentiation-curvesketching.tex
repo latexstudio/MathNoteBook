@@ -1,0 +1,61 @@
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapter{Curve Sketching}
+
+\begin{center}
+\begin{tikzpicture}[scale=1, node distance=2cm, text width=8em, auto]
+    % Place nodes
+\node [limit] (verticalasymptotes) {Vertical};
+\node [class, below of=verticalasymptotes] (asymptotes) {Asymptote(s)};
+\node [limit, left of=asymptotes, node distance=5cm] (slantasymptotes) {Slant};
+\node [limit, right of=asymptotes, node distance=5cm] (horizontalasymptotes) {Horizontal};
+\node [fd, below of=asymptotes, node distance=5cm] (function) {$f(x)$};
+\node [class, left of=function, node distance=5cm] (intercepts) {Intercepts};
+\node [point, right of=function, node distance=5cm] (endpoints) {Endpoints};
+\node [point, above of=intercepts] (xintercept) {$x$-intercept(s)};
+\node [point, below of=intercepts] (yintercept) {$y$-intercept};
+\node [fd, below of=function, node distance=3cm] (derivative) {$f'(x)$};
+\node [point, right of=derivative, node distance=5cm] (criticalpoints) {Critical Point(s)};
+\node [fd, below of=derivative, node distance=3cm] (twoderivative) {$f''(x)$};
+\node [point, left of=twoderivative, node distance=5cm] (inflectionpoints) {Inflection Point(s)};
+\node [intervals, below of=criticalpoints, node distance=3cm] (increasedecrease) {Interval(s) of Increase/Decrease};
+\node [intervals, below of=twoderivative, node distance=3cm] (concavity) {Interval(s) of Concavity};
+\node [point, right of=increasedecrease, node distance=5cm] (globalextrema) {Global Extrema};
+\node [point, below of=increasedecrease, node distance=3cm] (localextrema) {Local Extrema};
+\node [secondderivative, right of=twoderivative](twoderivativetest){};
+
+\path [line] (verticalasymptotes) -- (asymptotes);
+\path [line] (asymptotes) -- (slantasymptotes);
+\path [line] (asymptotes) -- (horizontalasymptotes);
+\path [line] (asymptotes) -- (function);
+\path [line] (function) -- (intercepts);
+\path [line] (function) -- (endpoints);
+\path [line] (intercepts) -- (xintercept);
+\path [line] (intercepts) -- (yintercept);
+\path [line] (function) -- (derivative);
+\path [line] (derivative) -- (criticalpoints);
+\path [line] (derivative) -- (twoderivative);
+\path [line] (twoderivative) -- (inflectionpoints);
+\path [line] (criticalpoints) -- (increasedecrease);
+\path [line] (twoderivative) -- (concavity);
+\path [line] (increasedecrease) -- (localextrema);
+\path [line] (localextrema) edge [out= 0, in= 270] (globalextrema);
+\path [line] (endpoints) edge [out= 0, in= 90] (globalextrema);
+\path [line] (function) edge [out= 230, in= 90] (inflectionpoints);
+\path [line] (function) edge [out= 310, in= 90] (criticalpoints);
+\path [line] (inflectionpoints) edge [out= 270, in= 180] (concavity);
+\path [line] (criticalpoints) edge [out= 225, in= 60] (twoderivativetest);
+\path [line] (twoderivativetest) edge [out= 270, in= 189] (localextrema);
+\path [line] (twoderivative) edge [out= 60, in= 120] (twoderivativetest);
+\end{tikzpicture}
+\end{center}
+
+\end{document}
+
