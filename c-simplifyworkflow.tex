@@ -1,3 +1,7 @@
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
+\begin{figure}
 \begin{tikzpicture}[scale=1, node distance=1.1cm, text width=5em, auto]
     % Place nodes
 \node [property] (MId1) {MId};
@@ -43,30 +47,30 @@
 
 \node [function, right of=DELIM, node distance=8cm] (PoTF) {PoTF};
 \node [function, below of=PoTF] (RTPo) {RTPo};
-\node [function, below of=RTPo] (PoNE1) {PoNE};
-\node [function, below of=PoNE1] (PoPr) {PoPr};
+\node [function, below of=RTPo] (PoNegE1) {PoNegE};
+\node [function, below of=PoNegE1] (PoPr) {PoPr};
 \node [function, below of=PoPr] (PoQ) {PoQ};
 \node [function, below of=PoQ] (PoPrPo) {PoPrPo};
 \node [function, below of=PoPrPo] (PoQPo) {PoQPo};
 \node [function, below of=PoQPo] (PrCBPo) {PrCBPo};
 \node [function, below of=PrCBPo] (QCBPo) {QCBPo};
 \node [function, below of=QCBPo] (PoPo) {PoPo};
-\node [function, below of=PoPo] (PoNE2) {PoNE};
-\node [operation, below of=PoNE2] (OOE) {OOE};
+\node [function, below of=PoPo] (PoNegE2) {PoNegE};
+\node [operation, below of=PoNegE2] (OOE) {OOE};
 \node [function, below of=OOE] (PoTR) {PoTR};
 
 
 \path [line] (DELIM) edge [bend left=30] (PoTF);
 \path [line] (PoTF) -- (RTPo);
-\path [line] (RTPo) -- (PoNE1);
+\path [line] (RTPo) -- (PoNegE1);
 \path [line] (PoPr) -- (PoQ);
 \path [line] (PoQ) -- (PoPrPo);
 \path [line] (PoPrPo) -- (PoQPo);
 \path [line] (PoQPo) -- (PrCBPo);
 \path [line] (PrCBPo) -- (QCBPo);
 \path [line] (QCBPo) -- (PoPo);
-\path [line] (PoPo) -- (PoNE2);
-\path [line] (PoNE2) -- (OOE);
+\path [line] (PoPo) -- (PoNegE2);
+\path [line] (PoNegE2) -- (OOE);
 \path [line] (OOE) -- (PoTR);
 
 %\node[productdotted, fit =(DELIM)(JTC)(CPM)(OOM)(RF1)(CTJ)(APM)](product) {};
@@ -77,10 +81,10 @@
 %\node[left of =sum2, text centered,](powers) {\textcolor{sthlmPurple}{\textbf{Addition}}};
 
 
-\node[functiondotted, fit =(PoTF)(RTPo)(PoNE1)(PoPr)(PoQ)(PoPrPo)(PoQPo)(PrCBPo)(QCBPo)(PoPo)(PoNE2)(OOE)(PoTR)](powerfunctions) {};
+\node[functiondotted, fit =(PoTF)(RTPo)(PoNegE1)(PoPr)(PoQ)(PoPrPo)(PoQPo)(PrCBPo)(QCBPo)(PoPo)(PoNegE2)(OOE)(PoTR)](powerfunctions) {};
 \node[below of =PoTR, text centered,](powers) {\textcolor{sthlmPurple}{\textbf{Powers}}};
 
-\path [line] (PoNE1) edge [out= 180, in= 0] (DELIM);
+\path [line] (PoNegE1) edge [out= 180, in= 0] (DELIM);
 
 \path [line] (CPM) edge [out= 0, in= 180] (PoPr);
 
@@ -89,3 +93,8 @@
 \path [line] (AId) edge [out= 180, in= 180] (DELIM);
 
 \end{tikzpicture}
+\caption{Simplifying Expressions Workflow: \newline {\color{sthlmRed!40}\ensuremath{\blacksquare}} Property, {\color{sthlmBlue!40}\ensuremath{\blacksquare}} Operation, {\color{sthlmGreen!40}\ensuremath{\blacksquare}} Notation, {\color{sthlmPurple!40}\ensuremath{\blacksquare}} Powers, {\color{sthlmYellow!40}\ensuremath{\blacksquare}} Delimiters, {\color{sthlmOrange!40}\ensuremath{\blacksquare}} Process, {\color{sthlmDarkGrey!40}\ensuremath{\blacksquare}} Not Used}
+\end{figure}
+
+\end{document}
+
