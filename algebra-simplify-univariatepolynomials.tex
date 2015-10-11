@@ -1,0 +1,1362 @@
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapter{Simplifying Univariate Polynomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: OPERATION OF ADDITION
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Classification of Univariate Polynomial Expressions}\index{Classification of Univariate Polynomial Expressions}
+
+%-=-=-= DEFINITION
+\begin{definition}[Indeterminate]\index{Indeterminate}
+
+\[
+\cRed{x}
+\]
+
+An indeterminate is a symbol that is treated as a variable, but does not stand for anything else but itself and is used as a placeholder.
+
+\begin{itemize}
+	\item it does \textbf{not} designate a constant or a parameter
+	\item it is \textbf{not} an unknown that could be solved for
+	\item it is \textbf{not} a variable designating a function argument
+\end{itemize}
+
+\hfill \cite{wikipedia:indeterminate}
+\end{definition}
+
+
+%-=-=-= DEFINITION
+\begin{definition}[Coefficient]\index{Coefficient}
+\[
+	\cBlue{C}x^{k}
+\]
+A coefficient, $\cBlue{C}$ is a real number multiplicative factor.\\
+
+\end{definition}
+
+%-=-=-= DEFINITION
+\begin{definition}[Univariate Monomial]\index{Univariate Monomial}
+
+\[
+ \cBlue{C_{k}}\cRed{x^{k}}
+\]
+
+A univariate monomial is made up of two factors.  The first factor of a monomial, $\cBlue{C_{k}}$, is the \cBlue{coefficient}. The second factor of each monomial, $\cRed{x^{k}}$, is an indeterminate raised to a non-negative integer power $k$. \\
+
+\end{definition}
+
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141120-202842] \label{20141120-202842}\index{Example!20141120-202842} \hfill \\
+
+Express $1x^2$ in canonical form.
+
+\soln
+
+\solnsteps
+\begin{align*}
+x^2 && \text{MId} \eqref{eq:mid2}
+\end{align*}
+\end{example}
+
+%-=-=-= DEFINITION
+\begin{definition}[Univariate Polynomial Expression]\index{Univariate Polynomial Expression}
+\begin{align}
+\sum\limits_{k=0}^n \cBlue{C_{k}}\cRed{x^{n}} & = \cBlue{C_{n}}\cRed{x^{n}}+\cBlue{C_{n-1}}\cRed{x^{n-1}}+ \cdots + \cBlue{C_{k}}\cRed{x^{k}} + \cdots + \cBlue{C_{2}}\cRed{x^{2}}+\cBlue{C_{1}}\cRed{x^{1}}+\underbrace{\cBlue{C_{0}}}_{\cBlue{C_{0}}\cRed{x^{0}}}
+\end{align}
+A univariate polynomial in an indeterminate $x$ is an expression made up of one or more summands of the form $\cBlue{C_{k}}\cRed{x^{k}}$, which are called monomials.  The first factor of each monomial, $\cBlue{C_{k}}$, is a numerical factor called the \cBlue{coefficient} where $\cBlue{C_{k}} \in \real$. The second factor of each monomial, $\cRed{x^{k}}$, is an indeterminate raised to a non-negative integer power $i$.
+
+\hfill \textcite{wikipedia:polynomial}
+\end{definition}
+
+%-=-=-= DEFINITION
+\begin{definition}[Degree of the Indeterminate]\index{Degree of the Indeterminate}
+
+\[
+x^{\cRed{k}}
+\]
+The exponent of an indeterminate power, $\cRed{k}$ is called the degree of the indeterminate.
+
+\hfill \textcite{wikipedia:polynomial}
+\end{definition}
+
+%-=-=-= DEFINITION
+\begin{definition}[Degree of the Univarite Polynomial]\index{Degree of the Univariate Polynomial}
+
+\[
+C_{n}x^{\cRed{n}}+C_{n-1}x^{n-1}+ \cdots + C_{k}x^{k} + \cdots + C_{2}x^{2}+C_{1}x^{1}+\underbrace{C_{0}}_{C_{0}x^{0}}
+\]
+
+The degree of the univariate polynomial is determined by the monomial with the largest degree of the indeterminate.
+
+%\hfill \cite{mathworld:algebraicexpression}
+\end{definition}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Degree -1 Univariate Polynomials}\index{Degree -1 Univariate Polynomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Monomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Degree 0 Univariate Polynomials}\index{Degree 0 Univariate Polynomials}
+
+% TODO Define the PowerID
+
+\[
+\cDarkGrey{C_{n}x^{n}+C_{n-1}x^{n-1}+ \cdots + C_{k}x^{k} + \cdots + C_{2}x^{2}+C_{1}x^{1}+}\underbrace{\cBlue{C_{0}}}_{\cBlue{C_{0}}\cRed{x^{0}}}
+\]
+
+Degree 0 univariate polynomial expressions are made up of univariate monomials, $\cBlue{C_{0}}$, called \alert{constants}.  The power identity is an indeterminate raised to a power of 0 has a value of 1.  Thus, $\cRed{x^{0}}=1$ and results in the monomial $\cBlue{C_{0}} \cdot 1$.  The canonical form of a product does not show the multiplicative identity factor, so what remains of this monomial product is only the coefficient factor $\cBlue{C_{0}}$ and from now on will be referred to as a \alert{constant}.
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141121-093747] \label{20141121-093747}\index{Example!20141121-093747} \hfill \\
+
+Express $13x^0$ in canonical form.
+
+\soln
+
+\solnsteps
+\begin{align*}
+13 % TODO Add PowerID here.
+\end{align*}
+\end{example}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Monomials}
+
+Degree 0 univariate polynomial expressions are usually a monomial in their canonical form if $\cBlue{C_{0}}$ is a non-zero real number.  The exception is if $\cBlue{C_{0}}=0$, the additive identity, then the result is the zero polynomial, which can be considered a degree -1 polynomial.\\
+
+The expression can be manipulated into its monomial canonical form by simplifying the expression.  Simplifying the expression can be defined as evaluating the expression by following order of operations, which is the same as evaluating an arithmetic expression.
+
+% TODO Add reference to evaluating arithmetic expressions.
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Degree 1 Univariate Polynomials}\index{Degree 1 Univariate Polynomials}
+
+\[
+\cDarkGrey{C_{n}x^{n}+C_{n-1}x^{n-1}+ \cdots + C_{k}x^{k} + \cdots + C_{2}x^{2}}+\cRed{C_{1}x^{1}+\underbrace{C_{0}}_{C_{0}x^{0}}}
+\]
+
+Degree 1 univariate polynomial expressions can be expressed with at most two different terms and consequently this expression in its canonical form has at most two monomial summands -- called a binomial.
+
+%-=-=-= DEFINITION
+\begin{definition}[Univariate Like Terms]\index{Like Terms}
+
+\[
+\cBlue{C_{1}}\cRed{x^{k}} = \cBlue{C_{2}}\cRed{x^{k}}
+\]
+Two or more univariate monomials are defined as having like terms if each monomial has the same term, which will be the same indeterminate raised to the same positive integer power.
+\end{definition}
+
+Sometimes the word \alert{term} is used to describe monomials (including both the coefficient and the term), which may be confusing when trying to define like terms.  For this reason, we will refer to the summands of a polynomial as monomials.
+
+The monomials $5x^1$ and $3x^1$ can be described as having like terms because they share the common term $x^1$.  One could also say that $5x^1$ and $3x^1$ are like terms by definition and consequenlty giving the reader an impression that $5x^1$ and $3x^1$ are terms themselves.
+
+\begin{remark}
+A degree 1 indeterminate does not display the multiplicative identity in the exponent when its in canonical form.
+\end{remark}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141120-202042] \label{20141120-202042}\index{Example!20141120-202042} \hfill \\
+
+Express $5x^1$ in canonical form
+
+\soln
+
+\solnsteps
+\begin{align*}
+5x && \text{MId} \eqref{eq:mid2}
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141121-093439] \label{20141121-093439}\index{Example!20141121-093439} \hfill \\
+
+Express $7x^1+5$ in canonical form.
+
+\soln
+
+\solnsteps
+\begin{align*}
+7x+5 && \text{MId} \eqref{eq:mid2} \\
+\end{align*}
+\end{example}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Monomials}
+
+\begin{essentialq}\hfill \\
+
+\begin{enumerate}
+	\item How do we simplify univariate polynomial expressions?
+\end{enumerate}
+
+\end{essentialq}
+
+
+If the constant monomial is 0, the additive identity, then the canonical form of a degree 1 univariate polynomial is a degree 1 monomial.
+
+\subsubsection{Simplifying Univariate Monomial Expressions}
+
+The definition of a univariate monomial expression is based on the expanded canonical form of some polynomial expression.  It might be that the original expression might not be in the expanded canonical form, so a process called \alert{simplifying by expanding} will be introduced to manipulate the expression such that it can be written in its expanded canonical form.
+
+This process of simplifying by expanding polynomial expressions will be developed to the extent that it will be used to simplify multivariate polynomials.  We will start by simplifying univariate monomial expressions.
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141120-203846] \label{20141120-203846}\index{Example!20141120-203846} \hfill \\
+
+Simplify $6x+7x$
+
+\soln
+
+\solnsteps
+
+Notice that the indeterminate of each monomial is of degree 1; however, the exponent 1 is not shown.  The monomials $6x$ and $7x$ have a like term of $x$.
+
+\begin{align*}
+(6+7)x && \text{DPF} \eqref{eq:dpf1} \\
+13x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+Notice that the sum of two monomials that have like terms can be found by adding the coefficients of the monomials.  The distributive property in the factoring direction provides some insight to why we can add the coefficients of monomials that have like terms.\\
+
+\soln
+
+\lesssteps
+\begin{align*}
+13x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\end{example}
+
+
+% TODO section on units as indeterminates
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141027-075159]\label{20141027-075159}\index{Example!20141027-075159} \hfill \\
+
+Simplify $7\unit{cm}+8\unit{cm}$
+
+\soln
+
+\solnsteps
+\begin{align*}
+(7+8)\alert{\unit{cm}}  &&\text{DPF}\eqref{eq:dpf1} \\
+15\unit{cm}  &&\text{OOA} \eqref{eq:ooa}
+\end{align*}
+\end{example}
+
+\begin{remark}
+Remember, if a monomial does not have a coefficient factor, then it's implied that the coefficient factor is 1, the multiplicative identity, and consequently its not explicitly shown.
+\end{remark}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141121-185558] \label{20141121-185558}\index{Example!20141121-185558} \hfill \\
+
+Simplify $x+5x$
+
+\soln
+
+\solnsteps
+
+It can be useful when simplifying expressions to make the multiplicative identity (MId) factor explicit.
+
+\begin{align*}
+1x+5x && \text{MId} \eqref{eq:mid1} \\
+(1+5)x && \text{DPF} \eqref{eq:dpf1} \\
+6x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+1x+5x && \text{MId} \eqref{eq:mid1} \\
+6x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+As one becomes more experienced, there is no reason to make the multiplicative identity coefficient explicit.
+
+\soln
+
+\lesssteps
+\begin{align*}
+6x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\end{example}
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141121-190857] \label{20141121-190857}\index{Example!20141121-190857} \hfill \\
+
+Simplify $8x-6x$
+
+\soln
+
+\solnsteps
+\begin{align*}
+8x + \neg 6x && \text{DOS} \eqref{eq:dos1} \\
+(8+\neg 6)x && \text{DPF} \eqref{eq:dpf1} \\
+2x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+8x + \neg 6x && \text{DOS} \eqref{eq:dos1} \\
+2x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+% TODO Possibly add the OOS less steps example
+
+\end{example}
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141121-193636] \label{20141121-193636}\index{Example!20141121-193636} \hfill \\
+
+Simplify $3x-5x$
+
+\soln
+
+\solnsteps
+\begin{align*}
+3x + \neg 5x && \text{DOS} \eqref{eq:dos1} \\
+(3+ \neg 5)x && \text{DPF} \eqref{eq:dpf1} \\
+\neg 2x && \text{OOA} \eqref{eq:ooa} \\
+-2x && \text{ONeg} \eqref{eq:oneg2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+3x + \neg 5x && \text{DOS} \eqref{eq:dos1} \\
+\neg 2x && \text{OOA} \eqref{eq:ooa} \\
+-2x && \text{ONeg} \eqref{eq:oneg2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+-2x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141106-150622] \label{20141106-150622} \index{Example!20141106-150622} \hfill \\
+
+Simplify $13x-x$
+
+\soln
+
+\solnsteps
+\begin{align*}
+13x-1x && \text{MId} \eqref{eq:mid1} \\
+13x+\neg 1x && \text{DOS} \eqref{eq:dos1} \\
+(13+\neg 1)x && \text{DPF} \eqref{eq:dpf1} \\
+12x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+13x + \neg x && \text{DOS} \eqref{eq:dos1} \\
+12 x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+\end{example}
+
+
+It is possible for a univariate monomial to have more than two terms in its non-canonical form.  The associative property of addition will be used to help simplify these expressions.
+
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141121-184652] \label{20141121-184652}\index{Example!20141121-184652} \hfill \\
+
+Simplify the expression $3x+7x+8x$
+
+\soln
+\solnsteps
+\begin{align*}
+(3x+7x)+8x && \text{APA} \eqref{eq:apa1} \\
+(3+7)x+8x && \text{DPF} \eqref{eq:dpf1} \\
+10x+8x && \text{OOA} \eqref{eq:ooa} \\
+(10+8)x && \text{DPF} \eqref{eq:dpf1} \\
+18x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+(3x+7x)+8x && \text{APA} \eqref{eq:apa1} \\
+10x+8x && \text{OOA} \eqref{eq:ooa} \\
+18x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+You might have noticed that this expression could be simplified in one step by adding the coefficient of the three monomials $3x$, $7x$ and $8x$, which have the like term $x$.\\
+
+\soln
+
+\lesssteps
+\begin{align*}
+18x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141106-152020] \label{20141106-152020} \index{Example!20141106-152020} \hfill \\
+
+Simplify $4x-2x-x$
+
+\soln
+
+\solnsteps
+\begin{align*}
+4x-2x-1x && \text{MId} \eqref{eq:mid1} \\
+4x+\neg 2x + \neg 1 x && \text{DOS} \eqref{eq:dos1} \\
+(4+\neg 2)x + \neg 1x && \text{DPF} \eqref{eq:dpf1} \\
+2x+\neg 1x && \text{OOA} \eqref{eq:ooa} \\
+(2+\neg 1)x && \text{DPF} \eqref{eq:dpf1} \\
+1x && \text{OOA} \eqref{eq:ooa} \\
+x && \text{MId} \eqref{eq:mid2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+4x + \neg 2x + \neg x && \text{DOS} \eqref{eq:dos1} \\
+x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141108-194431] \label{20141108-194431} \index{Example!20141108-194431} \hfill \\
+
+Simplify $- 3\cdot 7x - 2x \cdot 4$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\neg 3 \cdot 7x - 2x \cdot 4 && \text{ONeg} \eqref{eq:oneg1} \\
+\neg 3 \cdot 7x +\neg 2x \cdot 4 && \text{DOS} \eqref{eq:dos1} \\
+\neg 3 \cdot 7 \cdot x + \neg 2 \cdot x \cdot 4 && \text{JTC} \eqref{eq:jtc} \\
+\neg 3 \cdot 7 \cdot x + \neg 2 \cdot 4 \cdot x && \text{CPM} \eqref{eq:cpm} \\
+(\neg 3 \cdot 7) \cdot x + (\neg 2 \cdot 4) \cdot x && \text{APM} \eqref{eq:apm1} \\
+\neg 21 \cdot x + \neg 8 \cdot x && \text{OOM} \eqref{eq:oom} \\
+\neg 21 x + \neg 8 x && \text{CTJ} \eqref{eq:ctj} \\
+(\neg 21 + \neg 8 )x && \text{DPF} \eqref{eq:dpf1} \\
+\neg 29x && \text{OOA} \eqref{eq:ooa} \\
+-29x && \text{ONeg} \eqref{eq:oneg2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+-3 \cdot 7x + \neg 2x \cdot 4 && \text{DOS} \eqref{eq:dos1} \\
+\neg 3 \cdot 7 \cdot x + \neg 2 \cdot 4 \cdot x && \text{CPM} \eqref{eq:cpm} \\
+\neg 21x + \neg 8x && \text{OOM} \eqref{eq:oom} \\
+-29x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141108-194156] \label{20141108-194156} \index{Example!20141108-194156} \hfill \\
+
+Simplify $3 \cdot 5x + 3x \cdot 4$
+
+\soln
+
+\solnsteps
+\begin{align*}
+3 \cdot 5 \cdot x + 3 \cdot x \cdot 4 && \text{JTC} \eqref{eq:jtc} \\
+3 \cdot 5 \cdot x + 3 \cdot 4 \cdot x && \text{CPM} \eqref{eq:cpm} \\
+(3 \cdot 5) \cdot x + (3 \cdot 4) \cdot x && \text{APM} \eqref{eq:apm1} \\
+15 \cdot x + 12 \cdot x && \text{OOM} \eqref{eq:oom} \\
+15x +12x && \text{CTJ} \eqref{eq:ctj} \\
+(15+12)x && \text{DPF} \eqref{eq:dpf1} \\
+27x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+3 \cdot 5 \cdot x + 3 \cdot 4 \cdot x && \text{CPM} \eqref{eq:cpm} \\
+15x + 12x && \text{OOM} \eqref{eq:oom} \\
+27x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141108-173613] \label{20141108-173613} \index{Example!20141108-173613} \hfill \\
+
+Simplify $8x \cdot 5$
+
+\soln
+
+\solnsteps
+\begin{align*}
+8 \cdot x \cdot 5 && \text{JTC} \eqref{eq:jtc} \\
+8 \cdot 5 \cdot x && \text{CPM} \eqref{eq:cpm} \\
+(8 \cdot 5) \cdot x && \text{APM} \eqref{eq:apm1} \\
+40 \cdot x && \text{OOM} \eqref{eq:oom} \\
+40x && \text{CTJ} \eqref{eq:ctj}
+\end{align*}
+\end{example}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Binomials}
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141109-090809] \label{20141109-090809} \index{Example!20141109-090809} \hfill \\
+
+Simplify by expanding $5(x+4)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+5(1x+4) && \text{MId} \eqref{eq:mid1} \\
+5 \cdot 1x + 5 \cdot 5 && \text{DPF} \eqref{eq:dpf1} \\
+5 \cdot 1 \cdot x + 5 \cdot 5 && \text{JTC} \eqref{eq:jtc} \\
+5 \cdot x + 25  && \text{OOM} \eqref{eq:oom} \\
+5x + 25  && \text{CTJ} \eqref{eq:ctj}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+5x + 20 && \text{DPE} \eqref{eq:dpe1}
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141109-091015] \label{20141109-091015} \index{Example!20141109-091015} \hfill \\
+
+Simplify by expanding $5(3x-9)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+5(3x+ \neg 9)  && \text{DOS} \eqref{eq:dos1} \\
+5 \cdot 3x + 5 \cdot \neg 9  && \text{DPE} \eqref{eq:dpe1} \\
+5 \cdot 3 \cdot x + 5 \cdot \neg 9  && \text{JTC} \eqref{eq:jtc} \\
+15 \cdot x + \neg 45  && \text{OOM} \eqref{eq:oom} \\
+15x + \neg 45  && \text{CTJ} \eqref{eq:ctj} \\
+15x - 45  && \text{DOS} \eqref{eq:dos2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+5(3x+\neg 9) && \text{DOS} \eqref{eq:dos1} \\
+15x+ \neg 40 && \text{DPE} \eqref{eq:dpe1} \\
+15x-40 && \text{DOS} \eqref{eq:dos2}
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141109-092448] \label{20141109-092448} \index{Example!20141109-092448} \hfill \\
+
+Simplify by expanding $-(5x+7)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\neg 1(5x+7) && \text{MId} \eqref{eq:mid1} \\
+\neg 1 \cdot 5x + \neg 1 \cdot 7  && \text{DPE} \eqref{eq:dpe1} \\
+\neg 1 \cdot 5 \cdot x + \neg 1 \cdot 7  && \text{JTC} \eqref{eq:jtc} \\
+\neg 5 \cdot x + \neg 7 && \text{OOM} \eqref{eq:oom} \\
+\neg 5 x + \neg 7  && \text{CTJ} \eqref{eq:ctj} \\
+\neg 5x - 7  && \text{DOS} \eqref{eq:dos2} \\
+-5x-7  && \text{ONeg} \eqref{eq:oneg2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+-5x-7 && \text{DPE} \eqref{eq:dpe1}
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141109-092651] \label{20141109-092651} \index{Example!20141109-092651} \hfill \\
+
+Simplify by expanding $- 13(7x-9)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\neg 13 (7x+\neg 9)  && \text{DOS} \eqref{eq:dos1} \\
+\neg 13 \cdot 7x + \neg 13 \cdot \neg 9 && \text{DPE} \eqref{eq:dpe1} \\
+\neg 13 \cdot 7 \cdot x + \neg 13 \cdot \neg 9  && \text{JTC} \eqref{eq:jtc} \\
+\neg 91 \cdot x + 117  && \text{OOM} \eqref{eq:oom} \\
+\neg 91 x + 117  && \text{CTJ} \eqref{eq:ctj} \\
+-91x + 117 && \text{ONeg} \eqref{eq:oneg2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+-13(7x+ \neg 9) && \text{DOS} \eqref{eq:dos1} \\
+- 91 x + 117 && \text{DPE} \eqref{eq:dpe1}
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141109-092910] \label{20141109-092910} \index{Example!20141109-092910} \hfill \\
+
+Simplify by expanding $a(x+b)$ , where $a, b \in \mathbb{Z}$
+
+\soln
+
+\solnsteps
+\begin{align*}
+a(1x+b)  && \text{MId} \eqref{eq:mid1} \\
+a \cdot 1x + a \cdot b  && \text{DPE} \eqref{eq:dpe1} \\
+a \cdot 1 \cdot x + a \cdot b  && \text{JTC} \eqref{eq:jtc} \\
+1 \cdot a \cdot x + a \cdot b  && \text{CPM} \eqref{eq:cpm} \\
+1ax + ab  && \text{JTC} \eqref{eq:jtc} \\
+ax+ab  && \text{MId} \eqref{eq:mid2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+ax +ab && \text{DPE} \eqref{eq:dpe1}
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141109-093220] \label{20141109-093220} \index{Example!20141109-093220} \hfill \\
+
+Simplify by expanding $5(x+2)+4$
+
+\soln
+
+\solnsteps
+\begin{align*}
+5(1x+2)+4 && \text{MId} \eqref{eq:mid1} \\
+5 \cdot 1x + 5 \cdot 2 + 4 && \text{DPE} \eqref{eq:dpe1} \\
+5 \cdot 1 \cdot x + 5 \cdot 2 + 4 && \text{JTC} \eqref{eq:jtc} \\
+5 \cdot x +10+4 && \text{OOM} \eqref{eq:oom} \\
+5x+10+4 && \text{CTJ} \eqref{eq:ctj} \\
+5x+14 && \text{OOA} \eqref{eq:ooa} \\
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+5x + 10 + 4 && \text{DPE} \eqref{eq:dpe1} \\
+5x + 14 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141109-093419] \label{20141109-093419} \index{Example!20141109-093419} \hfill \\
+
+Simplify by expanding $7x +5(4x+8)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+7x + 5 \cdot 4x + 5 \cdot 8 && \text{DPE} \eqref{eq:dpe1} \\
+7 \cdot x + 5 \cdot 4 \cdot x + 5 \cdot 8 && \text{JTC} \eqref{eq:jtc} \\
+7 \cdot x + 20 \cdot x + 40 && \text{OOM} \eqref{eq:oom} \\
+7x + 20x + 40 && \text{CTJ} \eqref{eq:ctj} \\
+(7+20)x + 40 && \text{DPF} \eqref{eq:dpf1} \\
+27x+40 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141109-094928] \label{20141109-094928} \index{Example!20141109-094928} \hfill \\
+
+Simplify by expanding $4(3x+4)+x+6$
+
+\soln
+
+\solnsteps
+\begin{align*}
+4(3x+4)+1x+6 && \text{MId} \eqref{eq:mid1} \\
+4 \cdot 3x + 4 \cdot 4 + 1x + 6 && \text{DPE} \eqref{eq:dpe1} \\
+4 \cdot 3 \cdot x + 4 \cdot 4 + 1 \cdot x + 6 && \text{JTC} \eqref{eq:jtc} \\
+12 \cdot x + 16 + 1 \cdot x + 6 && \text{OOM} \eqref{eq:oom} \\
+12x+16+1x+6 && \text{CTJ} \eqref{eq:ctj} \\
+12+1x+16+6 && \text{CPA} \eqref{eq:cpa} \\
+(12+1)x+16+6 && \text{DPF} \eqref{eq:dpf1} \\
+13x+22 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+12x + 16 + x+ 6 && \text{DPE} \eqref{eq:dpe1} \\
+12x + x + 16 + 6 && \text{CPA} \eqref{eq:cpa} \\
+13x+22 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141109-095151] \label{20141109-095151} \index{Example!20141109-095151} \hfill \\
+
+Simplify by expanding $5(x-4)+3x-5$
+
+\soln
+
+\solnsteps
+\begin{align*}
+5(1x-4)+3x-5 && \text{MId} \eqref{eq:mid1} \\
+5(1x + \neg 4)+3x + \neg 5 && \text{DOS} \eqref{eq:dos1} \\
+5 \cdot 1x + 5 \cdot \neg 4 + 3x + \neg 5 && \text{DPE} \eqref{eq:dpe1} \\
+5 \cdot 1 \cdot x + 5 \cdot \neg 4 + 3 \cdot x + \neg 5 && \text{JTC} \eqref{eq:jtc} \\
+5 \cdot x + \neg 20 + 3 \cdot x + \neg 5 && \text{OOM} \eqref{eq:oom} \\
+5x + \neg 20 + 3x + \neg 5 && \text{JTC} \eqref{eq:jtc} \\
+5x + 3x + \neg 20 + \neg 5 && \text{CPA} \eqref{eq:cpa} \\
+(5+3)x + \neg 20 + \neg 5 && \text{DPF} \eqref{eq:dpf1} \\
+8x + \neg 25 && \text{OOA} \eqref{eq:ooa} \\
+8x-25 && \text{DOS} \eqref{eq:dos2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+5(x+ \neg 4)+3x + \neg 5 && \text{DOS} \eqref{eq:dos1} \\
+5x + \neg 20 + 3x + \neg 5 && \text{DPE} \eqref{eq:dpe1} \\
+5x + 3x + \neg 20 + \neg 5 && \text{CPA} \eqref{eq:cpa} \\
+8x + \neg 25 && \text{OOA} \eqref{eq:ooa} \\
+8x-25 && \text{DOS} \eqref{eq:dos2}
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141109-095536] \label{20141109-095536} \index{Example!20141109-095536} \hfill \\
+
+Simplify by expanding $8x-5-4(x-3)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+8x-5-4(1x-3) && \text{MId} \eqref{eq:mid1} \\
+8x + \neg 5 + \neg 4(1x + \neg 3) && \text{DOS} \eqref{eq:dos1} \\
+8x + \neg 5 + \neg 4 \cdot 1x + \neg 4 \cdot \neg 3 && \text{DPE} \eqref{eq:dpe1} \\
+8 \cdot x + \neg 5 + \neg 4 \cdot 1 \cdot x + \neg 4 \cdot \neg 3 && \text{JTC} \eqref{eq:jtc} \\
+8 \cdot x + \neg 5 + \neg 4 \cdot x + 12 && \text{OOM} \eqref{eq:oom} \\
+8x + \neg 5 + \neg 4x + 12 && \text{CTJ} \eqref{eq:ctj} \\
+8x + \neg 4x + \neg 5 + 12 && \text{CPA} \eqref{eq:cpa} \\
+(8+\neg 4)x + \neg 5 + 12 && \text{DPF} \eqref{eq:dpf1} \\
+4x + 7 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+8x + \neg 5 + \neg 4(x+\neg 3) && \text{DOS} \eqref{eq:dos1} \\
+8x + \neg 5 + \neg 4x + 12 && \text{DPE} \eqref{eq:dpe1} \\
+8x + \neg 4x + \neg 5 + 12 && \text{CPA} \eqref{eq:cpa} \\
+4x+7 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141109-095842] \label{20141109-095842} \index{Example!20141109-095842} \hfill \\
+
+Simplify by expanding $5(x+3)+3(x+2)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+5 \cdot x + 5 \cdot 3 + 3 \cdot x + 3 \cdot 2 && \text{DPE} \eqref{eq:dpe1} \\
+5 \cdot x + 15 + 3 \cdot x + 6 && \text{OOM} \eqref{eq:oom} \\
+5x + 15 + 3x+6 && \text{CTJ} \eqref{eq:ctj} \\
+5x +3x+ 15 + 6 && \text{CPA} \eqref{eq:cpa} \\
+(3+5)x+15+6 && \text{DPF} \eqref{eq:dpf1} \\
+8x+21 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+5x + 15 +3x+6 && \text{DPE} \eqref{eq:dpe1} \\
+5x+3x+15+6 && \text{CPA} \eqref{eq:cpa} \\
+8x+21 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\end{example}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Degree 2 Univariate Polynomials}\index{Degree 2 Univariate Polynomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Monomials}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141106-151138] \label{20141106-151138} \index{Example!20141106-151138} \hfill \\
+
+Simplify $4x^2+12x^2$
+
+\soln
+
+\solnsteps
+\begin{align*}
+(4+12)x^2 && \text{DPF} \eqref{eq:dpf1} \\
+16x^2 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+16x^2 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141106-154547] \label{20141106-154547} \index{Example!20141106-154547} \hfill \\
+
+Simplify $x^2-x+x^2+x$
+
+\soln
+
+\solnsteps
+\begin{align*}
+1x^2-1x+1x^2+1x && \text{MId} \eqref{eq:mid1} \\
+1x^2+\neg 1 x + 1x^2+1x && \text{DOS} \eqref{eq:dos1} \\
+1x^2+1x^2+\neg 1x+1x && \text{CPA} \eqref{eq:cpa} \\
+(1+1)x^2+(\neg 1 + 1)x && \text{DPF} \eqref{eq:dpf1} \\
+2x^2+0x && \text{OOA} \eqref{eq:ooa} \\
+2x^2 && \text{MId} \eqref{eq:mid2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+x^2 + \neg x + x^2 + x && \text{DOS} \eqref{eq:dos1} \\
+x^2 + x^2 + \neg x + x && \text{CPA} \eqref{eq:cpa} \\
+2x^2 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\end{example}
+
+% TODO Commutative property of multiplication
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141108-194709] \label{20141108-194709} \index{Example!20141108-194709} \hfill \\
+
+Simplify $- 2x4x - x \cdot-x3$
+
+\soln
+
+\solnsteps
+\begin{align*}
+-2x4x-1x \cdot 1x3 && \text{MId} \eqref{eq:mid1} \\
+\neg 2x4x-1x \cdot 1x3  && \text{ONeg} \eqref{eq:oneg1} \\
+\neg 2 \cdot x \cdot 4 \cdot x + \neg 1 \cdot x \cdot 1 \cdot x \cdot 3 && \text{JTC} \eqref{eq:jtc} \\
+\neg 2 \cdot 4 \cdot x \cdot x + \neg 1 \cdot \neg 1 \cdot 3 \cdot x \cdot x && \text{CPM} \eqref{eq:cpm} \\
+\neg 2 \cdot 4 \cdot x^2  + \neg 1 \cdot \neg 1 \cdot 3 \cdot x^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+(\neg 2 \cdot 4) \cdot x^2 + (\neg 1 \cdot \neg 1 \cdot 3) x^2 && \text{APM} \eqref{eq:apm1} \\
+\neg 8 x^2 + 3 x^2 && \text{OOM} \eqref{eq:oom} \\
+(\neg 8 + 3)x^2 && \text{DPF} \eqref{eq:dpf1} \\
+\neg 5 x^2 && \text{OOA} \eqref{eq:ooa} \\
+-5x^2 && \text{ONeg} \eqref{eq:oneg2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+- 2x4x + \neg x \cdot-x3  && \text{DOS} \eqref{eq:dos1} \\
+\neg 2 \cdot 4 \cdot x \cdot x + 3 \cdot \neg x \cdot \neg x && \text{CPM} \eqref{eq:cpm} \\
+\neg 2 \cdot 4 \cdot x^2 + 3 \cdot x^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+\neg 8x^2 + 3 x^2 && \text{OOM} \eqref{eq:oom} \\
+-5x^2 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\end{example}
+
+\begin{arule}[Product of a Common Base Powers (PrCBPo)]\index{Powers!Product of Common Base Powers}
+\begin{subequations}
+\begin{align}
+	b^m \cdot b^n &= b^{m+n} \label{eq:prcbpo1}\\
+	b^{m+n} &= b^m \cdot b^n \label{eq:prcbpo2}
+\end{align}
+\end{subequations}
+\end{arule}
+
+\begin{arule}[Quotient of a Common Base Powers (QCBPo)]\index{Powers!Quotient of Common Base Powers}
+\begin{subequations}
+\begin{align}
+	\dfrac{b^m}{b^n} &= b^{m-n} \label{eq:qcbpoo1}\\
+	b^{m-n} &= \dfrac{b^m}{b^n} \label{eq:qcbpo2}
+\end{align}
+\end{subequations}
+\end{arule}
+
+\begin{arule}[Power of a Power (PoPo)]\index{Powers!Power of a Power}
+\begin{subequations}
+\begin{align}
+	\left(b^m\right)^k &= b^{m \cdot k} \label{eq:popo1}\\
+	b^{m \cdot k} &= \left( b^m \right)^k \label{eq:popo2}
+\end{align}
+\end{subequations}
+\end{arule}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141108-191616] \label{20141108-191616} \index{Example!20141108-191616} \hfill \\
+
+Simplify $-5x \cdot 4x$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\neg 5x \cdot 4x && \text{ONeg} \eqref{eq:oneg1} \\
+\neg 5 \cdot x \cdot 4 \cdot x && \text{JTC} \eqref{eq:jtc} \\
+\neg 5 \cdot 4 \cdot x \cdot x && \text{CPM} \eqref{eq:cpm} \\
+\neg 5 \cdot 4 \cdot x^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+(\neg 5 \cdot 4) \cdot x^2 && \text{APM} \eqref{eq:apm1} \\
+\neg 20 \cdot x^2 && \text{OOM} \eqref{eq:oom} \\
+\neg 20 x^2 && \text{CTJ} \eqref{eq:ctj} \\
+-20x^2 && \text{ONeg} \eqref{eq:oneg2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+\neg 5 \cdot 4 \cdot x \cdot x && \text{CPM} \eqref{eq:cpm} \\
+\neg 5 \cdot 4 \cdot x^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+-20x^2 && \text{OOM} \eqref{eq:oom}
+\end{align*}
+
+\end{example}
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Binomials}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141106-152339] \label{20141106-152339} \index{Example!20141106-152339} \hfill \\
+
+Simplify $3x^2+2x+5x^2+4x$
+
+\soln
+
+\solnsteps
+\begin{align*}
+3x^2+5x^2+2x+4x && \text{CPA} \eqref{eq:cpa} \\
+(3+5)x^2+(2+4)x && \text{DPF} \eqref{eq:dpf1} \\
+8x^2+6x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\emph{If needed we could continue and express it in the simplified factored form using the distributive property}
+
+\begin{align*}
+(4x+3)2x && \text{DPF} \eqref{eq:dpf1} \\
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+3x^2 + 5x^2 + 2x + 4x && \text{CPA} \eqref{eq:cpa} \\
+8x^2+6x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141107-121834] \label{20141107-121834} \index{Example!20141107-121834} \hfill \\
+
+Simplify $\left(\sqrt{9-x^2}\right)^2$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\left(\sqrt{9-1x^2}\right)^2 && \text{MId} \eqref{eq:mid1} \\
+\left(\sqrt{9+\neg 1x^2}\right)^2 && \text{DOS} \eqref{eq:dos1} \\
+\left[\left(9+\neg x^2\right)^{\alert{\frac{1}{2}}} \right]^2 && \text{RTPo} \eqref{eq:rtpo} \\
+9+\neg 1 x^2 && \text{PoPo} \eqref{eq:popo1} \\
+\neg 1 x^2 + 9 && \text{CPA} \eqref{eq:cpa} \\
+\neg x^2 + 9 && \text{MId} \eqref{eq:mid1} \\
+-x^2+9 && \text{ONeg} \eqref{eq:oneg2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+9-x^2 && \text{PoPo} \eqref{eq:popo1}
+\end{align*}
+
+
+\emph{It might be easier to view this using a variable substitution for the radicand, $9-x^2$. Let $k=9+\neg 1x^2$.}
+
+\begin{align*}
+\left(\sqrt{k}\right)^2 && \text{MId} \eqref{eq:mid1} \\
+\left(\sqrt{k}\right)^2 && \text{DOS} \eqref{eq:dos1} \\
+\left[\left(k\right)^{\alert{\frac{1}{2}}} \right]^2 && \text{RTPo} \eqref{eq:rtpo} \\
+k && \text{PoPo} \eqref{eq:popo1} \\
+9 + \neg 1 x^2  && \text{CPA} \eqref{eq:cpa} \\
+\neg 1 x^2 + 9 && \text{CPA} \eqref{eq:cpa} \\
+\neg x^2 + 9 && \text{MId} \eqref{eq:mid1} \\
+-x^2+9 && \text{ONeg} \eqref{eq:oneg2}
+\end{align*}
+
+\qdepend
+
+\qdependlist
+example \ref{20141105-144223}-20141105-144223
+
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141209-145211] \label{20141209-145211}\index{Example!20141209-145211} \hfill \\
+
+Simplify $2x(2x+4)+x^2 \cdot 2 \cdot 1 + 0$
+
+\soln
+
+\solnsteps
+\begin{align*}
+2x \cdot 2x + 2x \cdot 4 + x^2 \cdot 2 \cdot 1 + 0 && \text{DPE} \eqref{eq:dpe1} \\
+2 \cdot x \cdot 2 \cdot x + 2 \cdot x \cdot 4 + x^2 \cdot 2 \cdot 1 + 0 && \text{JTC} \eqref{eq:jtc} \\
+2 \cdot 2 \cdot x \cdot x + 2 \cdot 4 \cdot x + 2 \cdot 1 \cdot x^2 + 0 && \text{CPM} \eqref{eq:cpm} \\
+2 \cdot 2 \cdot x^2 + 2 \cdot 4 \cdot x + 2 \cdot 1 \cdot x^2 + 0 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+4 \cdot x^2 + 8 \cdot x + 2 \cdot x^2 + 0 && \text{OOM} \eqref{eq:oom} \\
+4 x^2 +8x + 2x^2 + 0 && \text{CTJ} \eqref{eq:ctj} \\
+4x^2 + 2x^2 + 8x && \text{APA} \eqref{eq:apa1} \\
+(4+2)x^2 +8x && \text{DPF} \eqref{eq:dpf2} \\
+6x^2+8x && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\qdepend
+
+\qdependlist
+example \ref{20141209-144203}-20141209-144203
+\end{example}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Trinomials}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141109-133008] \label{20141109-133008}  \index{Example!20141109-133008} \hfill \\
+
+Simplify by expanding $(x+5)(x-8)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+(1x+5)(1x-8)  && \text{MId} \eqref{eq:mid1} \\
+(1x+5)(1x+\neg 8)  && \text{DOS} \eqref{eq:dos1} \\
+1x(1x+\neg 8) + 5(1x+\neg 8) && \text{DPE} \eqref{eq:dpe2} \\
+1x \cdot 1x + 1x \cdot \neg 8 + 5 \cdot 1x + 5 \cdot \neg 8 && \text{DPE} \eqref{eq:dpe1} \\
+1 \cdot x \cdot 1 \cdot x + 1 \cdot x \cdot \neg 8 + 5 \cdot 1 \cdot x + 5 \cdot \neg 8 && \text{JTC} \eqref{eq:jtc} \\
+1 \cdot 1 \cdot x \cdot x + \neg 8 \cdot 1 \cdot x + 1 \cdot 5 \cdot x + \neg 8 \cdot 5  && \text{CPM} \eqref{eq:cpm} \\
+1 \cdot 1 \cdot x^2 + \neg 8 \cdot 1 \cdot x + 1 \cdot 5 \cdot x + \neg 8 \cdot 5 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+1 \cdot x^2 + \neg 8 \cdot x + 5 \cdot x  + \neg 40  && \text{OOM} \eqref{eq:oom} \\
+1  x^2 +  \neg 8 x +5x + \neg 40  && \text{CTJ} \eqref{eq:ctj} \\
+1 x^2 + \neg 3 x + \neg 40  && \text{OOA} \eqref{eq:ooa} \\
+1 x^2 - 3x - 40  && \text{DOS} \eqref{eq:dos2} \\
+x^2-3x-40  && \text{MId} \eqref{eq:mid1}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+(x+5)(x+\neg 8) && \text{DOS} \eqref{eq:dos1} \\
+x(x+\neg 8)+ 5(x+\neg 8) && \text{DPE} \eqref{eq:dpe2} \\
+x^2 + \neg 8x + 5x + \neg 40 && \text{DPE} \eqref{eq:dpe1} \\
+x^2-3x-40 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141109-133316] \label{20141109-133316} \index{Example!20141109-133316} \hfill \\
+
+Simplify by expanding $(x+a)(x+b)$, where $ a, b \in \mathbb{Z}$
+
+\soln
+
+\solnsteps
+\begin{align*}
+(1x+a)(1x+b)  && \text{MId} \eqref{eq:mid1} \\
+1x(1x+b) + a(1x+b)  && \text{DPE} \eqref{eq:dpe2} \\
+1x \cdot 1x + 1x \cdot b + a \cdot 1x + a \cdot b  && \text{DPE} \eqref{eq:dpe1} \\
+1 \cdot x \cdot 1 \cdot x + 1 \cdot x \cdot b + a \cdot 1 \cdot x + a \cdot b  && \text{JTC} \eqref{eq:jtc} \\
+1 \cdot 1 \cdot x \cdot x + 1 \cdot b \cdot x + 1 \cdot a \cdot x + a \cdot b  && \text{CPM} \eqref{eq:cpm} \\
+1 \cdot 1 \cdot x^2 + 1 \cdot b \cdot x + 1 \cdot a \cdot x + a \cdot b  && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+1 \cdot x^2 + 1 \cdot b \cdot x + 1 \cdot a \cdot x + a \cdot b  && \text{OOM} \eqref{eq:oom} \\
+1 x^2 + 1 b x + 1 a x + a b  && \text{CTJ} \eqref{eq:ctj} \\
+1 x^2 + (1b + 1a)x + ab && \text{DPF} \eqref{eq:dpf1} \\
+x^2+(b+a)x+ab  && \text{MId} \eqref{eq:mid2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+x(x+b)+a(x+b) && \text{DPE} \eqref{eq:dpe2} \\
+x^2 + (b+a)x + ab && \text{DPE} \eqref{eq:dpe1}
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141109-140659] \label{20141109-140659} \index{Example!20141109-140659} \hfill \\
+
+Simplify by expanding $(2x+3)(5x+13)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+2x(5x+13) + 3(5x+13) && \text{DPE} \eqref{eq:dpe2} \\
+2x \cdot 5x + 2x \cdot 13 + 3 \cdot 5x + 3 \cdot 13 && \text{DPE} \eqref{eq:dpe1} \\
+2 \cdot x \cdot 5 \cdot x + 2 \cdot x \cdot 13 + 3 \cdot 5 \cdot x + 3 \cdot 13 && \text{JTC} \eqref{eq:jtc} \\
+2 \cdot 5 \cdot x \cdot x + 2 \cdot 13 \cdot x + 5 \cdot 3 \cdot x + 3 \cdot 13  && \text{CPM} \eqref{eq:cpm} \\
+2 \cdot 5 \cdot x^2 + 2 \cdot 13 \cdot x + 5 \cdot 3 \cdot x + 3 \cdot 13  && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+10 \cdot x^2 + 26 \cdot x + 16 \cdot x + 39  && \text{OOM} \eqref{eq:oom} \\
+10x^2 + 26x + 15x + 39  && \text{CTJ} \eqref{eq:ctj} \\
+10x^2 + 41x + 39  && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+2x(5x+13) + 3(5x+13) && \text{DPE} \eqref{eq:dpe2} \\
+10x^2+26x+15x+39 && \text{DPE} \eqref{eq:dpe1} \\
+10x^2+41x+39 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141109-141019] \label{20141109-141019} \index{Example!20141109-141019} \hfill \\
+
+Simplify by expanding $(-3x-5)(7x+8)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+(\neg 3x - 5)(7x+8)  && \text{ONeg} \eqref{eq:oneg1} \\
+(\neg 3x + \neg 5)(7x+8)  && \text{DOS} \eqref{eq:dos1} \\
+\neg 3x(7x+8) + \neg 5(7x+8) && \text{DPE} \eqref{eq:dpe2} \\
+\neg 3x \cdot 7x + \neg 3x \cdot 8 + \neg 5 \cdot 7x + \neg 5 \cdot 8 && \text{DPE} \eqref{eq:dpe1} \\
+\neg 3 \cdot x \cdot 7 \cdot x + \neg 3 \cdot x \cdot 8 + \neg 5 \cdot 7 \cdot x + \neg 5 \cdot 8 && \text{JTC} \eqref{eq:jtc} \\
+\neg 3 \cdot 7 \cdot x \cdot x + \neg 3 \cdot 8 \cdot x + \neg 5 \cdot 7 \cdot x + \neg 5 \cdot 8  && \text{CPM} \eqref{eq:cpm} \\
+\neg 3 \cdot 7 \cdot x^2 + \neg 3 \cdot 8 \cdot x + \neg 5 \cdot 7 \cdot x + \neg 5 \cdot 8  && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+\neg 21 \cdot x^2 + \neg 24 \cdot x + \neg 35 \cdot x + \neg 40  && \text{OOM} \eqref{eq:oom} \\
+\neg 21  x^2 + \neg 24  x + \neg 35  x + \neg 40  && \text{CTJ} \eqref{eq:ctj} \\
+\neg 21 x^2 + \neg 59 x + \neg 40  && \text{OOA} \eqref{eq:ooa} \\
+\neg 21 x^2 - 59 x - 40  && \text{DOS} \eqref{eq:dos2} \\
+- 21 x^2 - 59 x - 40  && \text{ONeg} \eqref{eq:oneg2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+(-3x+\neg 5)(7x+8) && \text{DOS} \eqref{eq:dos1} \\
+\neg 3x(7x+8) + \neg 5(7x+8) && \text{DPE} \eqref{eq:dpe2} \\
+\neg 21  x^2 + \neg 24  x + \neg 35  x + \neg 40  && \text{CTJ} \eqref{eq:dpe1} \\
+-21x^2-59x-40 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141109-141347] \label{20141109-141347} \index{Example!20141109-141347} \hfill \\
+
+Simplify by expanding  $(ax+b)(cx+d)$, where $a, b, c, d \in \mathbb{Z}$
+
+\soln
+
+\solnsteps
+\begin{align*}
+ax(cx+d)+b(cx+d)  && \text{DPE} \eqref{eq:dpe2} \\
+ax \cdot cx + ax \cdot d + b \cdot cx + b \cdot d && \text{DPE} \eqref{eq:dpe1} \\
+a \cdot x \cdot c \cdot x + a \cdot x \cdot d + b \cdot c \cdot x + b \cdot d   && \text{JTC} \eqref{eq:jtc} \\
+a \cdot c \cdot x \cdot x + a \cdot d \cdot x + b \cdot c \cdot x + b \cdot d  && \text{CPM} \eqref{eq:cpm} \\
+a \cdot c \cdot x^2 + a \cdot d \cdot x + b \cdot c \cdot x + b \cdot d  && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+acx^2 + adx + bcx + bd  && \text{CTJ} \eqref{eq:ctj} \\
+acx^2 + (ad+bc)x + bd  && \text{DPF} \eqref{eq:dpf1}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+ax(cx+d)+b(cx+d) && \text{DPE} \eqref{eq:dpe2} \\
+acx^2 + (ad+bc)x + bd && \text{DPE} \eqref{eq:dpe1}
+\end{align*}
+
+\end{example}
+
+
+\begin{example}[id:20141105-161225]\label{20141105-161225} \index{Example!20141105-161225} \hfill \\
+
+Simplify $\left(2-\dfrac{x}{2} \right)^2$ by expanding.
+
+\soln
+
+\solnsteps
+\begin{align*}
+\left(2-\dfrac{1x}{2} \right)^2 && \text{MId} \eqref{eq:mid1} \\
+\left(2+ \neg \dfrac{1x}{2} \right)^2 && \text{DOS} \eqref{eq:dos1} \\
+\left(2+ \neg \dfrac{1x}{2} \right)\left(2+ \neg \dfrac{1x}{2} \right) && \text{PoTF} \eqref{eq:potf} \\
+2\left(2+ \neg \dfrac{1x}{2} \right) + \neg \dfrac{1x}{2}\left(2+ \neg \dfrac{1x}{2} \right) && \text{DPE} \eqref{eq:dpe2} \\
+2 \cdot 2 + 2 \cdot \neg \dfrac{1x}{2} + \neg \dfrac{1x}{2} \cdot 2 + \neg \dfrac{1x}{2} \cdot \neg \dfrac{1x}{2} && \text{DPE} \eqref{eq:dpe1} \\
+2 \cdot 2 + 2 \cdot \neg \dfrac{1}{2} \cdot x + \neg \dfrac{1}{2} \cdot x \cdot 2 + \neg \dfrac{1}{2} \cdot x \cdot \neg \dfrac{1}{2} \cdot x && \text{JTC} \eqref{eq:jtc} \\
+2 \cdot 2 + 2 \cdot \neg \dfrac{1}{2} \cdot x + \neg \dfrac{1}{2} \cdot 2 \cdot x + \neg \dfrac{1}{2} \cdot \neg \dfrac{1}{2} \cdot x \cdot x && \text{CPM} \eqref{eq:cpm} \\
+2 \cdot 2 + 2 \cdot \neg \dfrac{1}{2} \cdot x + \neg \dfrac{1}{2} \cdot 2 \cdot x + \neg \dfrac{1}{2} \cdot \neg \dfrac{1}{2} \cdot x^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+4 + \neg 1 \cdot x + \neg 1 \cdot x +  \dfrac{1}{4} \cdot x^2 && \text{OOM} \eqref{eq:oom} \\
+4 + \neg 1 x + \neg 1 x +  \dfrac{1}{4} x^2 && \text{CTJ} \eqref{eq:ctj} \\
+\dfrac{1}{4} x^2 + \neg 1 x + \neg 1 x + 4 && \text{CPA} \eqref{eq:cpa} \\
+\dfrac{1}{4} x^2 + \neg 2 x + 4 && \text{OOA} \eqref{eq:ooa} \\
+\dfrac{1}{4} x^2 - 2 x + 4 && \text{DOS} \eqref{eq:dos2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+7x + 20x + 40 && \text{DPE} \eqref{eq:dpe1} \\
+27x + 40 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+\end{example}
+
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Degree 3 Univariate Polynomials}\index{Degree 3 Univariate Polynomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Monomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Binomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Trinomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Polynomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Degree $n$ Univariate Polynomials}\index{Degree $n$ Univariate Polynomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Monomials}
+
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Binomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Trinomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SUBSECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\subsection*{Polynomials}
+
+
+
+\end{document}
+
