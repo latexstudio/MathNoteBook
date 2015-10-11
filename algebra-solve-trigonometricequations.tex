@@ -1,0 +1,228 @@
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapter{Solving Linear Equations}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Power Inverse}\index{Solving Quadratic Equations! Power Inverse}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141206-102142] \label{20141206-102142}\index{Example!20141206-102142} \hfill \\
+
+Solve the equation $x+a=b$ for $x$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\farg{x+a} + \neg a  &= \farg{b} + \neg a  && \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
+x + (a+\neg a) &= b + \neg a  && \text{APA} \eqref{eq:apa2} \\
+x + 0 &= b + \neg a  && \text{OOA} \eqref{eq:ooa} \\
+x &= b + \neg a  && \text{AId} \eqref{eq:aid2} \\
+x &= b-a  && \text{DOS} \eqref{eq:dos2}
+\end{align*}
+\end{example}
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141111-222931] \label{20141111-222931}\index{Example!20141111-222931} \hfill \\
+
+Solve the equations $x+8=0$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\farg{x+8}+\neg 8 &= \farg{0}+\neg 8 && \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
+x+(8+\neg 8) &= 0 + \neg 8 && \text{APA} \eqref{eq:apa2} \\
+x+0 &= \neg 8 && \text{OOA} \eqref{eq:ooa} \\
+x &= \neg 8 && \text{AId} \eqref{eq:aid2} \\
+x &= -8 && \text{ONeg} \eqref{eq:oneg2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+\farg{x+8}+\neg 8 &= \farg{0}+\neg 8 && \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
+x &= - 8 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\qdepend
+
+\qdependlist
+
+example \ref{20141111-190212}-20141111-190212
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141206-101632] \label{20141206-101632}\index{Example!20141206-101632} \hfill \\
+
+Solve the equation $x+4=7$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\farg{x +4} + \neg 4  &= \farg{7} + \neg 4  && \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
+x + (4+\neg 4) &= 7 + \neg 4  && \text{APA} \eqref{eq:apa2} \\
+x + 0 &= 3  && \text{OOA} \eqref{eq:ooa} \\
+x  &= 3  && \text{AId} \eqref{eq:aid2}
+\end{align*}
+
+\soln
+
+\lesssteps
+
+\begin{align*}
+\farg{x} +4 + \neg 4  &= \farg{7} + \neg 4  && \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
+x &= 3  && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141206-101107] \label{20141206-101107}\index{Example!20141206-101107} \hfill \\
+
+Solve the equation $x-8=15$ for $x$
+
+\soln
+
+\solnsteps
+\begin{align*}
+x+ \neg 8 &= 15  && \text{DOS} \eqref{eq:dos1} \\
+\farg{x+ \neg 8} + 8  &= \farg{15} + 8  && \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
+x + (\neg 8+ 8) &= 15 + 8  && \text{APA} \eqref{eq:apa2} \\
+x + 0 &= 23  && \text{OOA} \eqref{eq:ooa} \\
+x  &= 23  && \text{AId} \eqref{eq:aid2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+\farg{x+ \neg 8} + 8  &= \farg{15} + 8  && \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
+x &= 23  && \text{OOA} \eqref{eq:ooa} \\
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141206-102404] \label{20141206-102404}\index{Example!20141206-102404} \hfill \\
+
+Solve the equation $5x=9$ for $x$.
+
+\soln
+
+\solnsteps
+\begin{align*}
+\dfrac{1}{5}\farg{5x} &= \dfrac{1}{5}\farg{9} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
+\dfrac{1}{5} \cdot \left[ 5 \cdot x \right] &= \dfrac{1}{5} \cdot 9 && \text{JTC} \eqref{eq:jtc} \\
+\left(\dfrac{1}{5} \cdot 5 \right) \cdot x &= \dfrac{1}{5} \cdot 9  && \text{APM} \eqref{eq:apm2} \\
+1\cdot x &= \dfrac{9}{5}  && \text{OOM} \eqref{eq:oom} \\
+x &= \dfrac{9}{5}  && \text{MId} \eqref{eq:mid2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+\dfrac{1}{5}\farg{5x} &= \dfrac{1}{5}\farg{9} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
+x &= \dfrac{9}{5}  && \text{OOM} \eqref{eq:oom}
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141206-104404] \label{20141206-104404}\index{Example!20141206-104404} \hfill \\
+
+Solve the equation $ax=b$ for $x$.
+
+\soln
+
+\solnsteps
+\begin{align*}
+\dfrac{1}{a}\farg{ax} &= \dfrac{1}{a}\farg{b} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
+\dfrac{1}{a} \cdot \left( a \cdot x \right) &= \dfrac{1}{a} \cdot b && \text{JTC} \eqref{eq:jtc} \\
+\left(\dfrac{1}{a} \cdot a \right) \cdot x &= \dfrac{1}{a} \cdot b  && \text{APM} \eqref{eq:apm2} \\
+1\cdot x &= \dfrac{b}{a}  && \text{OOM} \eqref{eq:oom} \\
+x &= \dfrac{b}{a}  && \text{MId} \eqref{eq:mid2}
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141206-102723] \label{20141206-102723}\index{Example!20141206-102723} \hfill \\
+
+Solve the equation $-2x=7$ for $x$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\neg 2x &= 7  && \text{ONeg} \eqref{eq:oneg1} \\
+\neg \dfrac{1}{2}\farg{\neg 2x}  &= \neg \dfrac{1}{2}\farg{7} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi2} \\
+\neg \dfrac{1}{2} \cdot \left( \neg 2 \cdot x \right) &= \neg \dfrac{1}{2} \cdot 7 && \text{JTC} \eqref{eq:jtc} \\
+\left(\neg\dfrac{1}{2} \cdot \neg 2 \right) \cdot x &= \neg \dfrac{1}{2} \cdot 7  && \text{APM} \eqref{eq:apm2} \\
+1\cdot x &= \neg \dfrac{7}{2}  && \text{OOM} \eqref{eq:oom} \\
+1\cdot x &= -\dfrac{7}{2}  && \text{ONeg} \eqref{eq:oneg2} \\
+x &= -\dfrac{7}{2}  && \text{MId} \eqref{eq:mid2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+\neg \dfrac{1}{2}\farg{\neg 2x}  &= \neg \dfrac{1}{2}\farg{7} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi2} \\
+x &= -\dfrac{7}{2}  && \text{OOM} \eqref{eq:oom}
+\end{align*}
+\end{example}
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141111-215726] \label{20141111-215726}\index{Example!20141111-215726} \hfill \\
+
+Solve the equation $2x+5=0$ for $x$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\farg{2x+5}+\neg 5 &= \farg{0} + \neg 5 && \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
+2x+(5+\neg 5) &= 0+\neg 5 && \text{APA} \eqref{eq:apa1} \\
+2x + 0 &= \neg 5 && \text{OOA} \eqref{eq:ooa} \\
+2x &= \neg 5 && \text{AId} \eqref{eq:aid1} \\
+\dfrac{1}{2}\farg{2x} &= \dfrac{1}{2}\farg{\neg 5} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
+\dfrac{1}{2} \cdot 2 \cdot x &= \dfrac{1}{2} \cdot \neg 5 && \text{JTC} \eqref{eq:jtc} \\
+\left(\dfrac{1}{2}\cdot 2 \right) \cdot x &= \dfrac{1}{2} \cdot \neg 5 && \text{APM} \eqref{eq:apm1} \\
+1 \cdot x &= \dfrac{\neg 5}{2} && \text{OOM} \eqref{eq:oom} \\
+1x &= -\dfrac{5}{2} && \text{ONeg} \eqref{eq:oneg2} \\
+x &= -\dfrac{5}{2} && \text{MId} \eqref{eq:mid2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align}
+\farg{2x+5}+\neg 5 &= \farg{0} + \neg 5 && \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
+2x &= \neg 5 && \text{OOA} \eqref{eq:ooa} \\
+\dfrac{1}{2}\farg{2x} &= \dfrac{1}{2}\farg{\neg 5} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
+x &= -\dfrac{5}{2} && \text{OOM} \eqref{eq:oom}
+\end{align}
+
+\qdepend
+
+\qdependlist
+
+example \ref{20141111-192213}-20141111-192213
+
+
+\end{example}
+
+\end{document}
+
