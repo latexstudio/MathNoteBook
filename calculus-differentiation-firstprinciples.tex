@@ -1,0 +1,74 @@
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapter{Derivative by First Principles}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Limit of the Difference Quotient}
+
+%-=-=-= DEFINITION
+\begin{definition}[Derivative]\index{Derivative}
+
+The derivative of a function $f(x)$ with respect to the variable $x$ is defined as
+\begin{align}
+f'(\cBlue{x}) & \equiv \displaystyle \lim_{\cRed{\Delta x} \to 0} \underbrace{\dfrac{f(\cBlue{x}+\cRed{\Delta x})-f(\cBlue{x})}{\cRed{\Delta x}}}_{\text{Difference Quotient}} \label{eq:dbfp1}
+\end{align}
+
+\end{definition}
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=0:2, range=0:6,ymax=6,ymin=0,
+            axis lines =left, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            xtick={1,1.666}, ytick={1,3},
+            xticklabels={$x$,$x+\Delta x$}, yticklabels={$f(x)$,$f(x+\Delta x)$},
+            axis on top,
+          ]
+          \addplot [sthlmRed!15, domain=(0:2)] {-3.348+4.348*x};
+          \addplot [sthlmRed!32, domain=(0:2)] {-2.704+3.704*x};
+          \addplot [sthlmRed!49, domain=(0:2)] {-1.994+2.994*x};
+          \addplot [sthlmRed!66, domain=(0:2)] {-1.326+2.326*x};
+          \addplot [sthlmRed!83, domain=(0:2)] {-0.666+1.666*x};
+	  \addplot [sthlmDarkGrey,dashed] plot coordinates {(1,0) (1,1)};
+          \addplot [sthlmDarkGrey,dashed] plot coordinates {(0,1) (1,1)};
+          \addplot [sthlmDarkGrey,dashed] plot coordinates {(0,3) (1.666,3)};
+          \addplot [sthlmDarkGrey,dashed] plot coordinates {(1.666,0) (1.666,3)};
+          \addplot [very thick,sthlmBlue, smooth,domain=(0:1.833)] {-1/(x-2)};
+          \addplot[color=sthlmDarkGrey,fill=sthlmDarkGrey,only marks,mark=*] coordinates{(1.666,3)};  %% closed hole
+          \addplot[color=sthlmDarkGrey,fill=sthlmDarkGrey,only marks,mark=*] coordinates{(1,1)};  %% closed hole
+          \addplot [very thick,sthlmRed, smooth,domain=(0:2)] {x};
+        \end{axis}
+\end{tikzpicture}
+\caption{\cite{mooculus:textbook}}
+\end{figure}
+%-=-=-= EXAMPLE
+\begin{example}[id:20141219-212546] \label{20141219-212546}\index{Example!20141219-212546} \hfill \\
+
+Differentiate the function $f(x)=5$
+
+\soln
+
+\solnsteps
+\begin{align*}
+f(x) & = 5x^0 && \text{PoID} \eqref{eq:poid1} \\
+f'(x) &= \displaystyle \lim_{\Delta x \to 0} \dfrac{5\farg{x+\Delta x}^0-5\farg{x}^0}{\Delta x} && \text{SPE} \eqref{eq:spe} \& \text{DBFP} \eqref{eq:dbfp1}\\
+f'(x) &= \displaystyle \lim_{\Delta x \to 0} \dfrac {5(1)-5(1)}{\Delta x} && \text{PoID} \eqref{eq:poid2} \\
+f'(x) &= \displaystyle \lim_{\Delta x \to 0} 0 && \text{OOM} \eqref{eq:oom} \\
+f'(x) &= 0 % TODO Evaluate the limit
+\end{align*}
+
+\end{example}
+
+\end{document}
+
