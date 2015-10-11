@@ -370,19 +370,19 @@ FileID: \jobname
 \begin{tabular}{@{}ll@{}l@{}}
 
 $\cRed{\mathbb{N}}$	& \texttt{Natural numbers}
-							& \qquad $\mathbb{N}=\{1, 2, 3, \ldots  \}$ \\
+							& \qquad $\mathbb{N}=\set{1, 2, 3, \ldots }$ \\
 							&& \\
 $\cRed{\mathbb{Z}}$  	& \texttt{Integers}
-							& \qquad $\mathbb{Z}=\{0, \pm 1, \pm 2, \pm 3, \ldots \}$ \\
+							& \qquad $\mathbb{Z}=\set{0, \pm 1, \pm 2, \pm 3, \ldots}$ \\
 							&& \\
 $\cRed{\mathbb{Q}}$  	& \texttt{Rational}
-							& \qquad $\mathbb{Q}=\{\frac{m}{n} \mid m \in \mathbb{Z}, n \in \mathbb{Z}, n \ne 0\}$ \\
+							& \qquad $\mathbb{Q}=\set{\frac{m}{n} \suchthat m \in \mathbb{Z}, n \in \mathbb{Z}, n \ne 0}$ \\
 							&& \\
 $\cRed{\mathbb{R}}$  	& \texttt{Real numbers}
 							&  \\
 							&& \\
 $\cRed{\mathbb{C}}$  	& \texttt{Complex numbers}
-							&
+							& \qquad $\mathbb{C}=\set{a+bi \suchthat a, b \in \mathbb{R}}$
 \end{tabular}
 \end{mysection}
 
@@ -546,7 +546,7 @@ Reduce the fraction $\frac{m}{n}$
 \cRed{FTPo}			& \texttt{Factor to Power} \\
 						& \qquad $a_n \cdot a_{n-1} \cdot \ldots \cdot a_2 \cdot a_1=a^n$ \\
 						& \\
-\cRed{PoNE}		& \texttt{Power with a Negative Exponent} \\
+\cRed{PoNegE}		& \texttt{Power Negative Exponent} \\
 						& \qquad $b^{-k}= \frac{1}{b^k}$ \\
 						& \\
 \cRed{PoPo}		& \texttt{Power of a Power} \\
@@ -602,12 +602,21 @@ Reduce the fraction $\frac{m}{n}$
 \begin{mysection}{Inverses}
 \begin{tabular}{@{}ll@{}l@{}}
 
+\cRed{ArcCos}  	& \texttt{Cosine Inverse} \\
+					& \qquad $\cos\inv \left(\cos \theta \right) = \theta $ \\
+					& \\
+					
+\cRed{ArcSin}  	& \texttt{Sine Inverse} \\
+					& \qquad $\sin\inv \left(\sin \theta \right) = \theta $\\
+					& \\
+\cRed{ArcTan}  	& \texttt{Tangent Inverse} \\
+					& \qquad $\tan\inv \left(\tan \theta \right) = \theta $ \\
+					& \\
+					
 \cRed{AI}		& \texttt{Additive Inverse} \\
 					& \qquad $a+(-a) = 0$ \\
 					& \\
-\cRed{CI}  	& \texttt{Cosine Inverse} \\
-					& \qquad $\cos\inv \left(\cos \theta \right) = \theta $ \\
-					& \\
+
 \cRed{EI}  	& \texttt{Exponential Inverse} \\
 					& \qquad $\log_a \left(a^x \right)=x$ \\
 					& \\
@@ -618,13 +627,8 @@ Reduce the fraction $\frac{m}{n}$
 					& \qquad $a \cdot \frac{1}{a}=1=a \cdot a^{-1}, a \ne 0$ \\
 					& \\
 \cRed{PoI} 	& \texttt{Power Inverse} \\
-					& \qquad $\left(x^{\frac{m}{n}} \right)^{\frac{n}{m}}=x$ \\
-					& \\
-\cRed{SI}  	& \texttt{Sine Inverse} \\
-					& \qquad $\sin\inv \left(\sin \theta \right) = \theta $\\
-					& \\
-\cRed{TI}  	& \texttt{Tangent Inverse} \\
-					& \qquad $\tan\inv \left(\tan \theta \right) = \theta $
+					& \qquad $\left(x^{\frac{m}{n}} \right)^{\frac{n}{m}}=x$ 
+
 \end{tabular}
 \end{mysection}
 
@@ -686,7 +690,7 @@ Reduce the fraction $\frac{m}{n}$
 	\item \cRed{PoId}
 	\item \cRed{PoTF}
 	\item \cRed{RTPo}
-	\item \cRed{PoNE} Goto 4
+	\item \cRed{PoNegE} Goto 4
 	\item \cRed{PoPr}
 	\item \cRed{PoQ}
 	\item \cRed{PoPrPo}
@@ -694,7 +698,7 @@ Reduce the fraction $\frac{m}{n}$
 	\item \cRed{PrCBPo}
 	\item \cRed{QCBPo}
 	\item \cRed{PoPo}
-	\item \cRed{PoNE}
+	\item \cRed{PoNegE}
 	\item \cRed{OOE}
 	\item \cRed{PoTR}
 	\item \cRed{PoId} Goto 8
@@ -721,7 +725,7 @@ Reduce the fraction $\frac{m}{n}$
 \cRed{LQCBPo}  	& \texttt{Logarithm Quotient of Common Base Powers} \\
 						& \qquad $\log_b \left( \frac{m}{n} \right) = \log_b m - \log_b n $\\
 						& \\
-\cRed{LTPo}  		& \texttt{Logarithm to Power Form} \\
+\cRed{LTPo}  		& \texttt{Logarithm to Power} \\
 						& \qquad $x=\log_b y \Rightarrow y=b^x$\\
 						&
 \end{tabular}
@@ -2036,16 +2040,16 @@ $\dfrac{\sin A}{a}=\dfrac{\sin B}{ b}=\dfrac{\sin C }{c}$
 \begin{mysection}{Notations}
 
 \begin{tabular}{@{}ll@{}}
-						& \texttt{Leibiz's first derivative} \\
+						& \texttt{Leibniz's first derivative} \\
 						& \qquad $\dfrac{\dy}{\dx} = \dfrac{d \left[f(x) \right]}{\dx}= \dfrac{d}{\dx} \left[f(x) \right]$\\
 						& \\
-						& \texttt{Leibiz's second derivative} \\
+						& \texttt{Leibniz's second derivative} \\
 						& \qquad $\dfrac{\dd^{2}y}{\dx^{2}}$\\
 						& \\
-						& \texttt{Leibiz's nth derivative} \\
+						& \texttt{Leibniz's nth derivative} \\
 						& \qquad $\dfrac{\dd^{n}y}{\dx^{n}}$\\
 						& \\
-						& \texttt{Leibiz's evaluate derivative at $x=a$} \\
+						& \texttt{Leibniz's evaluate derivative at $x=a$} \\
 						& \qquad $\dydx\left.{\!\!\frac{}{}}\right|_{x=a} = \dydx(a)$\\
 						& \\
 						& \texttt{LaGrange's first derivative} \\
