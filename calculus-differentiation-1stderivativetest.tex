@@ -9,7 +9,96 @@
 
 \chapter{First Derivative Test}
 
+%-=-=-= EXAMPLE
+\begin{example}[id:20151012-190708] \label{20151012-190708}\index{Example!20151012-190708} \hfill \\
+
+Given the function $f(x)=2x^3-3x^2-12x+1$ find the critical points, classify the critical points and find the intervals of increasing/decreasing. 
+\soln
+
+\solnsteps
+
+Differentiate the function:
+\begin{align*}
+f(x) &= 2x^3+\neg 3x^2+\neg12x+1 && \text{DOS} \eqref{eq:dos1} \\
+\farg{f(x)}' &= \farg{2x^2+\neg 3x^2 + \neg 12x+1}' && \text{SPE} \eqref{eq:spe} \\
+f'(x) &= \farg{2x^3}' + \farg{\neg 3x^2}' + \farg{\neg 12x}' + \farg{1}' && \text{DS} \eqref{eq:ds1} \\
+f'(x) &= 2\farg{x^3}' + \neg 3 \farg{x^2}' + \neg 12 \farg{x}' + \farg{1}' && \text{DCM} \eqref{eq:dcm1} \\
+f'(x) &= 2(3x^2) + \neg 3 (2x) + \neg 12 (1) + \farg{1}' && \text{DPo} \eqref{eq:dpo1} \\
+f'(x) &= 6x^2+\neg 6x + \neg 12 + \farg{1}' && \text{OOM} \eqref{eq:oom} \\
+f'(x) &= 6x^2+\neg 6x + \neg 12 + 0 && \text{DC} \eqref{eq:dc1} \\
+f'(x) &= 6x^2+\neg 6x + \neg 12 && \text{AId} \eqref{eq:aid1} 
+\end{align*}
+
+Solving the equation $6x^2 + \neg 6x + \neg 12=0$ to find the $x$ value(s) of the critical points, \text{\, goto \,} \, \ref{20151012-192313}, we find that $x=2$ and $x=-1$ are critical values of the function.\\
+
+Since we are looking for critical \textbf{points}, we need to find the ordinates, $y$-values, of the critical points by evaluating the function for the given critical $x$-values.
+\begin{align*}
+f(2) & = -19 \text{\, goto \,} \, \ref{20151012-201647}\\
+f(-1) &= 8 \text{\, goto \,} \, \ref{20151012-203549}
+\end{align*}
+Therefore the critical points are $(2, -19)$ and $(-1, 8)$.\\
+
+The first derivative test can be used to determine the intervals of increasing/decreasing and consequently we will be able to classify the critical points. Since we are only interested in the values of the derivative, it will be easier to used the factored form of the derivative, $f'(x)$=6(x-2)(x+1)\\
 
 
+\textbf{1st Derivative Test Table}
+\vspace{0.5cm}\\
+\begin{tabular}{ | c | c | c | c | c | c | }
+\hline
+$x$	&
+$x<-1$	& 	
+$x=-1$ &
+$-1<x<2$ &
+$x=2$ & 
+$x>2$  \\
+\hline
+$f'(x)$ &
+$\cGreen{+}$&
+$0$		&	
+$\cRed{-}$ &
+$0$ &
+$\cGreen{+}$\\
+\hline
+$f(x)$	&	
+\incf &
+\stationary &
+\decf	&
+\stationary &
+\incf\\
+\hline
+C.P.&
+&
+Max &
+&
+Min &
+\\
+\hline
+\end{tabular}\\
+
+From the first derivative table we can classify the critical point $(2, -19)$ as a local maximum and $(-1,8)$ as a local minimum.
+
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-4:4,
+            ymax=10,
+            ymin=-20,
+            %samples=100,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west}
+          ]
+
+          \addplot [very thick, sthlmBlue, smooth] {2*x^3-3*x^2-12*x+1};
+          \addplot [very thick, sthlmRed, smooth] {6*(x-2)*(x+1)};
+
+          \node at (axis cs:2.7,-4) {\color{sthlmBlue}$f(x)$};  
+          \node at (axis cs:2.8,8)  {\color{sthlmRed}$f''(x)$};
+
+          \addplot[color=sthlmDarkGrey,fill=sthlmDarkGrey,only marks,mark=*] coordinates{(2,-19)};  %% closed hole
+		  \addplot[color=sthlmDarkGrey,fill=sthlmDarkGrey,only marks,mark=*] coordinates{(-1,8)};  %% closed hole
+        \end{axis}
+\end{tikzpicture}
+
+\end{example}
 \end{document}
 
