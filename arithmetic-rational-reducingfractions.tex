@@ -1,0 +1,61 @@
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapter{Reducing Fractions}
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Arithmetic Expressions}\index{Fractions!Reducing Fractions}
+
+
+%-=-=-= DEFINITION
+\begin{definition}[Reduced Fraction]\index{Reduced Fraction}
+A fraction of the form $\frac{m}{n}$, where $n \ne 0$, is said to be in it's reduced form if the $\gcd(m,n)=1$
+\end{definition}
+
+\begin{figure}[!ht]
+\begin{center}
+\begin{tikzpicture}[scale=1, node distance=2cm, text width=6em,text centered, auto]
+    % Place nodes
+\node [bluerbox, text width=9em] (numerator) {factor numerator};
+\node [below of =numerator](empty){};
+\node [bluerbox, text width=9em, below of = empty] (denominator) {factor denominator};
+\node [redrbox, right of = empty] (cancel) {cancel MId};
+
+\path [line] (numerator) -- (denominator);
+\path [line] (numerator) edge [out=0, in=90] (cancel);
+\path [line] (denominator) edge [out=0, in=270] (cancel);
+\end{tikzpicture}
+\end{center}
+\caption{Reducing Fractions Workflow}
+\end{figure}
+
+\begin{figure}[!ht]
+\begin{center}
+\begin{tikzpicture}[scale=1, node distance=2cm, text width=6em,text centered, auto]
+    % Place nodes
+\node [bluerbox, text width=9em] (gcd) {$\gcd{n,d}$};
+\node [redrbox, below right of = gcd] (reduced) {Reduced Fraction};
+\node [bluerbox, text width=9em, below left of = gcd](numerator) {$\frac{n}{\gcd(n,d)}$};
+\node [bluerbox, text width=9em, below of = numerator](numerator) {$\frac{d}{\gcd(n,d)}$};
+
+\path [line] (gcd) edge [out=270, in=90] (numerator);
+\path [line] (gcd) edge [out=270, in=90] (reduced);
+\path [line] (denominator) edge [out=0, in=270] (reduced);
+\end{tikzpicture}
+\end{center}
+\caption{Using the $\gcd(n,d)$ to reduce the fraction $\frac{n}{d}$ Workflow}
+\end{figure}
+
+
+\end{document}
+
