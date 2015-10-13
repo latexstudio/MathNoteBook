@@ -36,6 +36,78 @@ x &= \pm \sqrt{2} && \text{SyPE} \eqref{eq:sype}
 \end{align*}
 \end{example}
 
+%-=-=-= EXAMPLE
+\begin{example}[id:20151012-192313] \label{20151012-192313}\index{Example!20151012-192313} \hfill \\
+
+Solve the equation $6x^2 - 6x - 12 = 0$
+
+\soln
+
+\solnsteps
+\begin{align*}
+6x^2+\neg 6x + \neg 12 &= 0 && \text{DOS} \eqref{eq:dos1} \\
+6(1x^2 \neg 1x + \neg 2) &= 0 && \text{DPF} \eqref{eq:dpf2} \\
+\end{align*}
+
+Using the factor orgnanizer,
+
+\begin{tikzpicture}[scale=1, auto]
+
+% Place nodes
+
+\node[firstterm](11){$x$}; \node[factoradd,right=of 11](plus1){$+$}; \node[secondterm, right=of plus1](12){$\neg 2$};
+\node[firstterm, below=of 11](21){$x$}; \node[factoradd,right=of 21](plus2){$+$}; \node[secondterm, right=of plus2](22){$1$};
+
+\node[multiply, below=of 21](31){$x^2$};
+\node[multiply, below=of 22](32){$\neg 2$};
+
+\node[multiply, right=of 12](13){$\neg 2 x$};
+\node[multiply, right=of 22](23){$1 x$};
+
+\node[add, below=of 23](33){$\neg 2x$};
+
+\path [line](11) edge[bend right=30]node[color=black, midway, left]{$\times$}(21);
+\path [line](12) edge[bend left=30]node[color=black,, midway, right]{$\times$}(22);
+\path [line](21)--(31);
+
+\path [line](21) edge[bend left=30]node[color=black, pos=0.4, below]{$\times$}(12);
+\path [line](11) edge[bend right=30](22);
+\path [line](22)--(32);
+
+\path [line](12)--(13);
+\path [line](22)--(23);
+
+\path [line](13)--node[color=black, midway, right]{$+$}(23);
+\path [line](23)--(33);
+
+\end{tikzpicture}
+
+Solving the linear equations using \text{ZPr} \eqref{eq:zpr} \\ \\
+\begin{align*}
+x_1+\neg 2& = 0  &&\text{\alert{Case I}} \\
+\farg{x_1 +\neg 2}  + 2 &= \farg{0} + \neg 2 && \text{AI} \eqref{eq:ai},\text{SPE} \eqref{eq:spe}  \\
+x_1+(\neg 2 + 2) &= 0 + \neg 2 && \text{APA} \eqref{eq:apa1} \\
+x_1+0 &= \neg 2 && \text{OOA} \eqref{eq:ooa} \\
+x_1&= \neg 2 && \text{AId} \eqref{eq:aid2} \\
+x_1 &= -2 && \text{ONeg} \eqref{eq:oneg2} 
+\end{align*}
+\vspace{-0.5cm}
+\begin{align*}
+x_2+1 &= 0  &&\text{\alert{Case II}} \\
+\farg{x_2+1} + \neg 1 &= \farg{0} + \neg 1 && \text{AI} \eqref{eq:ai},\text{SPE} \eqref{eq:spe}  \\
+x_2 + (1 + \neg 1) &= 0+ \neg 1 && \text{APA} \eqref{eq:apa1} \\
+x_2 + 0 &= \neg 2 && \text{OOA} \eqref{eq:ooa} \\
+x_2 &= \neg 2 && \text{AId} \eqref{eq:aid2} \\
+x_2 &= -2 && \text{ONeg} \eqref{eq:oneg2} 
+\end{align*}
+
+\qdepend
+
+\qdependlist
+example \ref{20151012-190708}-20151012-190708
+
+\end{example}
+
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	SECTION:
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
