@@ -46,7 +46,7 @@ pgfplots
 }
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	STOCKHOLMS COLOR THEME
+%	STOCKHOLMS COLOR THEME 20151012-071009
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 %== BLUE
@@ -209,7 +209,7 @@ pgfplots
 \newcommand{\doneit}{\textcolor{sthlmRed}{$\odot$}}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	GLOBAL MATH
+%	GLOBAL MATH 20151012-065906
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 \newcommand{\limit}{\displaystyle\lim}
@@ -233,6 +233,9 @@ pgfplots
 \newcommand{\dydu}{\dfrac{\mathrm{d}y}{\mathrm{d}u}}
 \newcommand{\dudx}{\dfrac{\mathrm{d}u}{\mathrm{d}x}}
 \newcommand{\dxdt}{\dfrac{\mathrm{d}x}{\mathrm{d}t}}
+\newcommand{\decf}{\cRed{$\searrow$}}
+\newcommand{\incf}{\cGreen{$\nearrow$}}
+\newcommand{\stationary}{$\longrightarrow$}
 \newcommand{\vect}[1]{\boldsymbol{#1}}
 \newcommand{\farg}[1]{{\color{sthlmBlue}{\left[\boldsymbol{#1}\right]}}}
 \newcommand{\set}[1]{\left\{#1\right\}}
@@ -247,6 +250,7 @@ pgfplots
 \newcommand{\ihat}{\hat{\imath}}
 \newcommand{\jhat}{\hat{\jmath}}
 \newcommand{\khat}{\hat{k}}
+\DeclareMathOperator{\lcm}{lcm}
 
 \newcommand{\alert}[1]{{\color{sthlmRed}{#1}}}
 \newcommand{\mathref}[1]{{\color{sthlmPurple}{#1}}}
@@ -870,14 +874,12 @@ trees
 \tikzstyle{firstterm} = [circle, draw, fill=sthlmRed!20, text centered,minimum size=1cm]
 \tikzstyle{secondterm} = [circle, draw, fill=sthlmBlue!20, text centered, node distance=0.25cm,minimum size=1cm]
 \tikzstyle{terms} = [rectangle, draw, fill=sthlmDarkGrey!20, text centered, node distance=0.25cm,minimum size=1cm]
-\tikzstyle{factoradd} = [rectangle, draw=none, fill=white, text centered, node distance=0.25cm,minimum size=1cm]
+\tikzstyle{factoradd} = [rectangle, draw=none, text centered, node distance=0.25cm,minimum size=1cm]
 \tikzstyle{multiply} = [rectangle, draw, fill=sthlmDarkGrey!20, text centered, minimum height=0.75cm,minimum size=1cm]
 \tikzstyle{add} = [rectangle, draw, fill=sthlmGreen!20, text centered, minimum height=0.75cm,minimum size=1cm]
 \tikzstyle{line} = [draw, color=black!50, -latex']
 % Define the style for the red dotted boxes
-\tikzset{factordotted/.style={draw=sthlmPurple!50!white, line width=1pt,
-                               dash pattern=on 1pt off 4pt on 6pt off 4pt,
-                                inner sep=4mm, rectangle, rounded corners}}
+\tikzset{factordotted/.style={draw=sthlmPurple!50!white, line width=1pt, dash pattern=on 1pt off 4pt on 6pt off 4pt, inner sep=4mm, rectangle, rounded corners}}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	WORKFLOW SETUP: SIMPLIFYING EXPRESSIONS
@@ -1018,6 +1020,8 @@ trees
 \subfile{algebra-solve-deg1polynomials}
 \subfile{algebra-solve-deg2polynomials}
 
+\part{Functions}
+\subfile{functions-evaluate-polynomials}
 \part{Differential Calculus}
 \subfile{calculus-differentiation-firstprinciples}
 \subfile{calculus-differentiation-rules}
