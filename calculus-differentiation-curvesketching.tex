@@ -8,7 +8,7 @@
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 \chapter{Curve Sketching}
-
+\begin{figure}[!ht]
 \begin{center}
 \begin{tikzpicture}[scale=1, node distance=2cm, text width=8em, auto]
     % Place nodes
@@ -27,14 +27,14 @@
 \node [point, left of=twoderivative, node distance=5cm] (inflectionpoints) {Inflection Point(s)};
 \node [intervals, below of=criticalpoints, node distance=3cm] (increasedecrease) {Interval(s) of Increase/Decrease};
 \node [intervals, below of=twoderivative, node distance=3cm] (concavity) {Interval(s) of Concavity};
-\node [point, right of=increasedecrease, node distance=5cm] (globalextrema) {Global Extrema};
+\node [point, above right of=increasedecrease, node distance=2.5cm] (globalextrema) {Global Extrema};
 \node [point, below of=increasedecrease, node distance=3cm] (localextrema) {Local Extrema};
 \node [secondderivative, right of=twoderivative](twoderivativetest){};
 
-\path [line] (verticalasymptotes) -- (asymptotes);
+\path [line] (asymptotes) -- (verticalasymptotes);
 \path [line] (asymptotes) -- (slantasymptotes);
 \path [line] (asymptotes) -- (horizontalasymptotes);
-\path [line] (asymptotes) -- (function);
+\path [line] (function) -- (asymptotes);
 \path [line] (function) -- (intercepts);
 \path [line] (function) -- (endpoints);
 \path [line] (intercepts) -- (xintercept);
@@ -56,6 +56,7 @@
 \path [line] (twoderivative) edge [out= 60, in= 120] (twoderivativetest);
 \end{tikzpicture}
 \end{center}
-
+\caption{Overview of Curve Sketching}
+\end{figure}
 \end{document}
 
