@@ -37,8 +37,7 @@
 \node [bluerbox, right of = abscissa] (ordinate) {$b$};
 \node [greenrbox, below of = abscissa] (function) {$f(x)$};
 \node [circlenode, right of = function] (join) {$b$};
-\node [purplerbox, below of = function] (derivative) {$f'(x)$};
-\node [purplerbox, right of = derivative] (derivativea) {$f'(a)$};
+\node [purplerbox, below of = function] (derivative) {$f'(a)$};
 \node [orangerbox, right of = join, node distance=4cm, text width=8em] (intercept) {$k=-f'(a)a+b$};
 \node [redrbox, below of= intercept, text width=8em] (equation) {$y=f'(a)x+k$};
 
@@ -47,12 +46,10 @@
 \path [line] (ordinate) edge [out=270, in=90] (join);
 \path [line] (join) -- (intercept);
 \path [line] (abscissa) edge [out= 180, in= 180] (derivative);
-\path [line] (derivative) edge [out=0, in=180] (derivativea);
-\path [line] (derivativea) edge [out=0, in=180] (intercept);
+\path [line] (derivative) edge [out=0, in=210] (intercept);
 \path [line] (abscissa) edge [out=90, in=90] (intercept);
 \path [line] (intercept) edge [out=0, in=0] (equation);
-\path [line] (derivative) edge [out=0, in=180] (derivativea);
-\path [line] (derivativea) edge [out=0, in=180] (equation);
+\path [line] (derivative) edge [out=0, in=180] (equation);
 \path [dashline] (function)--(derivative);
 \end{tikzpicture}
 \end{center}
@@ -98,7 +95,7 @@ Find the $y$-intercept, $k$, of the equation of the tangent line.
 y &= f'(x)x + k\\
 \farg{21} & = \farg{11}\farg{2} + k && \text{SPE} \eqref{eq:spe} \\
 21 & = 22 + k && \text{OOM} \eqref{eq:oom} \\
-\neg 22 + \left[\farg{21} \right] &= \neg 22 + \left[\farg{22} \right] + k && \text{SPE+AI}\\ 
+\neg 22 + \farg{21} &= \neg 22 + \farg{22+k} && \text{SPE+AI}\\ 
 \neg 22 + 21 & = (\neg 22 + 22) + k && \text{APA} \eqref{eq:apa1} \\
 \neg 1 &= 0 + k && \text{OOA} \eqref{eq:ooa} \\
 \neg 1 &= k && \text{AId} \eqref{eq:aid1} \\
