@@ -1,0 +1,132 @@
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapter{Functions}
+
+%-=-=-= DEFINITION
+\begin{property}[Function Value Argument Substitution (FVAS)]\index{Function Value Argument Substitution}
+\begin{subequations}
+\begin{align}
+f(a) \label{eq:fvas}
+\end{align}
+\end{subequations}
+\end{property}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151012-201647] \label{20151012-201647}\index{Example!20151012-201647} \hfill \\
+Find $f(2)$ given $f(x)=2x^3-3x^2-12x+1$
+\soln
+
+\solnsteps
+\begin{align*}
+f(x) & =2x^3 + \neg 3x^2 + \neg 12x+1 && \text{DOS} \eqref{eq:dos1} \\
+f(2) &= 2\farg{2}^3 + \neg 3\farg{2}^2 + \neg 12 \farg{2} +1 && \text{SPE} \eqref{eq:spe} \\
+f(2) &= 2(8) + \neg 3(4) + \neg 12(2) + 1 && \text{OOE} \eqref{eq:ooe} \\
+f(2) &= 16 + \neg 12 + \neg 24 +1 && \text{OOM} \eqref{eq:oom} \\
+f(2) &= -19 && \text{OOA} \eqref{eq:ooa} \\
+\end{align*}
+
+\qdepend
+
+\qdependlist
+example \ref{20151012-190708}-20151012-190708
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151012-203549] \label{20151012-203549}\index{Example!20151012-203549} \hfill \\
+Find $f(-1)$ given $f(x)=2x^3-3x^2-12x+1$
+
+\soln
+
+\solnsteps
+\begin{align*}
+f(x) & =2x^3 + \neg 3x^2 + \neg 12x+1 && \text{DOS} \eqref{eq:dos1} \\
+f(\neg 1) &= 2\farg{\neg 1}^3 + \neg 3\farg{\neg 1}^2 + \neg 12 \farg{\neg 1} +1 && \text{SPE} \eqref{eq:spe} \\
+f(\neg 1) &= 2(\neg 1) + \neg 3(1) + \neg 12(\neg 1) + 1 && \text{OOE} \eqref{eq:ooe} \\
+f(\neg 1) &= \neg 2 + \neg 3 + 12 +1 && \text{OOM} \eqref{eq:oom} \\
+f(\neg 1) &= 8 && \text{OOA} \eqref{eq:ooa} \\
+\end{align*}
+
+\qdepend
+
+\qdependlist
+example \ref{20151012-190708}-20151012-190708
+
+\end{example}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Inverse Functions}\index{Functions! Inverses}
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Inverses}\index{Property!Inverses}
+
+
+%-=-=-= DEFINITION
+\begin{property}[Cosine Inverse (ArcCos)]\index{Cosine Inverse}
+\begin{subequations}
+\begin{align}
+\cos\inv \left(\cos \theta \right) = \theta \label{eq:arccos}
+\end{align}
+\end{subequations}
+\end{property}
+
+%-=-=-= DEFINITION
+\begin{property}[Sine Inverse (ArcSin)]\index{Sine Inverse}
+\begin{subequations}
+\begin{align}
+\sin\inv \left(\sin \theta \right) = \theta  \label{eq:arcsin}
+\end{align}
+\end{subequations}
+\end{property}
+
+%-=-=-= DEFINITION
+\begin{property}[Tangent Inverse (ArcTan)]\index{Tangent Inverse}
+\begin{subequations}
+\begin{align}
+\tan\inv \left(\tan \theta \right) = \theta  \label{eq:arctan}
+\end{align}
+\end{subequations}
+\end{property}
+
+%-=-=-= DEFINITION
+\begin{property}[Exponential Inverse (EI)]\index{Exponential Inverse}
+\begin{subequations}
+\begin{align}
+\log_a \left(a^x \right)=x \label{eq:ei}
+\end{align}
+\end{subequations}
+\end{property}
+
+%-=-=-= DEFINITION
+\begin{property}[Logarithmic Inverse (LI)]\index{Logarithmic Inverse}
+\begin{subequations}
+\begin{align}
+a^{\log_a x}= x  \label{eq:li}
+\end{align}
+\end{subequations}
+\end{property}
+
+%-=-=-= DEFINITION
+\begin{property}[Power Inverse (PoI)]\index{Power Inverse}
+\begin{subequations}
+\begin{align}
+\left(b^{m}\right)^{\frac{1}{m}} &= b  \label{eq:poi}
+\end{align}
+\end{subequations}
+\end{property}
+
+\end{document}
+
