@@ -111,5 +111,54 @@ y &= 11x - 1 && \text{SPE} \eqref{eq:spe}
 
 \end{example}
 
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151015-171630] \label{20151015-171630}\index{Example!20151015-171630} \hfill \\
+Given $f(x)=e^{3x}$, find the the equation of the tangent line $L$ to the curve $f$ at the point $(2, e^2)$.
+
+\soln
+
+\solnsteps
+
+Find the derivative of $f(x)$
+\begin{align*}
+\farg{f(x)}' &= \farg{e^{3x}}' && \text{SPE} \eqref{eq:spe} \\
+f'(x) &= \farg{3x}' \farg{e^{3x}}' && \text{DCF} \eqref{eq:dcf1} \\
+f'(x) &= 3\farg{x}'  \farg{e^{3x}}' && \text{DCM} \eqref{eq:dcm1} \\
+f'(x) &= 3 \cdot 1 \farg{e^{3x}}' && \text{DPo} \eqref{eq:dpo1} \\
+f'(x) &= 3 \farg{e^{3x}}' && \text{OOM} \eqref{eq:oom} \\
+f'(x) &= 3 e^{3x} && \text{DExp} \eqref{eq:dexp1} 
+\end{align*}
+
+Evaluate the derivative at $x=2$
+\begin{align*}
+f'(2) & = 3 e^{3\farg{2}} && \text{SPE} \eqref{eq:spe} \\
+f'(2) & = 3 e^{6} && \text{OOM} \eqref{eq:oom} \\
+\end{align*}
+
+Find the $y$-intercept, $k$, of the equation of the tangent line.
+
+\begin{align*}
+y &= f'(x)x + k\\ 
+\farg{e^2} &= \farg{3 e^{6}} \farg{2} + k && \text{SPE} \eqref{eq:spe} \\
+e^2 &= 3 \cdot e^{6} \cdot 2 + k && \text{JTC} \eqref{eq:jtc} \\
+e^2 &= 3 \cdot 2 \cdot e^{6} + k && \text{CPM} \eqref{eq:cpm} \\
+e^2 &= 6 \cdot e^6 + k && \text{OOM} \eqref{eq:oom} \\
+e^2 &= 6e^6 + k && \text{CTJ} \eqref{eq:ctj} \\
+\neg 6e^6 + \farg{e^2}  &= \neg 6e^6 + \farg{6e^6 + k}  && \text{AI} \eqref{eq:ai},\text{SPE} \eqref{eq:spe}  \\
+e^2(\neg 6 e^4 + 1) &= \neg 6e^6 + \farg{6e^6 + k} && \text{DPF} \eqref{eq:dpf2} \\
+\neg 6e^6 + e^2  &= (\neg 6e^6 + 6e^6) + k && \text{APA} \eqref{eq:apa1} \\
+e^2(\neg 6 e^4 + 1) &=  0 + k && \text{OOA} \eqref{eq:ooa} \\
+e^2(\neg 6 e^4 + 1) &= k && \text{AId} \eqref{eq:aid2}\\
+e^2(-6 e^4 + 1) &= k && \text{ONeg} \eqref{eq:oneg2} 
+\end{align*}
+
+The equation of the tangent line, $L$ is
+\begin{align*}
+y & = f'(2)x+k \\
+y &= 3 e^{6}x + e^2(-6 e^4 + 1) && \text{SPE} \eqref{eq:spe} 
+\end{align*}
+\end{example}
+
 \end{document}
 
