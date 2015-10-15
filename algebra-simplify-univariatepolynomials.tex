@@ -9,6 +9,10 @@
 
 \chapter{Simplifying Univariate Polynomials}
 
+The definition of a univariate polynomial expression is based on the expanded canonical form of some polynomial expression.  It might be that the original expression might not be in the expanded canonical form, so a process called \alert{simplifying by expanding} will be introduced to manipulate the expression such that it can be written in its expanded canonical form.
+
+This process of simplifying by expanding polynomial expressions will be developed to the extent that it will be used to simplify multivariate polynomials.  We will start by simplifying univariate monomial expressions.
+
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	SECTION: Simplifying Univariate Monomials
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -71,64 +75,6 @@ Degree 0 univariate polynomial expressions are usually a monomial in their canon
 
 The expression can be manipulated into its monomial canonical form by simplifying the expression.  Simplifying the expression can be defined as evaluating the expression by following order of operations, which is the same as evaluating an arithmetic expression.
 
-
-%-=-=-= EXAMPLE
-\begin{example}[id:20141121-093747] \label{20141121-093747}\index{Example!20141121-093747} \hfill \\
-
-Express $13x^0$ in canonical form.
-
-\soln
-
-\solnsteps
-\begin{align*}
-13 % TODO Add PowerID here.
-\end{align*}
-\end{example}
-
-
-%-=-=-= EXAMPLE
-\begin{example}[id:20141120-202842] \label{20141120-202842}\index{Example!20141120-202842} \hfill \\
-
-Express $1x^2$ in canonical form.
-
-\soln
-
-\solnsteps
-\begin{align*}
-x^2 && \text{MId} \eqref{eq:mid2}
-\end{align*}
-\end{example}
-
-
-
-
-
-
-\[
-\cDarkGrey{C_{n}x^{n}+C_{n-1}x^{n-1}+ \cdots + C_{k}x^{k} + \cdots + C_{2}x^{2}+C_{1}x^{1}+}\underbrace{\cBlue{C_{0}}}_{\cBlue{C_{0}}\cRed{x^{0}}}
-\]
-
-
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection*{Monomials}
-
-
-% TODO Add reference to evaluating arithmetic expressions.
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\section{Degree 1 Univariate Polynomials}\index{Degree 1 Univariate Polynomials}
-
-\[
-\cDarkGrey{C_{n}x^{n}+C_{n-1}x^{n-1}+ \cdots + C_{k}x^{k} + \cdots + C_{2}x^{2}}+\cRed{C_{1}x^{1}+\underbrace{C_{0}}_{C_{0}x^{0}}}
-\]
-
-Degree 1 univariate polynomial expressions can be expressed with at most two different terms and consequently this expression in its canonical form has at most two monomial summands -- called a binomial.
-
 %-=-=-= DEFINITION
 \begin{definition}[Univariate Like Terms]\index{Like Terms}
 
@@ -145,6 +91,26 @@ The monomials $5x^1$ and $3x^1$ can be described as having like terms because th
 \begin{remark}
 A degree 1 indeterminate does not display the multiplicative identity in the exponent when its in canonical form.
 \end{remark}
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141121-093747] \label{20141121-093747}\index{Example!20141121-093747} \hfill \\
+
+Express $13x^0$ in canonical form.
+
+\soln
+
+\solnsteps
+\begin{align*}
+13 && \text{PoID} \eqref{eq:poid2} \\
+\end{align*}
+\end{example}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Simplifying Degree 1 Univariate Monomials
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Simplifying Degree 1 Univariate Monomials}\label{Simplifying Degree 1 Univariate Monomials}
 
 %-=-=-= EXAMPLE
 \begin{example}[id:20141120-202042] \label{20141120-202042}\index{Example!20141120-202042} \hfill \\
@@ -172,28 +138,7 @@ Express $7x^1+5$ in canonical form.
 \end{align*}
 \end{example}
 
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection*{Monomials}
-
-\begin{essentialq}\hfill \\
-
-\begin{enumerate}
-	\item How do we simplify univariate polynomial expressions?
-\end{enumerate}
-
-\end{essentialq}
-
-
 If the constant monomial is 0, the additive identity, then the canonical form of a degree 1 univariate polynomial is a degree 1 monomial.
-
-\subsubsection{Simplifying Univariate Monomial Expressions}
-
-The definition of a univariate monomial expression is based on the expanded canonical form of some polynomial expression.  It might be that the original expression might not be in the expanded canonical form, so a process called \alert{simplifying by expanding} will be introduced to manipulate the expression such that it can be written in its expanded canonical form.
-
-This process of simplifying by expanding polynomial expressions will be developed to the extent that it will be used to simplify multivariate polynomials.  We will start by simplifying univariate monomial expressions.
-
 
 %-=-=-= EXAMPLE
 \begin{example}[id:20141120-203846] \label{20141120-203846}\index{Example!20141120-203846} \hfill \\
@@ -221,9 +166,6 @@ Notice that the sum of two monomials that have like terms can be found by adding
 \end{align*}
 
 \end{example}
-
-
-% TODO section on units as indeterminates
 
 %-=-=-= EXAMPLE
 \begin{example}[id:20141027-075159]\label{20141027-075159}\index{Example!20141027-075159} \hfill \\
@@ -301,11 +243,7 @@ Simplify $8x-6x$
 8x + \neg 6x && \text{DOS} \eqref{eq:dos1} \\
 2x && \text{OOA} \eqref{eq:ooa}
 \end{align*}
-
-% TODO Possibly add the OOS less steps example
-
 \end{example}
-
 
 %-=-=-= EXAMPLE
 \begin{example}[id:20141121-193636] \label{20141121-193636}\index{Example!20141121-193636} \hfill \\
@@ -510,11 +448,155 @@ Simplify $8x \cdot 5$
 \end{align*}
 \end{example}
 
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection*{Binomials}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Simplifying Degree 2 Univariate Monomials
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+\section{Simplifying Degree 2 Univariate Monomials}\label{Simplifying Degree 2 Univariate Monomials}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141120-202842] \label{20141120-202842}\index{Example!20141120-202842} \hfill \\
+
+Express $1x^2$ in canonical form.
+
+\soln
+
+\solnsteps
+\begin{align*}
+x^2 && \text{MId} \eqref{eq:mid2}
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141106-151138] \label{20141106-151138} \index{Example!20141106-151138} \hfill \\
+
+Simplify $4x^2+12x^2$
+
+\soln
+
+\solnsteps
+\begin{align*}
+(4+12)x^2 && \text{DPF} \eqref{eq:dpf1} \\
+16x^2 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+16x^2 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141106-154547] \label{20141106-154547} \index{Example!20141106-154547} \hfill \\
+
+Simplify $x^2-x+x^2+x$
+
+\soln
+
+\solnsteps
+\begin{align*}
+1x^2-1x+1x^2+1x && \text{MId} \eqref{eq:mid1} \\
+1x^2+\neg 1 x + 1x^2+1x && \text{DOS} \eqref{eq:dos1} \\
+1x^2+1x^2+\neg 1x+1x && \text{CPA} \eqref{eq:cpa} \\
+(1+1)x^2+(\neg 1 + 1)x && \text{DPF} \eqref{eq:dpf1} \\
+2x^2+0x && \text{OOA} \eqref{eq:ooa} \\
+2x^2 && \text{MId} \eqref{eq:mid2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+x^2 + \neg x + x^2 + x && \text{DOS} \eqref{eq:dos1} \\
+x^2 + x^2 + \neg x + x && \text{CPA} \eqref{eq:cpa} \\
+2x^2 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141108-194709] \label{20141108-194709} \index{Example!20141108-194709} \hfill \\
+
+Simplify $- 2x4x - x \cdot-x3$
+
+\soln
+
+\solnsteps
+\begin{align*}
+-2x4x-1x \cdot 1x3 && \text{MId} \eqref{eq:mid1} \\
+\neg 2x4x-1x \cdot 1x3  && \text{ONeg} \eqref{eq:oneg1} \\
+\neg 2 \cdot x \cdot 4 \cdot x + \neg 1 \cdot x \cdot 1 \cdot x \cdot 3 && \text{JTC} \eqref{eq:jtc} \\
+\neg 2 \cdot 4 \cdot x \cdot x + \neg 1 \cdot \neg 1 \cdot 3 \cdot x \cdot x && \text{CPM} \eqref{eq:cpm} \\
+\neg 2 \cdot 4 \cdot x^2  + \neg 1 \cdot \neg 1 \cdot 3 \cdot x^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+(\neg 2 \cdot 4) \cdot x^2 + (\neg 1 \cdot \neg 1 \cdot 3) x^2 && \text{APM} \eqref{eq:apm1} \\
+\neg 8 x^2 + 3 x^2 && \text{OOM} \eqref{eq:oom} \\
+(\neg 8 + 3)x^2 && \text{DPF} \eqref{eq:dpf1} \\
+\neg 5 x^2 && \text{OOA} \eqref{eq:ooa} \\
+-5x^2 && \text{ONeg} \eqref{eq:oneg2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+- 2x4x + \neg x \cdot-x3  && \text{DOS} \eqref{eq:dos1} \\
+\neg 2 \cdot 4 \cdot x \cdot x + 3 \cdot \neg x \cdot \neg x && \text{CPM} \eqref{eq:cpm} \\
+\neg 2 \cdot 4 \cdot x^2 + 3 \cdot x^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+\neg 8x^2 + 3 x^2 && \text{OOM} \eqref{eq:oom} \\
+-5x^2 && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+
+\end{example}
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141108-191616] \label{20141108-191616} \index{Example!20141108-191616} \hfill \\
+
+Simplify $-5x \cdot 4x$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\neg 5x \cdot 4x && \text{ONeg} \eqref{eq:oneg1} \\
+\neg 5 \cdot x \cdot 4 \cdot x && \text{JTC} \eqref{eq:jtc} \\
+\neg 5 \cdot 4 \cdot x \cdot x && \text{CPM} \eqref{eq:cpm} \\
+\neg 5 \cdot 4 \cdot x^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+(\neg 5 \cdot 4) \cdot x^2 && \text{APM} \eqref{eq:apm1} \\
+\neg 20 \cdot x^2 && \text{OOM} \eqref{eq:oom} \\
+\neg 20 x^2 && \text{CTJ} \eqref{eq:ctj} \\
+-20x^2 && \text{ONeg} \eqref{eq:oneg2}
+\end{align*}
+
+\soln
+
+\lesssteps
+\begin{align*}
+\neg 5 \cdot 4 \cdot x \cdot x && \text{CPM} \eqref{eq:cpm} \\
+\neg 5 \cdot 4 \cdot x^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+-20x^2 && \text{OOM} \eqref{eq:oom}
+\end{align*}
+
+\end{example}
+
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Simplifying Degree 3 Univariate Monomials
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Simplifying Degree 3 Univariate Monomials}\label{Simplifying Degree 3 Univariate Monomials}
+
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Simplifying Degree 1 Univariate Binomials
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Simplifying Degree 1 Univariate Binomials}\label{Simplifying Degree 1 Univariate Binomials}
 
 %-=-=-= EXAMPLE
 \begin{example}[id:20141109-090809] \label{20141109-090809} \index{Example!20141109-090809} \hfill \\
@@ -817,137 +899,10 @@ Simplify by expanding $5(x+3)+3(x+2)$
 \end{example}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION:
+%	SECTION: Simplifying Degree 2 Univariate Binomials
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\section{Degree 2 Univariate Polynomials}\index{Degree 2 Univariate Polynomials}
 
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection*{Monomials}
-
-%-=-=-= EXAMPLE
-\begin{example}[id:20141106-151138] \label{20141106-151138} \index{Example!20141106-151138} \hfill \\
-
-Simplify $4x^2+12x^2$
-
-\soln
-
-\solnsteps
-\begin{align*}
-(4+12)x^2 && \text{DPF} \eqref{eq:dpf1} \\
-16x^2 && \text{OOA} \eqref{eq:ooa}
-\end{align*}
-
-\soln
-
-\lesssteps
-\begin{align*}
-16x^2 && \text{OOA} \eqref{eq:ooa}
-\end{align*}
-
-\end{example}
-
-%-=-=-= EXAMPLE
-\begin{example}[id:20141106-154547] \label{20141106-154547} \index{Example!20141106-154547} \hfill \\
-
-Simplify $x^2-x+x^2+x$
-
-\soln
-
-\solnsteps
-\begin{align*}
-1x^2-1x+1x^2+1x && \text{MId} \eqref{eq:mid1} \\
-1x^2+\neg 1 x + 1x^2+1x && \text{DOS} \eqref{eq:dos1} \\
-1x^2+1x^2+\neg 1x+1x && \text{CPA} \eqref{eq:cpa} \\
-(1+1)x^2+(\neg 1 + 1)x && \text{DPF} \eqref{eq:dpf1} \\
-2x^2+0x && \text{OOA} \eqref{eq:ooa} \\
-2x^2 && \text{MId} \eqref{eq:mid2}
-\end{align*}
-
-\soln
-
-\lesssteps
-\begin{align*}
-x^2 + \neg x + x^2 + x && \text{DOS} \eqref{eq:dos1} \\
-x^2 + x^2 + \neg x + x && \text{CPA} \eqref{eq:cpa} \\
-2x^2 && \text{OOA} \eqref{eq:ooa}
-\end{align*}
-
-\end{example}
-
-% TODO Commutative property of multiplication
-
-%-=-=-= EXAMPLE
-\begin{example}[id:20141108-194709] \label{20141108-194709} \index{Example!20141108-194709} \hfill \\
-
-Simplify $- 2x4x - x \cdot-x3$
-
-\soln
-
-\solnsteps
-\begin{align*}
--2x4x-1x \cdot 1x3 && \text{MId} \eqref{eq:mid1} \\
-\neg 2x4x-1x \cdot 1x3  && \text{ONeg} \eqref{eq:oneg1} \\
-\neg 2 \cdot x \cdot 4 \cdot x + \neg 1 \cdot x \cdot 1 \cdot x \cdot 3 && \text{JTC} \eqref{eq:jtc} \\
-\neg 2 \cdot 4 \cdot x \cdot x + \neg 1 \cdot \neg 1 \cdot 3 \cdot x \cdot x && \text{CPM} \eqref{eq:cpm} \\
-\neg 2 \cdot 4 \cdot x^2  + \neg 1 \cdot \neg 1 \cdot 3 \cdot x^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
-(\neg 2 \cdot 4) \cdot x^2 + (\neg 1 \cdot \neg 1 \cdot 3) x^2 && \text{APM} \eqref{eq:apm1} \\
-\neg 8 x^2 + 3 x^2 && \text{OOM} \eqref{eq:oom} \\
-(\neg 8 + 3)x^2 && \text{DPF} \eqref{eq:dpf1} \\
-\neg 5 x^2 && \text{OOA} \eqref{eq:ooa} \\
--5x^2 && \text{ONeg} \eqref{eq:oneg2}
-\end{align*}
-
-\soln
-
-\lesssteps
-\begin{align*}
-- 2x4x + \neg x \cdot-x3  && \text{DOS} \eqref{eq:dos1} \\
-\neg 2 \cdot 4 \cdot x \cdot x + 3 \cdot \neg x \cdot \neg x && \text{CPM} \eqref{eq:cpm} \\
-\neg 2 \cdot 4 \cdot x^2 + 3 \cdot x^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
-\neg 8x^2 + 3 x^2 && \text{OOM} \eqref{eq:oom} \\
--5x^2 && \text{OOA} \eqref{eq:ooa}
-\end{align*}
-
-\end{example}
-
-
-%-=-=-= EXAMPLE
-\begin{example}[id:20141108-191616] \label{20141108-191616} \index{Example!20141108-191616} \hfill \\
-
-Simplify $-5x \cdot 4x$
-
-\soln
-
-\solnsteps
-\begin{align*}
-\neg 5x \cdot 4x && \text{ONeg} \eqref{eq:oneg1} \\
-\neg 5 \cdot x \cdot 4 \cdot x && \text{JTC} \eqref{eq:jtc} \\
-\neg 5 \cdot 4 \cdot x \cdot x && \text{CPM} \eqref{eq:cpm} \\
-\neg 5 \cdot 4 \cdot x^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
-(\neg 5 \cdot 4) \cdot x^2 && \text{APM} \eqref{eq:apm1} \\
-\neg 20 \cdot x^2 && \text{OOM} \eqref{eq:oom} \\
-\neg 20 x^2 && \text{CTJ} \eqref{eq:ctj} \\
--20x^2 && \text{ONeg} \eqref{eq:oneg2}
-\end{align*}
-
-\soln
-
-\lesssteps
-\begin{align*}
-\neg 5 \cdot 4 \cdot x \cdot x && \text{CPM} \eqref{eq:cpm} \\
-\neg 5 \cdot 4 \cdot x^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
--20x^2 && \text{OOM} \eqref{eq:oom}
-\end{align*}
-
-\end{example}
-
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection*{Binomials}
+\section{Simplifying Degree 2 Univariate Binomials}\label{Simplifying Degree 2 Univariate Binomials}
 
 %-=-=-= EXAMPLE
 \begin{example}[id:20141106-152339] \label{20141106-152339} \index{Example!20141106-152339} \hfill \\
@@ -1051,10 +1006,12 @@ Simplify $2x(2x+4)+x^2 \cdot 2 \cdot 1 + 0$
 example \ref{20141209-144203}-20141209-144203
 \end{example}
 
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection*{Trinomials}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Simplifying Degree 2 Univariate Trinomials
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Simplifying Degree 2 Univariate Trinomials}\label{Simplifying Degree 2 Univariate Trinomials}
+
 
 %-=-=-= EXAMPLE
 \begin{example}[id:20141109-133008] \label{20141109-133008}  \index{Example!20141109-133008} \hfill \\
@@ -1247,36 +1204,35 @@ Simplify $\left(2-\dfrac{x}{2} \right)^2$ by expanding.
 \end{example}
 
 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Simplifying Degree 1 Univariate Polynomials
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Simplifying Degree 1 Univariate Polynomials}\label{Simplifying Degree 1 Univariate Polynomials}
+
+\[
+\cDarkGrey{C_{n}x^{n}+C_{n-1}x^{n-1}+ \cdots + C_{k}x^{k} + \cdots + C_{2}x^{2}}+\cRed{C_{1}x^{1}+\underbrace{C_{0}}_{C_{0}x^{0}}}
+\]
+
+Degree 1 univariate polynomial expressions can be expressed with at most two different terms and consequently this expression in its canonical form has at most two monomial summands -- called a binomial.
+
+
+
+
+
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION:
+%	SECTION: Simplifying Degree 2 Univariate Polynomials
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\section{Degree 3 Univariate Polynomials}\index{Degree 3 Univariate Polynomials}
 
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection*{Monomials}
+\section{Simplifying Degree 2 Univariate Polynomials}\label{Simplifying Degree 2 Univariate Polynomials}
 
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection*{Binomials}
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection*{Trinomials}
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection*{Polynomials}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION:
+%	SECTION: Simplifying Degree $n$ Univariate Polynomials
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\section{Degree $n$ Univariate Polynomials}\index{Degree $n$ Univariate Polynomials}
+
+\section{Simplifying Degree $n$ Univariate Polynomials}\label{Simplifying Degree $n$ Univariate Polynomials}
 
 %-=-=-= DEFINITION
 \begin{definition}[Univariate Polynomial Expression]\index{Univariate Polynomial Expression}
@@ -1299,29 +1255,6 @@ The degree of the univariate polynomial is determined by the monomial with the l
 
 %\hfill \cite{mathworld:algebraicexpression}
 \end{definition}
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection*{Monomials}
-
-
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection*{Binomials}
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection*{Trinomials}
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection*{Polynomials}
-
 
 
 \end{document}
