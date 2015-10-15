@@ -220,7 +220,34 @@ x &= -\dfrac{5}{2} && \text{OOM} \eqref{eq:oom}
 \qdependlist
 
 example \ref{20141111-192213}-20141111-192213
+\end{example}
 
+%-=-=-= EXAMPLE
+\begin{example}[id:20151015-104754] \label{20151015-104754}\index{Example!20151015-104754} \hfill \\
+Solve the equation $2ax+b=0$ for $x$.
+
+\soln
+
+\solnsteps
+\begin{align*}
+\farg{2ax+b} + \neg b&= \farg{0} + \neg b && \text{AI} \eqref{eq:ai},\text{SPE} \eqref{eq:spe}  \\
+2ax + (b + \neg b) &= 0 + \neg b && \text{APA} \eqref{eq:apa2} \\
+2ax + 0 &= 0 + \neg b && \text{OOA} \eqref{eq:ooa} \\
+2ax &= \neg b && \text{AId} \eqref{eq:aid1} \\
+\dfrac{1}{2a} \farg{2ax} &= \dfrac{1}{2a} \farg{\neg b}  && \text{MI} \eqref{eq:ai},\text{SPE} \eqref{eq:spe}  \\
+\dfrac{1}{2a} \cdot (2ax) &= \dfrac{1}{2a} \cdot (\neg b)  && \text{JTC} \eqref{eq:jtc} \\
+\left(\dfrac{1}{2a} \cdot 2a \right) \cdot x &= \dfrac{1}{2a} \cdot \neg b && \text{APA} \eqref{eq:apa1} \\ 
+\left(\dfrac{1}{2a} \cdot \dfrac{2a}{1} \right) x &= \dfrac{1}{2a} \cdot \dfrac{neg b}{1} && \text{MId} \eqref{eq:mid1} \\
+\dfrac{2a}{2a} \cdot x &= \dfrac{\neg b}{2a} && \text{OOM} \eqref{eq:oom} \\
+1 \cdot x &= \dfrac{\neg b}{2a} %TODO Reduce fraction
+x &= \dfrac{\neg b}{2a} && \text{MId} \eqref{eq:mid2} \\
+x &= - \dfrac{b}{2a} && \text{ONeg} \eqref{eq:oneg2} \\ 
+\end{align*}
+
+\qdepend
+
+\qdependlist
+example \ref{20151008-110208}-20151008-110208
 
 \end{example}
 
