@@ -1,0 +1,40 @@
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapter{Simplifying Rationals}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151015-160832] \label{20151015-160832}\index{Example!20151015-160832} \hfill \\
+
+Simplify $\dfrac{3x^2 \left(x^2 \right)-\left[(x^3+1)(2x)\right]}{\left(x^2\right)^2}$
+\soln
+
+\solnsteps
+\begin{align*}
+\dfrac{3x^2 \left(x^2 \right)-1 \left[(x^3+1)(2x)\right]}{\left(1x^2\right)^2}  && \text{MId} \eqref{eq:mid1} \\
+\dfrac{3x^2 \left(x^2 \right)+\neg 1\left[\left(1x^3+1\right)(2x) \right]}{\left(x^2\right)^2} && \text{DOS} \eqref{eq:dos1} \\
+\dfrac{3x^2 \left(x^2 \right)+\neg 1\left[\left(1x^3+1\right)(2x) \right]}{x^4} && \text{PoPo} \eqref{eq:popo1} \\
+\dfrac{3x^2 \left(x^2 \right)+\neg 1\left[1x \cdot 2x + 1 \cdot 2x \right]}{x^4} && \text{DPE} \eqref{eq:dpe1} \\
+\dfrac{3 \cdot x^2 \cdot x^2 +\neg 1\left[1 \cdot x \cdot 2 \cdot x + 1 \cdot 2 \cdot x \right]}{x^4} && \text{JTC} \eqref{eq:jtc} \\
+\dfrac{3 \cdot x^2 \cdot x^2 +\neg 1\left[1 \cdot 2 \cdot x \cdot x + 1 \cdot 2 \cdot x \right]}{x^4} && \text{CPM} \eqref{eq:cpm} \\
+\dfrac{3 \cdot x^4 +\neg 1\left[1 \cdot 2 \cdot x^2 + 1 \cdot 2 \cdot x \right]}{x^4} && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+\dfrac{3 \cdot x^4 +\neg 1\left[2 \cdot x^2 + 2 \cdot x \right]}{x^4} && \text{OOM} \eqref{eq:oom} \\
+\dfrac{3 \cdot x^4 + \neg 1 \cdot 2 \cdot x^2 +  \neg 1 \cdot 2 \cdot x }{x^4} && \text{DPE} \eqref{eq:dpe1} \\
+\dfrac{3 \cdot x^4 +\neg 2\cdot x^2  +  \neg 2 \cdot x}{x^4} && \text{OOM} \eqref{eq:oom} \\
+\dfrac{3x^4 +\neg 2x^2  +  \neg 2x}{x^4} && \text{CTJ} \eqref{eq:ctj} \\
+\dfrac{x \left(3x^3 +\neg 2x  +  \neg 2 \right)}{x^4} && \text{DPF} \eqref{eq:dpf2} \\ 
+\dfrac{x \left(3x^3 +\neg 2x  +  \neg 2 \right)}{x \cdot x^3} && \text{PrCBPo} \eqref{eq:prcbpo2} \\
+\dfrac{\cancel{x}\left(3x^3 +\neg 2x  +  \neg 2 \right)}{\cancel{x} \cdot x^3} && \text{MId} \eqref{eq:mid2} \\
+\dfrac{3x^3-2x^2-2}{x^3}
+\end{align*}
+\end{example}
+
+
+\end{document}
+
