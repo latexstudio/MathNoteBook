@@ -33,18 +33,20 @@ Find the vertex of the quadratic function, $f(x)=ax^2+bx+c$, using differentiati
 \farg{f(x)}' &= \farg{ax^2+bx+c}' && \text{SPE} \eqref{eq:spe} \\
 f'(x) &= \farg{ax^2}' + \farg{bx}' + \farg{c}' && \text{DS} \eqref{eq:ds1} \\
 f'(x) &= a\farg{x^2}' + b \farg{x}' + \farg{c}' && \text{DCM} \eqref{eq:dcm1} \\
-f'(x) &= a \cdot{x} + b \cdot 1 + c && \text{DPo} \eqref{eq:dpo1} \\
-f'(x) &= ax + b + \farg{c}'  &&\text{Todo simplify} \\
-f'(x) &= ax + b + 0 && \text{DC} \eqref{eq:dc1} \\
-f'(x) &= ax + b && \text{AId} \eqref{eq:aid2} \\
+f'(x) &= 2 \cdot a \cdot{x} + b \cdot 1 + \farg{c}' && \text{DPo} \eqref{eq:dpo1} \\
+f'(x) &= 2 \cdot a \cdot{x} + 1 \cdot b + \farg{c}' && \text{CPM} \eqref{eq:cpm} \\
+f'(x) &= 2ax + 1b+ \farg{c}' && \text{CTJ} \eqref{eq:ctj} \\
+f'(x) &= 2ax + b + \farg{c}' && \text{MId} \eqref{eq:mid2} \\
+f'(x) &= 2ax + b + 0 && \text{DC} \eqref{eq:dc1} \\
+f'(x) &= 2ax + b && \text{AId} \eqref{eq:aid2} \\
 \end{align*}
 
 2. Set the derivative equal to zero and solve for $x$.
 
 \begin{align*}
 f'(x) & = 0 \\
-ax + b &= 0  \\
-x &= -\frac{b}{a}  &&\text{Todo Solve}
+2ax + b &= 0  \\
+x &= -\frac{b}{2a}  \text{\, goto \,} \, \ref{20151015-104754}
 \end{align*}
 
 The abscissa of the vertex is $x=-\frac{b}{2a}$.
