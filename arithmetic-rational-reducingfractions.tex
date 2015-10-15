@@ -41,16 +41,17 @@ A fraction of the form $\frac{m}{n}$, where $n \ne 0$, is said to be in it's red
 
 \begin{figure}[!ht]
 \begin{center}
-\begin{tikzpicture}[scale=1, node distance=2cm, text width=6em,text centered, auto]
+\begin{tikzpicture}[scale=1, node distance=2cm, text width=3em,text centered, auto]
     % Place nodes
 \node [bluerbox, text width=9em] (gcd) {$\gcd{n,d}$};
-\node [redrbox, below right of = gcd] (reduced) {Reduced Fraction};
 \node [bluerbox, text width=9em, below left of = gcd](numerator) {$\frac{n}{\gcd(n,d)}$};
-\node [bluerbox, text width=9em, below of = numerator](numerator) {$\frac{d}{\gcd(n,d)}$};
+\node [redrbox, right of = numerator, text width=8em, node distance=4cm] (reduced) {Reduced Fraction};
+\node [bluerbox, text width=9em, below of = numerator](denominator) {$\frac{d}{\gcd(n,d)}$};
 
 \path [line] (gcd) edge [out=270, in=90] (numerator);
 \path [line] (gcd) edge [out=270, in=90] (reduced);
 \path [line] (denominator) edge [out=0, in=270] (reduced);
+\path [line] (numerator) -- (denominator);
 \end{tikzpicture}
 \end{center}
 \caption{Using the $\gcd(n,d)$ to reduce the fraction $\frac{n}{d}$ Workflow}
