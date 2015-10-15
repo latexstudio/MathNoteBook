@@ -14,8 +14,6 @@
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Derivative of a Monomial Functions}
 
-
-
 %-=-=-= EXAMPLE
 \begin{example}[id:20141124-153017] \label{20141124-153017}\index{Example!20141124-153017} \hfill \\
 
@@ -34,7 +32,6 @@ f'(x) &= 0 && \text{DC} \eqref{eq:dc1}
 \qdependlist
 
 example \ref{20141124-152503}-20141124-152503
-
 
 \end{example}
 
@@ -65,6 +62,7 @@ f'(x) & = 2x && \text{DPo} \eqref{eq:dpo1}
 
 \qdependlist
 
+example \ref{20141124-141850}-20141124-141850\\
 example \ref{20141124-152503}-20141124-152503
 
 
@@ -108,6 +106,28 @@ f(x) & = 2x^2 && \text{DPo} \eqref{eq:dpo1} \& \text{DC} \eqref{eq:dpo1}
 \qdependlist
 
 example \ref{20141124-205219}-20141124-205219
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151015-155838] \label{20151015-155838}\index{Example!20151015-155838} \hfill \\
+Differentiate $y=x^3+1$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\farg{y}' &= \farg{x^3+1} && \text{SPE} \eqref{eq:spe} \\
+y' &= [x^3]' + [1]' && \text{DS} \eqref{eq:ds1} \\
+y' &= 3x^2 + [1]' && \text{DPo} \eqref{eq:dpo1} \\
+y' &= 3x^2 + 0 && \text{DC} \eqref{eq:dc1} \\
+y' &= 3x^2 && \text{MId} \eqref{eq:mid2} 
+\end{align*}
+
+\qdepend
+
+\qdependlist
+example \ref{20151015-153507}-20151015-153507
 
 \end{example}
 
@@ -353,11 +373,65 @@ Differentiate $y=\left(x^2-1 \right) \ln(3x)$
 \solnsteps
 \begin{align*}
 y' &= \farg{x^2-3}' \cdot \ln x + \left(x^2-3\right) \cdot \farg{\ln 3x}' && \text{DPr} \eqref{eq:dpr1} \\
-y' &= 2x \cdot \ln x + \left(x^2-3\right) \cdot \farg{\ln 3x}' && \text{differentiate} \text{\, goto \,} \, \ref{20141124-152503} \\
-y' &= 2x \cdot \ln x + \left(x^2-3\right) \cdot \dfrac{1}{x}  &&\text{differentiate} \text{\, goto \,} \, \ref{20141124-203850}\\
+y' &= 2x \cdot \ln x + \left(x^2-3\right) \cdot \farg{\ln 3x}' &&  \text{\, differentiate goto \,} \, \ref{20141124-152503} \\
+y' &= 2x \cdot \ln x + \left(x^2-3\right) \cdot \dfrac{1}{x}  && \text{\, differentiate goto \,} \, \ref{20141124-203850}\\
 y' &= 2x \cdot \ln x + \dfrac{x^2-3}{x} && \text{OOM} \eqref{eq:oom} \\
 y' &= 2x^2 \ln x +\dfrac{x^2-3}{x} && \text{JTC} \eqref{eq:jtc} \\
 y' &= \dfrac{2x^2 \ln x + \left(x^2-3\right)}{x} && \text{OOA} \eqref{eq:ooa}
+\end{align*}
+\end{example}
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Derivative of a Quotient
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Derivative of a Quotient}\label{Derivative of a Quotient}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151015-165037] \label{20151015-165037}\index{Example!20151015-165037} \hfill \\
+Differentiate $y=\dfrac{\sin x}{e^x}$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\dfrac{\dd \farg{y}}{\dx} &= \dfrac{\dd \farg{\dfrac{\sin x}{e^x}}}{\dx} && \text{SPE} \eqref{eq:spe} \\
+\dydx &= \dfrac{\ddx \farg{\sin x} e^x - \sin x \ddx \farg{e^x}}{\farg{e^x}^2} && \text{DQ} \eqref{eq:dq1}\\
+\dydx &= \dfrac{\ddx \farg{\sin x} e^x - \sin x \ddx \farg{e^x}}{e^{2x}} && \text{PoPo} \eqref{eq:popo1} \\
+\dydx &= \dfrac{\cos x e^x - \sin x \ddx \farg{e^x}}{e^{2x}} && \text{DSin} \eqref{eq:dsin2} \\
+\dydx &= \dfrac{\cos x e^x - \sin x e^x}{e^{2x}} && \text{DExp} \eqref{eq:dexp2} \\
+\dydx &= \dfrac{e^x (\cos x - \sin x)}{e^{2x}} && \text{DPF} \eqref{eq:dpf2} \\
+\dydx &= \dfrac{e^x (\cos x - \sin x)}{e^xe^x} && \text{PrCBPo} \eqref{eq:prcbpo2} \\
+\dydx &= \dfrac{\cancel{e^x} (\cos x - \sin x)}{\cancel{e^x}e^x} && \text{MId} \eqref{eq:mid1} \\
+\dydx &= \dfrac{\cos x - \sin x}{e^x}
+\end{align*}
+\end{example}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Derivative of a Rational
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Derivative of a Rational Function}\label{Derivative of a Rational Function}
+
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151015-153507] \label{20151015-153507}\index{Example!20151015-153507} \hfill \\
+Differentiate $f(x)=\dfrac{x^3+1}{x^2}$
+
+\soln
+
+\solnsteps
+
+Method 1: Derivative of a quotient
+
+\begin{align*}
+\farg{f(x)}' &= \farg{\dfrac{x^3+1}{x^2}}' && \text{SPE} \eqref{eq:spe} \\
+f'(x) &= \dfrac{\farg{x^3+1}^\prime \left(x^2\right) + \neg 1 \left( \left(x^3+1 \right) \farg{x^2}' \right)}{\farg{x^2}^2} && \text{DQ} \eqref{eq:dq1} \\
+f'(x) &= \dfrac{(3x^2)(x^2) \neg 1 \left( \left(x^3+1 \right) \farg{x^2}' \right)}{\farg{x^2}^2} &&  \, \text{\, differentiate goto \,} \, \ref{20151015-155838} \\
+f'(x) &= \dfrac{(3x^2)(x^2) \neg 1 \left( \left(x^3+1 \right) (2x) \right)}{\farg{x^2}^2} &&  \, \text{\, differentiate goto \,} \, \ref{20141124-141850}
+f'(x) &= \dfrac{3x^3-2x^2-2}{x^3} && \text{Simplify \, goto \,} \, \ref{20151015-160832}
 \end{align*}
 \end{example}
 
