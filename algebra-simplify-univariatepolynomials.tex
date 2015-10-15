@@ -10,9 +10,10 @@
 \chapter{Simplifying Univariate Polynomials}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION: OPERATION OF ADDITION
+%	SECTION: Simplifying Univariate Monomials
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\section{Classification of Univariate Polynomial Expressions}\index{Classification of Univariate Polynomial Expressions}
+
+\section{Simplifying Degree 0 Univariate Monomials}\index{Simplifying Degree 0 Univariate Monomials}
 
 %-=-=-= DEFINITION
 \begin{definition}[Indeterminate]\index{Indeterminate}
@@ -30,6 +31,17 @@ An indeterminate is a symbol that is treated as a variable, but does not stand f
 \end{itemize}
 
 \hfill \cite{wikipedia:indeterminate}
+\end{definition}
+
+%-=-=-= DEFINITION
+\begin{definition}[Degree of the Indeterminate]\index{Degree of the Indeterminate}
+
+\[
+x^{\cRed{k}}
+\]
+The exponent of an indeterminate power, $\cRed{k}$ is called the degree of the indeterminate.
+
+\hfill \textcite{wikipedia:polynomial}
 \end{definition}
 
 
@@ -53,6 +65,25 @@ A univariate monomial is made up of two factors.  The first factor of a monomial
 
 \end{definition}
 
+Degree 0 univariate polynomial expressions are made up of univariate monomials, $\cBlue{C_{0}}$, called \alert{constants}.  The power identity is an indeterminate raised to a power of 0 has a value of 1.  Thus, $\cRed{x^{0}}=1$ and results in the monomial $\cBlue{C_{0}} \cdot 1$.  The canonical form of a product does not show the multiplicative identity factor, so what remains of this monomial product is only the coefficient factor $\cBlue{C_{0}}$ and from now on will be referred to as a \alert{constant}.
+
+Degree 0 univariate polynomial expressions are usually a monomial in their canonical form if $\cBlue{C_{0}}$ is a non-zero real number.  The exception is if $\cBlue{C_{0}}=0$, the additive identity, then the result is the zero polynomial, which can be considered a degree -1 polynomial.\\
+
+The expression can be manipulated into its monomial canonical form by simplifying the expression.  Simplifying the expression can be defined as evaluating the expression by following order of operations, which is the same as evaluating an arithmetic expression.
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20141121-093747] \label{20141121-093747}\index{Example!20141121-093747} \hfill \\
+
+Express $13x^0$ in canonical form.
+
+\soln
+
+\solnsteps
+\begin{align*}
+13 % TODO Add PowerID here.
+\end{align*}
+\end{example}
 
 
 %-=-=-= EXAMPLE
@@ -68,83 +99,22 @@ x^2 && \text{MId} \eqref{eq:mid2}
 \end{align*}
 \end{example}
 
-%-=-=-= DEFINITION
-\begin{definition}[Univariate Polynomial Expression]\index{Univariate Polynomial Expression}
-\begin{align}
-\sum\limits_{k=0}^n \cBlue{C_{k}}\cRed{x^{n}} & = \cBlue{C_{n}}\cRed{x^{n}}+\cBlue{C_{n-1}}\cRed{x^{n-1}}+ \cdots + \cBlue{C_{k}}\cRed{x^{k}} + \cdots + \cBlue{C_{2}}\cRed{x^{2}}+\cBlue{C_{1}}\cRed{x^{1}}+\underbrace{\cBlue{C_{0}}}_{\cBlue{C_{0}}\cRed{x^{0}}}
-\end{align}
-A univariate polynomial in an indeterminate $x$ is an expression made up of one or more summands of the form $\cBlue{C_{k}}\cRed{x^{k}}$, which are called monomials.  The first factor of each monomial, $\cBlue{C_{k}}$, is a numerical factor called the \cBlue{coefficient} where $\cBlue{C_{k}} \in \real$. The second factor of each monomial, $\cRed{x^{k}}$, is an indeterminate raised to a non-negative integer power $i$.
 
-\hfill \textcite{wikipedia:polynomial}
-\end{definition}
 
-%-=-=-= DEFINITION
-\begin{definition}[Degree of the Indeterminate]\index{Degree of the Indeterminate}
 
-\[
-x^{\cRed{k}}
-\]
-The exponent of an indeterminate power, $\cRed{k}$ is called the degree of the indeterminate.
 
-\hfill \textcite{wikipedia:polynomial}
-\end{definition}
-
-%-=-=-= DEFINITION
-\begin{definition}[Degree of the Univaritate Polynomial]\index{Degree of the Univariate Polynomial}
-
-\[
-C_{n}x^{\cRed{n}}+C_{n-1}x^{n-1}+ \cdots + C_{k}x^{k} + \cdots + C_{2}x^{2}+C_{1}x^{1}+\underbrace{C_{0}}_{C_{0}x^{0}}
-\]
-
-The degree of the univariate polynomial is determined by the monomial with the largest degree of the indeterminate.
-
-%\hfill \cite{mathworld:algebraicexpression}
-\end{definition}
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\section{Degree -1 Univariate Polynomials}\index{Degree -1 Univariate Polynomials}
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection*{Monomials}
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SECTION:
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\section{Degree 0 Univariate Polynomials}\index{Degree 0 Univariate Polynomials}
-
-% TODO Define the PowerID
 
 \[
 \cDarkGrey{C_{n}x^{n}+C_{n-1}x^{n-1}+ \cdots + C_{k}x^{k} + \cdots + C_{2}x^{2}+C_{1}x^{1}+}\underbrace{\cBlue{C_{0}}}_{\cBlue{C_{0}}\cRed{x^{0}}}
 \]
 
-Degree 0 univariate polynomial expressions are made up of univariate monomials, $\cBlue{C_{0}}$, called \alert{constants}.  The power identity is an indeterminate raised to a power of 0 has a value of 1.  Thus, $\cRed{x^{0}}=1$ and results in the monomial $\cBlue{C_{0}} \cdot 1$.  The canonical form of a product does not show the multiplicative identity factor, so what remains of this monomial product is only the coefficient factor $\cBlue{C_{0}}$ and from now on will be referred to as a \alert{constant}.
 
-%-=-=-= EXAMPLE
-\begin{example}[id:20141121-093747] \label{20141121-093747}\index{Example!20141121-093747} \hfill \\
-
-Express $13x^0$ in canonical form.
-
-\soln
-
-\solnsteps
-\begin{align*}
-13 % TODO Add PowerID here.
-\end{align*}
-\end{example}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	SUBSECTION:
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \subsection*{Monomials}
 
-Degree 0 univariate polynomial expressions are usually a monomial in their canonical form if $\cBlue{C_{0}}$ is a non-zero real number.  The exception is if $\cBlue{C_{0}}=0$, the additive identity, then the result is the zero polynomial, which can be considered a degree -1 polynomial.\\
-
-The expression can be manipulated into its monomial canonical form by simplifying the expression.  Simplifying the expression can be defined as evaluating the expression by following order of operations, which is the same as evaluating an arithmetic expression.
 
 % TODO Add reference to evaluating arithmetic expressions.
 
@@ -1307,6 +1277,28 @@ Simplify $\left(2-\dfrac{x}{2} \right)^2$ by expanding.
 %	SECTION:
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Degree $n$ Univariate Polynomials}\index{Degree $n$ Univariate Polynomials}
+
+%-=-=-= DEFINITION
+\begin{definition}[Univariate Polynomial Expression]\index{Univariate Polynomial Expression}
+\begin{align}
+\sum\limits_{k=0}^n \cBlue{C_{k}}\cRed{x^{n}} & = \cBlue{C_{n}}\cRed{x^{n}}+\cBlue{C_{n-1}}\cRed{x^{n-1}}+ \cdots + \cBlue{C_{k}}\cRed{x^{k}} + \cdots + \cBlue{C_{2}}\cRed{x^{2}}+\cBlue{C_{1}}\cRed{x^{1}}+\underbrace{\cBlue{C_{0}}}_{\cBlue{C_{0}}\cRed{x^{0}}}
+\end{align}
+A univariate polynomial in an indeterminate $x$ is an expression made up of one or more summands of the form $\cBlue{C_{k}}\cRed{x^{k}}$, which are called monomials.  The first factor of each monomial, $\cBlue{C_{k}}$, is a numerical factor called the \cBlue{coefficient} where $\cBlue{C_{k}} \in \real$. The second factor of each monomial, $\cRed{x^{k}}$, is an indeterminate raised to a non-negative integer power $i$.
+
+\hfill \textcite{wikipedia:polynomial}
+\end{definition}
+
+%-=-=-= DEFINITION
+\begin{definition}[Degree of the Univaritate Polynomial]\index{Degree of the Univariate Polynomial}
+
+\[
+C_{n}x^{\cRed{n}}+C_{n-1}x^{n-1}+ \cdots + C_{k}x^{k} + \cdots + C_{2}x^{2}+C_{1}x^{1}+\underbrace{C_{0}}_{C_{0}x^{0}}
+\]
+
+The degree of the univariate polynomial is determined by the monomial with the largest degree of the indeterminate.
+
+%\hfill \cite{mathworld:algebraicexpression}
+\end{definition}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	SUBSECTION:
