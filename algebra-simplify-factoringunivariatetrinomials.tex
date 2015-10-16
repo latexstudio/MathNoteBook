@@ -1,0 +1,127 @@
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapter{Factoring Univariate Trinomials}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151015-184212] \label{20151015-184212}\index{Example!20151015-184212} \hfill \\
+Simplify by factoring $x^2+7x+12$
+
+\soln
+
+\solnsteps
+
+
+
+Using the distributive property organizer\\
+
+The factors of $(x^2+7x+12)$ are $(\cRed{x}+\cBlue{3})(\cRed{x}+\cBlue{4})$
+
+\begin{align*}
+1x^2+7x+12 && \text{MId} \eqref{eq:mid1}  
+\end{align*}
+
+\begin{tikzpicture}[scale=1, auto]
+
+% Place nodes
+
+\node[firstterm](11){$1x$}; \node[factoradd,right=of 11](plus1){$+$}; \node[secondterm, right=of plus1](12){$3$};
+\node[firstterm, below=of 11](21){$1x$}; \node[factoradd,right=of 21](plus2){$+$}; \node[secondterm, right=of plus2](22){$4$};
+
+\node[multiply, below=of 21](31){$1x^2$};
+\node[multiply, below=of 22](32){$7x$};
+
+\node[multiply, right=of 12](13){$3x$};
+\node[multiply, right=of 22](23){$4x$};
+
+\node[add, below=of 23](33){$12$};
+
+\path [line](11) edge[bend right=30]node[color=black, midway, left]{$\times$}(21);
+\path [line](12) edge[bend left=30]node[color=black, midway, right]{$\times$}(22);
+\path [line](21)--(31);
+
+\path [line](21) edge[bend left=30]node[color=black, pos=0.4, below]{$\times$}(12);
+\path [line](11) edge[bend right=30](22);
+\path [line](22)--(32);
+
+\path [line](12)--(13);
+\path [line](22)--(23);
+
+\path [line](13)--node[color=black, midway, right]{$+$}(23);
+\path [line](23)--(33);
+
+\end{tikzpicture}
+
+\begin{align*}
+(1x+3)(1x+4)\\
+(x+3)(x+4) && \text{MId} \eqref{eq:mid2} 
+\end{align*}
+\end{example}
+
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151016-063338] \label{20151016-063338}\index{Example!20151016-063338} \hfill \\
+
+Simplify by factoring $x^2+x-2$
+
+\soln
+
+\solnsteps
+
+Using the distributive property organizer\\
+
+The factors of $(x^2+x-2)$ are $(\cRed{x}+\cBlue{2})(\cRed{x}-\cBlue{1})$\\
+
+\begin{align*}
+1x^2+1x-2 && \text{AId} \eqref{eq:aid1} \\
+1x^2+1x+\neg 2 && \text{DOS} \eqref{eq:dos1} \\
+\end{align*}
+
+\begin{tikzpicture}[scale=1, auto]
+
+% Place nodes
+
+\node[firstterm](11){$1x$}; \node[factoradd,right=of 11](plus1){$+$}; \node[secondterm, right=of plus1](12){$2$};
+\node[firstterm, below=of 11](21){$1x$}; \node[factoradd,right=of 21](plus2){$+$}; \node[secondterm, right=of plus2](22){$-1$};
+
+\node[multiply, below=of 21](31){$1x^2$};
+\node[multiply, below=of 22](32){$\neg 2$};
+
+\node[multiply, right=of 12](13){$2x$};
+\node[multiply, right=of 22](23){$\neg 1 x$};
+
+\node[add, below=of 23](33){$1x$};
+
+\path [line](11) edge[bend right=30]node[color=black, midway, left]{$\times$}(21);
+\path [line](12) edge[bend left=30]node[color=black, midway, right]{$\times$}(22);
+\path [line](21)--(31);
+
+\path [line](21) edge[bend left=30]node[color=black, pos=0.4, below]{$\times$}(12);
+\path [line](11) edge[bend right=30](22);
+\path [line](22)--(32);
+
+\path [line](12)--(13);
+\path [line](22)--(23);
+
+\path [line](13)--node[color=black, midway, right]{$+$}(23);
+\path [line](23)--(33);
+
+\end{tikzpicture}
+
+\begin{align*}
+(1x+2)(1x + \neg 1) \\
+(1x+2)(1x-1) && \text{MId} \eqref{eq:mid2} \\
+(x+2)(x-1) && \text{MId} \eqref{eq:mid2}  
+\end{align*}
+
+
+\end{example}
+
+\end{document}
+
