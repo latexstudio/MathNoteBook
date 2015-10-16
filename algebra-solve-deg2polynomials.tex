@@ -70,7 +70,7 @@ Using the factor orgnanizer,
 \path [line](12) edge[bend left=30]node[color=black,, midway, right]{$\times$}(22);
 \path [line](21)--(31);
 
-\path [line](21) edge[bend left=30]node[color=black, pos=0.4, below]{$\times$}(12);
+\path [line](21) edge[bend left=30]node[color=black, pos=0.37, below]{$\times$}(12);
 \path [line](11) edge[bend right=30](22);
 \path [line](22)--(32);
 
@@ -112,10 +112,10 @@ example \ref{20151012-190708}-20151012-190708
 %	SECTION:
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Completing The Square}\index{Solving Quadratic Equations! Completing the Square}
-Completing the square is an algebraic algorithm used to find the solutions of quadratic equations of the form, $ax^2+bx+c=0$.   Essentially, we want to manipulate this equation such that $x=\text{some values}$.  To gain some understanding of how this algorithm works, we will consider each step individually.  Let's begin with a quadratic equation in the general form: $ax^2+bx+c=0$.\\
 
-Since we are trying to manipulate the equation  $ax^2+bx+c=0$ such that $x=\text{some value}$, we first want the coefficient factor $a$ to be equal to 1.  This is done by multiplying both expressions by the multiplicative inverse of $a$ (step 1) followed by simplifying both expressions.
+Completing the square is an algebraic process used to find the roots of quadratic equations of the form, $ax^2+bx+c=0$.   Essentially, we want to manipulate this equation such that $x=\text{some value}$.  Let's begin with a quadratic equation in the general form: $ax^2+bx+c=0$.\\
 
+Since we are trying to manipulate the equation  $ax^2+bx+c=0$ such that $x=\text{some value}$, we first want the coefficient factor $a$ to be equal to 1.
 
 \begin{align*}
 \dfrac{1}{a} \farg{ax^2 + bx +c} & = \dfrac{1}{a} \farg{0} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
@@ -125,142 +125,144 @@ x^2 + \dfrac{b}{a} \cdot x + \dfrac{c}{a} & = 0 && \text{OOM} \eqref{eq:oom} \\
 x^2 +\dfrac{b}{a}x + \dfrac{c}{a}  & = 0 && \text{CTJ} \eqref{eq:ctj}
 \end{align*}
 
-We now have three terms in the left hand expression where the first two terms have at least one variable factor, $x$.  The problem is that the third term is a constant and we want $x=\text{some value}$.  This text step is to get rid of the $\dfrac{c}{a}$ term, which can be done by using the additive inverse followed by simplifying both expressions.\\
+We now have three summands in the left hand expression where the first two summands have $x^2$ and $x$ terms respectively.  The goal is to have $x=\text{some value}$, so the next step is focused on removing the  $\dfrac{c}{a}$ summand.\\
 
 \begin{align*}
-\left[x^2 +\dfrac{b}{a}x + \dfrac{c}{a} \right]  + \neg \dfrac{c}{a}  & = \left[ 0 \right]   + \neg \dfrac{c}{a} && && \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
-x^2 +\dfrac{b}{a}x + \dfrac{c}{a} + \neg \dfrac{c}{a}  & = 0  + \neg \dfrac{c}{a} && && \text{APA} \eqref{eq:apa1} \\
-x^2 +\dfrac{b}{a}x  & = \neg \dfrac{c}{a} && \text{OOA} \eqref{eq:ooa} \\
+\farg{x^2 +\dfrac{b}{a}x + \dfrac{c}{a}}  + \neg \dfrac{c}{a}  & = \farg{ 0 } + \neg \dfrac{c}{a} &&  \text{SPE} \eqref{eq:spe} + \text{AI} \eqref{eq:ai} \\
+x^2 +\dfrac{b}{a}x + \left(\dfrac{c}{a} + \neg \dfrac{c}{a} \right)  & = 0  + \neg \dfrac{c}{a} && \text{APA} \eqref{eq:apa1} \\
+x^2 +\dfrac{b}{a}x + 0 & = \neg \dfrac{c}{a} && \text{OOA} \eqref{eq:ooa} \\
+x^2 +\dfrac{b}{a}x & = \neg \dfrac{c}{a} && \text{AId} \eqref{eq:aid2} 
 \end{align*}
 
+The next step is called completing the square - the creative step.  The idea is to add a \textit{NeW} constant, $\color{sthlmRed}k$, to the left-hand expression, $x^2 +\frac{b}{a}x+\color{sthlmRed}k$,  such that the quadratic expression can then be factored as two identical factors, $({\color{sthlmBlue}x}+{\color{sthlmRed}m})({\color{sthlmBlue}x}+{\color{sthlmRed}m}) = ({\color{sthlmBlue}x}+{\color{sthlmRed}m})^2$, where  ${{\color{sthlmRed}k}=\color{sthlmRed}m} \cdot {\color{sthlmRed}m}$.  
 
+\begin{figure}[h!]
+\begin{center}
+\begin{tikzpicture}[scale=1, auto]
 
-The next step is called completing the square.  The idea is to add a \textit{NeW} constant, $\color{sthlmRed}k$, to the left-hand expression, $x^2 +\dfrac{b}{a}x+\color{sthlmRed}k$,  such that the quadratic expression can then be factored as two identical factors, $({\color{sthlmBlue}x}+{\color{sthlmRed}m})({\color{sthlmBlue}x}+{\color{sthlmRed}m}) = ({\color{sthlmBlue}x}+{\color{sthlmRed}m})^2$, where  ${{\color{sthlmRed}k}=\color{sthlmRed}m} \cdot {\color{sthlmRed}m}$.  Notice that since we are adding a constant term, $\color{sthlmRed}k$, to the left-hand expression, then we must also add this constant, ${\color{sthlmRed}k}$, to the right-hand expression, $x^2 +\dfrac{b}{a}x+{\color{sthlmRed}k} = \neg \dfrac{c}{a}+{\color{sthlmRed}k}$.  To determine the values of both ${\color{sthlmRed}m}$ and ${\color{sthlmRed}k}$ we should refer to the the organization of the two factors that make up the product of a quadratic expression, $x^2 +\dfrac{b}{a}x+{\color{sthlmRed}k}= ({\color{sthlmBlue}x}+{\color{sthlmRed}m})^2$.\\
+% Place nodes
 
-%\begin{figure}[htbp]
-%\begin{center}
-%\begin{tikzpicture}[description/.style={fill=white, inner sep=2pt}]
-%	\matrix (m) [matrix of math nodes, row sep=3em,
-%	column sep=2.5em, text height=1.5ex, text depth=0.25ex]
-%	{\textcolor{sthlmBlue}{x} 	&&	\textcolor{sthlmRed}{m} &	\textcolor{sthlmRed}{m}\textcolor{sthlmBlue}{x} \\
-%	 \textcolor{sthlmBlue}{x}	&&	\textcolor{sthlmRed}{m}  & \textcolor{sthlmRed}{m}\textcolor{sthlmBlue}{x} \\
-%	 \underbrace{\textcolor{sthlmBlue}{x \cdot x}}_{\text{1st Term}} && \underbrace{\textcolor{sthlmRed}{k}}_{\text{Last Term}} & \underbrace{\dfrac{b}{a}x}_{\text{Middle Terms}}\\};
-%	\path[->, font=\scriptsize]
-%	(m-1-1) 	edgenode[description] {$\times$} (m-2-3)
-%			edge  node[description] {$\times$} (m-2-1)
-%	(m-2-1)	edge  node[description] {$\times$} (m-1-3)
-%	(m-1-3)	edge  (m-1-4)
-%	(m-2-3)	edge (m-2-4)
-%	(m-1-4)	edge node[description] {$+$}(m-2-4)
-%	(m-2-1)	edge  (m-3-1)
-%	(m-2-3)	edge  (m-3-3)
-%	(m-2-4)	edge  (m-3-4)
-%	(m-1-3)	edge  node[description] {$\times$} (m-2-3);
-%\end{tikzpicture}
+\node[firstterm](11){$x$}; \node[factoradd,right=of 11](plus1){$+$}; \node[secondterm, right=of plus1](12){$m$};
+\node[firstterm, below=of 11](21){$x$}; \node[factoradd,right=of 21](plus2){$+$}; \node[secondterm, right=of plus2](22){$m$};
 
-%\caption{The Organization of the Distributive Property}
-%\end{center}
-%\end{figure}
+\node[multiply, below=of 21](31){$x^2$};
+\node[multiply, below=of 22](32){$k$};
 
-Since both factors of this new quadratic expression are the same, both terms that make up the middle term,  must also be the same.  We know that ${\color{sthlmRed}m}{\color{sthlmBlue}x} + {\color{sthlmRed}m}{\color{sthlmBlue}x}=\dfrac{b}{a}x$, so we should be able to determine the value of ${\color{sthlmRed}m}$ from this equation.    If we can determine the value of ${\color{sthlmRed}m}$, then we can determine the value of  ${\color{sthlmRed}k}$.
+\node[multiply, right=of 12](13){$mx$};
+\node[multiply, right=of 22](23){$mx$};
+
+\node[add, below=of 23](33){$2m x$};
+
+\path [line](11) edge[bend right=30]node[color=black, midway, left]{$\times$}(21);
+\path [line](12) edge[bend left=30]node[color=black, midway, right]{$\times$}(22);
+\path [line](21)--(31);
+
+\path [line](21) edge[bend left=30]node[color=black, pos=0.37, below]{$\times$}(12);
+\path [line](11) edge[bend right=30](22);
+\path [line](22)--(32);
+
+\path [line](12)--(13);
+\path [line](22)--(23);
+
+\path [line](13)--node[color=black, midway, right]{$+$}(23);
+\path [line](23)--(33);
+
+\end{tikzpicture}
+\caption{The Organization of the Distributive Property}
+\end{center}
+\end{figure}
+
+Adding $\cRed{k}$ to the right-hand expression is a consequence of adding $\cRed{k}$ to the left-hand expression to get what we want (a perfect square), $\farg{x^2 +\frac{b}{a}x}+\cRed{k} = \farg{\neg \frac{c}{a}}+\cRed{k}$.  
+
+To determine the values of both $\cRed{m}$ and $\cRed{k}$ we should refer to the the organisation of the two factors, $(\cBlue{x}+\cRed{m})^2$, that make up the product of the quadratic expression, $x^2 +\frac{b}{a}x+\cRed{k}$.\\
+
+Since both factors of this new quadratic expression are the same, both terms that make up the middle term,  must also be the same.  We know that $\cRed{m}\cBlue{x} + \cRed{m}\cBlue{x}=\dfrac{b}{a}x$, so we should be able to determine the value of $\cRed{m}$ from this equation.    If we can determine the value of $\cRed{m}$, then we can determine the value of  $\cRed{k}$.
 
 \begin{align*}
-\dfrac{b}{a}x 	& = \textcolor{sthlmRed}{m}\textcolor{sthlmBlue}{x} + \textcolor{sthlmRed}{m}\textcolor{sthlmBlue}{x}\\
-		& = 2mx && \text{OOA} \eqref{eq:ooa} \\
+\dfrac{b}{a}x 	& = \cRed{m}\cBlue{x} + \cRed{m}\cBlue{x}\\
+				& = 2mx && \text{OOA} \eqref{eq:ooa} 
 \end{align*}
 
 Solving for $m$,
 
 \begin{align*}
 2mx & = \dfrac{b}{a}x \\
-2 \cdot m \cdot x &= \dfrac{b}{a} \cdot x  && \text{JTC} \eqref{eq:jtc} \\
-\dfrac{1}{2} \left[2 \cdot m \cdot x \right] &= \dfrac{1}{2} \left[\dfrac{b}{a} \cdot x \right]  && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
-m \cdot  x &= \dfrac{b}{2a} \cdot x  && \text{OOM} \eqref{eq:oom} \\
-\left[m \cdot x \right]\dfrac{1}{x}  &= \left[\dfrac{b}{2a}  \cdot x\right] \dfrac{1}{x}  && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
-m &= \dfrac{b}{2a}  && \text{OOM} \eqref{eq:oom}
+\dfrac{1}{2} \farg{2mx} &= \dfrac{1}{2} \farg{\dfrac{b}{a}x }  && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
+\left(\dfrac{1}{2} \cdot 2 \right)mx &= \left(\dfrac{1}{2} \dfrac{b}{a} \right)x && \text{APA} \eqref{eq:apa1} \\ 
+1mx &= \dfrac{b}{2a}x  && \text{OOM} \eqref{eq:oom} \\
+mx &= \dfrac{b}{2a}x && \text{MId} \eqref{eq:mid2} \\
+\farg{mx}\dfrac{1}{x}  &= \farg{\dfrac{b}{2a}x} \dfrac{1}{x}  && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
+m \left(x \cdot \dfrac{1}{x}\right)  &= \dfrac{b}{2a}\left(x \cdot \dfrac{1}{x}\right) && \text{APM} \eqref{eq:apm2} \\ 
+m \cdot 1 &= \dfrac{b}{2a} \cdot 1  && \text{OOM} \eqref{eq:oom}\\
+m &= \dfrac{b}{2a} && \text{MId} \eqref{eq:mid2} 
 \end{align*}
 
+\begin{figure}[h!]
+\begin{center}
+\begin{tikzpicture}[scale=1, auto]
 
-%\begin{figure}[htbp]
-%\begin{center}
-%\begin{tikzpicture}[description/.style={fill=white, inner sep=2pt}]
-%	\matrix (m) [matrix of math nodes, row sep=3em,
-%	column sep=2.5em, text height=1.5ex, text depth=0.25ex]
-%	{\textcolor{sthlmBlue}{x} 	&&	\textcolor{sthlmRed}{m} &	\dfrac{b}{2a} \cdot x   \\
-%	 \textcolor{sthlmBlue}{x}	&&	\textcolor{sthlmRed}{m}  &  \dfrac{b}{2a} \cdot x  \\
-%	 \underbrace{\textcolor{sthlmBlue}{x \cdot x}}_{\text{1st Term}} && \underbrace{\textcolor{sthlmRed}{k}}_{\text{Last Term}} & \underbrace{\dfrac{b}{a} x}_{\text{Middle Terms}}\\};
-%	\path[->, font=\scriptsize]
-%	(m-1-1) 	edge node[description] {$\times$} (m-2-3)
-%			edge  node[description] {$\times$} (m-2-1)
-%	(m-2-1)	edge  node[description] {$\times$} (m-1-3)
-%	(m-1-3)	edge  (m-1-4)
-%	(m-2-3)	edge (m-2-4)
-%	(m-1-4)	edge node[description] {$+$}(m-2-4)
-%	(m-2-1)	edge  (m-3-1)
-%	(m-2-3)	edge  (m-3-3)
-%	(m-2-4)	edge  (m-3-4)
-%	(m-1-3)	edge  node[description] {$\times$} (m-2-3);
-%\end{tikzpicture}
+% Place nodes
 
-%\caption{We now have the two terms, $\dfrac{b}{2a}x$ that make up the sum of the middle term $\dfrac{b}{a}x$}
-%\end{center}
-%\end{figure}
+\node[firstterm](11){$x$}; \node[factoradd,right=of 11](plus1){$+$}; \node[secondterm, right=of plus1](12){$\frac{b}{2a}$};
+\node[firstterm, below=of 11](21){$x$}; \node[factoradd,right=of 21](plus2){$+$}; \node[secondterm, right=of plus2](22){$\frac{b}{2a}$};
 
-%\newpage
-%\begin{figure}[htbp]
-%\begin{center}
-%\begin{tikzpicture}[description/.style={fill=white, inner sep=2pt}]
-%	\matrix (m) [matrix of math nodes, row sep=3em,
-%	column sep=2.5em, text height=1.5ex, text depth=0.25ex]
-%	{\textcolor{sthlmBlue}{x} 	&&	\textcolor{sthlmRed}{b/2a}	& x \cdot b/2a \\
-%	 \textcolor{sthlmBlue}{x}	&&	\textcolor{sthlmRed}{b/2a}  & x \cdot b/2a\\
-%	 \underbrace{\textcolor{sthlmBlue}{x \cdot x}}_{\text{1st Term}} && \underbrace{\textcolor{sthlmRed}{(b/2a)^2}}_{\text{Last Term}} & %\underbrace{bx/a}_{\text{Middle Terms}}\\};
-%	\path[->, font=\scriptsize]
-%	(m-1-1) 	edge node[description] {$\times$} (m-2-3)
-%			edge  node[description] {$\times$} (m-2-1)
-%	(m-2-1)	edge  node[description] {$\times$} (m-1-3)
-%	(m-1-3)	edge  (m-1-4)
-%	(m-2-3)	edge (m-2-4)
-%	(m-1-4)	edge node[description] {$+$}(m-2-4)
-%	(m-2-1)	edge  (m-3-1)
-%	(m-2-3)	edge  (m-3-3)
-%	(m-2-4)	edge  (m-3-4)
-%	(m-1-3)	edge  node[description] {$\times$} (m-2-3);
-%\end{tikzpicture}
+\node[multiply, below=of 21](31){$x^2$};
+\node[multiply, below=of 22](32){$\frac{b^2}{4a}$};
 
-%\caption{Doing reverse Cross-Check, we find the second term of both factors to be $\dfrac{b}{2a}$ and the  third term to be $\left( \dfrac{b}{2a} \right)^2$.}
-%\end{center}
-%\end{figure}
+\node[multiply, right=of 12](13){$\frac{b}{2a}x$};
+\node[multiply, right=of 22](23){$\frac{b}{2a}x$};
+
+\node[add, below=of 23](33){$\frac{b}{a}x$};
+
+\path [line](11) edge[bend right=30]node[color=black, midway, left]{$\times$}(21);
+\path [line](12) edge[bend left=30]node[color=black, midway, right]{$\times$}(22);
+\path [line](21)--(31);
+
+\path [line](21) edge[bend left=30]node[color=black, pos=0.37, below]{$\times$}(12);
+\path [line](11) edge[bend right=30](22);
+\path [line](22)--(32);
+
+\path [line](12)--(13);
+\path [line](22)--(23);
+
+\path [line](13)--node[color=black, midway, right]{$+$}(23);
+\path [line](23)--(33);
+
+\end{tikzpicture}
+\caption{The Organization of the Distributive Property}
+\end{center}
+\end{figure}
 
 \begin{align*}
-\left[x^2+\dfrac{b}{a}x \right]+\left( \dfrac{b}{2a} \right)^2 &= \left[\neg \dfrac{c}{a}\right] + \left( \dfrac{b}{2a} \right)^2 && \text{SPE} \eqref{eq:spe} \\
-x^2+\dfrac{b}{a}x +\left( \dfrac{b}{2a} \right)^2 &= \neg \dfrac{c}{a}+ \left( \dfrac{b}{2a} \right)^2 && \text{APA} \eqref{eq:apa2} \\
+\farg{x^2+\dfrac{b}{a}x}+\left( \dfrac{b}{2a} \right)^2 &= \farg{\neg \dfrac{c}{a}} + \left( \dfrac{b}{2a} \right)^2 && \text{SPE} \eqref{eq:spe}+ \text{Completing the Square} \\
+x^2+\dfrac{b}{a}x +\left( \dfrac{b}{2a} \right)^2 &= \neg \dfrac{c}{a}+ \left( \dfrac{b}{2a} \right)^2 && \text{APA} \eqref{eq:apa1} \\
 \left( x+ \dfrac{b}{2a} \right) \left( x+ \dfrac{b}{2a} \right)& = \neg \dfrac{c}{a} + \left( \dfrac{b}{2a} \right)^2 && \text{DPF} \eqref{eq:dpf2} \\
 \left( x+ \dfrac{b}{2a} \right)^2 &=\neg \dfrac{c}{a} + \left( \dfrac{b}{2a} \right)^2 && \text{PoTF} \eqref{eq:potf} \\
 \left( x+ \dfrac{b}{2a} \right)^2 &=\neg \dfrac{c}{a} +  \dfrac{\left(b \right)^2}{\left(2a \right)^2}  && \text{PoQPo} \eqref{eq:poqpo1} \\
-\left( x+ \dfrac{b}{2a} \right)^2 &=\neg \dfrac{c}{a} +  \dfrac{b^2}{2^2a^2} && \text{PoPrPo}\\
-\left( x+ \dfrac{b}{2a} \right)^2 &=\neg \dfrac{c}{a} +  \dfrac{b^2}{4a^2} && \text{OOE}\\
-\left( x+ \dfrac{b}{2a} \right)^2 &=\neg \dfrac{c}{a} \cdot {\color{sthlmRed}\dfrac{4a}{4a}} +  \dfrac{b^2}{4a^2}  && \text{MId}\\
-\left( x+ \dfrac{b}{2a} \right)^2 &=\neg \dfrac{c \cdot 4 \cdot a}{a \cdot 4 \cdot a} +  \dfrac{b^2}{4a^2}  && \text{JTC}\\
-\left( x+ \dfrac{b}{2a} \right)^2 &=\neg \dfrac{4 \cdot a \cdot c}{4 \cdot a \cdot a} +  \dfrac{b^2}{4a^2}  && \text{CPM}\\
-\left( x+ \dfrac{b}{2a} \right)^2 &=\neg \dfrac{4 \cdot a \cdot c}{4 \cdot a^2} +  \dfrac{b^2}{4a^2}  && \text{PrCBPo}\\
-\left( x+ \dfrac{b}{2a} \right)^2 &=\neg \dfrac{4 a c}{4a^2} +  \dfrac{b^2}{4a^2}  && \text{CTJ}\\
-\left( x+ \dfrac{b}{2a} \right)^2 &= \dfrac{\neg 4ac+b^2}{4a^2} && \text{CD}\\
-\left( x+ \dfrac{b}{2a} \right)^2 &= \dfrac{b^2+ \neg 4ac}{4a^2} && \text{CPA}\\
+\left( x+ \dfrac{b}{2a} \right)^2 &=\neg \dfrac{c}{a} +  \dfrac{b^2}{2^2a^2} && \text{PoPrPo} \eqref{eq:poprpo1} \\
+\left( x+ \dfrac{b}{2a} \right)^2 &=\neg \dfrac{c}{a} +  \dfrac{b^2}{4a^2} && \text{OOE} \eqref{eq:ooe} \\
+\left( x+ \dfrac{b}{2a} \right)^2 &=\neg \dfrac{c}{a} \cdot {\color{sthlmRed}\dfrac{4a}{4a}} +  \dfrac{b^2}{4a^2}  && \text{MId} \eqref{eq:mid1} \\
+\left( x+ \dfrac{b}{2a} \right)^2 &=\neg \dfrac{c \cdot 4 \cdot a}{a \cdot 4 \cdot a} +  \dfrac{b^2}{4a^2} && \text{JTC} \eqref{eq:jtc} \\
+\left( x+ \dfrac{b}{2a} \right)^2 &=\neg \dfrac{4 \cdot a \cdot c}{4 \cdot a \cdot a} +  \dfrac{b^2}{4a^2}  && \text{CPM} \eqref{eq:cpm} \\
+\left( x+ \dfrac{b}{2a} \right)^2 &=\neg \dfrac{4 \cdot a \cdot c}{4 \cdot a^2} +  \dfrac{b^2}{4a^2} && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+\left( x+ \dfrac{b}{2a} \right)^2 &=\neg \dfrac{4 a c}{4a^2} +  \dfrac{b^2}{4a^2} && \text{CTJ} \eqref{eq:ctj} \\
+\left( x+ \dfrac{b}{2a} \right)^2 &= \dfrac{\neg 4ac+b^2}{4a^2} && \text{CD} \eqref{eq:cd1} \\
+\left( x+ \dfrac{b}{2a} \right)^2 &= \dfrac{b^2+ \neg 4ac}{4a^2} && \text{CPM} \eqref{eq:cpm} \\
+\farg{\left( x+ \dfrac{b}{2a} \right)^2}^{\frac{1}{2}} &=\pm \farg{\dfrac{b^2+ \neg 4ac}{4a^2}}^{\frac{1}{2}} && \text{SPE} \eqref{eq:spe} \\
+ x+ \dfrac{b}{2a}  &=\pm \left[\dfrac{b^2+ \neg 4ac}{4a^2}\right]^{\frac{1}{2}} && \text{PoPrPo} \eqref{eq:poprpo1} \\
+x+ \dfrac{b}{2a}  &=\pm \dfrac{\left[b^2+ \neg 4ac \right]^{\frac{1}{2}}}{\left[4a^2\right]^{\frac{1}{2}}} && \text{PoQPo} \eqref{eq:poqpo1} \\
+x+ \dfrac{b}{2a}  &=\pm \dfrac{\left[b^2+ \neg 4ac \right]^{\frac{1}{2}}}{4^{\frac{1}{2}} a} && \text{PoPrPo} \eqref{eq:poprpo1} \\
+x_{\small{1,2}}+ \dfrac{b}{2a}  &=\pm \dfrac{\left[b^2+ \neg 4ac \right]^{\frac{1}{2}}}{2a} && \text{OOE} \eqref{eq:ooe} \\
 \displaybreak
-\left[\left( x+ \dfrac{b}{2a} \right)^2\right]^{\frac{1}{2}} &=\pm \left[\dfrac{b^2+ \neg 4ac}{4a^2}\right]^{\frac{1}{2}} && \text{PoI}\\
- x+ \dfrac{b}{2a}  &=\pm \left[\dfrac{b^2+ \neg 4ac}{4a^2}\right]^{\frac{1}{2}} && \text{PoPrPo}\\
-x+ \dfrac{b}{2a}  &=\pm \dfrac{\left[b^2+ \neg 4ac \right]^{\frac{1}{2}}}{\left[4a^2\right]^{\frac{1}{2}}} && \text{PoQPo}\\
-x+ \dfrac{b}{2a}  &=\pm \dfrac{\left[b^2+ \neg 4ac \right]^{\frac{1}{2}}}{4^{\frac{1}{2}} a} && \text{PoPrPo}\\
-x+ \dfrac{b}{2a}  &=\pm \dfrac{\left[b^2+ \neg 4ac \right]^{\frac{1}{2}}}{2a} && \text{OOE}\\
-\left[x+ \dfrac{b}{2a}\right] +  \neg   \dfrac{b}{2a} &= \left[\pm\dfrac{\left[b^2+ \neg 4ac \right]^{\frac{1}{2}}}{2a}\right] + \neg \dfrac{b}{2a} && \text{AI}\\
-x+ \dfrac{b}{2a} +  \neg   \dfrac{b}{2a} &= \pm\dfrac{\left[b^2+ \neg 4ac \right]^{\frac{1}{2}}}{2a} + \neg \dfrac{b}{2a} && \text{APA}\\
-x+ \dfrac{b}{2a} + \neg   \dfrac{b}{2a} &=\neg   \dfrac{b}{2a} \pm\dfrac{\left[b^2+ \neg 4ac \right]^{\frac{1}{2}}}{2a} && \text{CPA}\\
-x &=\neg   \dfrac{b}{2a}  \pm\dfrac{\left[b^2+ \neg 4ac \right]^{\frac{1}{2}}}{2a} && \text{OOA}\\
-x &= \dfrac{\neg  b  \pm {\left[b^2+ \neg 4ac \right]^{\frac{1}{2}}}}{2a} && \text{CD}\\
-x &= \dfrac{\neg  b  \pm {\left[b^2 - 4ac \right]^{\frac{1}{2}}}}{2a} && \text{DOS}\\
-x &= \dfrac{\neg  b  \pm {\sqrt{b^2 - 4ac}}}{2a} && \text{ETR}\\
-x &= \dfrac{-  b  \pm {\sqrt{b^2 - 4ac}}}{2a} && \text{ONeg}
+x+ \dfrac{b}{2a}  &=\pm \dfrac{\sqrt{b^2 - 4ac}}{2a} && \text{RTPo} \eqref{eq:rtpo} \\
+\farg{x+ \dfrac{b}{2a}} +  \neg   \dfrac{b}{2a} &= \farg{\pm\dfrac{\sqrt{b^2 - 4ac}}{2a}} + \neg \dfrac{b}{2a} && \text{SPE} \eqref{eq:spe}+ \text{AI} \eqref{eq:ai} \\
+x+ \left(\dfrac{b}{2a} +  \neg   \dfrac{b}{2a}\right) &= \pm\dfrac{\sqrt{b^2 - 4ac}}{2a} + \neg \dfrac{b}{2a} && \text{APA} \eqref{eq:apa2} \\
+x+ \left(\dfrac{b}{2a} + \neg   \dfrac{b}{2a}\right) &=\neg   \dfrac{b}{2a} \pm\dfrac{\sqrt{b^2 - 4ac}}{2a} && \text{CPM} \eqref{eq:cpm} \\
+x + 0 &=\neg   \dfrac{b}{2a}  \pm\dfrac{\sqrt{b^2 - 4ac}}{2a} && \text{OOA} \eqref{eq:ooa} \\
+x &=\neg   \dfrac{b}{2a}  \pm\dfrac{\sqrt{b^2 - 4ac}}{2a} && \text{AId} \eqref{eq:aid2} \\
+x &= \dfrac{\neg  b  \pm \sqrt{b^2 - 4ac}}{2a} && \text{CD} \eqref{eq:cd1} \\
+x &= \dfrac{\neg  b  \pm \sqrt{b^2 - 4ac}}{2a} && \text{DOS} \eqref{eq:dos2} \\
+x &= \dfrac{-  b  \pm \sqrt{b^2 - 4ac}}{2a} && \text{ONeg} \eqref{eq:oneg2} 
 \end{align*}
 
 \end{document}
