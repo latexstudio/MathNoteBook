@@ -12,7 +12,7 @@
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	SECTION:
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\section{Power Inverse}\index{Solving Quadratic Equations! Power Inverse}
+\section{Mutiliplicative Inverse}\index{Solving Quadratic Equations! Multiplicative Inverse}
 %-=-=-= EXAMPLE
 \begin{example}[id:20141107-131748] \label{20141107-131748} \index{Example!20141107-131748} \hfill \\
 
@@ -29,7 +29,7 @@ Solve the equation $2-x^2=0$ for $x$
 2 + 0 &= 0 + 1x^2 && \text{OOA} \eqref{eq:ooa} \\
 2 &= 1x^2 && \text{AId} \eqref{eq:aid1} \\
 2 &= x^2 && \text{MId} \eqref{eq:mid2} \\
-\alert{\pm} \left[\alert{2} \right]^{\frac{1}{2}} &= \left[\alert{x^2}\right]^{\frac{1}{2}} \\ % TODO Power Inverse
+\alert{\pm} \left[\alert{2} \right]^{\frac{1}{2}} &= \left[\alert{x^2}\right]^{\frac{1}{2}} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
 \pm 2^{\frac{1}{2}} &= x && \text{PoPo} \eqref{eq:popo1} \\
 \pm \sqrt{2} &= x && \text{PoTR} \eqref{eq:potr} \\
 x &= \pm \sqrt{2} && \text{SyPE} \eqref{eq:sype}
@@ -51,6 +51,8 @@ Solve the equation $6x^2 - 6x - 12 = 0$
 
 Using the factor orgnanizer,
 
+
+\begin{center}
 \begin{tikzpicture}[scale=1, auto]
 
 % Place nodes
@@ -81,6 +83,7 @@ Using the factor orgnanizer,
 \path [line](23)--(33);
 
 \end{tikzpicture}
+\end{center}
 
 Solving the linear equations using \text{ZPr} \eqref{eq:zpr} \\ \\
 \begin{align*}
@@ -113,9 +116,11 @@ example \ref{20151012-190708}-20151012-190708
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Completing The Square}\index{Solving Quadratic Equations! Completing the Square}
 
-Completing the square is an algebraic process used to find the roots of quadratic equations of the form, $ax^2+bx+c=0$.   Essentially, we want to manipulate this equation such that $x=\text{some value}$.  Let's begin with a quadratic equation in the general form: $ax^2+bx+c=0$.\\
+Completing the square is an algebraic process used to find the roots of quadratic equations of the form, $ax^2+bx+c=0$.   Essentially, we want to manipulate this equation such that $x=\frac{-  b  \pm \sqrt{b^2 - 4ac}}{2a}$.  
 
-Since we are trying to manipulate the equation  $ax^2+bx+c=0$ such that $x=\text{some value}$, we first want the coefficient factor $a$ to be equal to 1.
+\begin{proof}
+
+Let's begin with a quadratic equation in the general form: $ax^2+bx+c=0$.  Since we are trying to manipulate the equation  $ax^2+bx+c=0$ such that $x=\text{some value(s)}$, we first want the coefficient factor $a$ to be equal to 1.
 
 \begin{align*}
 \dfrac{1}{a} \farg{ax^2 + bx +c} & = \dfrac{1}{a} \farg{0} && \text{SPE} \eqref{eq:spe} + \text{MI} \eqref{eq:mi1} \\
@@ -252,7 +257,7 @@ x^2+\dfrac{b}{a}x +\left( \dfrac{b}{2a} \right)^2 &= \neg \dfrac{c}{a}+ \left( \
  x+ \dfrac{b}{2a}  &=\pm \left[\dfrac{b^2+ \neg 4ac}{4a^2}\right]^{\frac{1}{2}} && \text{PoPrPo} \eqref{eq:poprpo1} \\
 x+ \dfrac{b}{2a}  &=\pm \dfrac{\left[b^2+ \neg 4ac \right]^{\frac{1}{2}}}{\left[4a^2\right]^{\frac{1}{2}}} && \text{PoQPo} \eqref{eq:poqpo1} \\
 x+ \dfrac{b}{2a}  &=\pm \dfrac{\left[b^2+ \neg 4ac \right]^{\frac{1}{2}}}{4^{\frac{1}{2}} a} && \text{PoPrPo} \eqref{eq:poprpo1} \\
-x_{\small{1,2}}+ \dfrac{b}{2a}  &=\pm \dfrac{\left[b^2+ \neg 4ac \right]^{\frac{1}{2}}}{2a} && \text{OOE} \eqref{eq:ooe} \\
+x+ \dfrac{b}{2a}  &=\pm \dfrac{\left[b^2+ \neg 4ac \right]^{\frac{1}{2}}}{2a} && \text{OOE} \eqref{eq:ooe} \\
 \displaybreak
 x+ \dfrac{b}{2a}  &=\pm \dfrac{\sqrt{b^2 - 4ac}}{2a} && \text{RTPo} \eqref{eq:rtpo} \\
 \farg{x+ \dfrac{b}{2a}} +  \neg   \dfrac{b}{2a} &= \farg{\pm\dfrac{\sqrt{b^2 - 4ac}}{2a}} + \neg \dfrac{b}{2a} && \text{SPE} \eqref{eq:spe}+ \text{AI} \eqref{eq:ai} \\
@@ -264,6 +269,14 @@ x &= \dfrac{\neg  b  \pm \sqrt{b^2 - 4ac}}{2a} && \text{CD} \eqref{eq:cd1} \\
 x &= \dfrac{\neg  b  \pm \sqrt{b^2 - 4ac}}{2a} && \text{DOS} \eqref{eq:dos2} \\
 x &= \dfrac{-  b  \pm \sqrt{b^2 - 4ac}}{2a} && \text{ONeg} \eqref{eq:oneg2} 
 \end{align*}
+
+\end{proof}
+
+The previous proof starts with choosing to multiply both expressions by the multiplicative inverse of the coefficient of the degree two term such that $ax^2$ becomes $x^2$.  It is easier to manually complete the square, guess the two binomial factors, when the coefficient of the degree 2 term is 1.  However, as a consequence, the coefficients of the degree one and degree zero terms become fractions $\frac{b}{a}$ and $\frac{c}{a}$ respectively.  All that it means is that we have to work with fractions throughout the procedure.  \\
+
+   
+
+
 
 \end{document}
 
