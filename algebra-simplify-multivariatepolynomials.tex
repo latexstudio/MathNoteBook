@@ -1,0 +1,199 @@
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapter{Simplifying Multivariate Monomials}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Simplifying Degree 0 Multivariate Monomials
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+%-=-=-= DEFINITION
+\begin{definition}[Zero Polynomial]\index{Zero Polynomial}\label{zeropolynomial}
+A constant polynomial with a value of zero whose coefficients are all equal to zero is called a zero polynomial.  The zero polynomial, 0, can be classified as a degree -1 polynomial.  The zero polynomial is the additive identity, AId \eqref{eq:aid1}, for polynomials.
+
+\hfill \cite{mathworld:zeropolynomial}
+\end{definition}
+
+
+\section{Simplifying Degree -1 Multivariate Monomials}\label{Simplify!Degree -1 Multivariate Monomials}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151018-165132] \label{20151018-165132}\index{Example!20151018-165132} \hfill \\
+Simplify $xy-xy$
+
+\soln
+
+\solnsteps
+\begin{align*}
+1xy-1xy && \text{MId} \eqref{eq:mid1} \\
+1xy + \neg 1 xy && \text{DOS} \eqref{eq:dos1} \\
+(1+\neg 1)xy && \text{DPF} \eqref{eq:dpf1} \\
+0xy && \text{OOA} \eqref{eq:ooa} \\
+0 && \text{AId} \eqref{eq:aid2} 
+\end{align*}
+
+\qdepend
+
+\qdependlist
+example \ref{20151018-164638}-20151018-164638
+
+\end{example}
+
+\begin{remark}
+	This is a special case of a polynomial that is made up of one monomial whose coefficient is equal to zero.  This corresponds to a constant with a value of zero and called the zero polynomial\ref{zeropolynomial}.  The zero polynomial is the additive identity.
+\end{remark}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION:
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Simplifying Degree 2 Multivariate Monomials}\index{Simplify!Degree 2 Multivariate Monomials}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151018-161315] \label{20151018-161315}\index{Example!20151018-161315} \hfill \\
+Simplify by expanding $4x2y$
+
+\soln
+
+\solnsteps
+\begin{align*}
+4 \cdot x \cdot 2 \cdot y && \text{JTC} \eqref{eq:jtc} \\
+4 \cdot 2 \cdot x \cdot y && \text{CPM} \eqref{eq:cpm} \\
+8 \cdot x \cdot y && \text{OOM} \eqref{eq:oom} \\
+8xy && \text{CTJ} \eqref{eq:ctj} 
+\end{align*}
+\end{example}
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Simplifying Degree 2 Multivariate Binomials
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Simplifying Degree 2 Multivariate Binomials}\label{Simplify! Degree 2 Multivariate Binomials}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151018-164351] \label{20151018-164351}\index{Example!20151018-164351} \hfill \\
+
+Simplify $10xy + 21xy$
+
+\soln
+
+\solnsteps
+\begin{align*}
+(10+21)xy && \text{DPF} \eqref{eq:dpf1} \\
+31xy && \text{OOA} \eqref{eq:ooa} 
+\end{align*}
+
+\qdepend
+
+\qdependlist
+example \ref{20151018-161544}-20151018-161544
+
+\end{example}
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	SECTION: Simplifying Degree 2 Multivariate Trinomials
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Simplifying Degree 2 Multivariate Trinomials}\label{Simplify! Degree 2 Multivariate Trinomials}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151018-161544] \label{20151018-161544}\index{Example!20151018-161544} \hfill \\
+Simplify by expanding $(2x+3y)(7x+5y)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+2x(7x+5y) + 3y(7x+5y) && \text{DPE} \eqref{eq:dpe2} \\
+2x \cdot 7x + 2x \cdot 5y + 3y \cdot 7x + 3y \cdot 5y && \text{DPE} \eqref{eq:dpe1} \\
+2 \cdot x \cdot 7 \cdot x +  2 \cdot x \cdot 5 \cdot y + 3 \cdot y \cdot 7 \cdot x + 3 \cdot y \cdot 5 \cdot y && \text{JTC} \eqref{eq:jtc} \\
+2 \cdot 7 \cdot x \cdot x +  2 \cdot 5 \cdot x \cdot y + 3 \cdot 7 \cdot x \cdot y + 3 \cdot 5 \cdot y \cdot y && \text{CPM} \eqref{eq:cpm} \\
+2 \cdot 7 \cdot x^2 +  2 \cdot 5 \cdot x \cdot y + 3 \cdot 7 \cdot x \cdot y + 3 \cdot 5 \cdot y^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+14 \cdot x^2 +  10 \cdot x \cdot y + 21 \cdot x \cdot y + 15 \cdot y^2 && \text{OOM} \eqref{eq:oom} \\
+14x^2 +  10xy + 21xy + 15y^2 && \text{CTJ} \eqref{eq:ctj} \\
+14x^2 +  31xy + 15y^2 && \text{OOA} \eqref{eq:ooa} \text{\, goto \,} \, \ref{20151018-164351} 
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151018-183900] \label{20151018-183900}\index{Example!20151018-183900} \hfill \\
+Simplify by expanding $(x+y)^2$
+
+\soln
+
+\solnsteps
+\begin{align*}
+(1x+1y)^2 && \text{MId} \eqref{eq:mid1} \\
+(1x+1y)(1x+1y) && \text{PoTF} \eqref{eq:potf} \\
+1x(1x+1y)+ 1y(1x+1y) && \text{DPE} \eqref{eq:dpe2} \\
+1x \cdot 1x + 1x \cdot 1y + 1y \cdot 1x + 1y \cdot 1y && \text{DPE} \eqref{eq:dpe1} \\
+1 \cdot x \cdot 1 \cdot x + 1 \cdot x \cdot 1 \cdot y + 1 \cdot y \cdot 1 \cdot x + 1 \cdot y \cdot 1 \cdot y && \text{JTC} \eqref{eq:jtc} \\
+1 \cdot 1 \cdot x \cdot x + 1 \cdot 1 \cdot x \cdot y + 1 \cdot 1 \cdot x \cdot y + 1 \cdot 1 \cdot y \cdot y && \text{CPM} \eqref{eq:cpm} \\
+1 \cdot 1 \cdot x^2 + 1 \cdot 1 \cdot x \cdot y + 1 \cdot 1 \cdot x \cdot y + 1 \cdot 1 \cdot y^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+1 \cdot x^2 + 1 \cdot x \cdot y + 1 \cdot x \cdot y + 1 \cdot y^2 && \text{OOM} \eqref{eq:oom} \\
+1x^2 + 1xy + 1xy + 1y^2 && \text{CTJ} \eqref{eq:ctj} \\
+1x^2 + (1+1)xy + 1y^2 && \text{DPF} \eqref{eq:dpf1} \\
+1x^2 + 2xy + 1y^2 && \text{OOA} \eqref{eq:ooa} \\
+x^2 + 2xy + y^2 && \text{MId} \eqref{eq:mid2} 
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151018-182202] \label{20151018-182202}\index{Example!20151018-182202} \hfill \\
+Simplify by expanding $(x-y)^2$
+
+\soln
+
+\solnsteps
+\begin{align*}
+(1x-1y)^2 && \text{MId} \eqref{eq:mid1} \\
+(1x-1y)(1x-1y) && \text{PoTF} \eqref{eq:potf} \\
+(1x-1y)(1x-1y) && \text{MId} \eqref{eq:mid1} \\
+(1x + \neg 1y)(1x + \neg 1y) && \text{DOS} \eqref{eq:dos1} \\
+1x(1x+\neg 1y) + \neg 1y(1x+\neg 1y) && \text{DPE} \eqref{eq:dpe2} \\
+1x \cdot 1x + 1x \cdot \neg 1y + \neg 1y \cdot 1x + \neg 1y \cdot \neg 1y && \text{DPE} \eqref{eq:dpe1} \\
+1 \cdot x \cdot 1 \cdot x + 1 \cdot x \cdot \neg 1 \cdot y + \neg 1 \cdot y \cdot 1 \cdot x + \neg 1 \cdot y \cdot \neg 1 \cdot y && \text{JTC} \eqref{eq:jtc} \\
+1 \cdot 1 \cdot x \cdot x + 1 \cdot \neg 1 \cdot x \cdot y + \neg 1 \cdot 1 \cdot x \cdot y + \neg 1 \cdot \neg 1 \cdot y \cdot y && \text{CPM} \eqref{eq:cpm} \\
+1 \cdot 1 \cdot x^2 + 1 \cdot \neg 1 \cdot x \cdot y + \neg 1 \cdot 1 \cdot x \cdot y + \neg 1 \cdot \neg 1 \cdot y^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+1 \cdot x^2 + \neg 1 \cdot x \cdot y + \neg 1 \cdot x \cdot y + 1 \cdot y^2 && \text{OOM} \eqref{eq:oom} \\
+1x^2 + \neg 1xy + \neg 1xy + 1y^2 && \text{CTJ} \eqref{eq:ctj} \\
+1x^2 + (\neg 1 + \neg 1)xy + 1y^2 && \text{DPF} \eqref{eq:dpf1} \\
+1x^2 + \neg 2xy + 1y^2 && \text{OOA} \eqref{eq:ooa} \\
+1x^2 - 2xy + 1y^2 && \text{DOS} \eqref{eq:dos2} \\
+x^2-2xy+y^2 && \text{AId} \eqref{eq:aid2} 
+\end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151018-164638] \label{20151018-164638}\index{Example!20151018-164638} \hfill \\
+Simplify by expanding $(x-y)(x+y)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+(1x-1y)(1x+1y) && \text{MId} \eqref{eq:mid1} \\
+(1x+ \neg 1y)(1x+1y) && \text{DOS} \eqref{eq:dos1} \\
+1x(1x+1y) + \neg 1y(1x+1y) && \text{DPE} \eqref{eq:dpe2} \\
+1x \cdot 1x + 1x \cdot 1y + \neg 1y \cdot 1x + \neg 1y \cdot 1y && \text{DPE} \eqref{eq:dpe1} \\
+1 \cdot x \cdot 1 \cdot x + 1 \cdot x \cdot 1 \cdot y + \neg 1 \cdot y \cdot 1 \cdot x + \neg 1 \cdot y \cdot 1 \cdot y && \text{JTC} \eqref{eq:jtc} \\
+1 \cdot 1 \cdot x \cdot x + 1 \cdot 1 \cdot x \cdot y + \neg 1 \cdot 1 \cdot x \cdot y + \neg 1 \cdot 1 \cdot y \cdot y && \text{CPM} \eqref{eq:cpm} \\
+1 \cdot 1 \cdot x^2 + 1 \cdot 1 \cdot x \cdot y + \neg 1 \cdot 1 \cdot x \cdot y + \neg 1 \cdot 1 \cdot y^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+1\cdot x^2 + 1\cdot x \cdot y + \neg 1 \cdot x \cdot y + \neg 1 \cdot y^2 && \text{OOM} \eqref{eq:oom} \\
+1x^2 + 1xy + \neg 1xy + \neg 1y^2 && \text{CTJ} \eqref{eq:ctj} \\
+1x^2 + \neg 1y^2 && \text{OOA} \eqref{eq:ooa} \text{\, goto \,} \, \ref{20151018-165132}\\
+1x^2 - 1y^2 && \text{DOS} \eqref{eq:dos2} \\
+x^2-y^2 && \text{MId} \eqref{eq:mid2} 
+\end{align*}
+\end{example}
+
+
+\end{document}
+
