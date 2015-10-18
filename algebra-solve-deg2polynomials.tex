@@ -274,7 +274,75 @@ x &= \dfrac{-  b  \pm \sqrt{b^2 - 4ac}}{2a} && \text{ONeg} \eqref{eq:oneg2}
 
 The previous proof starts with choosing to multiply both expressions by the multiplicative inverse of the coefficient of the degree two term such that $ax^2$ becomes $x^2$.  It is easier to manually complete the square, guess the two binomial factors, when the coefficient of the degree 2 term is 1.  However, as a consequence, the coefficients of the degree one and degree zero terms become fractions $\frac{b}{a}$ and $\frac{c}{a}$ respectively.  All that it means is that we have to work with fractions throughout the procedure.  \\
 
-   
+\begin{proof}
+\begin{align*}
+ax^2+bx+c & = 0 \\
+4a \farg{ax^2+bx+c} &= 4a \farg{0} && \text{SPE} \eqref{eq:spe} \\
+4ax^2+4abx+4ac &= 4a(0) && \text{DPE} \eqref{eq:dpe1} \\
+4ax^2+4abx+4ac &= 0 && \text{OOM} \eqref{eq:oom} \\
+\farg{4ax^2+4abx+4ac}+\neg 4ac &= \farg{0}+\neg 4ac && \text{AI} \eqref{eq:ai},\text{SPE} \eqref{eq:spe}  \\
+4ax^2+4abx+(4ac+ \neg 4ac) &= 0+\neg 4ac && \text{APA} \eqref{eq:apa1} \\
+4ax^2+4abx+0 &= 0+\neg 4ac && \text{OOA} \eqref{eq:ooa} \\
+4ax^2+4abx &= \neg 4ac && \text{AId} \eqref{eq:aid2} \\
+\end{align*}	
+
+Completing the square
+\begin{center}
+\begin{tikzpicture}[scale=1, auto]
+
+% Place nodes
+
+\node[firstterm](11){$2ax$}; \node[factoradd,right=of 11](plus1){$+$}; \node[secondterm, right=of plus1](12){$b$};
+\node[firstterm, below=of 11](21){$2ax$}; \node[factoradd,right=of 21](plus2){$+$}; \node[secondterm, right=of plus2](22){$b$};
+
+\node[multiply, below=of 21](31){$4ax^2$};
+\node[multiply, below=of 22](32){$b^2$};
+
+\node[multiply, right=of 12](13){$2abx$};
+\node[multiply, right=of 22](23){$2abx$};
+
+\node[add, below=of 23](33){$4abx$};
+
+\path [line](11) edge[bend right=30]node[color=black, midway, left]{$\times$}(21);
+\path [line](12) edge[bend left=30]node[color=black, midway, right]{$\times$}(22);
+\path [line](21)--(31);
+
+\path [line](21) edge[bend left=30]node[color=black, pos=0.37, below]{$\times$}(12);
+\path [line](11) edge[bend right=30](22);
+\path [line](22)--(32);
+
+\path [line](12)--(13);
+\path [line](22)--(23);
+
+\path [line](13)--node[color=black, midway, right]{$+$}(23);
+\path [line](23)--(33);
+
+\end{tikzpicture}
+\end{center}
+
+\begin{align*}
+\farg{4ax^2+4abx}+b^2 & = \farg{-4ac}+b^2 && \text{SPE} \eqref{eq:spe} \\
+4ax^2+4abx+b^2 &= b^2 + \neg 4ac && \text{CPA} \eqref{eq:cpa} \\
+(2ax+b)(2ax+b) &= b^2 + \neg 4ac && \text{DPF} \eqref{eq:dpf1} \\
+(2ax+b)^2 &= b^2 + \neg 4ac && \text{PoTF} \eqref{eq:potf} \\
+\farg{(2ax+b)^2}^{\frac{1}{2}} &= \pm \farg{b^2 + \neg 4ac}^{\frac{1}{2}} && \text{SPE} \eqref{eq:spe} \\
+2ax+b &=  \pm (b^2 + \neg 4ac)^{\frac{1}{2}} && \text{PoPo} \eqref{eq:popo1} \\
+2ax+b &= \pm \sqrt{b^2+\neg 4ac} && \text{PoTR} \eqref{eq:potr} \\
+\farg{2ax+b}+\neg b &= \farg{ \pm \sqrt{b^2+\neg 4ac}}+\neg b && \text{AI} \eqref{eq:ai},\text{SPE} \eqref{eq:spe}  \\
+(2ax+b)+\neg b &= \neg b \pm \sqrt{b^2+\neg 4ac} && \text{CPA} \eqref{eq:cpa} \\
+2ax+(b+\neg b) &= \neg b \pm \sqrt{b^2+\neg 4ac}  && \text{APA} \eqref{eq:apa2} \\
+2ax+0 &= \neg b \pm \sqrt{b^2+\neg 4ac} && \text{OOA} \eqref{eq:ooa} \\
+2ax &= \neg b \pm \sqrt{b^2+\neg 4ac} && \text{AId} \eqref{eq:aid2} \\
+\dfrac{1}{2a} \farg{2ax} &= \dfrac{1}{2a} \farg{\neg b \pm \sqrt{b^2+\neg 4ac}}  && \text{MI} \eqref{eq:ai},\text{SPE} \eqref{eq:spe}  \\
+\left(\dfrac{1}{2a}\cdot 2a\right)x &= \dfrac{1}{2a} \left( \neg b \pm \sqrt{b^2+\neg 4ac} \right) && \text{APM} \eqref{eq:apm1} \\
+\dfrac{2a}{2a}x &= \dfrac{\neg b \pm \sqrt{b^2+\neg 4ac}}{2a} && \text{OOM} \eqref{eq:oom} \\
+1x &=\dfrac{\neg b \pm \sqrt{b^2+\neg 4ac}}{2a} && \text{RF} \eqref{eq:rf}\\
+1x &=\dfrac{\neg b \pm \sqrt{b^2-4ac}}{2a} && \text{DOS} \eqref{eq:dos2} \\
+1x &=\dfrac{- b \pm \sqrt{b^2-4ac}}{2a} && \text{ONeg} \eqref{eq:oneg2} \\
+x &=\dfrac{- b \pm \sqrt{b^2-4ac}}{2a} && \text{MId} \eqref{eq:mid2} \\
+\end{align*}
+
+\end{proof}   
 
 
 
