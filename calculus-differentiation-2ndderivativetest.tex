@@ -10,6 +10,45 @@
 \chapter{Second Derivative Test}
 
 
+%-=-=-= EXAMPLE
+\begin{example}[id:20151021-063855] \label{20151021-063855}\index{Example!20151021-063855} \hfill \\
+Show that there exists a local maximum for the function $A(x)=-2x^2+24x$ at the critical point $x=6$.
+
+\soln
+
+\solnsteps
+We need to find the second derivative of the function $A(x)$, so we will first find the derivative.
+
+\begin{align*}
+A(x)=\neg 2x^2+24x && \text{ONeg} \eqref{eq:oneg1} \\
+A'(x)=\neg 4x +24  &&\text{Differentiate} \text{\, goto \,} \, \ref{20151021-054427} \\
+\end{align*}
+
+Finding the second derivative
+
+\begin{align*}
+A'(x) & = \neg 4x +24 \\
+\farg{A'(x)}' &= \farg{\neg 4x +24}' && \text{SPE} \eqref{eq:spe} \\
+A''(x) &= \farg{\neg 4x}' + \farg{24}' && \text{DS} \eqref{eq:ds1} \\
+A''(x) &= \neg 4\farg{x}' + \farg{24}' && \text{DCM} \eqref{eq:dcm1} \\
+A''(x) &= \neg 4(1) + \farg{24}' && \text{DPo} \eqref{eq:dpo1} \\
+A''(x) &= \neg 4 + \farg{24}' && \text{OOM} \eqref{eq:oom} \\
+A''(x) &= \neg 4 + 0 && \text{DC} \eqref{eq:dc1} \\
+A''(x) &= \neg 4 && \text{AId} \eqref{eq:aid2} \\
+A''(x) &= -4 && \text{ONeg} \eqref{eq:oneg2}
+\end{align*}
+
+Since the value of the second derivative is a constant and negative, we then know that the function $A(x)$ is always concave down and consequently the critical point at $x=6$ must be a maximum.
+
+\qdepend
+
+\qdependlist
+example \ref{20151020-171605}-20151020-171605
+
+
+\end{example}
+
+
 
 \end{document}
 

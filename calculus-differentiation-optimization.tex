@@ -1,0 +1,88 @@
+\documentclass[20150903-160354-rs2.2-MarksMathNotebook.tex]{subfiles}
+
+\begin{document}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	CHAPTER
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\chapter{Optimization Problems}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151020-171605] \label{20151020-171605}\index{Example!20151020-171605} \hfill \\
+Mark has 24 meters of fencing to build a rectangular pen for his two mini pigs situation along a river.  If he is not going to place fencing along the river, then what are the dimensions of the pen that produce the largest area?
+
+\soln
+
+\solnsteps
+
+Let $x$ be the width of the pen and $y$ be the length.  See the figure below:
+
+\begin{center}
+\begin{tikzpicture}
+\draw[sthlmRed] (2,1) -- node[anchor=east]{$x$} (2,3) -- node[anchor=south]{$y$} (6,3) -- (6,1); 
+\node (area) at (4,2) {Pen Area}; 
+\fill[sthlmLightBlue] (0,0) rectangle (8,1);
+\end{tikzpicture}
+\end{center}
+
+We are then able to express the area of the pen in terms of the width $x$ and the length $y$.
+
+\begin{align*}
+\text{Area} &= xy 
+\end{align*}
+
+The problem is that the area is expressed in terms of two variables $x$ and $y$.  The challenge is now to find a second relationship between these.  Since we are given the total length of fencing available, 24m, we can express the perimeter of fencing available in terms of the two variables $x$ and $y$. Furthermore, we can express $y$ in terms of only the variable $x$.
+
+\begin{align*}
+\text{Perimeter of Fencing} & = x + y + x \\
+\text{Perimeter of Fencing} &= 2x + y && \text{Simplify} \text{\, goto \,} \, \ref{20151020-175447} \\
+24 \unit{m} &= 2x + y && \text{SPE} \eqref{eq:spe} \\
+y &=  -2x + 24 \unit{m} && \text{Solve for } y \text{\, goto \,} \, \ref{20151020-180416}
+\end{align*} 
+
+\begin{align*}
+A & = xy \\
+A &= x \farg{\neg 2x+24x \unit{m}} && \text{SPE} \eqref{eq:spe} \\
+A &= \neg 2x^2+24x \unit{m} && \text{Simplify} \text{\, goto \,} \, \ref{20151020-214228}
+\end{align*}
+
+We are now interested in finding the maximum of the graph of the function $A(x)=\neg 2x^2+24$.  We can do this by finding if a critical point exists and subsequently showing that it can be classified as a maximum point.
+
+\begin{align*}
+\farg{A(x)}' & = \farg{\neg 2x^2+24x \unit{m}} && \text{SPE} \eqref{eq:spe} \\ 
+A'(x) &= \neg 4x+ 24 \unit{m}  &&\text{Differentiating} \text{\, goto \,} \, \ref{20151011-154209} \\
+\end{align*}
+
+Find the $x$ value of the critical point by setting the derivative equal to zero and solving for $x$.
+
+\begin{align*}
+\neg 4x + 24 \unit{m} & = 0 \\
+x &= 6 \unit{m}  &&\text{Solving} \text{\, goto \,} \, \ref{20151021-060347} \\
+\end{align*}
+
+There is one critical point at $x=6 \unit{m}$.  We now need to show that it is a local maximum value.  We can do this using the second derivative test (\text{\, goto \,} \ref{20151021-063855}) or the first derivative test (\text{\, goto \,}  \ref{20151021-061907}).
+
+Now that we have shown that the area function $A(x)$ has a maximum value at the critical point $x= 6\unit{m}$, we know that the width, $x$, will be $6 \unit{m}$ when the area has reached a maximum value.  We can find the length, $y$, of the pen by using the perimeter equation that we used earlier.
+
+\begin{align*}
+y &=  \neg 2x + 24 \unit{m} \\
+y &=  \neg 2 \farg{6 \unit{m}} + 24 \unit{m} && \text{SPE} \eqref{eq:spe} \\
+y &=  \neg 12 \unit{m} + 24 \unit{m} && \text{OOM} \eqref{eq:oom} \\
+y &=  12 \unit{m} && \text{OOA} \eqref{eq:ooa} 
+\end{align*}
+
+It might also be worth finding the maximum area of the pen.
+
+\begin{align*}
+A &= xy \\
+A &= \farg{6 \unit{m}}\farg{12 \unit{m}} && \text{SPE} \eqref{eq:spe} \\
+A &= 72\unit{m}^2  &&\text{Simplify} \text{\, goto \,} \, \ref{20151021-065906} \\
+\end{align*}
+
+\end{example}
+
+
+\end{document}
+
