@@ -222,6 +222,62 @@ x &= -\dfrac{5}{2} && \text{OOM} \eqref{eq:oom}
 example \ref{20141111-192213}-20141111-192213
 \end{example}
 
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151020-180416] \label{20151020-180416}\index{Example!20151020-180416} \hfill \\
+Solve the equation $24 \unit{m} = 2x + y$ for $y$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\neg 2x + \farg{24 \unit{m}} &= \neg 2x \farg{2x+y} && \text{AI} \eqref{eq:ai},\text{SPE} \eqref{eq:spe}  \\
+\neg 2x + 24 \unit{m} &= \left(\neg 2x + 2x\right) + y && \text{APA} \eqref{eq:apa1} \\
+\neg 2x + 24 \unit{m} &= 0+y && \text{OOA} \eqref{eq:ooa} \\
+\neg 2x + 24 \unit{m} &= y && \text{AId} \eqref{eq:aid2} \\
+- 2x + 24 \unit{m} &= y && \text{ONeg} \eqref{eq:oneg2} \\
+y &=  -2x + 24 \unit{m} && \text{SyPE} \eqref{eq:sype} 
+\end{align*}
+
+\qdepend
+
+\qdependlist
+example \ref{20151020-171605}-20151020-171605
+
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151021-060347] \label{20151021-060347}\index{Example!20151021-060347} \hfill \\
+Solve $-4x + 24 \unit{m} = 0$ for $x$, where m is the unit length for meters.
+
+\soln
+
+\solnsteps
+\begin{align*}
+\neg 4x + 24 \unit{m} &= 0 && \text{ONeg} \eqref{eq:oneg1} \\
+\farg{\neg 4x + 24 \unit{m}} + \neg 24 \unit{m} &= \farg{0} + \neg 24 \unit{m} && \text{AI} \eqref{eq:ai},\text{SPE} \eqref{eq:spe}  \\
+\neg 4x + (24 \unit {m} + \neg 24 \unit{m}) &= \farg{0} + \neg 24 \unit{m} && \text{APA} \eqref{eq:apa2} \\
+\neg 4x + 0 &=  0 + \neg 24 \unit{m} && \text{OOA} \eqref{eq:ooa} \\
+\neg 4x &= \neg 24 \unit{m} && \text{AId} \eqref{eq:aid2} \\
+\dfrac{1}{\neg 4} \farg{\neg 4x} &= \dfrac{1}{\neg 4} \farg{\neg 24 \unit{m}}  && \text{MI} \eqref{eq:ai},\text{SPE} \eqref{eq:spe}  \\
+\left(\dfrac{1}{\neg 4} \cdot 4\right)x &= \left(dfrac{1}{\neg 4} \cdot \neg 24\right) \unit{m} && \text{APM} \eqref{eq:apm2} \\
+\dfrac{4}{4}x &=\dfrac{24}{4} \unit{m} && \text{OOM} \eqref{eq:oom} \\
+1x &= 6 \unit{m} && \text{RF} \eqref{eq:rf} \\
+1x &= 6 \unit{m} && \text{ONeg} \eqref{eq:oneg2} \\
+x &= 6 \unit{m} && \text{MId} \eqref{eq:mid2} 
+\end{align*}
+
+\qdepend
+
+\qdependlist
+example \ref{20151020-171605}-20151020-171605 \\
+
+example \ref{20151021-061907}-20151021-061907
+
+
+\end{example}
+
+
 %-=-=-= EXAMPLE
 \begin{example}[id:20151015-104754] \label{20151015-104754}\index{Example!20151015-104754} \hfill \\
 Solve the equation $2ax+b=0$ for $x$.

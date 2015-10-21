@@ -448,6 +448,23 @@ Simplify by expanding $8x \cdot 5$
 \end{align*}
 \end{example}
 
+%-=-=-= EXAMPLE
+\begin{example}[id:20151019-170505] \label{20151019-170505}\index{Example!20151019-170505} \hfill \\
+
+Simplify $\frac{3x}{5}-\frac{2x}{4}$
+
+\soln
+
+\solnsteps
+\begin{align*}
+\frac{3x}{5}+ \neg \frac{2x}{4} && \text{DOS} \eqref{eq:dos1} \\
+\left(\frac{3}{5}+ \neg \frac{2}{4} \right)x && \text{DPF} \eqref{eq:dpf1} \\
+\frac{1}{10}x && \text{OOA} \eqref{eq:ooa} \text{\, goto \,} \, \ref{20151019-171424}\\
+\frac{1x}{10} && \text{OOM} \eqref{eq:oom} \\
+\frac{x}{10} && \text{MId} \eqref{eq:mid2} 
+\end{align*}
+\end{example}
+
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	SECTION: Simplifying Degree 2 Univariate Monomials
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -482,6 +499,23 @@ Express by expanding $1x^2$ in canonical form.
 x^2 && \text{MId} \eqref{eq:mid2}
 \end{align*}
 \end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151021-065906] \label{20151021-065906}\index{Example!20151021-065906} \hfill \\
+Simplify $(6 \unit{m})(12 \unit{m})$
+
+\soln
+
+\solnsteps
+\begin{align*}
+6 \cdot \unit{m} \cdot 12 \cdot \unit{m} && \text{JTC} \eqref{eq:jtc} \\
+6 \cdot 12 \cdot \unit{m} \cdot \unit{m} && \text{CPM} \eqref{eq:cpm} \\
+6 \cdot 12 \cdot \unit{m}^2 && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+72 \cdot \unit{m}^2 && \text{OOM} \eqref{eq:oom} \\
+72 \unit{m}^2 && \text{CTJ} \eqref{eq:ctj} 
+\end{align*}
+\end{example}
+
 
 %-=-=-= EXAMPLE
 \begin{example}[id:20141106-151138] \label{20141106-151138} \index{Example!20141106-151138} \hfill \\
@@ -922,6 +956,26 @@ Simplify by expanding $5(x+3)+3(x+2)$
 
 \end{example}
 
+%-=-=-= EXAMPLE
+\begin{example}[id:20151019-165511] \label{20151019-165511}\index{Example!20151019-165511} \hfill \\
+Simplify by expanding $10x-2(x+5)-(x-3)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+10x-2(1x+5)-1(1x-3) && \text{MId} \eqref{eq:mid1} \\
+10x + \neg 2(1x+5) + \neg 1(1x + \neg 3) && \text{DOS} \eqref{eq:dos1} \\
+10x + \neg 2 \cdot 1x + \neg 2 \cdot 5 + \neg 1 \cdot 1x + \neg 1 \cdot \neg 3 && \text{DPE} \eqref{eq:dpe1} \\
+10 \cdot x + \neg 2 \cdot 1 \cdot x + \neg 2 \cdot 5 + \neg 1 \cdot 1 \cdot x + \neg 1 \cdot \neg 3 && \text{JTC} \eqref{eq:jtc} \\
+10 \cdot x + \neg 2 \cdot x + \neg 10 + \neg 1 \cdot x + 3 && \text{OOM} \eqref{eq:oom} \\
+10x + \neg 2x + \neg 10 + \neg 1x + 3 && \text{CTJ} \eqref{eq:ctj} \\
+10x + \neg 2x + \neg 1x + \neg 10 +3 && \text{CPA} \eqref{eq:cpa} \\
+7x + \neg 7 && \text{OOA} \eqref{eq:ooa} \\
+7x - 7 && \text{DOS} \eqref{eq:dos2}
+\end{align*}
+\end{example}
+
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	SECTION: Simplifying Degree 2 Univariate Binomials
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -955,6 +1009,32 @@ Simplify by expanding $3x^2+2x+5x^2+4x$
 3x^2 + 5x^2 + 2x + 4x && \text{CPA} \eqref{eq:cpa} \\
 8x^2+6x && \text{OOA} \eqref{eq:ooa}
 \end{align*}
+\end{example}
+
+%-=-=-= EXAMPLE
+\begin{example}[id:20151020-214228] \label{20151020-214228}\index{Example!20151020-214228} \hfill \\
+Simplify $x(-2x+25)$
+
+\soln
+
+\solnsteps
+\begin{align*}
+1x(-2x+25) && \text{MId} \eqref{eq:mid1} \\
+1x(\neg 2x +25) && \text{ONeg} \eqref{eq:oneg1} \\
+1x \cdot \neg 2x + 1x \cdot 25 && \text{DPE} \eqref{eq:dpe1} \\
+1 \cdot x \cdot \neg 2 \cdot x + 1 \cdot x \cdot 25 && \text{JTC} \eqref{eq:jtc} \\
+1 \cdot \neg 2 \cdot x \cdot x + 1 \cdot 25 \cdot x && \text{CPM} \eqref{eq:cpm} \\
+1 \cdot \neg 2 \cdot x^2 + 1 \cdot 25 \cdot x && \text{PrCBPo} \eqref{eq:prcbpo1} \\
+\neg 2 \cdot x^2 + 25 \cdot x && \text{OOM} \eqref{eq:oom} \\
+\neg 2 x^2 + 25 x && \text{CTJ} \eqref{eq:ctj} \\
+- 2 x^2 + 25 x && \text{ONeg} \eqref{eq:oneg2} 
+\end{align*}
+
+\qdepend
+
+\qdependlist
+example \ref{20151020-171605}-20151020-171605
+
 \end{example}
 
 %-=-=-= EXAMPLE
